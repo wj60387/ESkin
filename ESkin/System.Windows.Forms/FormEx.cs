@@ -15,6 +15,8 @@ namespace System.Windows.Forms
         private System.ComponentModel.IContainer components = null;
         public FormEx()
         {
+             
+             
             this.FormBorderStyle =  FormBorderStyle.None;
             this.SuspendLayout();
             this.components = new System.ComponentModel.Container();
@@ -29,11 +31,21 @@ namespace System.Windows.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "打开指标文档所在目录";
             this.ResumeLayout(false);
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            SetStyle(ControlStyles.UserPaint, true);
-            SetStyle(ControlStyles.DoubleBuffer, true);
+            base.SetStyle(
+                    ControlStyles.UserPaint |                      // 控件将自行绘制，而不是通过操作系统来绘制
+                    ControlStyles.OptimizedDoubleBuffer |          // 该控件首先在缓冲区中绘制，而不是直接绘制到屏幕上，这样可以减少闪烁
+                    ControlStyles.AllPaintingInWmPaint |           // 控件将忽略 WM_ERASEBKGND 窗口消息以减少闪烁
+                    ControlStyles.ResizeRedraw |                   // 在调整控件大小时重绘控件
+                    ControlStyles.SupportsTransparentBackColor,    // 控件接受 alpha 组件小于 255 的 BackColor 以模拟透明
+                    true);                                         // 设置以上值为 true
+            base.UpdateStyles();
+            //SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            //SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            //SetStyle(ControlStyles.UserPaint, true);
+            //SetStyle(ControlStyles.DoubleBuffer, true);
+            //base.UpdateStyles();
         }
+
         const int HTLEFT = 10;
         const int HTRIGHT = 11;
         const int HTTOP = 12;
@@ -283,6 +295,8 @@ namespace System.Windows.Forms
             }
             base.Dispose(disposing);
         }
+
+       
     }
     
 }

@@ -1,6 +1,6 @@
 ﻿namespace EApp
 {
-    partial class FrmMain2
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain2));
-            this.panelMain = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControlEx1 = new System.Windows.Forms.TabControlEx();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.ucTextBox1 = new System.Windows.Forms.UCTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -41,10 +41,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.ucTextBox2 = new System.Windows.Forms.UCTextBox();
-            this.ucTextBox3 = new System.Windows.Forms.UCTextBox();
-            this.ucTextBox1 = new System.Windows.Forms.UCTextBox();
-            this.panelMain.SuspendLayout();
             this.tabControlEx1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -52,17 +48,6 @@
             this.tabPage5.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelMain
-            // 
-            this.panelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMain.Controls.Add(this.tabControlEx1);
-            this.panelMain.Location = new System.Drawing.Point(0, 22);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(876, 644);
-            this.panelMain.TabIndex = 1;
             // 
             // tabControlEx1
             // 
@@ -72,30 +57,39 @@
             this.tabControlEx1.Controls.Add(this.tabPage3);
             this.tabControlEx1.Controls.Add(this.tabPage5);
             this.tabControlEx1.Controls.Add(this.tabPage4);
-            this.tabControlEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlEx1.ItemSize = new System.Drawing.Size(88, 88);
-            this.tabControlEx1.Location = new System.Drawing.Point(0, 0);
+            this.tabControlEx1.Location = new System.Drawing.Point(3, 23);
             this.tabControlEx1.Multiline = true;
             this.tabControlEx1.Name = "tabControlEx1";
             this.tabControlEx1.SelectedIndex = 0;
-            this.tabControlEx1.Size = new System.Drawing.Size(876, 644);
-            this.tabControlEx1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControlEx1.TabIndex = 0;
+            this.tabControlEx1.Size = new System.Drawing.Size(636, 473);
+            this.tabControlEx1.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.ucTextBox2);
-            this.tabPage1.Controls.Add(this.ucTextBox3);
             this.tabPage1.Controls.Add(this.ucTextBox1);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage1.Location = new System.Drawing.Point(92, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(780, 636);
+            this.tabPage1.Size = new System.Drawing.Size(477, 374);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "听诊器配置";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ucTextBox1
+            // 
+            this.ucTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.ucTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.BackgroundImage")));
+            this.ucTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ucTextBox1.Location = new System.Drawing.Point(100, 201);
+            this.ucTextBox1.Name = "ucTextBox1";
+            this.ucTextBox1.PasswordChar = '\0';
+            this.ucTextBox1.Size = new System.Drawing.Size(273, 40);
+            this.ucTextBox1.TabIndex = 1;
+            this.ucTextBox1.TextImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.TextImage")));
+            this.ucTextBox1.WaterText = "水印文字";
             // 
             // button1
             // 
@@ -105,12 +99,10 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.checkBox1);
-            this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage2.Location = new System.Drawing.Point(92, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -124,7 +116,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(404, 191);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(100, 24);
+            this.checkBox1.Size = new System.Drawing.Size(78, 16);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -132,7 +124,6 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage3.Location = new System.Drawing.Point(92, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -153,7 +144,6 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.button4);
-            this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage5.Location = new System.Drawing.Point(92, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -174,11 +164,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage4.Location = new System.Drawing.Point(92, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(778, 627);
+            this.tabPage4.Size = new System.Drawing.Size(540, 465);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "远程教学";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -192,62 +181,14 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // ucTextBox2
+            // Form2
             // 
-            this.ucTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.ucTextBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox2.BackgroundImage")));
-            this.ucTextBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucTextBox2.Location = new System.Drawing.Point(110, 328);
-            this.ucTextBox2.Name = "ucTextBox2";
-            this.ucTextBox2.PasswordChar = '*';
-            this.ucTextBox2.Size = new System.Drawing.Size(220, 40);
-            this.ucTextBox2.TabIndex = 5;
-            this.ucTextBox2.TextImage = global::EApp.Properties.Resources.密码图标;
-            this.ucTextBox2.WaterText = "密码";
-            // 
-            // ucTextBox3
-            // 
-            this.ucTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.ucTextBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox3.BackgroundImage")));
-            this.ucTextBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucTextBox3.Location = new System.Drawing.Point(110, 268);
-            this.ucTextBox3.Name = "ucTextBox3";
-            this.ucTextBox3.PasswordChar = '\0';
-            this.ucTextBox3.Size = new System.Drawing.Size(220, 40);
-            this.ucTextBox3.TabIndex = 4;
-            this.ucTextBox3.TextImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox3.TextImage")));
-            this.ucTextBox3.WaterText = "用户名";
-            // 
-            // ucTextBox1
-            // 
-            this.ucTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ucTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.BackgroundImage")));
-            this.ucTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucTextBox1.Location = new System.Drawing.Point(100, 201);
-            this.ucTextBox1.Name = "ucTextBox1";
-            this.ucTextBox1.PasswordChar = '\0';
-            this.ucTextBox1.Size = new System.Drawing.Size(273, 40);
-            this.ucTextBox1.TabIndex = 1;
-            this.ucTextBox1.TextImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.TextImage")));
-            this.ucTextBox1.WaterText = "水印文字";
-            // 
-            // FrmMain2
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(876, 666);
-            this.Controls.Add(this.panelMain);
-            this.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "FrmMain2";
-            this.ShowIcon = false;
-            this.Text = "窗体2";
-            this.panelMain.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(642, 646);
+            this.Controls.Add(this.tabControlEx1);
+            this.Name = "Form2";
+            this.Text = "Form2";
             this.tabControlEx1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -263,9 +204,9 @@
 
         private System.Windows.Forms.TabControlEx tabControlEx1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.UCTextBox ucTextBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button2;
@@ -273,9 +214,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.UCTextBox ucTextBox1;
-        private System.Windows.Forms.UCTextBox ucTextBox2;
-        private System.Windows.Forms.UCTextBox ucTextBox3;
 
     }
 }

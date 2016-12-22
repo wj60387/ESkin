@@ -73,6 +73,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="System.Windows.Forms\FormEx.resx">
+      <DependentUpon>FormEx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="System.Windows.Forms\UCTextBoxEX.resx">
       <DependentUpon>UCTextBoxEX.cs</DependentUpon>
     </EmbeddedResource>
