@@ -153,6 +153,7 @@
     <None Include="Resources\云端听诊.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="readme.txt" />
     <Content Include="Resources\logo.png" />
     <None Include="Resources\账号图标.png" />
     <None Include="Resources\输入框账号.png" />

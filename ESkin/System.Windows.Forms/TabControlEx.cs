@@ -11,7 +11,6 @@ namespace System.Windows.Forms
         public List<Image> ListImage = new List<Image>();
         public TabControlEx()
         {
-           
             base.SetStyle(
      ControlStyles.UserPaint |                      // 控件将自行绘制，而不是通过操作系统来绘制  
      ControlStyles.OptimizedDoubleBuffer |          // 该控件首先在缓冲区中绘制，而不是直接绘制到屏幕上，这样可以减少闪烁  
@@ -20,54 +19,79 @@ namespace System.Windows.Forms
      ControlStyles.SupportsTransparentBackColor,    // 控件接受 alpha 组件小于 255 的 BackColor 以模拟透明  
      true);                                         // 设置以上值为 true  
             base.UpdateStyles();
-            this.SizeMode = TabSizeMode.Fixed;  // 大小模式为固定  
-            this.ItemSize = new Size(88, 88);   // 设定每个标签的尺寸 
-            
+            this.SizeMode = TabSizeMode.FillToRight;  // 大小模式为固定  
+            this.ItemSize = new Size(98, 88);   // 设定每个标签的尺寸 
+            this.DrawMode = TabDrawMode.OwnerDrawFixed;
         }
         Point mPoint = Point.Empty;
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
             mPoint = e.Location;
-            mPoint = PointToClient(MousePosition);
             this.Invalidate(new Rectangle(0, 0, ItemSize.Width, this.Height));
         }
+        
         string getString(Point point)
         {
             return string.Format("{0},{1}：{2}",point.X,point.Y,this.Height);
         }
+        public override Rectangle DisplayRectangle
+        {
+            get
+            {
+                Rectangle rect = base.DisplayRectangle;
+                return new Rectangle(rect.Left - 4, rect.Top - 4, rect.Width + 8, rect.Height + 7);
+            }
+        }
+        protected override void OnDrawItem(DrawItemEventArgs e)
+        {
+            base.OnDrawItem(e);
+            e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, e.Bounds, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+
+        }
         protected override void OnPaint(PaintEventArgs e)
         {
-            //this.Region =new Drawing.Region( e.ClipRectangle);
-            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(40, 147, 202)), new Rectangle(0, 0, ItemSize.Width, this.Height));
+            switch(Alignment)
+            {
+                case TabAlignment.Left:
+                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(40, 147, 202)), new Rectangle(0, 0, ItemSize.Width, this.Height));
+                    break;
+                case TabAlignment.Top:
+                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(40, 147, 202)), new Rectangle(0, 0, ItemSize.Height, this.Width));
+                    break;
+            }
+
+                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(40, 147, 202)), new Rectangle(0, 0, ItemSize.Width, this.Height));
            // e.Graphics.DrawRectangle(Pens.Red, new Rectangle(0, 0, ItemSize.Width, this.Height));
             for (int i = 0; i < this.TabCount; i++)
             {
                 //e.Graphics.DrawRectangle(Pens.Red, this.GetTabRect(i));
-                
+                this.TabPages[i].SetBounds(this.TabPages[i].Bounds.X
+                    , this.TabPages[i].Bounds.Y + ItemSize.Height
+                    , this.TabPages[i].Bounds.Width
+                    , this.TabPages[i].Bounds.Height);
                 this.TabPages[i].BorderStyle = BorderStyle.None;
+
                 // （略）  
                 // Calculate text position  
                 Rectangle bounds = this.GetTabRect(i);
-                bounds.Y += ItemSize.Height;
+                //bounds.Y += ItemSize.Height;
                 PointF textPoint = new PointF();
-                if (this.SelectedIndex == i)
-                {
-                    var rect = new Rectangle(bounds.X - 2, bounds.Y - 1, bounds.Width, bounds.Height);
-                    var _rect = new Rectangle(bounds.X - 2 + bounds.Width-10, bounds.Y - 1, 10, bounds.Height);
-                    
-                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), rect);
-                    e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), _rect);
-                }
+               
                 if (bounds.Contains(mPoint))
                 {
                     var rect = new Rectangle(bounds.X - 2, bounds.Y - 1, bounds.Width, bounds.Height);
                     var _rect = new Rectangle(bounds.X - 2 + bounds.Width - 10, bounds.Y - 1, 10, bounds.Height);
-
                     e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 161, 133)), rect);
                     e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), _rect);
                 }
-                
+                if (this.SelectedIndex == i)
+                {
+                    var rect = new Rectangle(bounds.X - 2, bounds.Y - 1, bounds.Width, bounds.Height);
+                    var _rect = new Rectangle(bounds.X - 2 + bounds.Width - 10, bounds.Y - 1, 10, bounds.Height);
+                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), rect);
+                    e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), _rect);
+                }
                 SizeF textSize = TextRenderer.MeasureText(this.TabPages[i].Text, this.Font);
                 // 注意要加上每个标签的左偏移量X  
                 textPoint.X
@@ -93,10 +117,10 @@ namespace System.Windows.Forms
                     , bounds.Width / 2
                     , bounds.Height / 2 - textSize.Height / 2
                     );
-                //e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
-                e.Graphics.DrawString(getString(mPoint), new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
-
+                // e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
             }
+           // e.Graphics.DrawString(getString(mPoint), new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+
         }  
     }
 }

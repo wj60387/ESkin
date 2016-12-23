@@ -15,7 +15,7 @@ namespace EApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain2());
+            Application.Run(new FrmMain());
         }
     }
 }

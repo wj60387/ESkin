@@ -134,7 +134,6 @@ namespace System.Windows.Forms
         }
         void ShowTip(string Msg)
         {
-            ToolTipEx.ShowTip(Msg);
         }
         protected override void OnMouseLeave(EventArgs e)
         {
