@@ -40,10 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\ImageDrawRect.cs" />
+    <Compile Include="Helper\ImageObject.cs" />
+    <Compile Include="Helper\NativeMethods.cs" />
+    <Compile Include="Helper\Win32.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="System.Windows.Forms\ButtonEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System.Windows.Forms\CheckBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System.Windows.Forms\DataGridViewEx.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="System.Windows.Forms\FormEx.cs">
       <SubType>Form</SubType>

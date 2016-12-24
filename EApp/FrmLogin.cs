@@ -14,6 +14,13 @@ namespace EApp
         public FrmLogin()
         {
             InitializeComponent();
+             
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FrmMain main = new FrmMain();
+            main.Show();
         }
     }
 }

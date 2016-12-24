@@ -29,39 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.ucTextBox1 = new System.Windows.Forms.UCTextBox();
-            this.ucTextBox2 = new System.Windows.Forms.UCTextBox();
+            this.btnLogin = new System.Windows.Forms.ButtonEx();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ucTextBox2 = new System.Windows.Forms.UCTextBox();
+            this.ucTextBox1 = new System.Windows.Forms.UCTextBox();
             this.SuspendLayout();
             // 
-            // ucTextBox1
+            // btnLogin
             // 
-            this.ucTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ucTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.BackgroundImage")));
-            this.ucTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucTextBox1.Location = new System.Drawing.Point(60, 170);
-            this.ucTextBox1.Name = "ucTextBox1";
-            this.ucTextBox1.PasswordChar = '\0';
-            this.ucTextBox1.Size = new System.Drawing.Size(220, 40);
-            this.ucTextBox1.TabIndex = 2;
-            this.ucTextBox1.TextImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.TextImage")));
-            this.ucTextBox1.WaterText = "用户名";
-            // 
-            // ucTextBox2
-            // 
-            this.ucTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.ucTextBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox2.BackgroundImage")));
-            this.ucTextBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucTextBox2.Location = new System.Drawing.Point(60, 230);
-            this.ucTextBox2.Name = "ucTextBox2";
-            this.ucTextBox2.PasswordChar = '*';
-            this.ucTextBox2.Size = new System.Drawing.Size(220, 40);
-            this.ucTextBox2.TabIndex = 3;
-            this.ucTextBox2.TextImage = global::EApp.Properties.Resources.密码图标;
-            this.ucTextBox2.WaterText = "密码";
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BackgroundImage = global::EApp.Properties.Resources.登入框登录200x40;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogin.Location = new System.Drawing.Point(60, 290);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(220, 40);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "登录";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
@@ -73,22 +64,37 @@
             this.panel1.Size = new System.Drawing.Size(200, 45);
             this.panel1.TabIndex = 4;
             // 
-            // button1
+            // ucTextBox2
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::EApp.Properties.Resources.登入框登录200x40;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(60, 290);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "登录";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ucTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.ucTextBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox2.BackgroundImage")));
+            this.ucTextBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTextBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ucTextBox2.ImageDrawRect = new System.Drawing.Rectangle(25, 10, 20, 20);
+            this.ucTextBox2.Location = new System.Drawing.Point(60, 230);
+            this.ucTextBox2.Name = "ucTextBox2";
+            this.ucTextBox2.PasswordChar = '*';
+            this.ucTextBox2.Size = new System.Drawing.Size(220, 40);
+            this.ucTextBox2.TabIndex = 3;
+            this.ucTextBox2.TextBoxLocation = new System.Drawing.Point(50, 10);
+            this.ucTextBox2.TextImage = global::EApp.Properties.Resources.密码图标;
+            this.ucTextBox2.WaterText = "密码";
+            // 
+            // ucTextBox1
+            // 
+            this.ucTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.ucTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.BackgroundImage")));
+            this.ucTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ucTextBox1.ImageDrawRect = new System.Drawing.Rectangle(25, 10, 20, 20);
+            this.ucTextBox1.Location = new System.Drawing.Point(60, 170);
+            this.ucTextBox1.Name = "ucTextBox1";
+            this.ucTextBox1.PasswordChar = '\0';
+            this.ucTextBox1.Size = new System.Drawing.Size(220, 40);
+            this.ucTextBox1.TabIndex = 2;
+            this.ucTextBox1.TextBoxLocation = new System.Drawing.Point(50, 10);
+            this.ucTextBox1.TextImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.TextImage")));
+            this.ucTextBox1.WaterText = "用户名";
             // 
             // FrmLogin
             // 
@@ -96,16 +102,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::EApp.Properties.Resources.背景;
-            this.ClientSize = new System.Drawing.Size(600, 404);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(600, 400);
+            this.ControlBox = true;
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucTextBox2);
             this.Controls.Add(this.ucTextBox1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.IsResize = false;
             this.Name = "FrmLogin";
             this.ShowIcon = false;
             this.Text = "";
+            this.Controls.SetChildIndex(this.ucTextBox1, 0);
+            this.Controls.SetChildIndex(this.ucTextBox2, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.btnLogin, 0);
             this.ResumeLayout(false);
 
         }
@@ -115,6 +125,6 @@
         private System.Windows.Forms.UCTextBox ucTextBox1;
         private System.Windows.Forms.UCTextBox ucTextBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ButtonEx btnLogin;
     }
 }
