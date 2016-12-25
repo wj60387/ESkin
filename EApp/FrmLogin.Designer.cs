@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.ucTextBox2 = new System.Windows.Forms.UCTextBox();
             this.ucTextBox1 = new System.Windows.Forms.UCTextBox();
+            this.btnClose = new System.Windows.Forms.ButtonEx();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -96,26 +97,39 @@
             this.ucTextBox1.TextImage = ((System.Drawing.Image)(resources.GetObject("ucTextBox1.TextImage")));
             this.ucTextBox1.WaterText = "用户名";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::EApp.Properties.Resources.系统按钮关闭;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(582, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(12, 12);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::EApp.Properties.Resources.背景;
             this.ClientSize = new System.Drawing.Size(600, 400);
-            this.ControlBox = true;
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucTextBox2);
             this.Controls.Add(this.ucTextBox1);
-            this.IsResize = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.ShowIcon = false;
-            this.Text = "";
-            this.Controls.SetChildIndex(this.ucTextBox1, 0);
-            this.Controls.SetChildIndex(this.ucTextBox2, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.btnLogin, 0);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }
@@ -126,5 +140,6 @@
         private System.Windows.Forms.UCTextBox ucTextBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ButtonEx btnLogin;
+        private System.Windows.Forms.ButtonEx btnClose;
     }
 }

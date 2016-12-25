@@ -82,7 +82,7 @@ namespace System.Windows.Forms
 
         protected virtual int DefaultCheckButtonWidth
         {
-            get { return 12; }
+            get { return 16; }
         }
 
          ControlState ControlState
@@ -134,101 +134,35 @@ namespace System.Windows.Forms
                 }
             }
         }
-
+        public Image image = ESkin.Properties.Resources._16x16_没勾选;
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             base.OnPaintBackground(e);
-
             Graphics g = e.Graphics;
             Rectangle checkButtonRect;
             Rectangle textRect;
-
             CalculateRect(out checkButtonRect, out textRect);
             g.SmoothingMode = SmoothingMode.AntiAlias;
 
             Color backColor = ControlPaint.Light(_baseColor);
-            Color borderColor;
-            Color innerBorderColor;
-            Color checkColor;
-            bool hover = false;
 
             if (Enabled)
             {
                 switch (ControlState)
                 {
                     case ControlState.Hover:
-                        borderColor = _baseColor;
-                        innerBorderColor = _baseColor;
-                        checkColor = GetColor(_baseColor, 0, 35, 24, 9);
-                        hover = true;
+                        image = Checked ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
                         break;
                     case ControlState.Pressed:
-                        borderColor = _baseColor;
-                        innerBorderColor = GetColor(_baseColor, 0, -13, -8, -3);
-                        checkColor = GetColor(_baseColor, 0, -35, -24, -9);
-                        hover = true;
+                        image = Checked ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
                         break;
                     default:
-                        borderColor = _baseColor;
-                        innerBorderColor = Color.Empty;
-                        checkColor = _baseColor;
+                        image = Checked ? ESkin.Properties.Resources._16x16勾选 : ESkin.Properties.Resources._16x16_没勾选;
                         break;
                 }
             }
-            else
-            {
-                borderColor = SystemColors.ControlDark;
-                innerBorderColor = SystemColors.ControlDark;
-                checkColor = SystemColors.ControlDark;
-            }
-
-            using (SolidBrush brush = new SolidBrush(Color.White))
-            {
-                g.FillRectangle(brush, checkButtonRect);
-            }
-
-            if (hover)
-            {
-                using (Pen pen = new Pen(innerBorderColor, 2F))
-                {
-                    g.DrawRectangle(pen, checkButtonRect);
-                }
-            }
-
-            switch (CheckState)
-            {
-                case CheckState.Checked:
-                    DrawCheckedFlag(
-                        g,
-                        checkButtonRect,
-                        checkColor);
-                    break;
-                case CheckState.Indeterminate:
-                    checkButtonRect.Inflate(-1, -1);
-                    using (GraphicsPath path = new GraphicsPath())
-                    {
-                        path.AddEllipse(checkButtonRect);
-                        using (PathGradientBrush brush = new PathGradientBrush(path))
-                        {
-                            brush.CenterColor = checkColor;
-                            brush.SurroundColors = new Color[] { Color.White };
-                            Blend blend = new Blend();
-                            blend.Positions = new float[] { 0f, 0.4f, 1f };
-                            blend.Factors = new float[] { 0f, 0.3f, 1f };
-                            brush.Blend = blend;
-                            g.FillEllipse(brush, checkButtonRect);
-                        }
-                    }
-                    checkButtonRect.Inflate(1, 1);
-                    break;
-            }
-
-            using (Pen pen = new Pen(borderColor))
-            {
-                g.DrawRectangle(pen, checkButtonRect);
-            }
-
+            DrawCheckedFlag(g, checkButtonRect, image);
             Color textColor = Enabled ? ForeColor : SystemColors.GrayText;
             TextRenderer.DrawText(
                 g,
@@ -328,24 +262,10 @@ namespace System.Windows.Forms
             }
         }
 
-        private void DrawCheckedFlag(Graphics graphics, Rectangle rect, Color color)
+        private void DrawCheckedFlag(Graphics graphics, Rectangle rect, Image image)
         {
-            PointF[] points = new PointF[3];
-            points[0] = new PointF(
-                rect.X + rect.Width / 4.5f,
-                rect.Y + rect.Height / 2.5f);
-            points[1] = new PointF(
-                rect.X + rect.Width / 2.5f,
-                rect.Bottom - rect.Height / 3f);
-            points[2] = new PointF(
-                rect.Right - rect.Width / 4.0f,
-                rect.Y + rect.Height / 4.5f);
-            using (Pen pen = new Pen(color, 2F))
-            {
-                graphics.DrawLines(pen, points);
-            }
+            graphics.DrawImage(image, rect);
         }
-
         private Color GetColor(Color colorBase, int a, int r, int g, int b)
         {
             int a0 = colorBase.A;

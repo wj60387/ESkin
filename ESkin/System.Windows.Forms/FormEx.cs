@@ -12,214 +12,250 @@ namespace System.Windows.Forms
 {
     public class FormEx : Form, IDisposable
     {
+        private ToolTip toolTip1;
         private ButtonEx btnClose;
         private ButtonEx btnMin;
         private ButtonEx btnMax;
-        private ToolTip toolTip1;      //鼠标的按下位置
+        private bool isMouseDown = false;
+        private Point FormLocation;     //form的location
+        private Point mouseOffset;      //鼠标的按下位置
         private System.ComponentModel.IContainer components = null;
         public FormEx()
         {
-            InitializeComponent();
+           // InitializeComponent();
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.SuspendLayout();
             this.components = new System.ComponentModel.Container();
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+           // this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
+            this.ClientSize = new System.Drawing.Size(427, 247);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ESkinForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "打开指标文档所在目录";
             this.ResumeLayout(false);
-            this.SetStyle(ControlStyles.UserPaint, true);//自绘
-            this.SetStyle(ControlStyles.DoubleBuffer, true);// 双缓冲
-            this.SetStyle(ControlStyles.ResizeRedraw, true);//调整大小时重绘
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true); // 禁止擦除背景.
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);// 双缓冲
-            //this.SetStyle(ControlStyles.Opaque, true);//如果为真，控件将绘制为不透明，不绘制背景
-            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);   //透明效果
-        }
-        protected override void OnMouseClick(MouseEventArgs e)
-        {
-            
-            //base.OnMouseClick(e);
-        }
-        
-        public override Rectangle DisplayRectangle
-        {
-            get
-            {
+            base.SetStyle(
+                    ControlStyles.UserPaint |                      // 控件将自行绘制，而不是通过操作系统来绘制
+                    ControlStyles.OptimizedDoubleBuffer |          // 该控件首先在缓冲区中绘制，而不是直接绘制到屏幕上，这样可以减少闪烁
+                    ControlStyles.AllPaintingInWmPaint |           // 控件将忽略 WM_ERASEBKGND 窗口消息以减少闪烁
+                    ControlStyles.ResizeRedraw |                   // 在调整控件大小时重绘控件
+                    ControlStyles.SupportsTransparentBackColor,    // 控件接受 alpha 组件小于 255 的 BackColor 以模拟透明
+                    true);                                         // 设置以上值为 true
+            base.UpdateStyles();
+            //SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            //SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            //SetStyle(ControlStyles.UserPaint, true);
+            //SetStyle(ControlStyles.DoubleBuffer, true);
+            //base.UpdateStyles();
+            //this.btnClose.Location = new System.Drawing.Point(this.Width - 9 - btnClose.Width, 9);
+            //this.btnMax.Location = new System.Drawing.Point(this.Width - 9 - btnMax.Width - btnClose.Width, 9);
+            //this.btnMin.Location = new System.Drawing.Point(this.Width - 9 - btnMax.Width - btnClose.Width-btnMin.Width, 9);
 
-                Rectangle rect = base.DisplayRectangle;
-                return new Rectangle(rect.Left - 8, rect.Top - 4, rect.Width + 8, rect.Height + 7);
-            }
         }
-         
+
+        const int HTLEFT = 10;
+        const int HTRIGHT = 11;
+        const int HTTOP = 12;
+        const int HTTOPLEFT = 13;
+        const int HTTOPRIGHT = 14;
+        const int HTBOTTOM = 15;
+        const int HTBOTTOMLEFT = 0x10;
+        const int HTBOTTOMRIGHT = 17;
         protected override void WndProc(ref Message m)
         {
-            try
-            {
 
-                switch (m.Msg)
-                {
-                    //禁止双击标题栏关闭窗体
-                    case 0xF063:
-                    case 0xF093:
-                        m.WParam = IntPtr.Zero;
-                        break;
-                    //禁止拖拽标题栏还原窗体
-                    case 0xF012:
-                    case 0xF010:
-                        m.WParam = IntPtr.Zero;
-                        break;
-                    //禁止双击标题栏
-                    case 0xf122:
-                        m.WParam = IntPtr.Zero;
-                        break;
-                    //禁止最大化按钮
-                    case 0xf020:
-                        m.WParam = IntPtr.Zero;
-                        return;
-                    //禁止最小化按钮
-                    case 0xf030:
-                        m.WParam = IntPtr.Zero;
-                        return;
-                    //用户选择最大化按钮，最小化按钮，复原按钮或关闭按钮时，窗口将会接收该消息
-                    case Win32.WM_SYSCOMMAND:
-                        #region
-                        if ((m.WParam != (IntPtr)Win32.SC_MAXIMIZE) && (m.WParam.ToInt32() != 0xf032))
-                        {
-                            if ((m.WParam == (IntPtr)Win32.SC_RESTORE) || (m.WParam.ToInt32() == 0xf122))
-                            {
-                                base.Size = this.oldSize;
-                            }
-                            else if ((m.WParam == (IntPtr)Win32.SC_MINIMIZE) || (m.WParam.ToInt32() == 0xf022))
-                            {
-                                if (this.oldSize.Width == 0)
-                                {
-                                    this.oldSize = base.Size;
-                                }
-                            }
-                            break;
-                        }
-                        this.oldSize = base.Size;
-                        #endregion
-                        break;
-                    //在需要计算窗口客户区的大小和位置时发送。通过处理这个消息，应用程序可以在窗口大小或位置改变时控制客户区的内容
-                    case Win32.WM_NCCALCSIZE:
-                    //窗体客户区以外的重绘消息,一般是由系统负责处理
-                    case Win32.WM_NCPAINT:
-                        return;
-                    //鼠标移动,按下或释放都会执行该消息
-                    case Win32.WM_NCHITTEST:
-                        WM_NCHITTEST(ref m);
-                        return;
-                    //画窗体被激活或者没有被激活时的样子//http://blog.csdn.net/commandos/archive/2007/11/27/1904558.aspx
-                    case Win32.WM_NCACTIVATE:
-                        #region
-                        if (m.WParam == (IntPtr)Win32.WM_FALSE)
-                        {
-                            m.Result = (IntPtr)Win32.WM_TRUE;
-                        }
-                        #endregion
-                        return;
-                    default:
-                        base.WndProc(ref m);
-                        return;
-                }
-                base.WndProc(ref m);
+            switch (m.Msg)
+            {
+                case 0x0084:
+                    base.WndProc(ref m);
+                    Point vPoint = new Point((int)m.LParam & 0xFFFF,
+                        (int)m.LParam >> 16 & 0xFFFF);
+                    vPoint = PointToClient(vPoint);
+                    if (vPoint.X <= 5)
+                        if (vPoint.Y <= 5)
+                            m.Result = (IntPtr)HTTOPLEFT;
+                        else if (vPoint.Y >= ClientSize.Height - 5)
+                            m.Result = (IntPtr)HTBOTTOMLEFT;
+                        else m.Result = (IntPtr)HTLEFT;
+                    else if (vPoint.X >= ClientSize.Width - 5)
+                        if (vPoint.Y <= 5)
+                            m.Result = (IntPtr)HTTOPRIGHT;
+                        else if (vPoint.Y >= ClientSize.Height - 5)
+                            m.Result = (IntPtr)HTBOTTOMRIGHT;
+                        else m.Result = (IntPtr)HTRIGHT;
+                    else if (vPoint.Y <= 5)
+                        m.Result = (IntPtr)HTTOP;
+                    else if (vPoint.Y >= ClientSize.Height - 5)
+                        m.Result = (IntPtr)HTBOTTOM;
+                    break;
+                case 0x0201://鼠标左键按下的消息 
+                    base.WndProc(ref m);
+                    m.Msg = 0x00A1;//更改消息为非客户区按下鼠标 
+                    m.LParam = IntPtr.Zero;//默认值 
+                    m.WParam = new IntPtr(2);//鼠标放在标题栏内 
+                    break;
+                default:
+                    base.WndProc(ref m);
+                    break;
             }
-            catch { }
+        }
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            this.Invalidate();
+        }
+        //Size IconSize = new Size(12, 12);
+        //Rectangle rectColse
+        //{
+        //    get
+        //    {
+        //        return new Rectangle(this.ClientSize.Width - IconSize.Width - 6, 6, IconSize.Width, IconSize.Height);
+        //    }
+        //}
+        //Rectangle rectMax
+        //{
+        //    get
+        //    {
+        //        return new Rectangle(this.ClientSize.Width - 2 * IconSize.Width - 6 - 5, 6, IconSize.Width, IconSize.Height);
+        //    }
+        //}
+        //Rectangle rectMin
+        //{
+        //    get
+        //    {
+        //        return new Rectangle(this.ClientSize.Width - 3 * IconSize.Width - 6 - 10, 6, IconSize.Width, IconSize.Height);
+        //    }
+        //}
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            var point = PointToScreen(MousePosition);
+            this.MaximumSize = Screen.FromPoint(point).WorkingArea.Size;
+            base.OnMouseDown(e);
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = true;
+                FormLocation = this.Location;
+                mouseOffset = Control.MousePosition;
+            }
 
         }
-        private Size oldSize;
-        protected override void OnResizeEnd(EventArgs e)
+        
+        protected override void OnMouseLeave(EventArgs e)
         {
-            
-            base.OnResizeEnd(e);
-            this.oldSize = base.Size;
-        } 
-        private bool _IsResize = true;
-        public bool IsResize
-        {
-            get { return this._IsResize; }
-            set { _IsResize = value; }
+            base.OnMouseLeave(e);
         }
-        private void WM_NCHITTEST(ref Message m)
+         
+#if !DEBUG
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        CreateParams cp = base.CreateParams;
+        //        cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+        //        return cp;
+        //    }
+        //} 
+#endif
+        protected override void OnMouseMove(MouseEventArgs e)
         {
-            int wparam = m.LParam.ToInt32();
-            Point point = new Point(Win32.LOWORD(wparam), Win32.HIWORD(wparam));
-            point = PointToClient(point);
-            if (_IsResize)
+            base.OnMouseMove(e);
+            int _x = 0;
+            int _y = 0;
+            if (isMouseDown)
             {
-                if (point.X <= 8)
-                {
-                    if (point.Y <= 8)
-                        m.Result = (IntPtr)Win32.HTTOPLEFT;
-                    else if (point.Y > Height - 8)
-                        m.Result = (IntPtr)Win32.HTBOTTOMLEFT;
-                    else
-                        m.Result = (IntPtr)Win32.HTLEFT;
-                }
-                else if (point.X >= Width - 8)
-                {
-                    if (point.Y <= 8)
-                        m.Result = (IntPtr)Win32.HTTOPRIGHT;
-                    else if (point.Y >= Height - 8)
-                        m.Result = (IntPtr)Win32.HTBOTTOMRIGHT;
-                    else
-                        m.Result = (IntPtr)Win32.HTRIGHT;
-                }
-                else if (point.Y <= 8)
-                {
-                    m.Result = (IntPtr)Win32.HTTOP;
-                }
-                else if (point.Y >= Height - 8)
-                    m.Result = (IntPtr)Win32.HTBOTTOM;
+                Point pt = Control.MousePosition;
+                _x = mouseOffset.X - pt.X;
+                _y = mouseOffset.Y - pt.Y;
+
+                this.Location = new Point(FormLocation.X - _x, FormLocation.Y - _y);
+            }
+            //if (rectColse.Contains(e.Location) || rectMax.Contains(e.Location) || rectMin.Contains(e.Location))
+            //{
+            //    this.Invalidate(rectColse);
+            //    this.Invalidate(rectMax);
+            //    this.Invalidate(rectMin);
+            //}
+        }
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
+            //var clientPoint = this.PointToClient(MousePosition);
+            //if (rectColse.Contains(clientPoint))
+            //{
+            //    this.Close();
+            //}
+            //if (rectMax.Contains(clientPoint))
+            //{
+            //    if (MaximizeBox)
+            //        if (this.WindowState != FormWindowState.Maximized)
+            //            this.WindowState = FormWindowState.Maximized;
+            //        else
+            //            this.WindowState = FormWindowState.Normal;
+            //}
+            //if (rectMin.Contains(clientPoint))
+            //{
+            //    if (MinimizeBox)
+            //        if (this.WindowState != FormWindowState.Minimized)
+            //            this.WindowState = FormWindowState.Minimized;
+            //        else
+            //            this.WindowState = FormWindowState.Normal;
+            //}
+        }
+        protected override void OnDoubleClick(EventArgs e)
+        {
+            base.OnDoubleClick(e);
+            if (MaximizeBox)
+                if (this.WindowState != FormWindowState.Maximized)
+                    this.WindowState = FormWindowState.Maximized;
                 else
-                    m.Result = (IntPtr)Win32.HTCAPTION;
+                    this.WindowState = FormWindowState.Normal;
+        }
+        protected override void OnMouseUp(MouseEventArgs e)
+        {
+            base.OnMouseUp(e);
+
+            if (e.Button == MouseButtons.Left)
+            {
+                isMouseDown = false;
             }
-            else
-            { m.Result = (IntPtr)Win32.HTCAPTION; }
+
+
         }
-       
-        protected override void OnInvalidated(InvalidateEventArgs e)
+        protected override void OnPaint(PaintEventArgs e)
         {
-            
-            SetReion();
-            base.OnInvalidated(e);
+
+            base.OnPaint(e);
+            var image = this.Icon.ToBitmap().GetThumbnailImage(18, 18, () => { return false; }, IntPtr.Zero);
+            if (ShowIcon)
+                e.Graphics.DrawImage(image, 1, 1);
+            //var clientPoint = this.PointToClient(MousePosition);
+            //if (rectColse.Contains(clientPoint) && ControlBox)
+            //{
+            //    // e.Graphics.DrawRectangle(new Pen(Color.DarkOrange), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width - 1, rectColse.Height - 1));
+            //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(203, 209, 216)), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width, rectColse.Height));
+            //}
+            //if (rectMax.Contains(clientPoint) && MaximizeBox)
+            //{
+            //    // e.Graphics.DrawRectangle(new Pen(Color.DarkOrange), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width - 1, rectColse.Height - 1));
+            //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 255, 255)), new Rectangle(rectMax.X, rectMax.Y, rectMax.Width, rectMax.Height));
+            //}
+            //if (rectMin.Contains(clientPoint) && MinimizeBox)
+            //{
+            //    // e.Graphics.DrawRectangle(new Pen(Color.DarkOrange), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width - 1, rectColse.Height - 1));
+            //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 255, 255)), new Rectangle(rectMin.X, rectMin.Y, rectMin.Width, rectMin.Height));
+            //}
+            //e.Graphics.DrawString(this.Text, Font, new SolidBrush(Color.Black), 2.5f + (ShowIcon ? image.Width : 0), 1.5f);
+            //if (ControlBox)
+            //    e.Graphics.DrawImage(ESkin.Properties.Resources.关闭按钮, rectColse);
+            //if (MaximizeBox)
+            //    e.Graphics.DrawImage(ESkin.Properties.Resources.还原按钮, rectMax);
+            //if (MinimizeBox)
+            //    e.Graphics.DrawImage(ESkin.Properties.Resources._16x1, rectMin,0, 0,ESkin.Properties.Resources._16x1.Width,ESkin.Properties.Resources._16x1.Height, GraphicsUnit.Pixel);
         }
-        public new bool ControlBox
-        {
-            get { return btnClose.Visible; }
-            set { this.btnClose.Visible = value; }
-        }
-        public new bool MinimizeBox
-        {
-            get { return btnMin.Visible; }
-            set { this.btnMin.Visible = value; }
-        }
-        public new bool MaximizeBox
-        {
-            get { return btnMax.Visible; }
-            set { this.btnMax.Visible = value; }
-        }
-        protected void SetReion()
-        {
-            var Rgn = Win32.CreateRoundRectRgn(5, 5, ClientRectangle.Width - 4, ClientRectangle.Height - 4, 0, 0);
-            Win32.SetWindowRgn(this.Handle, Rgn, true);
-        }
-   //     protected override void OnPaint(PaintEventArgs e)
-   //     {
-   //         try
-   //         {
-   //             e.Graphics.SmoothingMode = SmoothingMode.HighQuality; //高质量
-   //             e.Graphics.PixelOffsetMode = PixelOffsetMode.HighQuality; //高像素偏移质量
-   //             e.Graphics.DrawImage(this.BackgroundImage, this.ClientRectangle);
-                
-   //         }
-   //         catch
-   //         { }
-   //}
         
         /// <summary>
         /// 必需的设计器变量。
@@ -317,7 +353,12 @@ namespace System.Windows.Forms
 
         private void btnMax_Click(object sender, EventArgs e)
         {
-
+            if (MaximizeBox)
+                if (this.WindowState != FormWindowState.Maximized)
+                    this.WindowState = FormWindowState.Maximized;
+                else
+                    this.WindowState = FormWindowState.Normal;
+            this.Invalidate();
         }
 
         private void btnMin_Click(object sender, EventArgs e)

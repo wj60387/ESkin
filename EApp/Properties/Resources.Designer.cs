@@ -93,6 +93,36 @@ namespace EApp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 单选框未选中 {
+            get {
+                object obj = ResourceManager.GetObject("单选框未选中", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 单选框选中 {
+            get {
+                object obj = ResourceManager.GetObject("单选框选中", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 听诊器图片 {
+            get {
+                object obj = ResourceManager.GetObject("听诊器图片", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 听诊器配置 {
             get {
                 object obj = ResourceManager.GetObject("听诊器配置", resourceCulture);
@@ -133,6 +163,16 @@ namespace EApp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 听诊配置 {
+            get {
+                object obj = ResourceManager.GetObject("听诊配置", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 奔达听诊平台 {
             get {
                 object obj = ResourceManager.GetObject("奔达听诊平台", resourceCulture);
@@ -146,6 +186,16 @@ namespace EApp.Properties {
         internal static System.Drawing.Bitmap 密码图标 {
             get {
                 object obj = ResourceManager.GetObject("密码图标", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 导航栏 {
+            get {
+                object obj = ResourceManager.GetObject("导航栏", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +226,56 @@ namespace EApp.Properties {
         internal static System.Drawing.Bitmap 系统 {
             get {
                 object obj = ResourceManager.GetObject("系统", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 系统关于 {
+            get {
+                object obj = ResourceManager.GetObject("系统关于", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 系统按钮关闭 {
+            get {
+                object obj = ResourceManager.GetObject("系统按钮关闭", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 系统按钮最小化 {
+            get {
+                object obj = ResourceManager.GetObject("系统按钮最小化", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 系统按钮还原 {
+            get {
+                object obj = ResourceManager.GetObject("系统按钮还原", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 系统设置 {
+            get {
+                object obj = ResourceManager.GetObject("系统设置", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

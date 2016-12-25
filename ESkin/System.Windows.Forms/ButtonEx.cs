@@ -16,13 +16,14 @@ namespace  System.Windows.Forms
             this.FlatAppearance.MouseDownBackColor = Color.Transparent;
             this.FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
-        protected override void OnMouseMove(MouseEventArgs mevent)
+        protected override void OnMouseMove(MouseEventArgs e)
         {
-            base.OnMouseMove(mevent);
+            base.OnMouseMove(e);
         }
-        protected override void OnMouseDown(MouseEventArgs mevent)
+        protected override void OnMouseDown(MouseEventArgs e)
         {
-            base.OnMouseDown(mevent);
+            
+            base.OnMouseDown(e);
         }
     }
 }

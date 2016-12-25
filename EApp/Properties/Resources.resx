@@ -127,6 +127,15 @@
   <data name="关于" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\关于.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="单选框未选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\单选框未选中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="单选框选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\单选框选中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="听诊器图片" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊器图片.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="听诊器配置" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器配置.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,11 +148,17 @@
   <data name="听诊教学蓝色文字" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊教学蓝色文字.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="听诊配置" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊配置.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="奔达听诊平台" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\奔达听诊平台.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="密码图标" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\密码图标.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="导航栏" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航栏.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="导航栏200x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\导航栏200x1080.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,6 +168,21 @@
   </data>
   <data name="系统" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\系统.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统关于" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统关于.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统按钮关闭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统按钮关闭.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统按钮最小化" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统按钮最小化.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统按钮还原" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统按钮还原.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统设置" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统设置.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="背景" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\背景.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

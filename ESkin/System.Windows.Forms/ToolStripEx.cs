@@ -33,7 +33,17 @@ namespace System.Windows.Forms
             this.Text = "toolStripEx1";
             this.Renderer = new MyMenuRender();
             this.LayoutStyle = ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.SizeChanged += ToolStripEx_SizeChanged;
            // 232, 241, 249
+        }
+
+        void ToolStripEx_SizeChanged(object sender, EventArgs e)
+        {
+            this.ImageScalingSize = new System.Drawing.Size(this.Width/2 - 10 / 2, this.Width/2 - 10 / 2);
+            foreach (ToolStripItem item in this.Items)
+            {
+                item.Invalidate();
+            }
         }
         protected override void OnCreateControl()
         {

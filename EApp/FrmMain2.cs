@@ -14,7 +14,7 @@ namespace EApp
         public FrmMain2()
         {
             InitializeComponent();
-            tabControlEx1.ListImage.Add(EApp.Properties.Resources.听诊器配置);
+            tabControlEx1.ListImage.Add(EApp.Properties.Resources.听诊配置);
             tabControlEx1.ListImage.Add(EApp.Properties.Resources.听诊教学);
             tabControlEx1.ListImage.Add(EApp.Properties.Resources.听诊录音);
             tabControlEx1.ListImage.Add(EApp.Properties.Resources.云端听诊);
@@ -25,6 +25,11 @@ namespace EApp
         {
             FrmLogin2 login = new FrmLogin2();
             login.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
          

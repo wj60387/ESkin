@@ -55,6 +55,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin2.resx">
       <DependentUpon>FrmLogin2.cs</DependentUpon>
@@ -129,19 +138,7 @@
     <None Include="Resources\导航栏200x1080.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\听诊教学.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\听诊教学蓝色文字.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\听诊录音.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\听诊器配置.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\远程教学.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\关于.png" />
@@ -150,11 +147,23 @@
     <None Include="Resources\系统.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\云端听诊.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="readme.txt" />
     <Content Include="Resources\logo.png" />
+    <None Include="Resources\云端听诊.png" />
+    <None Include="Resources\远程教学.png" />
+    <None Include="Resources\系统设置.png" />
+    <None Include="Resources\系统关于.png" />
+    <None Include="Resources\系统按钮最小化.png" />
+    <None Include="Resources\系统按钮还原.png" />
+    <None Include="Resources\系统按钮关闭.png" />
+    <None Include="Resources\听诊器图片.png" />
+    <None Include="Resources\听诊器配置.png" />
+    <None Include="Resources\听诊配置.png" />
+    <None Include="Resources\听诊录音.png" />
+    <None Include="Resources\听诊教学.png" />
+    <None Include="Resources\导航栏.png" />
+    <None Include="Resources\单选框选中.png" />
+    <None Include="Resources\单选框未选中.png" />
     <None Include="Resources\账号图标.png" />
     <None Include="Resources\输入框账号.png" />
     <None Include="Resources\输入框密码.png" />
