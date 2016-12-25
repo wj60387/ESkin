@@ -151,6 +151,9 @@
   <data name="_4x549" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4x549.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="下拉箭头" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下拉箭头.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="关于" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\关于.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,6 +169,9 @@
   <data name="听诊器名称" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器名称.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="听诊器图片" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊器图片.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="听诊器序号" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器序号.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,17 +184,53 @@
   <data name="听诊器配置听诊" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器配置听诊.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="听诊小图标" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊小图标.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="听诊录音" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊录音.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="听诊教学" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊教学.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="听诊配置" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊配置.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="奔达听诊平台" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\奔达听诊平台.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="密码图标" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\密码图标.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="导航栏" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\导航栏.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="序号" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\序号.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="按钮右半椭圆" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\按钮右半椭圆.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="按钮左半椭圆" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\按钮左半椭圆.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="登入框登录200x40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\登入框登录200x40.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统关于" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统关于.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统按钮关闭" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统按钮关闭.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统按钮最小化" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统按钮最小化.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统按钮还原" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统按钮还原.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="系统设置" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\系统设置.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="背景" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\背景.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

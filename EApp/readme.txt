@@ -21,4 +21,7 @@ https://msdn.microsoft.com/zh-cn/library/system.windows.forms.toolstriplayoutsty
 http://www.cnblogs.com/yuanfan/archive/2010/12/03/1895878.html
 
 
+http://www.sufeinet.com/thread-2082-1-1.html
+
+
 

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace EApp
 {
-    public partial class Form3 : FormEx
+    public partial class FrmMain3 : FormEx
     {
-        public Form3()
+        public FrmMain3()
         {
             InitializeComponent();
         }

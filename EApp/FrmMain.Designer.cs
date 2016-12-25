@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.comboBoxEx1 = new System.Windows.Forms.ComboBoxEx();
+            this.btnClose = new System.Windows.Forms.ButtonEx();
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
             this.toolStripEx3 = new System.Windows.Forms.ToolStripEx();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -37,6 +39,39 @@
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripEx3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // comboBoxEx1
+            // 
+            this.comboBoxEx1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEx1.FormattingEnabled = true;
+            this.comboBoxEx1.ItemHeight = 22;
+            this.comboBoxEx1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C"});
+            this.comboBoxEx1.Location = new System.Drawing.Point(233, 155);
+            this.comboBoxEx1.Name = "comboBoxEx1";
+            this.comboBoxEx1.Size = new System.Drawing.Size(150, 28);
+            this.comboBoxEx1.TabIndex = 15;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::EApp.Properties.Resources.系统按钮关闭;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(744, 9);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(12, 12);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // buttonEx2
             // 
@@ -140,7 +175,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(756, 515);
+            this.ClientSize = new System.Drawing.Size(767, 515);
+            this.Controls.Add(this.comboBoxEx1);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.buttonEx2);
             this.Controls.Add(this.toolStripEx3);
             this.MaximumSize = new System.Drawing.Size(1366, 728);
@@ -162,6 +199,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ButtonEx buttonEx2;
+        private System.Windows.Forms.ButtonEx btnClose;
+        private System.Windows.Forms.ComboBoxEx comboBoxEx1;
 
 
 

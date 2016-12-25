@@ -31,15 +31,15 @@
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.tabControlEx1 = new System.Windows.Forms.TabControlEx();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBoxEx1 = new System.Windows.Forms.CheckBoxEx();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBoxEx2 = new System.Windows.Forms.CheckBoxEx();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.checkBoxEx3 = new System.Windows.Forms.CheckBoxEx();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.checkBoxEx4 = new System.Windows.Forms.CheckBoxEx();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.checkBoxEx1 = new System.Windows.Forms.CheckBoxEx();
-            this.checkBoxEx2 = new System.Windows.Forms.CheckBoxEx();
-            this.checkBoxEx3 = new System.Windows.Forms.CheckBoxEx();
-            this.checkBoxEx4 = new System.Windows.Forms.CheckBoxEx();
             this.tabControlEx1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,9 +78,12 @@
             this.tabControlEx1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControlEx1.ItemSize = new System.Drawing.Size(98, 88);
             this.tabControlEx1.Location = new System.Drawing.Point(0, 28);
+            this.tabControlEx1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControlEx1.Multiline = true;
             this.tabControlEx1.Name = "tabControlEx1";
+            this.tabControlEx1.Padding = new System.Drawing.Point(0, 0);
             this.tabControlEx1.SelectedIndex = 0;
+            this.tabControlEx1.ShowToolTips = true;
             this.tabControlEx1.Size = new System.Drawing.Size(732, 521);
             this.tabControlEx1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlEx1.TabIndex = 0;
@@ -97,6 +100,20 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "听诊器配置";
             // 
+            // checkBoxEx1
+            // 
+            this.checkBoxEx1.AutoSize = true;
+            this.checkBoxEx1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checkBoxEx1.Checked = true;
+            this.checkBoxEx1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEx1.ForeColor = System.Drawing.Color.Red;
+            this.checkBoxEx1.Location = new System.Drawing.Point(128, 64);
+            this.checkBoxEx1.Name = "checkBoxEx1";
+            this.checkBoxEx1.Size = new System.Drawing.Size(84, 24);
+            this.checkBoxEx1.TabIndex = 0;
+            this.checkBoxEx1.Text = "听诊配置";
+            this.checkBoxEx1.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.checkBoxEx2);
@@ -108,6 +125,20 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "听诊教学";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEx2
+            // 
+            this.checkBoxEx2.AutoSize = true;
+            this.checkBoxEx2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checkBoxEx2.Checked = true;
+            this.checkBoxEx2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEx2.ForeColor = System.Drawing.Color.Yellow;
+            this.checkBoxEx2.Location = new System.Drawing.Point(115, 93);
+            this.checkBoxEx2.Name = "checkBoxEx2";
+            this.checkBoxEx2.Size = new System.Drawing.Size(84, 24);
+            this.checkBoxEx2.TabIndex = 1;
+            this.checkBoxEx2.Text = "听诊配置";
+            this.checkBoxEx2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -121,6 +152,20 @@
             this.tabPage3.Text = "听诊录音";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // checkBoxEx3
+            // 
+            this.checkBoxEx3.AutoSize = true;
+            this.checkBoxEx3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checkBoxEx3.Checked = true;
+            this.checkBoxEx3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEx3.ForeColor = System.Drawing.Color.Navy;
+            this.checkBoxEx3.Location = new System.Drawing.Point(158, 138);
+            this.checkBoxEx3.Name = "checkBoxEx3";
+            this.checkBoxEx3.Size = new System.Drawing.Size(84, 24);
+            this.checkBoxEx3.TabIndex = 1;
+            this.checkBoxEx3.Text = "听诊配置";
+            this.checkBoxEx3.UseVisualStyleBackColor = true;
+            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.checkBoxEx4);
@@ -132,6 +177,20 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "云端听诊";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEx4
+            // 
+            this.checkBoxEx4.AutoSize = true;
+            this.checkBoxEx4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.checkBoxEx4.Checked = true;
+            this.checkBoxEx4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEx4.ForeColor = System.Drawing.Color.Lime;
+            this.checkBoxEx4.Location = new System.Drawing.Point(117, 135);
+            this.checkBoxEx4.Name = "checkBoxEx4";
+            this.checkBoxEx4.Size = new System.Drawing.Size(84, 24);
+            this.checkBoxEx4.TabIndex = 1;
+            this.checkBoxEx4.Text = "听诊配置";
+            this.checkBoxEx4.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
@@ -153,62 +212,6 @@
             this.button3.TabIndex = 0;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEx1
-            // 
-            this.checkBoxEx1.AutoSize = true;
-            this.checkBoxEx1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.checkBoxEx1.Checked = true;
-            this.checkBoxEx1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEx1.ForeColor = System.Drawing.Color.Red;
-            this.checkBoxEx1.Location = new System.Drawing.Point(128, 64);
-            this.checkBoxEx1.Name = "checkBoxEx1";
-            this.checkBoxEx1.Size = new System.Drawing.Size(84, 24);
-            this.checkBoxEx1.TabIndex = 0;
-            this.checkBoxEx1.Text = "听诊配置";
-            this.checkBoxEx1.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEx2
-            // 
-            this.checkBoxEx2.AutoSize = true;
-            this.checkBoxEx2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.checkBoxEx2.Checked = true;
-            this.checkBoxEx2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEx2.ForeColor = System.Drawing.Color.Yellow;
-            this.checkBoxEx2.Location = new System.Drawing.Point(115, 93);
-            this.checkBoxEx2.Name = "checkBoxEx2";
-            this.checkBoxEx2.Size = new System.Drawing.Size(84, 24);
-            this.checkBoxEx2.TabIndex = 1;
-            this.checkBoxEx2.Text = "听诊配置";
-            this.checkBoxEx2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEx3
-            // 
-            this.checkBoxEx3.AutoSize = true;
-            this.checkBoxEx3.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.checkBoxEx3.Checked = true;
-            this.checkBoxEx3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEx3.ForeColor = System.Drawing.Color.Navy;
-            this.checkBoxEx3.Location = new System.Drawing.Point(158, 138);
-            this.checkBoxEx3.Name = "checkBoxEx3";
-            this.checkBoxEx3.Size = new System.Drawing.Size(84, 24);
-            this.checkBoxEx3.TabIndex = 1;
-            this.checkBoxEx3.Text = "听诊配置";
-            this.checkBoxEx3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEx4
-            // 
-            this.checkBoxEx4.AutoSize = true;
-            this.checkBoxEx4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.checkBoxEx4.Checked = true;
-            this.checkBoxEx4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEx4.ForeColor = System.Drawing.Color.Lime;
-            this.checkBoxEx4.Location = new System.Drawing.Point(117, 135);
-            this.checkBoxEx4.Name = "checkBoxEx4";
-            this.checkBoxEx4.Size = new System.Drawing.Size(84, 24);
-            this.checkBoxEx4.TabIndex = 1;
-            this.checkBoxEx4.Text = "听诊配置";
-            this.checkBoxEx4.UseVisualStyleBackColor = true;
             // 
             // FrmMain2
             // 

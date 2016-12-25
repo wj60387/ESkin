@@ -55,6 +55,9 @@
     <Compile Include="System.Windows.Forms\CheckBoxEx.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="System.Windows.Forms\ComboBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="System.Windows.Forms\DataGridViewEx.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -197,6 +200,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\听诊器配置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮右半椭圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\按钮左半椭圆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导航栏.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊教学.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊录音.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊配置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊器图片.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊小图标.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统按钮关闭.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统按钮还原.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统按钮最小化.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统关于.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下拉箭头.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

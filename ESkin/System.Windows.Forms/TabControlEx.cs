@@ -19,15 +19,22 @@ namespace System.Windows.Forms
      ControlStyles.SupportsTransparentBackColor,    // 控件接受 alpha 组件小于 255 的 BackColor 以模拟透明  
      true);                                         // 设置以上值为 true  
             base.UpdateStyles();
-            this.SizeMode = TabSizeMode.Normal;  // 大小模式为固定  
+            this.SizeMode = TabSizeMode.Fixed;  // 大小模式为固定  
             this.ItemSize = new Size(120, 100);   // 设定每个标签的尺寸 
             this.DrawMode = TabDrawMode.OwnerDrawFixed;
+
+            
         }
+
+        
         Point mPoint = Point.Empty;
+
+
+        int EmptyLen = 100;
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
-            //e = new MouseEventArgs(e.Button, e.Clicks, e.X, e.Y + 66, e.Delta);
+           // e = new MouseEventArgs(e.Button, e.Clicks, e.X, e.Y + EmptyLen, e.Delta);
             mPoint = e.Location;
             //this.Invalidate(new Rectangle(0, 0, ItemSize.Width, this.Height));
             this.Invalidate();
@@ -35,7 +42,7 @@ namespace System.Windows.Forms
          
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            //e = new MouseEventArgs(e.Button, e.Clicks, e.X, e.Y - 66, e.Delta);
+           // e = new MouseEventArgs(e.Button, e.Clicks, e.X, e.Y - EmptyLen, e.Delta);
             mPoint = e.Location;
             base.OnMouseDown(e);
         }
@@ -52,11 +59,9 @@ namespace System.Windows.Forms
                 return new Rectangle(rect.Left - 4, rect.Top - 4, rect.Width + 6, rect.Height + 6);
             }
         }
-        protected override void OnDrawItem(DrawItemEventArgs e)
+        protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
         {
-            base.OnDrawItem(e);
-            e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, e.Bounds, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
-
+            base.SetBoundsCore(x, y, width, height, specified);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -82,7 +87,6 @@ namespace System.Windows.Forms
                 // （略）  
                 // Calculate text position  
                 Rectangle bounds = this.GetTabRect(i);
-                //bounds.Y += 66;
                 PointF textPoint = new PointF();
                 
                 if (bounds.Contains(mPoint))
@@ -94,8 +98,8 @@ namespace System.Windows.Forms
                 }
                 if (this.SelectedIndex == i)
                 {
-                    var rect = new Rectangle(bounds.X - 2, bounds.Y - 1 , bounds.Width, bounds.Height);
-                    var _rect = new Rectangle(bounds.X - 2 + bounds.Width - 10, bounds.Y - 1 , 10, bounds.Height);
+                    var rect = new Rectangle(bounds.X - 2, bounds.Y - 1, bounds.Width, bounds.Height);
+                    var _rect = new Rectangle(bounds.X - 2 + bounds.Width - 10, bounds.Y - 1, 10, bounds.Height);
                     e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), rect);
                     e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), _rect);
                 }
@@ -126,7 +130,7 @@ namespace System.Windows.Forms
                         );
                 // e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
             }
-            // e.Graphics.DrawString(getString(mPoint), new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            e.Graphics.DrawString(getString(mPoint), new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 500, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
 
         }
     }
