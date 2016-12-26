@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.comboBoxEx1 = new System.Windows.Forms.ComboBoxEx();
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
@@ -42,17 +43,22 @@
             // 
             // comboBoxEx1
             // 
-            this.comboBoxEx1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.comboBoxEx1.BackColor = System.Drawing.Color.Transparent;
             this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx1.DropDownHeight = 100;
             this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEx1.DwonImage = ((System.Drawing.Image)(resources.GetObject("comboBoxEx1.DwonImage")));
             this.comboBoxEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBoxEx1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.comboBoxEx1.FormattingEnabled = true;
+            this.comboBoxEx1.IntegralHeight = false;
             this.comboBoxEx1.ItemHeight = 22;
             this.comboBoxEx1.Items.AddRange(new object[] {
             "A",
             "B",
             "C"});
-            this.comboBoxEx1.Location = new System.Drawing.Point(233, 155);
+            this.comboBoxEx1.Location = new System.Drawing.Point(241, 140);
             this.comboBoxEx1.Name = "comboBoxEx1";
             this.comboBoxEx1.Size = new System.Drawing.Size(150, 28);
             this.comboBoxEx1.TabIndex = 15;

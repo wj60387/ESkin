@@ -79,16 +79,13 @@ namespace System.Windows.Forms
             // e.Graphics.DrawRectangle(Pens.Red, new Rectangle(0, 0, ItemSize.Width, this.Height));
             for (int i = 0; i < this.TabCount; i++)
             {
-
                 //e.Graphics.DrawRectangle(Pens.Red, this.GetTabRect(i));
-
                 this.TabPages[i].BorderStyle = BorderStyle.None;
-
                 // （略）  
                 // Calculate text position  
                 Rectangle bounds = this.GetTabRect(i);
                 PointF textPoint = new PointF();
-                
+               // bounds.Y += EmptyLen;
                 if (bounds.Contains(mPoint))
                 {
                     var rect = new Rectangle(bounds.X - 2, bounds.Y - 1, bounds.Width, bounds.Height);
@@ -128,9 +125,9 @@ namespace System.Windows.Forms
                         , bounds.Width / 2
                         , bounds.Height / 2 - textSize.Height / 2
                         );
-                // e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
             }
-            e.Graphics.DrawString(getString(mPoint), new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 500, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            // e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 0, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            //e.Graphics.DrawString(getString(mPoint), new Font("微软雅黑", 16f, FontStyle.Bold), Brushes.Black, new RectangleF(0, 500, ItemSize.Width, ItemSize.Height), new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
 
         }
     }
