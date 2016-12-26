@@ -74,13 +74,18 @@ namespace System.Windows.Forms
                     e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(40, 147, 202)), new Rectangle(0, 0, ItemSize.Height, this.Width));
                     break;
             }
-
             e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(40, 147, 202)), new Rectangle(0, 0, ItemSize.Width, this.Height));
             // e.Graphics.DrawRectangle(Pens.Red, new Rectangle(0, 0, ItemSize.Width, this.Height));
             for (int i = 0; i < this.TabCount; i++)
             {
                 //e.Graphics.DrawRectangle(Pens.Red, this.GetTabRect(i));
-                this.TabPages[i].BorderStyle = BorderStyle.None;
+                 this.TabPages[i].BorderStyle = BorderStyle.None;
+
+                 this.TabPages[i].Bounds = new Rectangle(88, 88, 600, 600);
+                //this.TabPages[i].SetBounds(0, 0, 100,100, BoundsSpecified.Y);
+
+
+
                 // （略）  
                 // Calculate text position  
                 Rectangle bounds = this.GetTabRect(i);

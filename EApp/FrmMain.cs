@@ -19,24 +19,24 @@ namespace EApp
 
         void FrmMain_Load(object sender, EventArgs e)
         {
-            CalendarColumn col = new CalendarColumn();
-            this.dataGridView1.Columns.Add(col);
-            this.dataGridView1.RowCount = 5;
+           //System.Windows.Forms.CheckBoxExColumn col = new System.Windows.Forms.CheckBoxExColumn();
+            //this.dataGridViewEx1.Columns.Add("C1","C2");
+             this.dataGridView1.RowCount = 5;
 
-            System.Windows.Forms.CheckBoxEx ckBox = new System.Windows.Forms.CheckBoxEx();
-            ckBox.Text = "全选";
-            ckBox.Checked = true;
-            System.Drawing.Rectangle rect =
-                dataGridView1.GetCellDisplayRectangle(0, -1, true);
-            ckBox.Size = new System.Drawing.Size(dataGridView1.Columns[0].Width, 18);
-            ckBox.Location = rect.Location;
-            dataGridView1.Controls.Add(ckBox);
+            //System.Windows.Forms.CheckBoxEx ckBox = new System.Windows.Forms.CheckBoxEx();
+            //ckBox.Text = "全选";
+            //ckBox.Checked = true;
+            //System.Drawing.Rectangle rect =
+            //    dataGridViewEx1.GetCellDisplayRectangle(0, -1, true);
+            //ckBox.Size = new System.Drawing.Size(dataGridViewEx1.Columns[0].Width, 18);
+            //ckBox.Location = rect.Location;
+            //dataGridViewEx1.Controls.Add(ckBox);
 
 
-            
+
             foreach (DataGridViewRow row in this.dataGridView1.Rows)
             {
-                row.Cells[0].Value = DateTime.Now;
+                row.Cells[0].Value = row.Index%2==0 ;
             }
         }
 

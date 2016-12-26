@@ -1,41 +1,4 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Drawing;
-//using System.Linq;
-//using System.Text;
-//using System.Windows.Forms;
-
-//namespace System.Windows.Forms
-//{
-//    public class CheckBoxEx : Control
-//    {
-
-//        private bool check = false;
-//        public bool Check
-//        {
-//            get
-//            {
-//                return check;
-
-//            }
-//            set
-//            {
-//                check = value;
-//            }
-//        }
-
-//        public CheckBoxEx()
-//        {
-            
-//        }
-//        protected override void OnCreateControl()
-//        {
-//            base.OnCreateControl();
-//        }
-//    }
-//}
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;

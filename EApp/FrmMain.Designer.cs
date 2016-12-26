@@ -39,7 +39,10 @@
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
+            this.checkBoxEx1 = new System.Windows.Forms.CheckBoxEx();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxTextColumn();
             this.toolStripEx3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -108,7 +111,7 @@
             this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonEx2.Image = global::EApp.Properties.Resources.听诊器图片;
-            this.buttonEx2.Location = new System.Drawing.Point(148, 29);
+            this.buttonEx2.Location = new System.Drawing.Point(115, 12);
             this.buttonEx2.Name = "buttonEx2";
             this.buttonEx2.Size = new System.Drawing.Size(224, 63);
             this.buttonEx2.TabIndex = 13;
@@ -194,13 +197,47 @@
             this.toolStripButton5.Text = "EEE";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // radioButtonEx1
+            // 
+            this.radioButtonEx1.AutoSize = true;
+            this.radioButtonEx1.Checked = true;
+            this.radioButtonEx1.Location = new System.Drawing.Point(357, 213);
+            this.radioButtonEx1.Name = "radioButtonEx1";
+            this.radioButtonEx1.Size = new System.Drawing.Size(107, 16);
+            this.radioButtonEx1.TabIndex = 32;
+            this.radioButtonEx1.TabStop = true;
+            this.radioButtonEx1.Text = "radioButtonEx1";
+            this.radioButtonEx1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxEx1
+            // 
+            this.checkBoxEx1.AutoSize = true;
+            this.checkBoxEx1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(161)))), ((int)(((byte)(224)))));
+            this.checkBoxEx1.Checked = true;
+            this.checkBoxEx1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEx1.Location = new System.Drawing.Point(249, 146);
+            this.checkBoxEx1.Name = "checkBoxEx1";
+            this.checkBoxEx1.Size = new System.Drawing.Size(90, 16);
+            this.checkBoxEx1.TabIndex = 33;
+            this.checkBoxEx1.Text = "checkBoxEx1";
+            this.checkBoxEx1.UseVisualStyleBackColor = true;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(265, 195);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.dataGridView1.Location = new System.Drawing.Point(344, 271);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 31;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(178, 150);
+            this.dataGridView1.TabIndex = 34;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.Text = null;
             // 
             // FrmMain
             // 
@@ -209,6 +246,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(767, 515);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.checkBoxEx1);
+            this.Controls.Add(this.radioButtonEx1);
             this.Controls.Add(this.buttonEx1);
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.btnClose);
@@ -222,6 +261,7 @@
             this.toolStripEx3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -237,7 +277,10 @@
         private System.Windows.Forms.ButtonEx btnClose;
         private System.Windows.Forms.ComboBoxEx comboBoxEx1;
         private System.Windows.Forms.ButtonEx buttonEx1;
+        private System.Windows.Forms.RadioButtonEx radioButtonEx1;
+        private System.Windows.Forms.CheckBoxEx checkBoxEx1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewCheckBoxTextColumn Column1;
 
 
 

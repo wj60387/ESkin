@@ -50,14 +50,14 @@
             // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImage = global::EApp.Properties.Resources.系统按钮关闭;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(708, 10);
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Location = new System.Drawing.Point(757, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(12, 12);
             this.btnClose.TabIndex = 1;
@@ -76,15 +76,15 @@
             this.tabControlEx1.Controls.Add(this.tabPage5);
             this.tabControlEx1.Controls.Add(this.tabPage4);
             this.tabControlEx1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControlEx1.ItemSize = new System.Drawing.Size(98, 88);
-            this.tabControlEx1.Location = new System.Drawing.Point(0, 25);
+            this.tabControlEx1.ItemSize = new System.Drawing.Size(88, 88);
+            this.tabControlEx1.Location = new System.Drawing.Point(0, 0);
             this.tabControlEx1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControlEx1.Multiline = true;
             this.tabControlEx1.Name = "tabControlEx1";
             this.tabControlEx1.Padding = new System.Drawing.Point(0, 0);
             this.tabControlEx1.SelectedIndex = 0;
             this.tabControlEx1.ShowToolTips = true;
-            this.tabControlEx1.Size = new System.Drawing.Size(733, 507);
+            this.tabControlEx1.Size = new System.Drawing.Size(655, 624);
             this.tabControlEx1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlEx1.TabIndex = 0;
             // 
@@ -94,8 +94,9 @@
             this.tabPage1.Controls.Add(this.checkBoxEx1);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage1.Location = new System.Drawing.Point(88, 0);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(643, 505);
+            this.tabPage1.Size = new System.Drawing.Size(565, 622);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "听诊器配置";
             // 
@@ -119,7 +120,7 @@
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage2.Location = new System.Drawing.Point(88, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(643, 505);
+            this.tabPage2.Size = new System.Drawing.Size(565, 433);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "听诊教学";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -144,7 +145,7 @@
             this.tabPage3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage3.Location = new System.Drawing.Point(88, 0);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(643, 505);
+            this.tabPage3.Size = new System.Drawing.Size(565, 622);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "听诊录音";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -169,7 +170,7 @@
             this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage5.Location = new System.Drawing.Point(88, 0);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(643, 505);
+            this.tabPage5.Size = new System.Drawing.Size(565, 433);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "云端听诊";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -192,17 +193,17 @@
             // 
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage4.Location = new System.Drawing.Point(88, 0);
+            this.tabPage4.Location = new System.Drawing.Point(176, 0);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(643, 505);
+            this.tabPage4.Size = new System.Drawing.Size(477, 433);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "远程教学";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(255, 362);
+            this.button3.Location = new System.Drawing.Point(260, 203);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 33);
             this.button3.TabIndex = 0;
@@ -211,10 +212,10 @@
             // 
             // FrmMain2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(732, 549);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(782, 549);
+            this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabControlEx1);
             this.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

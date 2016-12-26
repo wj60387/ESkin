@@ -1,18 +1,219 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms.VisualStyles;
 
 namespace  System.Windows.Forms
 {
-    public class DataGridViewEx : DataGridView
+
+    class DataGridViewCheckBoxTextControl : CheckBox, IDataGridViewEditingControl
     {
-    }
-    public class CalendarColumn : DataGridViewColumn
-    {
-        public CalendarColumn()
-            : base(new CalendarCell())
+        /// <summary>
+        /// 当前所在表格
+        /// </summary>
+        private DataGridView MyDataGridView { set; get; }
+        /// <summary>
+        /// 值是否发生更改
+        /// </summary>
+        private bool ValueChanged { set; get; }
+        /// <summary>
+        /// 当前所在行
+        /// </summary>
+        private int RowIndex { set; get; }
+
+        protected override void OnCheckedChanged(EventArgs e)
         {
+            ValueChanged = true;
+            this.EditingControlDataGridView.NotifyCurrentCellDirty(true);
+            base.OnCheckedChanged(e);
+        }
+
+        public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
+        {
+            Font = dataGridViewCellStyle.Font;
+            ForeColor = dataGridViewCellStyle.ForeColor;
+            BackColor = dataGridViewCellStyle.BackColor;
+        }
+
+        public DataGridView EditingControlDataGridView
+        {
+            get
+            {
+                return MyDataGridView;
+            }
+            set
+            {
+                MyDataGridView = value;
+            }
+        }
+
+        public object EditingControlFormattedValue
+        {
+            get
+            {
+                return GetEditingControlFormattedValue(DataGridViewDataErrorContexts.Formatting);
+            }
+            set
+            {
+                Checked = value == null ? false : (bool)value;
+            }
+        }
+
+        public int EditingControlRowIndex
+        {
+            get
+            {
+                return RowIndex;
+            }
+            set
+            {
+                RowIndex = value;
+            }
+        }
+
+        public bool EditingControlValueChanged
+        {
+            get
+            {
+                return ValueChanged;
+            }
+            set
+            {
+                ValueChanged = value;
+            }
+        }
+
+        public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
+        {
+            switch (keyData & Keys.KeyCode)
+            {
+                case Keys.LButton:
+                    return !dataGridViewWantsInputKey;
+            }
+            return !dataGridViewWantsInputKey;
+        }
+
+        public Cursor EditingPanelCursor
+        {
+            get { return Cursors.Default; }
+        }
+
+        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
+        {
+            return this.Checked;
+        }
+
+        public void PrepareEditingControlForEdit(bool selectAll)
+        {
+
+        }
+
+        public bool RepositionEditingControlOnValueChange
+        {
+            get { return false; }
+        }
+    }
+    public class DataGridViewCheckBoxTextCell : DataGridViewCell
+    {
+        public DataGridViewCheckBoxTextCell() : base() { }
+
+        private static Type defaultEditType = typeof(DataGridViewCheckBoxTextControl);
+        private static Type defaultValueType = typeof(System.Boolean);
+
+        public override Type EditType
+        {
+            get { return defaultEditType; }
+        }
+
+        /// <summary>
+        /// 单元格边框颜色
+        /// </summary>
+        private Color CellBorderColor { get { return Color.FromArgb(172, 168, 153); } }
+
+        protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
+        {
+            var check = (Boolean)value;
+            if (paintParts == DataGridViewPaintParts.Background || paintParts == DataGridViewPaintParts.All)
+            {
+                graphics.FillRectangle(new SolidBrush(cellStyle.BackColor), cellBounds);
+            }
+            if (paintParts == DataGridViewPaintParts.Border || paintParts == DataGridViewPaintParts.All)
+            {
+                graphics.DrawRectangle(new Pen(CellBorderColor), cellBounds);
+            }
+            if (paintParts == DataGridViewPaintParts.SelectionBackground || Selected)
+            {
+                graphics.FillRectangle(new SolidBrush(cellStyle.SelectionBackColor), cellBounds);
+            }
+            //var col = OwningColumn as DataGridViewCheckBoxTextColumn;
+            //if (col != null && !string.IsNullOrEmpty(col.Text))
+            //{
+                graphics.DrawString( check ?"TRUE":"FALSE", cellStyle.Font, new SolidBrush(Selected ?
+                    cellStyle.SelectionForeColor : cellStyle.ForeColor),
+                    new Point(cellBounds.X + 25, cellBounds.Y + cellBounds.Height / 4));
+            //}
+
+            
+
+            var image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
+            graphics.DrawImage(image, new Rectangle(cellBounds.Location,new Size(16,16)));
+            //CheckBoxRenderer.DrawCheckBox(graphics, new Point(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 4), CheckState);
+           // base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
+        }
+
+        /// <summary>
+        /// <summary>
+        /// 当前复选框的状态
+        /// </summary>
+        private CheckBoxState CheckState { set; get; }
+
+        protected override void OnMouseDown(DataGridViewCellMouseEventArgs e)
+        {
+            var check = (bool)Value;
+            CheckState = check ? CheckBoxState.CheckedPressed : CheckBoxState.UncheckedPressed;
+            base.OnMouseDown(e);
+        }
+
+        protected override void OnMouseUp(DataGridViewCellMouseEventArgs e)
+        {
+            var check = (bool)Value;
+            Value = !check;
+            SetValue(RowIndex, Value);
+            CheckState = check ? CheckBoxState.CheckedNormal : CheckBoxState.UncheckedNormal;
+            base.OnMouseUp(e);
+        }
+
+        public override Type ValueType
+        {
+            get
+            {
+                Type valueType = base.ValueType;
+                if (valueType != null)
+                {
+                    return valueType;
+                }
+                return defaultValueType;
+            }
+        }
+
+        public override object DefaultNewRowValue
+        {
+            get
+            {
+                return true;
+            }
+        }
+    }
+
+    public class DataGridViewCheckBoxTextColumn : DataGridViewColumn
+    {
+        public DataGridViewCheckBoxTextColumn()
+            : base()
+        {
+            CellTemplate = new DataGridViewCheckBoxTextCell();
         }
 
         public override DataGridViewCell CellTemplate
@@ -23,229 +224,23 @@ namespace  System.Windows.Forms
             }
             set
             {
-                // Ensure that the cell used for the template is a CalendarCell.
-                if (value != null &&
-                    !value.GetType().IsAssignableFrom(typeof(CalendarCell)))
+                if (value != null && !value.GetType().IsAssignableFrom(typeof(DataGridViewCheckBoxTextCell)))
                 {
-                    throw new InvalidCastException("Must be a CalendarCell");
+                    throw new Exception("这个列里面必须绑定MyDataGridViewCheckBoxCell");
                 }
                 base.CellTemplate = value;
             }
         }
-    }
-    public class CalendarCell : DataGridViewTextBoxCell
-    {
 
-        public CalendarCell()
-            : base()
+        public override object Clone()
         {
-            // Use the short date format.
-            this.Style.Format = "d";
+            DataGridViewCheckBoxTextColumn col = (DataGridViewCheckBoxTextColumn)base.Clone();
+            col.Text = Text;
+            return col;
         }
 
-        public override void InitializeEditingControl(int rowIndex, object
-            initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
-        {
-            // Set the value of the editing control to the current cell value.
-            base.InitializeEditingControl(rowIndex, initialFormattedValue,
-                dataGridViewCellStyle);
-            CalendarEditingControl ctl =
-                DataGridView.EditingControl as CalendarEditingControl;
-            // Use the default row value when Value property is null.
-            if (this.Value == null)
-            {
-                ctl.Value = (DateTime)this.DefaultNewRowValue;
-            }
-            else
-            {
-                ctl.Value = (DateTime)this.Value;
-            }
-        }
+        public string Text { set; get; }
 
-        public override Type EditType
-        {
-            get
-            {
-                // Return the type of the editing control that CalendarCell uses.
-                return typeof(CalendarEditingControl);
-            }
-        }
 
-        public override Type ValueType
-        {
-            get
-            {
-                // Return the type of the value that CalendarCell contains.
-
-                return typeof(DateTime);
-            }
-        }
-
-        public override object DefaultNewRowValue
-        {
-            get
-            {
-                // Use the current date and time as the default value.
-                return DateTime.Now;
-            }
-        }
-    }
-    class CalendarEditingControl : DateTimePicker, IDataGridViewEditingControl
-    {
-        DataGridView dataGridView;
-        private bool valueChanged = false;
-        int rowIndex;
-
-        public CalendarEditingControl()
-        {
-            this.Format = DateTimePickerFormat.Short;
-        }
-
-        // Implements the IDataGridViewEditingControl.EditingControlFormattedValue 
-        // property.
-        public object EditingControlFormattedValue
-        {
-            get
-            {
-                return this.Value.ToShortDateString();
-            }
-            set
-            {
-                if (value is String)
-                {
-                    try
-                    {
-                        // This will throw an exception of the string is 
-                        // null, empty, or not in the format of a date.
-                        this.Value = DateTime.Parse((String)value);
-                    }
-                    catch
-                    {
-                        // In the case of an exception, just use the 
-                        // default value so we're not left with a null
-                        // value.
-                        this.Value = DateTime.Now;
-                    }
-                }
-            }
-        }
-
-        // Implements the 
-        // IDataGridViewEditingControl.GetEditingControlFormattedValue method.
-        public object GetEditingControlFormattedValue(
-            DataGridViewDataErrorContexts context)
-        {
-            return EditingControlFormattedValue;
-        }
-
-        // Implements the 
-        // IDataGridViewEditingControl.ApplyCellStyleToEditingControl method.
-        public void ApplyCellStyleToEditingControl(
-            DataGridViewCellStyle dataGridViewCellStyle)
-        {
-            this.Font = dataGridViewCellStyle.Font;
-            this.CalendarForeColor = dataGridViewCellStyle.ForeColor;
-            this.CalendarMonthBackground = dataGridViewCellStyle.BackColor;
-        }
-
-        // Implements the IDataGridViewEditingControl.EditingControlRowIndex 
-        // property.
-        public int EditingControlRowIndex
-        {
-            get
-            {
-                return rowIndex;
-            }
-            set
-            {
-                rowIndex = value;
-            }
-        }
-
-        // Implements the IDataGridViewEditingControl.EditingControlWantsInputKey 
-        // method.
-        public bool EditingControlWantsInputKey(
-            Keys key, bool dataGridViewWantsInputKey)
-        {
-            // Let the DateTimePicker handle the keys listed.
-            switch (key & Keys.KeyCode)
-            {
-                case Keys.Left:
-                case Keys.Up:
-                case Keys.Down:
-                case Keys.Right:
-                case Keys.Home:
-                case Keys.End:
-                case Keys.PageDown:
-                case Keys.PageUp:
-                    return true;
-                default:
-                    return !dataGridViewWantsInputKey;
-            }
-        }
-
-        // Implements the IDataGridViewEditingControl.PrepareEditingControlForEdit 
-        // method.
-        public void PrepareEditingControlForEdit(bool selectAll)
-        {
-            // No preparation needs to be done.
-        }
-
-        // Implements the IDataGridViewEditingControl
-        // .RepositionEditingControlOnValueChange property.
-        public bool RepositionEditingControlOnValueChange
-        {
-            get
-            {
-                return false;
-            }
-        }
-
-        // Implements the IDataGridViewEditingControl
-        // .EditingControlDataGridView property.
-        public DataGridView EditingControlDataGridView
-        {
-            get
-            {
-                return dataGridView;
-            }
-            set
-            {
-                dataGridView = value;
-            }
-        }
-
-        // Implements the IDataGridViewEditingControl
-        // .EditingControlValueChanged property.
-        public bool EditingControlValueChanged
-        {
-            get
-            {
-                return valueChanged;
-            }
-            set
-            {
-                valueChanged = value;
-            }
-        }
-
-        // Implements the IDataGridViewEditingControl
-        // .EditingPanelCursor property.
-        public Cursor EditingPanelCursor
-        {
-            get
-            {
-                return base.Cursor;
-            }
-        }
-
-        protected override void OnValueChanged(EventArgs eventargs)
-        {
-            // Notify the DataGridView that the contents of the cell
-            // have changed.
-            valueChanged = true;
-            this.EditingControlDataGridView.NotifyCurrentCellDirty(true);
-            base.OnValueChanged(eventargs);
-        }
     }
 }
