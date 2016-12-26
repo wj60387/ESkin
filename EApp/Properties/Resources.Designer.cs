@@ -213,6 +213,16 @@ namespace EApp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 按钮左半椭圆 {
+            get {
+                object obj = ResourceManager.GetObject("按钮左半椭圆", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 登入框登录200x40 {
             get {
                 object obj = ResourceManager.GetObject("登入框登录200x40", resourceCulture);

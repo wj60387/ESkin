@@ -8,35 +8,53 @@ using System.Text;
 
 namespace System.Windows.Forms
 {
-    public class ComboBoxEx :  ComboBox
+    public class ComboBoxEx : ComboBox
     {
         private Image dwonImage = ESkin.Properties.Resources.下拉箭头;
 
         public ComboBoxEx()
             : base()
         {
-            base.SetStyle(
-     ControlStyles.UserPaint |                      // 控件将自行绘制，而不是通过操作系统来绘制  
-     ControlStyles.OptimizedDoubleBuffer |          // 该控件首先在缓冲区中绘制，而不是直接绘制到屏幕上，这样可以减少闪烁  
-     ControlStyles.AllPaintingInWmPaint |           // 控件将忽略 WM_ERASEBKGND 窗口消息以减少闪烁  
-    // ControlStyles.ResizeRedraw |                   // 在调整控件大小时重绘控件  
-     ControlStyles.SupportsTransparentBackColor,    // 控件接受 alpha 组件小于 255 的 BackColor 以模拟透明  
-     true);                                         // 设置以上值为 true  
-            base.UpdateStyles();
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+            this.UpdateStyles();
             //设置为手动绘制
             this.DrawMode = DrawMode.OwnerDrawFixed;
             //设置固定的DropDownList样式
             this.DropDownStyle = ComboBoxStyle.DropDownList;
             this.UpdateStyles();
-            this.BackColor = Color.Transparent;
+           this.BackColor = Color.Transparent;
         }
-
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            //画背景和下拉箭头
+            e.Graphics.DrawImage(ESkin.Properties.Resources.按钮右半椭圆, this.ClientRectangle);
+            e.Graphics.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
+            //获得项图片,绘制图片
+            Image img = ESkin.Properties.Resources.听诊小图标;
+            //图片绘制的区域
+            Rectangle imgRect = new Rectangle(3, this.Height/2  - img.Height/2  , img.Width, img.Height);
+            e.Graphics.DrawImage(img, imgRect);
+            //文本内容显示区域
+            Rectangle textRect =
+                    new Rectangle(imgRect.Right + 2, this.Height / 2 - img.Height / 2, img.Width, img.Height);
+            //获得项文本内容,绘制文本
+            //文本格式垂直居中
+            //StringFormat strFormat = new StringFormat();
+            //strFormat.LineAlignment = StringAlignment.Center;
+            StringFormat sfn = new StringFormat();
+            sfn.Alignment = StringAlignment.Near;
+            sfn.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(this.SelectedItem + "", this.Font, new SolidBrush(this.ForeColor), textRect, sfn);
+        }
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
             if (this.Items.Count != 0)
             {
-                this.DropDownHeight = this.Items.Count * 17;
+                this.DropDownHeight = this.Items.Count * DropDownButtonWidth;
             }
         }
 
@@ -60,7 +78,7 @@ namespace System.Windows.Forms
                     Win32.SendMessage(this.Handle, WM_ERASEBKGND, hDC.ToInt32(), 0);
                     SendPrintClientMsg();
                     Win32.SendMessage(this.Handle, WM_PAINT, 0, 0);
-                   // OverrideControlBorder(gdc);
+                    // OverrideControlBorder(gdc);
                     m.Result = (IntPtr)1;    // indicate msg has been processed
                     Win32.ReleaseDC(m.HWnd, hDC);
                     gdc.Dispose();
@@ -70,7 +88,7 @@ namespace System.Windows.Forms
                     hDC = Win32.GetWindowDC(m.HWnd);
                     gdc = Graphics.FromHdc(hDC);
                     OverrideDropDown(gdc);
-                   // OverrideControlBorder(gdc);
+                    // OverrideControlBorder(gdc);
                     Win32.ReleaseDC(m.HWnd, hDC);
                     gdc.Dispose();
                     break;
@@ -79,23 +97,21 @@ namespace System.Windows.Forms
                     break;
             }
         }
-        int right =12;
-        private static int DropDownButtonWidth = 17;
+        int right = 20;
+        private static int DropDownButtonWidth = 22;
 
         private void OverrideDropDown(Graphics g)
         {
             //if (DesignMode) return;
-            Rectangle rect = new Rectangle(this.Width - DropDownButtonWidth, 0, DropDownButtonWidth, this.Height);
+            //Rectangle rect = new Rectangle(this.Width - DropDownButtonWidth, 0, DropDownButtonWidth, this.Height);
 
-           
-            // g.FillRectangle(new SolidBrush(Color.Red), rect);
-            if (this.Enabled)
-            {
-                g.DrawImage(ESkin.Properties.Resources.按钮右半椭圆, ClientRectangle);
-                g.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
+            //g.FillRectangle(new SolidBrush(Color.White), rect);
 
-               // g.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
-            }
+            //if (this.Enabled)
+            //{
+            //     g.DrawImage(ESkin.Properties.Resources.按钮右半椭圆, this.ClientRectangle);
+            //     g.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
+            //}
         }
 
         /// <summary>
@@ -104,7 +120,7 @@ namespace System.Windows.Forms
         /// <param name="g"></param>
         private void OverrideControlBorder(Graphics g)
         {
-             //ControlPaint.DrawBorder
+            //ControlPaint.DrawBorder
             //g.DrawImage(ESkin.Properties.Resources.按钮右半椭圆, ClientRectangle);
             //g.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
 
@@ -163,35 +179,35 @@ namespace System.Windows.Forms
 
         protected override void OnMouseEnter(EventArgs e)
         {
-            //_mouseEnter = true;
+            _mouseEnter = true;
 
-            //IntPtr hDC = IntPtr.Zero;
-            //Graphics gdc = null;
-            //hDC = Win32.GetWindowDC(this.Handle);
-            //gdc = Graphics.FromHdc(hDC);
-            //gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
-            //Win32.ReleaseDC(this.Handle, hDC);
-            //gdc.Dispose();
-           // base.OnMouseEnter(e);
+            IntPtr hDC = IntPtr.Zero;
+            Graphics gdc = null;
+            hDC = Win32.GetWindowDC(this.Handle);
+            gdc = Graphics.FromHdc(hDC);
+            gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
+            Win32.ReleaseDC(this.Handle, hDC);
+            gdc.Dispose();
+            base.OnMouseEnter(e);
         }
 
         protected override void OnMouseLeave(EventArgs e)
         {
-             
-           // _mouseEnter = false;
-           // IntPtr hDC = IntPtr.Zero;
-           // Graphics gdc = null;
-           // hDC = Win32.GetWindowDC(this.Handle);
-           // gdc = Graphics.FromHdc(hDC);
-           //// gdc.DrawImage(dwonImage, new Rectangle(this.Width - 20, 3, 16, 16));
-           // gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
-           // Win32.ReleaseDC(this.Handle, hDC);
-            //base.OnMouseLeave(e);
+
+            _mouseEnter = false;
+            IntPtr hDC = IntPtr.Zero;
+            Graphics gdc = null;
+            hDC = Win32.GetWindowDC(this.Handle);
+            gdc = Graphics.FromHdc(hDC);
+            // gdc.DrawImage(dwonImage, new Rectangle(this.Width - 20, 3, 16, 16));
+            gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
+            Win32.ReleaseDC(this.Handle, hDC);
+            base.OnMouseLeave(e);
         }
 
-        
 
-        
+
+
         public Image DwonImage
         {
             get
@@ -203,8 +219,8 @@ namespace System.Windows.Forms
                 dwonImage = value;
             }
         }
-        
+
     }
 }
-   
- 
+
+

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            this.buttonEx1 = new System.Windows.Forms.ButtonEx();
             this.comboBoxEx1 = new System.Windows.Forms.ComboBoxEx();
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
@@ -38,8 +39,25 @@
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStripEx3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // buttonEx1
+            // 
+            this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.BackgroundImage = global::EApp.Properties.Resources.按钮左半椭圆;
+            this.buttonEx1.FlatAppearance.BorderSize = 0;
+            this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx1.Location = new System.Drawing.Point(389, 39);
+            this.buttonEx1.Name = "buttonEx1";
+            this.buttonEx1.Size = new System.Drawing.Size(86, 30);
+            this.buttonEx1.TabIndex = 30;
+            this.buttonEx1.Text = "选择听诊器";
+            this.buttonEx1.UseVisualStyleBackColor = false;
             // 
             // comboBoxEx1
             // 
@@ -49,18 +67,18 @@
             this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEx1.DwonImage = ((System.Drawing.Image)(resources.GetObject("comboBoxEx1.DwonImage")));
             this.comboBoxEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBoxEx1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBoxEx1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.comboBoxEx1.FormattingEnabled = true;
             this.comboBoxEx1.IntegralHeight = false;
-            this.comboBoxEx1.ItemHeight = 22;
+            this.comboBoxEx1.ItemHeight = 24;
             this.comboBoxEx1.Items.AddRange(new object[] {
             "A",
             "B",
             "C"});
-            this.comboBoxEx1.Location = new System.Drawing.Point(241, 140);
+            this.comboBoxEx1.Location = new System.Drawing.Point(475, 39);
             this.comboBoxEx1.Name = "comboBoxEx1";
-            this.comboBoxEx1.Size = new System.Drawing.Size(150, 28);
+            this.comboBoxEx1.Size = new System.Drawing.Size(219, 30);
             this.comboBoxEx1.TabIndex = 15;
             // 
             // btnClose
@@ -92,7 +110,7 @@
             this.buttonEx2.Image = global::EApp.Properties.Resources.听诊器图片;
             this.buttonEx2.Location = new System.Drawing.Point(148, 29);
             this.buttonEx2.Name = "buttonEx2";
-            this.buttonEx2.Size = new System.Drawing.Size(224, 64);
+            this.buttonEx2.Size = new System.Drawing.Size(224, 63);
             this.buttonEx2.TabIndex = 13;
             this.buttonEx2.Text = "听诊器配置";
             this.buttonEx2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -176,12 +194,22 @@
             this.toolStripButton5.Text = "EEE";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(265, 195);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 31;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(767, 515);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonEx1);
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.buttonEx2);
@@ -192,6 +220,7 @@
             this.Text = "";
             this.toolStripEx3.ResumeLayout(false);
             this.toolStripEx3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,6 +236,8 @@
         private System.Windows.Forms.ButtonEx buttonEx2;
         private System.Windows.Forms.ButtonEx btnClose;
         private System.Windows.Forms.ComboBoxEx comboBoxEx1;
+        private System.Windows.Forms.ButtonEx buttonEx1;
+        private System.Windows.Forms.DataGridView dataGridView1;
 
 
 
