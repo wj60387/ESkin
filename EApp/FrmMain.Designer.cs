@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            this.dataGridViewEx1 = new System.Windows.Forms.DataGridViewEx();
+            this.buttonEx4 = new System.Windows.Forms.ButtonEx();
+            this.buttonEx3 = new System.Windows.Forms.ButtonEx();
+            this.checkBoxEx1 = new System.Windows.Forms.CheckBoxEx();
+            this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
             this.buttonEx1 = new System.Windows.Forms.ButtonEx();
             this.comboBoxEx1 = new System.Windows.Forms.ComboBoxEx();
             this.btnClose = new System.Windows.Forms.ButtonEx();
@@ -39,13 +46,94 @@
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
-            this.checkBoxEx1 = new System.Windows.Forms.CheckBoxEx();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxTextColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
             this.toolStripEx3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridViewEx1
+            // 
+            this.dataGridViewEx1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewEx1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewEx1.Location = new System.Drawing.Point(161, 235);
+            this.dataGridViewEx1.Name = "dataGridViewEx1";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewEx1.RowTemplate.Height = 23;
+            this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEx1.Size = new System.Drawing.Size(577, 215);
+            this.dataGridViewEx1.TabIndex = 38;
+            // 
+            // buttonEx4
+            // 
+            this.buttonEx4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEx4.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.BackgroundImage = global::EApp.Properties.Resources.系统按钮最小化;
+            this.buttonEx4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonEx4.FlatAppearance.BorderSize = 0;
+            this.buttonEx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx4.Location = new System.Drawing.Point(708, 9);
+            this.buttonEx4.Name = "buttonEx4";
+            this.buttonEx4.Size = new System.Drawing.Size(12, 12);
+            this.buttonEx4.TabIndex = 36;
+            this.buttonEx4.UseVisualStyleBackColor = false;
+            // 
+            // buttonEx3
+            // 
+            this.buttonEx3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.BackgroundImage = global::EApp.Properties.Resources.系统按钮还原;
+            this.buttonEx3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEx3.FlatAppearance.BorderSize = 0;
+            this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx3.Location = new System.Drawing.Point(726, 9);
+            this.buttonEx3.Name = "buttonEx3";
+            this.buttonEx3.Size = new System.Drawing.Size(12, 12);
+            this.buttonEx3.TabIndex = 35;
+            this.buttonEx3.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxEx1
+            // 
+            this.checkBoxEx1.AutoSize = true;
+            this.checkBoxEx1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(161)))), ((int)(((byte)(224)))));
+            this.checkBoxEx1.Checked = true;
+            this.checkBoxEx1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxEx1.Location = new System.Drawing.Point(249, 146);
+            this.checkBoxEx1.Name = "checkBoxEx1";
+            this.checkBoxEx1.Size = new System.Drawing.Size(90, 16);
+            this.checkBoxEx1.TabIndex = 33;
+            this.checkBoxEx1.Text = "checkBoxEx1";
+            this.checkBoxEx1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonEx1
+            // 
+            this.radioButtonEx1.AutoSize = true;
+            this.radioButtonEx1.Checked = true;
+            this.radioButtonEx1.Location = new System.Drawing.Point(357, 213);
+            this.radioButtonEx1.Name = "radioButtonEx1";
+            this.radioButtonEx1.Size = new System.Drawing.Size(107, 16);
+            this.radioButtonEx1.TabIndex = 32;
+            this.radioButtonEx1.TabStop = true;
+            this.radioButtonEx1.Text = "radioButtonEx1";
+            this.radioButtonEx1.UseVisualStyleBackColor = true;
             // 
             // buttonEx1
             // 
@@ -197,55 +285,15 @@
             this.toolStripButton5.Text = "EEE";
             this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // radioButtonEx1
-            // 
-            this.radioButtonEx1.AutoSize = true;
-            this.radioButtonEx1.Checked = true;
-            this.radioButtonEx1.Location = new System.Drawing.Point(357, 213);
-            this.radioButtonEx1.Name = "radioButtonEx1";
-            this.radioButtonEx1.Size = new System.Drawing.Size(107, 16);
-            this.radioButtonEx1.TabIndex = 32;
-            this.radioButtonEx1.TabStop = true;
-            this.radioButtonEx1.Text = "radioButtonEx1";
-            this.radioButtonEx1.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEx1
-            // 
-            this.checkBoxEx1.AutoSize = true;
-            this.checkBoxEx1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(161)))), ((int)(((byte)(224)))));
-            this.checkBoxEx1.Checked = true;
-            this.checkBoxEx1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxEx1.Location = new System.Drawing.Point(249, 146);
-            this.checkBoxEx1.Name = "checkBoxEx1";
-            this.checkBoxEx1.Size = new System.Drawing.Size(90, 16);
-            this.checkBoxEx1.TabIndex = 33;
-            this.checkBoxEx1.Text = "checkBoxEx1";
-            this.checkBoxEx1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(344, 271);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(178, 150);
-            this.dataGridView1.TabIndex = 34;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.Text = null;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(767, 515);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewEx1);
+            this.Controls.Add(this.buttonEx4);
+            this.Controls.Add(this.buttonEx3);
             this.Controls.Add(this.checkBoxEx1);
             this.Controls.Add(this.radioButtonEx1);
             this.Controls.Add(this.buttonEx1);
@@ -257,9 +305,9 @@
             this.Name = "FrmMain";
             this.ShowIcon = false;
             this.Text = "";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
             this.toolStripEx3.ResumeLayout(false);
             this.toolStripEx3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,8 +327,9 @@
         private System.Windows.Forms.ButtonEx buttonEx1;
         private System.Windows.Forms.RadioButtonEx radioButtonEx1;
         private System.Windows.Forms.CheckBoxEx checkBoxEx1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxTextColumn Column1;
+        private System.Windows.Forms.ButtonEx buttonEx3;
+        private System.Windows.Forms.ButtonEx buttonEx4;
+        private System.Windows.Forms.DataGridViewEx dataGridViewEx1;
 
 
 
