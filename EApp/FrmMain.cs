@@ -20,10 +20,13 @@ namespace EApp
         void FrmMain_Load(object sender, EventArgs e)
         {
            //System.Windows.Forms.CheckBoxExColumn col = new System.Windows.Forms.CheckBoxExColumn();
-
-            this.dataGridViewEx1.Columns.Add(new DataGridViewCheckBoxExColumn() { HeaderText = "" });
+            var checkColumn = new DataGridViewCheckBoxExColumn() { HeaderText = "" };
+            this.dataGridViewEx1.Columns.Add(checkColumn);
             this.dataGridViewEx1.Columns.Add("C1C", "C1C");
             this.dataGridViewEx1.Columns.Add("C2C", "C2C");
+
+            var btnColumn = new DataGridViewButtonExColumn() { HeaderText = "" };
+            this.dataGridViewEx1.Columns.Add(btnColumn);
             this.dataGridViewEx1.RowCount = 5;
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.选择);
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器所属人);

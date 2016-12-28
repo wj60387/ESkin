@@ -243,6 +243,15 @@
   <ItemGroup>
     <None Include="Resources\下拉箭头.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除点击状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除未点击.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

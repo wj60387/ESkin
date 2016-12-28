@@ -99,10 +99,14 @@ namespace  System.Windows.Forms
         {
             base.OnRowPrePaint(e);
         }
-       
+        protected override void OnDataError(bool displayErrorDialogIfNoHandler, DataGridViewDataErrorEventArgs e)
+        {
+            //base.OnDataError(displayErrorDialogIfNoHandler, e);
+        }
     }
 
-    class DataGridViewCheckBoxTextControl : CheckBoxEx, IDataGridViewEditingControl
+    #region   扩展的复选框列
+    class DataGridViewCheckBoxExControl : CheckBoxEx, IDataGridViewEditingControl
     {
         /// <summary>
         /// 当前所在表格
@@ -211,9 +215,15 @@ namespace  System.Windows.Forms
     }
     public class DataGridViewCheckBoxExCell : DataGridViewCell
     {
-        public DataGridViewCheckBoxExCell() : base() { }
+        Image image = ESkin.Properties.Resources._16x16_没勾选;
 
-        private static Type defaultEditType = typeof(DataGridViewCheckBoxTextControl);
+        public DataGridViewCheckBoxExCell()
+            : base()
+        {
+             
+        }
+
+        private static Type defaultEditType = typeof(DataGridViewCheckBoxExControl);
         private static Type defaultValueType = typeof(System.Boolean);
 
         public override Type EditType
@@ -227,21 +237,7 @@ namespace  System.Windows.Forms
        // private Color CellBorderColor { get { return Color.Transparent; } }
         private Color CellBorderColor { get { return Color.FromArgb(100,200,250); } }
        // private Color CellBorderColor { get { return Color.Transparent; } }
-        ControlState _controlState = ControlState.Normal;
-        ControlState ControlState
-        {
-            get { return _controlState; }
-            set
-            {
-                if (_controlState != value)
-                {
-                    _controlState = value;
-                }
-            }
-        }
-
         
-        public Image image = ESkin.Properties.Resources._16x16_没勾选;
         
         protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
         {
@@ -338,7 +334,6 @@ namespace  System.Windows.Forms
             }
         }
     }
-
     public class DataGridViewCheckBoxExColumn : DataGridViewColumn
     {
         
@@ -376,4 +371,172 @@ namespace  System.Windows.Forms
 
 
     }
+
+    #endregion
+
+    #region   扩展的按钮列
+      class DataGridViewButtonExControl : ButtonEx, IDataGridViewEditingControl
+    {
+        private DataGridView MyDataGridView { set; get; }
+        private int RowIndex { set; get; }
+
+        
+
+        public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
+        {
+            Font = dataGridViewCellStyle.Font;
+            ForeColor = dataGridViewCellStyle.ForeColor;
+            BackColor = dataGridViewCellStyle.BackColor;
+        }
+
+        public DataGridView EditingControlDataGridView
+        {
+            get
+            {
+                return MyDataGridView;
+            }
+            set
+            {
+                MyDataGridView = value;
+            }
+        }
+
+        public object EditingControlFormattedValue
+        {
+            get
+            {
+                return GetEditingControlFormattedValue(DataGridViewDataErrorContexts.Formatting);
+            }
+            set
+            {
+                
+            }
+        }
+
+        public int EditingControlRowIndex
+        {
+            get
+            {
+                return RowIndex;
+            }
+            set
+            {
+                RowIndex = value;
+            }
+        }
+
+        public bool EditingControlValueChanged
+        {
+            get
+            {
+                return true;
+            }
+            set
+            {
+                 ;
+            }
+        }
+
+        public bool EditingControlWantsInputKey(Keys keyData, bool dataGridViewWantsInputKey)
+        {
+            switch (keyData & Keys.KeyCode)
+            {
+                case Keys.LButton:
+                    return !dataGridViewWantsInputKey;
+            }
+            return !dataGridViewWantsInputKey;
+        }
+
+        public Cursor EditingPanelCursor
+        {
+            get { return Cursors.Default; }
+        }
+
+        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
+        {
+            return this;
+        }
+
+        public void PrepareEditingControlForEdit(bool selectAll)
+        {
+
+        }
+
+        public bool RepositionEditingControlOnValueChange
+        {
+            get { return false; }
+        }
+    }
+
+      public class DataGridViewButtonExCell : DataGridViewCell
+      {
+          private static Type defaultEditType = typeof(DataGridViewCheckBoxExControl);
+          public Image image = ESkin.Properties.Resources.删除未点击;
+
+          protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
+          {
+
+              var boundRect = new Rectangle(cellBounds.X, cellBounds.Y, cellBounds.Width, cellBounds.Height - 1);
+              if (paintParts == DataGridViewPaintParts.Background || paintParts == DataGridViewPaintParts.All)
+              {
+                  graphics.FillRectangle(new SolidBrush(Color.White), boundRect);
+                  // graphics.FillRectangle(new SolidBrush(cellStyle.BackColor), boundRect);
+              }
+              if (paintParts == DataGridViewPaintParts.Border || paintParts == DataGridViewPaintParts.All)
+              {
+                  // var color = cellState == DataGridViewElementStates.Selected ? Color.Red : Color.Transparent;
+                  // graphics.DrawLine(new Pen(CellBorderColor), cellBounds.X, cellBounds.Y, cellBounds.X + cellBounds.Width,  cellBounds.Y);
+                  graphics.DrawRectangle(new Pen(Color.White), boundRect);
+              }
+              if (paintParts == DataGridViewPaintParts.SelectionBackground || Selected)
+              {
+                  //graphics.FillRectangle(new SolidBrush(cellStyle.SelectionBackColor), cellBounds);
+              }
+
+              if ((cellState & DataGridViewElementStates.Selected) != 0)
+              {
+                  image = ESkin.Properties.Resources.删除点击状态;
+              }
+              else
+              {
+                  image =  ESkin.Properties.Resources.删除未点击;
+              }
+              var rect = new Rectangle(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
+              graphics.DrawImage(image, rect);
+          }
+      }
+      public class DataGridViewButtonExColumn : DataGridViewColumn
+      {
+
+
+          public DataGridViewButtonExColumn()
+              : base()
+          {
+              CellTemplate = new DataGridViewButtonExCell();
+          }
+
+          public override DataGridViewCell CellTemplate
+          {
+              get
+              {
+                  return base.CellTemplate;
+              }
+              set
+              {
+                  if (value != null && !value.GetType().IsAssignableFrom(typeof(DataGridViewButtonExCell)))
+                  {
+                      throw new Exception("这个列里面必须绑定MyDataGridViewButtonExCell");
+                  }
+                  base.CellTemplate = value;
+              }
+          }
+
+          public override object Clone()
+          {
+              DataGridViewButtonExCell col = (DataGridViewButtonExCell)base.Clone();
+              return col;
+          }
+      }
+
+    #endregion
 }
