@@ -113,9 +113,39 @@ namespace EApp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 听诊器名称 {
+            get {
+                object obj = ResourceManager.GetObject("听诊器名称", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 听诊器图片 {
             get {
                 object obj = ResourceManager.GetObject("听诊器图片", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 听诊器所属人 {
+            get {
+                object obj = ResourceManager.GetObject("听诊器所属人", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 听诊器编号 {
+            get {
+                object obj = ResourceManager.GetObject("听诊器编号", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +236,16 @@ namespace EApp.Properties {
         internal static System.Drawing.Bitmap 导航栏200x1080 {
             get {
                 object obj = ResourceManager.GetObject("导航栏200x1080", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 序号 {
+            get {
+                object obj = ResourceManager.GetObject("序号", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +376,16 @@ namespace EApp.Properties {
         internal static System.Drawing.Bitmap 远程教学 {
             get {
                 object obj = ResourceManager.GetObject("远程教学", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 选择 {
+            get {
+                object obj = ResourceManager.GetObject("选择", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

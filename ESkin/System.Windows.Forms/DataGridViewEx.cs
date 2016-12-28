@@ -50,14 +50,26 @@ namespace  System.Windows.Forms
             this.ReadOnly = true;
                 
         }
+        Image xhImage = ESkin.Properties.Resources.序号;
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            StringFormat sfn = new StringFormat();
-            sfn.Alignment = StringAlignment.Center;
-            sfn.LineAlignment = StringAlignment.Center;
-            e.Graphics.DrawString("序号", this.Font, new SolidBrush(this.ForeColor), new Rectangle(0, 0, this.RowHeadersWidth, this.ColumnHeadersHeight), sfn);
+            //StringFormat sfn = new StringFormat();
+            //sfn.Alignment = StringAlignment.Center;
+            //sfn.LineAlignment = StringAlignment.Center;
+            //e.Graphics.DrawString("序号", this.Font, new SolidBrush(this.ForeColor), new Rectangle(0, 0, this.RowHeadersWidth, this.ColumnHeadersHeight), sfn);
+            System.Drawing.Rectangle xh = this.GetCellDisplayRectangle(-1, -1, true);
+            e.Graphics.DrawImage(xhImage, xh.X+ 4  , xh.Y + 4, xhImage.Width, xhImage.Height);
+            
+            if (ListColumnImage.Count == this.Columns.Count)
+                for (int i = 0; i < this.Columns.Count; i++)
+                {
+                    System.Drawing.Rectangle rect = this.GetCellDisplayRectangle(i, -1, true);
+                    e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width / 2 + 4, rect.Y + 4, ListColumnImage[i].Width, ListColumnImage[i].Height);
+                    // e.Graphics.DrawRectangle(  Pens.Red, rect);
+                }
         }
+        public List<Image> ListColumnImage = new List<Image>();
         protected override void OnRowPostPaint(DataGridViewRowPostPaintEventArgs e)
         {
             base.OnRowPostPaint(e);
@@ -71,16 +83,17 @@ namespace  System.Windows.Forms
             };
             var color = this.Rows[e.RowIndex].Selected ? Color.FromArgb(100, 200, 250) : Color.Black;
 
-            var rowBounds = new Rectangle(e.RowBounds.X-1, e.RowBounds.Y, e.RowBounds.Width+1, e.RowBounds.Height-1);
+            var rowBounds = new Rectangle(e.RowBounds.X - 1, e.RowBounds.Y, e.RowBounds.Width + 1, e.RowBounds.Height - 1);
             if (this.Rows[e.RowIndex].Selected)
                 e.Graphics.DrawRectangle(new Pen(color), rowBounds);
 
             var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, this.RowHeadersWidth, e.RowBounds.Height);
             using (var brush = new SolidBrush(color))
-           {
-               e.Graphics.DrawString(rowIdx, this.Font, brush, headerBounds, centerFormat);
+            {
+                e.Graphics.DrawString(rowIdx, this.Font, brush, headerBounds, centerFormat);
 
-           }
+            }
+            
         }
         protected override void OnRowPrePaint(DataGridViewRowPrePaintEventArgs e)
         {
@@ -89,7 +102,7 @@ namespace  System.Windows.Forms
        
     }
 
-    public class DataGridViewCheckBoxTextControl : CheckBoxEx, IDataGridViewEditingControl
+    class DataGridViewCheckBoxTextControl : CheckBoxEx, IDataGridViewEditingControl
     {
         /// <summary>
         /// 当前所在表格
@@ -196,9 +209,9 @@ namespace  System.Windows.Forms
             get { return false; }
         }
     }
-    public class DataGridViewCheckBoxTextCell : DataGridViewCell
+    public class DataGridViewCheckBoxExCell : DataGridViewCell
     {
-        public DataGridViewCheckBoxTextCell() : base() { }
+        public DataGridViewCheckBoxExCell() : base() { }
 
         private static Type defaultEditType = typeof(DataGridViewCheckBoxTextControl);
         private static Type defaultValueType = typeof(System.Boolean);
@@ -227,51 +240,7 @@ namespace  System.Windows.Forms
             }
         }
 
-        //protected override void OnLeave(int rowIndex, bool throughMouseClick)
-        //{
-        //    OnMouseLeave(rowIndex);
-        //    base.OnLeave(rowIndex, throughMouseClick);
-        //}
-        //protected override void OnMouseLeave(int rowIndex)
-        //{
-        //    base.OnMouseLeave(rowIndex);
-        //       ControlState = ControlState.Normal;
-        //}
         
-
-        
-        //protected override void OnMouseMove(DataGridViewCellMouseEventArgs e)
-        //{
-        //    ControlState = ControlState.Hover;
-        //    base.OnMouseMove(e);
-        //}
-        //protected override void OnMouseDown(DataGridViewCellMouseEventArgs e)
-        //{
-        //    var check = (bool)Value;
-        //    CheckState = check ? CheckBoxState.CheckedPressed : CheckBoxState.UncheckedPressed;
-        //    if (e.Button == MouseButtons.Left && e.Clicks == 1)
-        //    {
-        //        ControlState = ControlState.Pressed;
-        //    }
-        //    base.OnMouseDown(e);
-        //}
-        //protected override void OnMouseClick(DataGridViewCellMouseEventArgs e)
-        //{
-             
-        //    this.OnMouseDown(e);
-        //    base.OnMouseClick(e);
-        //}
-        
-        //protected override void OnEnter(int rowIndex, bool throughMouseClick)
-        //{
-        //    OnMouseEnter(rowIndex);
-        //    base.OnEnter(rowIndex, throughMouseClick);
-        //}
-        //protected override void OnMouseEnter(int rowIndex)
-        //{
-        //    ControlState = ControlState.Hover;
-        //    base.OnMouseEnter(rowIndex);
-        //}
         public Image image = ESkin.Properties.Resources._16x16_没勾选;
         
         protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
@@ -370,14 +339,14 @@ namespace  System.Windows.Forms
         }
     }
 
-    public class DataGridViewCheckBoxTextColumn : DataGridViewColumn
+    public class DataGridViewCheckBoxExColumn : DataGridViewColumn
     {
         
         
-        public DataGridViewCheckBoxTextColumn()
+        public DataGridViewCheckBoxExColumn()
             : base()
         {
-            CellTemplate = new DataGridViewCheckBoxTextCell();
+            CellTemplate = new DataGridViewCheckBoxExCell();
         }
 
         public override DataGridViewCell CellTemplate
@@ -388,7 +357,7 @@ namespace  System.Windows.Forms
             }
             set
             {
-                if (value != null && !value.GetType().IsAssignableFrom(typeof(DataGridViewCheckBoxTextCell)))
+                if (value != null && !value.GetType().IsAssignableFrom(typeof(DataGridViewCheckBoxExCell)))
                 {
                     throw new Exception("这个列里面必须绑定MyDataGridViewCheckBoxCell");
                 }
@@ -398,7 +367,7 @@ namespace  System.Windows.Forms
 
         public override object Clone()
         {
-            DataGridViewCheckBoxTextColumn col = (DataGridViewCheckBoxTextColumn)base.Clone();
+            DataGridViewCheckBoxExColumn col = (DataGridViewCheckBoxExColumn)base.Clone();
             col.Text = Text;
             return col;
         }

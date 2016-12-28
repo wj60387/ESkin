@@ -21,11 +21,13 @@ namespace EApp
         {
            //System.Windows.Forms.CheckBoxExColumn col = new System.Windows.Forms.CheckBoxExColumn();
 
-            this.dataGridViewEx1.Columns.Add(new DataGridViewCheckBoxTextColumn() { HeaderText = "选择" });
-            this.dataGridViewEx1.Columns.Add("C1", "C1");
-            this.dataGridViewEx1.Columns.Add("C2", "C2");
+            this.dataGridViewEx1.Columns.Add(new DataGridViewCheckBoxExColumn() { HeaderText = "" });
+            this.dataGridViewEx1.Columns.Add("C1C", "C1C");
+            this.dataGridViewEx1.Columns.Add("C2C", "C2C");
             this.dataGridViewEx1.RowCount = 5;
-
+            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.选择);
+            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器所属人);
+            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器名称);
              ////System.Windows.Forms.CheckBoxEx ckBox = new System.Windows.Forms.CheckBoxEx();
              ////ckBox.Text = "全选";
              ////ckBox.Checked = true;

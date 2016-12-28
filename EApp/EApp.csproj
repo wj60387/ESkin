@@ -149,6 +149,11 @@
   <ItemGroup>
     <Content Include="readme.txt" />
     <Content Include="Resources\logo.png" />
+    <None Include="Resources\选择.png" />
+    <None Include="Resources\序号.png" />
+    <None Include="Resources\听诊器所属人.png" />
+    <None Include="Resources\听诊器名称.png" />
+    <None Include="Resources\听诊器编号.png" />
     <None Include="Resources\按钮左半椭圆.png" />
     <None Include="Resources\云端听诊.png" />
     <None Include="Resources\远程教学.png" />
