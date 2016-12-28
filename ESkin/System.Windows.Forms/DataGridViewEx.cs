@@ -15,31 +15,76 @@ namespace  System.Windows.Forms
     {
         public DataGridViewEx()
         {
+            SetStyle(
+                ControlStyles.OptimizedDoubleBuffer |
+                ControlStyles.SupportsTransparentBackColor, true);
+            this.BackgroundColor = Color.White;
             this.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            this.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             this.BorderStyle = Forms.BorderStyle.None;
             this.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            this.RowHeadersDefaultCellStyle.BackColor = Color.Transparent;
-            this.DefaultCellStyle.SelectionBackColor = this.BackgroundColor ;
+
+            this.DefaultCellStyle.BackColor = DefaultCellStyle.SelectionBackColor = Color.White;
+            this.DefaultCellStyle.SelectionForeColor = Color.FromArgb(100, 200, 250);
+             
+            this.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            this.AllowUserToAddRows = false;
+            this.AllowUserToDeleteRows = false;
+            //行头样式消除
+            this.EnableHeadersVisualStyles = false;
+
+
+            this.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.ColumnHeadersHeight = 24;
+            this.ColumnHeadersDefaultCellStyle.BackColor = ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.White;
+            this.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(100, 200, 250);
+            this.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            this.RowHeadersDefaultCellStyle.BackColor = RowHeadersDefaultCellStyle.SelectionBackColor = Color.White;
+            this.RowHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(100, 200, 250);
+            //去掉小三角
+            this.RowHeadersDefaultCellStyle.Padding = new Padding(this.RowHeadersWidth);
+
+            this.ReadOnly = true;
+                
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            StringFormat sfn = new StringFormat();
+            sfn.Alignment = StringAlignment.Center;
+            sfn.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString("序号", this.Font, new SolidBrush(this.ForeColor), new Rectangle(0, 0, this.RowHeadersWidth, this.ColumnHeadersHeight), sfn);
+        }
+        protected override void OnRowPostPaint(DataGridViewRowPostPaintEventArgs e)
+        {
+            base.OnRowPostPaint(e);
+            var rowIdx = (e.RowIndex + 1).ToString();
+            var centerFormat = new StringFormat()
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center,
+
+
+            };
+            var color = this.Rows[e.RowIndex].Selected ? Color.FromArgb(100, 200, 250) : Color.Black;
+
+            var rowBounds = new Rectangle(e.RowBounds.X-1, e.RowBounds.Y, e.RowBounds.Width+1, e.RowBounds.Height-1);
+            if (this.Rows[e.RowIndex].Selected)
+                e.Graphics.DrawRectangle(new Pen(color), rowBounds);
+
+            var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, this.RowHeadersWidth, e.RowBounds.Height);
+            using (var brush = new SolidBrush(color))
+           {
+               e.Graphics.DrawString(rowIdx, this.Font, brush, headerBounds, centerFormat);
+
+           }
         }
         protected override void OnRowPrePaint(DataGridViewRowPrePaintEventArgs e)
         {
             base.OnRowPrePaint(e);
-            if ((e.State & DataGridViewElementStates.Selected) ==
-                      DataGridViewElementStates.Selected)
-            {
-                // 计算选中区域Size
-                int width = this.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + RowHeadersWidth;
-
-                Rectangle rowBounds = new Rectangle(
-                  0, e.RowBounds.Top, width,
-                    e.RowBounds.Height -1);
-
-
-                e.Graphics.DrawRectangle(Pens.Red, rowBounds);
-                // e.Graphics.FillRectangle(backbrush, rowBounds);
-                 e.PaintCellsContent(rowBounds);
-                e.Handled = true;
-            }
         }
        
     }
@@ -182,34 +227,34 @@ namespace  System.Windows.Forms
             }
         }
 
-        protected override void OnLeave(int rowIndex, bool throughMouseClick)
-        {
-            OnMouseLeave(rowIndex);
-            base.OnLeave(rowIndex, throughMouseClick);
-        }
-        protected override void OnMouseLeave(int rowIndex)
-        {
-            base.OnMouseLeave(rowIndex);
-               ControlState = ControlState.Normal;
-        }
+        //protected override void OnLeave(int rowIndex, bool throughMouseClick)
+        //{
+        //    OnMouseLeave(rowIndex);
+        //    base.OnLeave(rowIndex, throughMouseClick);
+        //}
+        //protected override void OnMouseLeave(int rowIndex)
+        //{
+        //    base.OnMouseLeave(rowIndex);
+        //       ControlState = ControlState.Normal;
+        //}
         
 
         
-        protected override void OnMouseMove(DataGridViewCellMouseEventArgs e)
-        {
-            ControlState = ControlState.Hover;
-            base.OnMouseMove(e);
-        }
-        protected override void OnMouseDown(DataGridViewCellMouseEventArgs e)
-        {
-            var check = (bool)Value;
-            CheckState = check ? CheckBoxState.CheckedPressed : CheckBoxState.UncheckedPressed;
-            if (e.Button == MouseButtons.Left && e.Clicks == 1)
-            {
-                ControlState = ControlState.Pressed;
-            }
-            base.OnMouseDown(e);
-        }
+        //protected override void OnMouseMove(DataGridViewCellMouseEventArgs e)
+        //{
+        //    ControlState = ControlState.Hover;
+        //    base.OnMouseMove(e);
+        //}
+        //protected override void OnMouseDown(DataGridViewCellMouseEventArgs e)
+        //{
+        //    var check = (bool)Value;
+        //    CheckState = check ? CheckBoxState.CheckedPressed : CheckBoxState.UncheckedPressed;
+        //    if (e.Button == MouseButtons.Left && e.Clicks == 1)
+        //    {
+        //        ControlState = ControlState.Pressed;
+        //    }
+        //    base.OnMouseDown(e);
+        //}
         //protected override void OnMouseClick(DataGridViewCellMouseEventArgs e)
         //{
              
@@ -217,57 +262,67 @@ namespace  System.Windows.Forms
         //    base.OnMouseClick(e);
         //}
         
-        protected override void OnEnter(int rowIndex, bool throughMouseClick)
-        {
-            OnMouseEnter(rowIndex);
-            base.OnEnter(rowIndex, throughMouseClick);
-        }
-        protected override void OnMouseEnter(int rowIndex)
-        {
-            ControlState = ControlState.Hover;
-            base.OnMouseEnter(rowIndex);
-        }
+        //protected override void OnEnter(int rowIndex, bool throughMouseClick)
+        //{
+        //    OnMouseEnter(rowIndex);
+        //    base.OnEnter(rowIndex, throughMouseClick);
+        //}
+        //protected override void OnMouseEnter(int rowIndex)
+        //{
+        //    ControlState = ControlState.Hover;
+        //    base.OnMouseEnter(rowIndex);
+        //}
         public Image image = ESkin.Properties.Resources._16x16_没勾选;
         
         protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
         {
+
+            var boundRect = new Rectangle(cellBounds.X, cellBounds.Y , cellBounds.Width, cellBounds.Height - 1);
             
-            cellBounds.Height -= 1 ;
             var check = (Boolean)value;
             if (paintParts == DataGridViewPaintParts.Background || paintParts == DataGridViewPaintParts.All)
             {
-                graphics.FillRectangle(new SolidBrush(cellStyle.BackColor), cellBounds);
+                graphics.FillRectangle(new SolidBrush(Color.White), boundRect);
+               // graphics.FillRectangle(new SolidBrush(cellStyle.BackColor), boundRect);
             }
             if (paintParts == DataGridViewPaintParts.Border || paintParts == DataGridViewPaintParts.All)
             {
                 // var color = cellState == DataGridViewElementStates.Selected ? Color.Red : Color.Transparent;
                 // graphics.DrawLine(new Pen(CellBorderColor), cellBounds.X, cellBounds.Y, cellBounds.X + cellBounds.Width,  cellBounds.Y);
-                 //graphics.DrawRectangle(new Pen(CellBorderColor), cellBounds);
+                graphics.DrawRectangle(new Pen(Color.White), boundRect);
             }
             if (paintParts == DataGridViewPaintParts.SelectionBackground || Selected)
             {
-                graphics.FillRectangle(new SolidBrush(cellStyle.SelectionBackColor), cellBounds);
+                //graphics.FillRectangle(new SolidBrush(cellStyle.SelectionBackColor), cellBounds);
             }
             //var col = OwningColumn as DataGridViewCheckBoxTextColumn;
             //if (col != null && !string.IsNullOrEmpty(col.Text))
             //{
-                graphics.DrawString( check ?"TRUE":"FALSE", cellStyle.Font, new SolidBrush(Selected ?
-                    cellStyle.SelectionForeColor : cellStyle.ForeColor),
-                    new Point(cellBounds.X + 25, cellBounds.Y + cellBounds.Height / 4));
+            graphics.DrawString(check ? "TRUE" : "FALSE", cellStyle.Font, new SolidBrush(Selected ?
+                cellStyle.SelectionForeColor : cellStyle.ForeColor),
+                new Point(cellBounds.X + 25, cellBounds.Y + cellBounds.Height / 4));
             //}
-                 
-                    switch (ControlState)
-                    {
-                        case ControlState.Hover:
-                            image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
-                            break;
-                        case ControlState.Pressed:
-                            image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
-                            break;
-                        default:
-                            image = check ? ESkin.Properties.Resources._16x16勾选 : ESkin.Properties.Resources._16x16_没勾选;
-                            break;
-                    }
+
+            if ((cellState & DataGridViewElementStates.Selected)!=0)
+            {
+                image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
+            }
+            else
+            {
+                image = check ? ESkin.Properties.Resources._16x16勾选 : ESkin.Properties.Resources._16x16_没勾选;
+            }
+                    //switch (ControlState)
+                    //{
+                    //    case ControlState.Hover:
+                    //        image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
+                    //        break;
+                    //    case ControlState.Pressed:
+                    //        image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
+                    //        break;
+                    //    default:
+                    //        image = check ? ESkin.Properties.Resources._16x16勾选 : ESkin.Properties.Resources._16x16_没勾选;
+                    //        break;
+                    //}
 
                     var rect = new Rectangle(cellBounds.X+4,cellBounds.Y+ cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
             //  image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
