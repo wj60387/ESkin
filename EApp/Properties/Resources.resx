@@ -121,11 +121,29 @@
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="下载" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下载.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="下载未点击" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下载未点击.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="下载点击状态" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下载点击状态.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="云端听诊" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\云端听诊.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="关于" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\关于.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="删除" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\删除.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="删除未点击" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\删除未点击.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="删除点击状态" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\删除点击状态.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="单选框未选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\单选框未选中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -201,6 +219,15 @@
   </data>
   <data name="背景" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\背景.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="详情" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\详情.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="详情未点击" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\详情未点击.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="详情点击状态" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\详情点击状态.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="账号图标" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\账号图标.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

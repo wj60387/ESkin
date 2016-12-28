@@ -73,6 +73,36 @@ namespace EApp.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 下载 {
+            get {
+                object obj = ResourceManager.GetObject("下载", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 下载未点击 {
+            get {
+                object obj = ResourceManager.GetObject("下载未点击", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 下载点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("下载点击状态", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 云端听诊 {
             get {
                 object obj = ResourceManager.GetObject("云端听诊", resourceCulture);
@@ -86,6 +116,36 @@ namespace EApp.Properties {
         internal static System.Drawing.Bitmap 关于 {
             get {
                 object obj = ResourceManager.GetObject("关于", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 删除 {
+            get {
+                object obj = ResourceManager.GetObject("删除", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 删除未点击 {
+            get {
+                object obj = ResourceManager.GetObject("删除未点击", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 删除点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("删除点击状态", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +396,36 @@ namespace EApp.Properties {
         internal static System.Drawing.Bitmap 背景 {
             get {
                 object obj = ResourceManager.GetObject("背景", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 详情 {
+            get {
+                object obj = ResourceManager.GetObject("详情", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 详情未点击 {
+            get {
+                object obj = ResourceManager.GetObject("详情未点击", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 详情点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("详情点击状态", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

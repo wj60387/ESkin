@@ -58,6 +58,9 @@
     <Compile Include="System.Windows.Forms\ComboBoxEx.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="System.Windows.Forms\DataGridViewCheckTextBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="System.Windows.Forms\DataGridViewEx.cs">
       <SubType>Component</SubType>
     </Compile>

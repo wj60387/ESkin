@@ -25,12 +25,21 @@ namespace EApp
             this.dataGridViewEx1.Columns.Add("C1C", "C1C");
             this.dataGridViewEx1.Columns.Add("C2C", "C2C");
 
-            var btnColumn = new DataGridViewButtonExColumn() { HeaderText = "" };
-            this.dataGridViewEx1.Columns.Add(btnColumn);
+            var btnDelColumn = new DataGridViewButtonExColumn("删除", EApp.Properties.Resources.删除点击状态, EApp.Properties.Resources.删除未点击) { HeaderText = "删除" };
+            this.dataGridViewEx1.Columns.Add(btnDelColumn);
+
+
+            var btnEditColumn = new DataGridViewButtonExColumn("", EApp.Properties.Resources.下载点击状态, EApp.Properties.Resources.下载未点击) { HeaderText = "下载" };
+            this.dataGridViewEx1.Columns.Add(btnEditColumn);
+            //var check = new DataGridViewCheckBoxTextColumn() { Text="测试"};
+            //this.dataGridViewEx1.Columns.Add(check);
+            
             this.dataGridViewEx1.RowCount = 5;
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.选择);
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器所属人);
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器名称);
+            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.删除);
+             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.下载);
              ////System.Windows.Forms.CheckBoxEx ckBox = new System.Windows.Forms.CheckBoxEx();
              ////ckBox.Text = "全选";
              ////ckBox.Checked = true;

@@ -149,6 +149,15 @@
   <ItemGroup>
     <Content Include="readme.txt" />
     <Content Include="Resources\logo.png" />
+    <None Include="Resources\详情未点击.png" />
+    <None Include="Resources\详情点击状态.png" />
+    <None Include="Resources\详情.png" />
+    <None Include="Resources\下载未点击.png" />
+    <None Include="Resources\下载点击状态.png" />
+    <None Include="Resources\下载.png" />
+    <None Include="Resources\删除未点击.png" />
+    <None Include="Resources\删除点击状态.png" />
+    <None Include="Resources\删除.png" />
     <None Include="Resources\选择.png" />
     <None Include="Resources\序号.png" />
     <None Include="Resources\听诊器所属人.png" />

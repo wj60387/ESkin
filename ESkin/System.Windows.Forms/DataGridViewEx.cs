@@ -51,6 +51,15 @@ namespace  System.Windows.Forms
                 
         }
         Image xhImage = ESkin.Properties.Resources.序号;
+
+        HitTestInfo CurCellInfo = HitTestInfo.Nowhere;
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            CurCellInfo = this.HitTest(e.X, e.Y);
+            this.Invalidate();
+             
+        }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -68,6 +77,15 @@ namespace  System.Windows.Forms
                     e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width / 2 + 4, rect.Y + 4, ListColumnImage[i].Width, ListColumnImage[i].Height);
                     // e.Graphics.DrawRectangle(  Pens.Red, rect);
                 }
+            if(CurCellInfo.RowIndex>=0 &&CurCellInfo.ColumnIndex>=0 )
+            {
+
+            
+            var rowRect = this.GetRowDisplayRectangle(CurCellInfo.RowIndex,false);
+            var rowBounds = new Rectangle(rowRect.X - 1, rowRect.Y, rowRect.Width, rowRect.Height - 1);
+            e.Graphics.DrawRectangle(new Pen(Color.Red), rowBounds);
+
+            }
         }
         public List<Image> ListColumnImage = new List<Image>();
         protected override void OnRowPostPaint(DataGridViewRowPostPaintEventArgs e)
@@ -409,9 +427,10 @@ namespace  System.Windows.Forms
             }
             set
             {
-                
+                this.Text = value +"";
             }
         }
+        
 
         public int EditingControlRowIndex
         {
@@ -424,16 +443,17 @@ namespace  System.Windows.Forms
                 RowIndex = value;
             }
         }
-
+        
+        private bool valueChanged = false;
         public bool EditingControlValueChanged
         {
             get
             {
-                return true;
+                return valueChanged;
             }
             set
             {
-                 ;
+                valueChanged = value;
             }
         }
 
@@ -454,7 +474,7 @@ namespace  System.Windows.Forms
 
         public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
         {
-            return this;
+            return this.Text;
         }
 
         public void PrepareEditingControlForEdit(bool selectAll)
@@ -470,12 +490,44 @@ namespace  System.Windows.Forms
 
       public class DataGridViewButtonExCell : DataGridViewCell
       {
-          private static Type defaultEditType = typeof(DataGridViewCheckBoxExControl);
-          public Image image = ESkin.Properties.Resources.删除未点击;
+         
+         
+           
+          public DataGridViewButtonExCell()
+              : base()
+          {
+          }
+          private static Type defaultEditType = typeof(DataGridViewButtonExControl);
+          private static Type defaultValueType = typeof(System.String);
+
+          public override Type EditType
+          {
+              get { return defaultEditType; }
+          }
+          public override Type ValueType
+          {
+              get
+              {
+                  Type valueType = base.ValueType;
+                  if (valueType != null)
+                  {
+                      return valueType;
+                  }
+                  return defaultValueType;
+              }
+          }
+
+          public override object DefaultNewRowValue
+          {
+              get
+              {
+                  return "按钮";
+              }
+          }
+
 
           protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
           {
-
               var boundRect = new Rectangle(cellBounds.X, cellBounds.Y, cellBounds.Width, cellBounds.Height - 1);
               if (paintParts == DataGridViewPaintParts.Background || paintParts == DataGridViewPaintParts.All)
               {
@@ -492,27 +544,57 @@ namespace  System.Windows.Forms
               {
                   //graphics.FillRectangle(new SolidBrush(cellStyle.SelectionBackColor), cellBounds);
               }
-
+              Image image = null;
+              var col = OwningColumn as DataGridViewButtonExColumn;
               if ((cellState & DataGridViewElementStates.Selected) != 0)
               {
-                  image = ESkin.Properties.Resources.删除点击状态;
+                  image = col.HoverImage;
               }
               else
               {
-                  image =  ESkin.Properties.Resources.删除未点击;
+                  image = col.NomalImage;
               }
-              var rect = new Rectangle(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
-              graphics.DrawImage(image, rect);
+              var sf = new StringFormat() {
+                  Alignment =StringAlignment.Near,
+                  LineAlignment= StringAlignment.Center
+              };
+              var text = col.Text;
+              Size textSize = TextRenderer.MeasureText(text, cellStyle.Font);
+              var exWidth = (cellBounds.Width - (image == null ? 0 : image.Width) - textSize.Width) / 2;
+              var exHeight =   cellBounds.Height / 4;
+
+              if (!string.IsNullOrEmpty(text))
+              graphics.DrawString(text, cellStyle.Font, new SolidBrush(Selected ?
+                cellStyle.SelectionForeColor : cellStyle.ForeColor),
+                new Point(cellBounds.X + exWidth + image.Width, cellBounds.Y + exHeight));
+
+              if (image!=null)
+             // var rect = new Rectangle(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
+              graphics.DrawImage(image, cellBounds.X + exWidth, cellBounds.Y+exHeight);
           }
       }
       public class DataGridViewButtonExColumn : DataGridViewColumn
       {
 
 
+          public Image HoverImage { get; set; }
+          public Image NomalImage { get; set; }
+          public string Text { get; set; }
           public DataGridViewButtonExColumn()
               : base()
           {
               CellTemplate = new DataGridViewButtonExCell();
+               
+          }
+         // public Image Image { get; set; }
+          public DataGridViewButtonExColumn(string Text,Image HoverImage,Image NomalImage)
+              : base()
+          {
+              CellTemplate = new DataGridViewButtonExCell();
+              this.Text = Text;
+              this.HoverImage = HoverImage;
+              this.NomalImage = NomalImage;
+              
           }
 
           public override DataGridViewCell CellTemplate
@@ -534,6 +616,7 @@ namespace  System.Windows.Forms
           public override object Clone()
           {
               DataGridViewButtonExCell col = (DataGridViewButtonExCell)base.Clone();
+             // col.text = HeaderText;
               return col;
           }
       }
