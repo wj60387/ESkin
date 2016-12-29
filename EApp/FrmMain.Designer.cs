@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.checkBoxEx1 = new System.Windows.Forms.CheckBoxEx();
             this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
@@ -42,15 +42,11 @@
             this.comboBoxEx1 = new System.Windows.Forms.ComboBoxEx();
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
-            this.tsNavBar = new System.Windows.Forms.ToolStripEx();
-            this.btnTZPZ = new System.Windows.Forms.ToolStripButton();
-            this.btnTZJX = new System.Windows.Forms.ToolStripButton();
-            this.btnTZLY = new System.Windows.Forms.ToolStripButton();
-            this.btnYDTZ = new System.Windows.Forms.ToolStripButton();
-            this.btnYCJX = new System.Windows.Forms.ToolStripButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.buttonEx3 = new System.Windows.Forms.ButtonEx();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
-            this.tsNavBar.SuspendLayout();
+            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxEx1
@@ -90,41 +86,41 @@
             this.dataGridViewEx1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewEx1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewEx1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewEx1.ColumnHeadersHeight = 40;
             this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewEx1.EnableHeadersVisualStyles = false;
-            this.dataGridViewEx1.Location = new System.Drawing.Point(118, 76);
+            this.dataGridViewEx1.Location = new System.Drawing.Point(141, 76);
             this.dataGridViewEx1.Name = "dataGridViewEx1";
             this.dataGridViewEx1.ReadOnly = true;
             this.dataGridViewEx1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(41);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(41);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewEx1.RowTemplate.Height = 32;
             this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEx1.Size = new System.Drawing.Size(687, 515);
+            this.dataGridViewEx1.Size = new System.Drawing.Size(664, 515);
             this.dataGridViewEx1.TabIndex = 37;
             // 
             // btnMin
@@ -236,87 +232,34 @@
             this.buttonEx2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEx2.UseVisualStyleBackColor = false;
             // 
-            // tsNavBar
+            // panelLeft
             // 
-            this.tsNavBar.AutoSize = false;
-            this.tsNavBar.BackColor = System.Drawing.Color.Yellow;
-            this.tsNavBar.BackgroundImage = global::EApp.Properties.Resources.导航栏200x1080;
-            this.tsNavBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tsNavBar.GripMargin = new System.Windows.Forms.Padding(0);
-            this.tsNavBar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.tsNavBar.ImageScalingSize = new System.Drawing.Size(51, 51);
-            this.tsNavBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnTZPZ,
-            this.btnTZJX,
-            this.btnTZLY,
-            this.btnYDTZ,
-            this.btnYCJX});
-            this.tsNavBar.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.tsNavBar.Location = new System.Drawing.Point(0, 0);
-            this.tsNavBar.MaximumSize = new System.Drawing.Size(120, 0);
-            this.tsNavBar.MinimumSize = new System.Drawing.Size(64, 0);
-            this.tsNavBar.MouseMoveItem = null;
-            this.tsNavBar.Name = "tsNavBar";
-            this.tsNavBar.Padding = new System.Windows.Forms.Padding(0);
-            this.tsNavBar.PressItem = this.btnTZPZ;
-            this.tsNavBar.Size = new System.Drawing.Size(112, 672);
-            this.tsNavBar.TabIndex = 6;
-            this.tsNavBar.Text = "toolStripEx3";
+            this.panelLeft.BackgroundImage = global::EApp.Properties.Resources.导航栏200x1080;
+            this.panelLeft.Controls.Add(this.buttonEx3);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(117, 672);
+            this.panelLeft.TabIndex = 38;
             // 
-            // btnTZPZ
+            // buttonEx3
             // 
-            this.btnTZPZ.Image = global::EApp.Properties.Resources.听诊配置;
-            this.btnTZPZ.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnTZPZ.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTZPZ.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTZPZ.Name = "btnTZPZ";
-            this.btnTZPZ.Size = new System.Drawing.Size(111, 116);
-            this.btnTZPZ.Text = "Press";
-            this.btnTZPZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // btnTZJX
-            // 
-            this.btnTZJX.Image = global::EApp.Properties.Resources.听诊教学;
-            this.btnTZJX.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnTZJX.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTZJX.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTZJX.Name = "btnTZJX";
-            this.btnTZJX.Size = new System.Drawing.Size(111, 107);
-            this.btnTZJX.Text = "Press";
-            this.btnTZJX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // btnTZLY
-            // 
-            this.btnTZLY.Image = global::EApp.Properties.Resources.听诊录音;
-            this.btnTZLY.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnTZLY.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTZLY.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTZLY.Name = "btnTZLY";
-            this.btnTZLY.Size = new System.Drawing.Size(111, 109);
-            this.btnTZLY.Text = "Press";
-            this.btnTZLY.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // btnYDTZ
-            // 
-            this.btnYDTZ.Image = global::EApp.Properties.Resources.云端听诊;
-            this.btnYDTZ.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnYDTZ.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnYDTZ.Margin = new System.Windows.Forms.Padding(0);
-            this.btnYDTZ.Name = "btnYDTZ";
-            this.btnYDTZ.Size = new System.Drawing.Size(111, 98);
-            this.btnYDTZ.Text = "Press";
-            this.btnYDTZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // btnYCJX
-            // 
-            this.btnYCJX.Image = global::EApp.Properties.Resources.远程教学;
-            this.btnYCJX.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.btnYCJX.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnYCJX.Margin = new System.Windows.Forms.Padding(0);
-            this.btnYCJX.Name = "btnYCJX";
-            this.btnYCJX.Size = new System.Drawing.Size(111, 101);
-            this.btnYCJX.Text = "Press";
-            this.btnYCJX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEx3.FlatAppearance.BorderSize = 0;
+            this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEx3.ForeColor = System.Drawing.Color.White;
+            this.buttonEx3.Image = global::EApp.Properties.Resources.听诊配置;
+            this.buttonEx3.Location = new System.Drawing.Point(0, 0);
+            this.buttonEx3.Name = "buttonEx3";
+            this.buttonEx3.Size = new System.Drawing.Size(117, 124);
+            this.buttonEx3.TabIndex = 39;
+            this.buttonEx3.Text = "听诊配置";
+            this.buttonEx3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonEx3.UseVisualStyleBackColor = false;
             // 
             // FrmMain
             // 
@@ -324,6 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(816, 672);
+            this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.dataGridViewEx1);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnBack);
@@ -333,14 +277,12 @@
             this.Controls.Add(this.comboBoxEx1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.buttonEx2);
-            this.Controls.Add(this.tsNavBar);
             this.MaximumSize = new System.Drawing.Size(1366, 728);
             this.Name = "FrmMain";
             this.ShowIcon = false;
             this.Text = "";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
-            this.tsNavBar.ResumeLayout(false);
-            this.tsNavBar.PerformLayout();
+            this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,12 +290,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStripEx tsNavBar;
-        private System.Windows.Forms.ToolStripButton btnTZPZ;
-        private System.Windows.Forms.ToolStripButton btnTZJX;
-        private System.Windows.Forms.ToolStripButton btnTZLY;
-        private System.Windows.Forms.ToolStripButton btnYDTZ;
-        private System.Windows.Forms.ToolStripButton btnYCJX;
         private System.Windows.Forms.ButtonEx buttonEx2;
         private System.Windows.Forms.ButtonEx btnClose;
         private System.Windows.Forms.ComboBoxEx comboBoxEx1;
@@ -364,6 +300,8 @@
         private System.Windows.Forms.ButtonEx btnMin;
         private System.Windows.Forms.DataGridViewEx dataGridViewEx1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.ButtonEx buttonEx3;
 
 
 
