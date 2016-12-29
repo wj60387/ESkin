@@ -82,7 +82,7 @@ namespace System.Windows.Forms
         protected override void OnPaint(PaintEventArgs e)
         {
 
-            if (PressItem != null)
+            if (PressItem != null && PressItem.Name!="navLOGO")
             {
                 e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), PressItem.Bounds);
                 var rect = new Rectangle(PressItem.Bounds.X + PressItem.Bounds.Width - 9
@@ -91,7 +91,7 @@ namespace System.Windows.Forms
                 , PressItem.Bounds.Height);
                 e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), rect);
             }
-            if (MouseMoveItem != null)
+            if (MouseMoveItem != null && MouseMoveItem.Name != "navLOGO")
             {
                 if (PressItem != null && MouseMoveItem != PressItem)
                 {

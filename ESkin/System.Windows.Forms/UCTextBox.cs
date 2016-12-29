@@ -11,7 +11,7 @@ namespace System.Windows.Forms
     {
         private WaterTextBox waterTextBox1;
 
-       
+        public event Action OnEnterKeyDown;
         public UCTextBox()
         {
             
@@ -39,7 +39,17 @@ namespace System.Windows.Forms
             this.SetStyle(ControlStyles.Selectable, true);
             this.BackColor = Color.Transparent;
         }
- 
+        
+        public   string Text { 
+            get{
+                return this.waterTextBox1.Text;
+
+            }
+            set
+            {
+                this.waterTextBox1.Text = value;
+            }
+        }
         public string WaterText
         {
             get { return waterTextBox1.WaterText; }
@@ -109,9 +119,21 @@ namespace System.Windows.Forms
             this.Name = "UCTextBox";
             this.Size = new System.Drawing.Size(273, 40);
             this.FontChanged += new System.EventHandler(this.UCTextBox_FontChanged);
+            waterTextBox1.KeyDown += waterTextBox1_KeyDown;
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        void waterTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+           if(e.KeyCode== Keys.Enter)
+           {
+               if(OnEnterKeyDown !=null)
+               {
+                   OnEnterKeyDown();
+               }
+           }
         }
 
         private void UCTextBox_FontChanged(object sender, EventArgs e)
@@ -130,7 +152,9 @@ namespace System.Windows.Forms
         {
             if(textImage!=null)
             {
-                e.Graphics.DrawImage(TextImage, ImageDrawRect);
+                 
+                e.Graphics.DrawImage(TextImage, ImageDrawRect.X + ImageDrawRect.Width / 2 - textImage.Width/2
+                   ,ImageDrawRect.Y+ ImageDrawRect.Height/2-textImage.Height/2);
             }
             this.waterTextBox1.Location = TextBoxLocation;
             this.waterTextBox1.Size=new Size(this.Width - ImageDrawRect.Width-40,this.Height);

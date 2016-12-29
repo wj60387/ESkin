@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.checkBoxEx1 = new System.Windows.Forms.CheckBoxEx();
             this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
@@ -44,7 +44,11 @@
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.buttonEx3 = new System.Windows.Forms.ButtonEx();
+            this.NavYCTZ = new System.Windows.Forms.ButtonEx();
+            this.NavYDTZ = new System.Windows.Forms.ButtonEx();
+            this.NavTZLY = new System.Windows.Forms.ButtonEx();
+            this.NavTZJX = new System.Windows.Forms.ButtonEx();
+            this.NavTZPZ = new System.Windows.Forms.ButtonEx();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -86,38 +90,38 @@
             this.dataGridViewEx1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewEx1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewEx1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewEx1.ColumnHeadersHeight = 40;
             this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewEx1.EnableHeadersVisualStyles = false;
             this.dataGridViewEx1.Location = new System.Drawing.Point(141, 76);
             this.dataGridViewEx1.Name = "dataGridViewEx1";
             this.dataGridViewEx1.ReadOnly = true;
             this.dataGridViewEx1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(41);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(41);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewEx1.RowTemplate.Height = 32;
             this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEx1.Size = new System.Drawing.Size(664, 515);
@@ -178,7 +182,7 @@
             // 
             this.comboBoxEx1.BackColor = System.Drawing.Color.Transparent;
             this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx1.DropDownHeight = 100;
+            this.comboBoxEx1.DropDownHeight = 154;
             this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEx1.DwonImage = ((System.Drawing.Image)(resources.GetObject("comboBoxEx1.DwonImage")));
             this.comboBoxEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -224,7 +228,7 @@
             this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonEx2.Image = global::EApp.Properties.Resources.听诊器图片;
-            this.buttonEx2.Location = new System.Drawing.Point(115, 7);
+            this.buttonEx2.Location = new System.Drawing.Point(141, 7);
             this.buttonEx2.Name = "buttonEx2";
             this.buttonEx2.Size = new System.Drawing.Size(224, 63);
             this.buttonEx2.TabIndex = 13;
@@ -234,32 +238,106 @@
             // 
             // panelLeft
             // 
-            this.panelLeft.BackgroundImage = global::EApp.Properties.Resources.导航栏200x1080;
-            this.panelLeft.Controls.Add(this.buttonEx3);
+            this.panelLeft.Controls.Add(this.NavYCTZ);
+            this.panelLeft.Controls.Add(this.NavYDTZ);
+            this.panelLeft.Controls.Add(this.NavTZLY);
+            this.panelLeft.Controls.Add(this.NavTZJX);
+            this.panelLeft.Controls.Add(this.NavTZPZ);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(117, 672);
-            this.panelLeft.TabIndex = 38;
+            this.panelLeft.TabIndex = 40;
             // 
-            // buttonEx3
+            // NavYCTZ
             // 
-            this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonEx3.FlatAppearance.BorderSize = 0;
-            this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonEx3.ForeColor = System.Drawing.Color.White;
-            this.buttonEx3.Image = global::EApp.Properties.Resources.听诊配置;
-            this.buttonEx3.Location = new System.Drawing.Point(0, 0);
-            this.buttonEx3.Name = "buttonEx3";
-            this.buttonEx3.Size = new System.Drawing.Size(117, 124);
-            this.buttonEx3.TabIndex = 39;
-            this.buttonEx3.Text = "听诊配置";
-            this.buttonEx3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonEx3.UseVisualStyleBackColor = false;
+            this.NavYCTZ.BackColor = System.Drawing.Color.Transparent;
+            this.NavYCTZ.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavYCTZ.FlatAppearance.BorderSize = 0;
+            this.NavYCTZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NavYCTZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.NavYCTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NavYCTZ.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NavYCTZ.ForeColor = System.Drawing.Color.White;
+            this.NavYCTZ.Location = new System.Drawing.Point(0, 496);
+            this.NavYCTZ.Name = "NavYCTZ";
+            this.NavYCTZ.Size = new System.Drawing.Size(117, 124);
+            this.NavYCTZ.TabIndex = 43;
+            this.NavYCTZ.Text = "远程听诊";
+            this.NavYCTZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NavYCTZ.UseVisualStyleBackColor = false;
+            // 
+            // NavYDTZ
+            // 
+            this.NavYDTZ.BackColor = System.Drawing.Color.Transparent;
+            this.NavYDTZ.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavYDTZ.FlatAppearance.BorderSize = 0;
+            this.NavYDTZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NavYDTZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.NavYDTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NavYDTZ.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NavYDTZ.ForeColor = System.Drawing.Color.White;
+            this.NavYDTZ.Location = new System.Drawing.Point(0, 372);
+            this.NavYDTZ.Name = "NavYDTZ";
+            this.NavYDTZ.Size = new System.Drawing.Size(117, 124);
+            this.NavYDTZ.TabIndex = 42;
+            this.NavYDTZ.Text = "云端听诊";
+            this.NavYDTZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NavYDTZ.UseVisualStyleBackColor = false;
+            // 
+            // NavTZLY
+            // 
+            this.NavTZLY.BackColor = System.Drawing.Color.Transparent;
+            this.NavTZLY.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavTZLY.FlatAppearance.BorderSize = 0;
+            this.NavTZLY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NavTZLY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.NavTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NavTZLY.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NavTZLY.ForeColor = System.Drawing.Color.White;
+            this.NavTZLY.Location = new System.Drawing.Point(0, 248);
+            this.NavTZLY.Name = "NavTZLY";
+            this.NavTZLY.Size = new System.Drawing.Size(117, 124);
+            this.NavTZLY.TabIndex = 41;
+            this.NavTZLY.Text = "听诊录音";
+            this.NavTZLY.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NavTZLY.UseVisualStyleBackColor = false;
+            // 
+            // NavTZJX
+            // 
+            this.NavTZJX.BackColor = System.Drawing.Color.Transparent;
+            this.NavTZJX.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavTZJX.FlatAppearance.BorderSize = 0;
+            this.NavTZJX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NavTZJX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.NavTZJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NavTZJX.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NavTZJX.ForeColor = System.Drawing.Color.White;
+            this.NavTZJX.Location = new System.Drawing.Point(0, 124);
+            this.NavTZJX.Name = "NavTZJX";
+            this.NavTZJX.Size = new System.Drawing.Size(117, 124);
+            this.NavTZJX.TabIndex = 40;
+            this.NavTZJX.Text = "听诊教学";
+            this.NavTZJX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NavTZJX.UseVisualStyleBackColor = false;
+            // 
+            // NavTZPZ
+            // 
+            this.NavTZPZ.BackColor = System.Drawing.Color.Transparent;
+            this.NavTZPZ.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavTZPZ.FlatAppearance.BorderSize = 0;
+            this.NavTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NavTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.NavTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NavTZPZ.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.NavTZPZ.ForeColor = System.Drawing.Color.White;
+            this.NavTZPZ.Location = new System.Drawing.Point(0, 0);
+            this.NavTZPZ.Name = "NavTZPZ";
+            this.NavTZPZ.Size = new System.Drawing.Size(117, 124);
+            this.NavTZPZ.TabIndex = 39;
+            this.NavTZPZ.Text = "听诊配置";
+            this.NavTZPZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.NavTZPZ.UseVisualStyleBackColor = false;
             // 
             // FrmMain
             // 
@@ -301,7 +379,11 @@
         private System.Windows.Forms.DataGridViewEx dataGridViewEx1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.ButtonEx buttonEx3;
+        private System.Windows.Forms.ButtonEx NavYCTZ;
+        private System.Windows.Forms.ButtonEx NavYDTZ;
+        private System.Windows.Forms.ButtonEx NavTZLY;
+        private System.Windows.Forms.ButtonEx NavTZJX;
+        private System.Windows.Forms.ButtonEx NavTZPZ;
 
 
 

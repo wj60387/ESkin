@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace EApp
+namespace BDAuscultation
 {
     static class Program
     {
@@ -13,12 +13,9 @@ namespace EApp
         [STAThread]
         static void Main()
         {
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           Application.Run(new FrmLogin());
-               //  Application.Run(new FrmMain()); 
-               // Application.Run(new FrmMain2()); 
+            Application.Run(new FrmLogin());
         }
     }
 }

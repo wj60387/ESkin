@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EApp
+namespace BDAuscultation
 {
     public partial class FrmLogin : Form
     {
@@ -17,15 +17,21 @@ namespace EApp
         public FrmLogin()
         {
             InitializeComponent();
-             
+            this.txtPWD.OnEnterKeyDown += txtPWD_OnEnterKeyDown;
+        }
+
+        void txtPWD_OnEnterKeyDown()
+        {
+            btnLogin_Click(null,null);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show(ucTextBox1.Text);
-            FrmMain main = new FrmMain();
-            main.Show();
+            MessageBox.Show(txtUserName.Text);
+            var frm = new FrmMain();
+            frm.Show();
+            
         }
         protected override void OnMouseDown(MouseEventArgs e)
         {
