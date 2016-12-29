@@ -75,18 +75,18 @@ namespace System.Windows.Forms
         {
             //base.OnClick(e);
         }
-        protected override void OnMouseDown(MouseEventArgs mea)
+        protected override void OnMouseDown(MouseEventArgs e)
         {
-            //base.OnMouseDown(mea);
+            //base.OnMouseDown(e);
         }
         protected override void OnPaint(PaintEventArgs e)
         {
-            
+
             if (PressItem != null)
             {
                 e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), PressItem.Bounds);
                 var rect = new Rectangle(PressItem.Bounds.X + PressItem.Bounds.Width - 9
-                , PressItem.Bounds.Y 
+                , PressItem.Bounds.Y
                 , 10
                 , PressItem.Bounds.Height);
                 e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), rect);
@@ -106,7 +106,7 @@ namespace System.Windows.Forms
                 }
             }
             base.OnPaint(e);
-           
+
         }
     }
     class MenuBarColor : ProfessionalColorTable
@@ -315,10 +315,9 @@ namespace System.Windows.Forms
          /// <param name="e"></param>
          protected override void OnRenderItemImage(ToolStripItemImageRenderEventArgs e)
          {
-             base.OnRenderItemImage(e);
-           
-            
-
+             if(e.Image!=null)
+             e.Graphics.DrawImage(e.Image, e.ImageRectangle);
+            // base.OnRenderItemImage(e);
          }
          /// <summary>  
          /// 渲染整个背景  
@@ -337,26 +336,27 @@ namespace System.Windows.Forms
          /// <param name="e"></param>  
          protected override void OnRenderButtonBackground(ToolStripItemRenderEventArgs e)
          {
-             var toolStrip = e.ToolStrip as ToolStripEx;
+             base.OnRenderButtonBackground(e);
+             //var toolStrip = e.ToolStrip as ToolStripEx;
 
-             if (toolStrip != null && toolStrip.PressItem != null && toolStrip.PressItem == e.Item)
-             {
-                 return;
-             }
-             if (e.Item.Selected)
-             {
+             //if (toolStrip != null && toolStrip.PressItem != null && toolStrip.PressItem == e.Item)
+             //{
+             //    return;
+             //}
+             //if (e.Item.Selected)
+             //{
 
-                 var rect = new Rectangle(e.Item.Bounds.X + e.Item.Bounds.Width - 9
-               , e.Item.Bounds.Y
-               , 10
-               , e.Item.Bounds.Height);
-                 e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), rect);
-                 e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 161, 133)),
-                     //new Rectangle(0, 0, e.Item.Size.Width, e.Item.Size.Height));
-                     e.Item.Bounds);
+             //    var rect = new Rectangle(e.Item.Bounds.X + e.Item.Bounds.Width - 9
+             //  , e.Item.Bounds.Y
+             //  , 10
+             //  , e.Item.Bounds.Height);
+             //    e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), rect);
+             //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 161, 133)),
+             //        //new Rectangle(0, 0, e.Item.Size.Width, e.Item.Size.Height));
+             //        e.Item.Bounds);
 
 
-             }
+             //}
              //if(e.Item.Pressed)
              //{
              //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), new Rectangle(0, 0, e.Item.Size.Width, e.Item.Size.Height));
@@ -376,15 +376,15 @@ namespace System.Windows.Forms
          /// <param name="e"></param>  
          protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
          {
-             ToolStrip toolStrip = e.ToolStrip;
-             e.Graphics.SmoothingMode = SmoothingMode.HighQuality;//抗锯齿
-             //e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;//抗锯齿
-             Rectangle bounds = e.AffectedBounds;
-             GraphicsPath path = new GraphicsPath();
-             Rectangle rect = new Rectangle(Point.Empty, toolStrip.Size);
-             e.Graphics.DrawRectangle(Pens.Red, 0, 0, toolStrip.Width - 1, toolStrip.Height - 1);  
-             e.Graphics.SetClip(bounds);
-             //base.OnRenderToolStripBorder(e);
+             
+             //ToolStrip toolStrip = e.ToolStrip;
+             //e.Graphics.SmoothingMode = SmoothingMode.HighQuality;//抗锯齿
+             ////e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;//抗锯齿
+             //Rectangle bounds = e.AffectedBounds;
+             //Rectangle rect = new Rectangle(Point.Empty, toolStrip.Size);
+             //e.Graphics.DrawRectangle(Pens.Red, 0, 0, toolStrip.Width - 1, toolStrip.Height - 1);  
+             //e.Graphics.SetClip(bounds);
+              base.OnRenderToolStripBorder(e);
          }
          /// <summary>  
          /// 渲染箭头  
