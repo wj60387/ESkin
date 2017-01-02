@@ -30,14 +30,52 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
-            this.btnLogin = new System.Windows.Forms.ButtonEx();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPWD = new System.Windows.Forms.UCTextBox();
-            this.txtUserName = new System.Windows.Forms.UCTextBox();
-            this.btnClose = new System.Windows.Forms.ButtonEx();
             this.lbMsg = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnClose = new System.Windows.Forms.ButtonEx();
+            this.btnLogin = new System.Windows.Forms.ButtonEx();
+            this.txtPwd = new System.Windows.Forms.UCTextBox();
+            this.txtUserName = new System.Windows.Forms.UCTextBox();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::BDAuscultation.Properties.Resources.奔达听诊平台;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(45, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 45);
+            this.panel1.TabIndex = 4;
+            // 
+            // lbMsg
+            // 
+            this.lbMsg.AutoSize = true;
+            this.lbMsg.BackColor = System.Drawing.Color.Transparent;
+            this.lbMsg.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbMsg.ForeColor = System.Drawing.Color.Red;
+            this.lbMsg.Location = new System.Drawing.Point(88, 349);
+            this.lbMsg.Name = "lbMsg";
+            this.lbMsg.Size = new System.Drawing.Size(0, 20);
+            this.lbMsg.TabIndex = 8;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::BDAuscultation.Properties.Resources.系统按钮关闭;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(582, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(12, 12);
+            this.btnClose.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.btnClose, "关闭");
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnLogin
             // 
@@ -58,31 +96,21 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // panel1
+            // txtPwd
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::BDAuscultation.Properties.Resources.奔达听诊平台;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(45, 80);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 45);
-            this.panel1.TabIndex = 4;
-            // 
-            // txtPWD
-            // 
-            this.txtPWD.BackColor = System.Drawing.Color.Transparent;
-            this.txtPWD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPWD.BackgroundImage")));
-            this.txtPWD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtPWD.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPWD.ImageDrawRect = new System.Drawing.Rectangle(25, 10, 20, 20);
-            this.txtPWD.Location = new System.Drawing.Point(60, 230);
-            this.txtPWD.Name = "txtPWD";
-            this.txtPWD.PasswordChar = '*';
-            this.txtPWD.Size = new System.Drawing.Size(220, 40);
-            this.txtPWD.TabIndex = 3;
-            this.txtPWD.TextBoxLocation = new System.Drawing.Point(50, 10);
-            this.txtPWD.TextImage = global::BDAuscultation.Properties.Resources.密码图标;
-            this.txtPWD.WaterText = "密码";
+            this.txtPwd.BackColor = System.Drawing.Color.Transparent;
+            this.txtPwd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPwd.BackgroundImage")));
+            this.txtPwd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtPwd.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtPwd.ImageDrawRect = new System.Drawing.Rectangle(25, 10, 20, 20);
+            this.txtPwd.Location = new System.Drawing.Point(60, 230);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
+            this.txtPwd.Size = new System.Drawing.Size(220, 40);
+            this.txtPwd.TabIndex = 3;
+            this.txtPwd.TextBoxLocation = new System.Drawing.Point(50, 10);
+            this.txtPwd.TextImage = global::BDAuscultation.Properties.Resources.密码图标;
+            this.txtPwd.WaterText = "密码";
             // 
             // txtUserName
             // 
@@ -100,34 +128,6 @@
             this.txtUserName.TextImage = ((System.Drawing.Image)(resources.GetObject("txtUserName.TextImage")));
             this.txtUserName.WaterText = "用户名";
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = global::BDAuscultation.Properties.Resources.系统按钮关闭;
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(582, 6);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(12, 12);
-            this.btnClose.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.btnClose, "关闭");
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lbMsg
-            // 
-            this.lbMsg.AutoSize = true;
-            this.lbMsg.BackColor = System.Drawing.Color.Transparent;
-            this.lbMsg.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbMsg.ForeColor = System.Drawing.Color.Red;
-            this.lbMsg.Location = new System.Drawing.Point(88, 349);
-            this.lbMsg.Name = "lbMsg";
-            this.lbMsg.Size = new System.Drawing.Size(0, 20);
-            this.lbMsg.TabIndex = 8;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -138,7 +138,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtPWD);
+            this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.txtUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -154,7 +154,7 @@
         #endregion
 
         private System.Windows.Forms.UCTextBox txtUserName;
-        private System.Windows.Forms.UCTextBox txtPWD;
+        private System.Windows.Forms.UCTextBox txtPwd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ButtonEx btnLogin;
         private System.Windows.Forms.ButtonEx btnClose;

@@ -142,15 +142,20 @@ namespace System.Windows.Forms
             if (e.Index < 0) return;
             if ((e.State & DrawItemState.Selected) != 0)
             {
-                //渐变画刷
-                LinearGradientBrush brush = new LinearGradientBrush(e.Bounds, Color.FromArgb(255, 251, 237),
-                                                 Color.FromArgb(255, 236, 181), LinearGradientMode.Vertical);
-                //填充区域
                 Rectangle borderRect = new Rectangle(0, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height);
-                e.Graphics.FillRectangle(brush, borderRect);
-                //画边框
-                Pen pen = new Pen(Color.FromArgb(229, 195, 101));
-                e.Graphics.DrawRectangle(pen, borderRect);
+                using (var brush = new SolidBrush(Color.DarkCyan))
+                {
+                    e.Graphics.FillRectangle(brush, borderRect);
+                }
+                ////渐变画刷
+                //LinearGradientBrush brush = new LinearGradientBrush(e.Bounds, Color.FromArgb(255, 251, 237),
+                //                                 Color.FromArgb(255, 236, 181), LinearGradientMode.Vertical);
+                ////填充区域
+                //Rectangle borderRect = new Rectangle(0, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height);
+                //e.Graphics.FillRectangle(brush, borderRect);
+                ////画边框
+                //Pen pen = new Pen(Color.FromArgb(229, 195, 101));
+                //e.Graphics.DrawRectangle(pen, borderRect);
             }
             else
             {
@@ -194,14 +199,14 @@ namespace System.Windows.Forms
         protected override void OnMouseLeave(EventArgs e)
         {
 
-            _mouseEnter = false;
-            IntPtr hDC = IntPtr.Zero;
-            Graphics gdc = null;
-            hDC = Win32.GetWindowDC(this.Handle);
-            gdc = Graphics.FromHdc(hDC);
-            // gdc.DrawImage(dwonImage, new Rectangle(this.Width - 20, 3, 16, 16));
-            gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
-            Win32.ReleaseDC(this.Handle, hDC);
+            //_mouseEnter = false;
+            //IntPtr hDC = IntPtr.Zero;
+            //Graphics gdc = null;
+            //hDC = Win32.GetWindowDC(this.Handle);
+            //gdc = Graphics.FromHdc(hDC);
+            //// gdc.DrawImage(dwonImage, new Rectangle(this.Width - 20, 3, 16, 16));
+            //gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
+            //Win32.ReleaseDC(this.Handle, hDC);
             base.OnMouseLeave(e);
         }
 

@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Windows.Forms;
 
@@ -17,28 +19,45 @@ namespace BDAuscultation
         public FrmLogin()
         {
             InitializeComponent();
-            this.txtPWD.OnEnterKeyDown += txtPWD_OnEnterKeyDown;
+            this.txtPwd.OnEnterKeyDown += txtPwd_KeyDown;
+
         }
 
-        void txtPWD_OnEnterKeyDown()
+        void txtPwd_KeyDown()
         {
-            btnLogin_Click(null,null);
+            btnLogin_Click(null, null);
         }
-
+        // public string SN = string.Empty;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show(txtUserName.Text);
-            var frm = new FrmMain();
-            frm.Show();
-            
+            if (string.IsNullOrEmpty(txtUserName.Text.Trim()) || string.IsNullOrEmpty(txtPwd.Text.Trim()))
+            {
+                lbMsg.Text = "用户名和密码不能为空！";
+                return;
+            }
+            if (Setting.authorizationInfo!=null)
+            using (OperationContextScope scope = new OperationContextScope(Mediator.remoteService.InnerChannel))
+            {
+                MessageHeader header = MessageHeader.CreateHeader("SN", "http://tempuri.org", Setting.authorizationInfo.AuthorizationNum);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                header = MessageHeader.CreateHeader("MAC", "http://tempuri.org", Setting.authorizationInfo.MachineCode);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                string sql = "select 1 from UserInfo where   UserName={0} and PWD={1}";
+                var r = Mediator.remoteService.ExecuteScalar(sql, new string[] { txtUserName.Text.Trim(), txtPwd.Text.Trim() });
+                if (!string.IsNullOrEmpty(r))
+                {
+                    lbMsg.Text = "登录成功";
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                }
+            }
+            lbMsg.Text = "用户名或者密码错误";
         }
         protected override void OnMouseDown(MouseEventArgs e)
         {
             var point = PointToScreen(MousePosition);
             this.MaximumSize = Screen.FromPoint(point).WorkingArea.Size;
             base.OnMouseDown(e);
-            if (e.Button == MouseButtons.Left  ) 
+            if (e.Button == MouseButtons.Left)
             {
                 isMouseDown = true;
                 FormLocation = this.Location;
@@ -59,7 +78,7 @@ namespace BDAuscultation
 
                 this.Location = new Point(FormLocation.X - _x, FormLocation.Y - _y);
             }
-             
+
         }
         protected override void OnMouseUp(MouseEventArgs e)
         {
@@ -76,5 +95,7 @@ namespace BDAuscultation
         {
             this.Close();
         }
+
+
     }
 }

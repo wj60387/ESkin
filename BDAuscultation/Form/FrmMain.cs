@@ -142,6 +142,11 @@ namespace BDAuscultation
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
 
+        private void btnTZPZ_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

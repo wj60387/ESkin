@@ -193,6 +193,9 @@
   <data name="导航栏" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\导航栏.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\按钮.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="按钮右半椭圆" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\按钮右半椭圆.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
