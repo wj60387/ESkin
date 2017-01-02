@@ -194,6 +194,39 @@
   <ItemGroup>
     <None Include="Resources\云端听诊.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\编辑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\编辑点击.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\编辑未点击.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\计算机名.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\连接状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊类型.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊器编号.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊器描述.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊器名字.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊器所属人.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\听诊器备注.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

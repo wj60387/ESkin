@@ -207,12 +207,12 @@ namespace System.Windows.Forms
         }
         protected override void OnDoubleClick(EventArgs e)
         {
-            base.OnDoubleClick(e);
-            if (MaximizeBox)
-                if (this.WindowState != FormWindowState.Maximized)
-                    this.WindowState = FormWindowState.Maximized;
-                else
-                    this.WindowState = FormWindowState.Normal;
+            //base.OnDoubleClick(e);
+            //if (MaximizeBox)
+            //    if (this.WindowState != FormWindowState.Maximized)
+            //        this.WindowState = FormWindowState.Maximized;
+            //    else
+            //        this.WindowState = FormWindowState.Normal;
         }
         protected override void OnMouseUp(MouseEventArgs e)
         {

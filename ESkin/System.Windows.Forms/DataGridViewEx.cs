@@ -48,9 +48,16 @@ namespace  System.Windows.Forms
             this.RowHeadersDefaultCellStyle.Padding = new Padding(this.RowHeadersWidth);
 
             this.ReadOnly = true;
+            //固定行列高度
+            this.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.RowHeadersWidth = 70;
+
+            this.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.ColumnHeadersHeight = 40;
                 
         }
-        Image xhImage = ESkin.Properties.Resources.序号;
+
+          Image xhImage = ESkin.Properties.Resources.序号;
 
         HitTestInfo CurCellInfo = HitTestInfo.Nowhere;
         protected override void OnMouseMove(MouseEventArgs e)
@@ -63,29 +70,38 @@ namespace  System.Windows.Forms
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            //StringFormat sfn = new StringFormat();
-            //sfn.Alignment = StringAlignment.Center;
-            //sfn.LineAlignment = StringAlignment.Center;
-            //e.Graphics.DrawString("序号", this.Font, new SolidBrush(this.ForeColor), new Rectangle(0, 0, this.RowHeadersWidth, this.ColumnHeadersHeight), sfn);
             System.Drawing.Rectangle xh = this.GetCellDisplayRectangle(-1, -1, true);
-            e.Graphics.DrawImage(xhImage, xh.X+ 4  , xh.Y + 4, xhImage.Width, xhImage.Height);
-            
+            var fSize = TextRenderer.MeasureText("序号", this.Font);
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Near;
+            sf.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString("序号", this.Font, new SolidBrush(this.ForeColor), xh, sf);
+            e.Graphics.DrawImage(xhImage, xh.X + fSize.Width, this.ColumnHeadersHeight / 2 - xhImage.Height/2, xhImage.Width, xhImage.Height);
+
+
+         //   e.Graphics.DrawRectangle(Pens.Red, xh);
+          //  e.Graphics.DrawRectangle(Pens.Green, new Rectangle(0,0,RowHeadersWidth,ColumnHeadersHeight));
+
             if (ListColumnImage.Count == this.Columns.Count)
                 for (int i = 0; i < this.Columns.Count; i++)
                 {
+                    if (ListColumnImage[i] == null) continue;
                     System.Drawing.Rectangle rect = this.GetCellDisplayRectangle(i, -1, true);
-                    e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width / 2 + 4, rect.Y + 4, ListColumnImage[i].Width, ListColumnImage[i].Height);
-                    // e.Graphics.DrawRectangle(  Pens.Red, rect);
+                    e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width - ListColumnImage[i].Width - 10, rect.Y+rect.Height / 2 - ListColumnImage[i].Height / 2, ListColumnImage[i].Width, ListColumnImage[i].Height);
+                   //  e.Graphics.DrawRectangle(  Pens.Red, rect);
                 }
-            if(CurCellInfo.RowIndex>=0 &&CurCellInfo.ColumnIndex>=0 )
-            {
+            //if (CurCellInfo.RowIndex >= 0 && CurCellInfo.ColumnIndex >= 0)
+            //{
+               
 
-            
-            var rowRect = this.GetRowDisplayRectangle(CurCellInfo.RowIndex,false);
-            var rowBounds = new Rectangle(rowRect.X - 1, rowRect.Y, rowRect.Width, rowRect.Height - 1);
-            e.Graphics.DrawRectangle(new Pen(Color.Red), rowBounds);
+            //    var rowRect = this.GetRowDisplayRectangle(CurCellInfo.RowIndex, false);
+            //    var rowBounds = new Rectangle(rowRect.X - 1, rowRect.Y, rowRect.Width, rowRect.Height - 1);
+            //    e.Graphics.DrawRectangle(new Pen(Color.Red), rowBounds);
 
-            }
+            //}
+
+
+             //cellStyle.SelectionForeColor : cellStyle.ForeColor
         }
         protected override void OnScroll(ScrollEventArgs e)
         {
@@ -110,16 +126,26 @@ namespace  System.Windows.Forms
 
             };
             var color = this.Rows[e.RowIndex].Selected ? Color.FromArgb(100, 200, 250) : Color.Black;
-
             var rowBounds = new Rectangle(e.RowBounds.X - 1, e.RowBounds.Y, e.RowBounds.Width + 1, e.RowBounds.Height - 1);
-            if (this.Rows[e.RowIndex].Selected)
-                e.Graphics.DrawRectangle(new Pen(color), rowBounds);
+           
+
+            //var _color = this.SelectedRows[0].Index == e.RowIndex ?
+            //       this.Rows[e.RowIndex].DefaultCellStyle.SelectionForeColor :
+            //       this.Rows[e.RowIndex].DefaultCellStyle.ForeColor;
 
             var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, this.RowHeadersWidth, e.RowBounds.Height);
             using (var brush = new SolidBrush(color))
             {
-                e.Graphics.DrawString(rowIdx, this.Font, brush, headerBounds, centerFormat);
-
+               // var g = e.Graphics;
+                //g.SmoothingMode = SmoothingMode.AntiAlias;
+              //  e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+                var eRect = new Rectangle(e.RowBounds.Left + this.RowHeadersWidth / 2+4 - this.RowHeadersWidth / 2, e.RowBounds.Top+4, e.RowBounds.Height-8, e.RowBounds.Height-8);
+                e.Graphics.DrawEllipse(new Pen(color,2f), eRect);
+                e.Graphics.DrawString(rowIdx, this.Font, brush, eRect, centerFormat);
+                //e.Graphics.DrawRectangle(new Pen(color, 1f), new Rectangle(eRect.X + this.RowHeadersWidth - 2, e.RowBounds.Top, 2, this.RowTemplate.Height));
+                e.Graphics.FillRectangle(brush, new Rectangle(eRect.X + this.RowHeadersWidth - 2 - 18, eRect.Y, 2, eRect.Height));
+                if (this.Rows[e.RowIndex].Selected)
+                    e.Graphics.DrawRectangle(new Pen(color), new Rectangle(e.RowBounds.X - 1, e.RowBounds.Y+4, e.RowBounds.Width + 1, e.RowBounds.Height - 1-7));
             }
             
         }
@@ -265,18 +291,18 @@ namespace  System.Windows.Forms
        // private Color CellBorderColor { get { return Color.Transparent; } }
         private Color CellBorderColor { get { return Color.FromArgb(100,200,250); } }
        // private Color CellBorderColor { get { return Color.Transparent; } }
-        
-        
+
+
         protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
         {
 
-            var boundRect = new Rectangle(cellBounds.X, cellBounds.Y , cellBounds.Width, cellBounds.Height - 1);
-            
-            var check = (Boolean)value;
+            var boundRect = new Rectangle(cellBounds.X, cellBounds.Y, cellBounds.Width, cellBounds.Height - 1);
+
+            var check = (bool)(value ?? false);
             if (paintParts == DataGridViewPaintParts.Background || paintParts == DataGridViewPaintParts.All)
             {
                 graphics.FillRectangle(new SolidBrush(Color.White), boundRect);
-               // graphics.FillRectangle(new SolidBrush(cellStyle.BackColor), boundRect);
+                // graphics.FillRectangle(new SolidBrush(cellStyle.BackColor), boundRect);
             }
             if (paintParts == DataGridViewPaintParts.Border || paintParts == DataGridViewPaintParts.All)
             {
@@ -291,12 +317,12 @@ namespace  System.Windows.Forms
             //var col = OwningColumn as DataGridViewCheckBoxTextColumn;
             //if (col != null && !string.IsNullOrEmpty(col.Text))
             //{
-            graphics.DrawString(check ? "TRUE" : "FALSE", cellStyle.Font, new SolidBrush(Selected ?
-                cellStyle.SelectionForeColor : cellStyle.ForeColor),
-                new Point(cellBounds.X + 25, cellBounds.Y + cellBounds.Height / 4));
+            //graphics.DrawString(check ? "TRUE" : "FALSE", cellStyle.Font, new SolidBrush(Selected ?
+            //    cellStyle.SelectionForeColor : cellStyle.ForeColor),
+            //    new Point(cellBounds.X + 25, cellBounds.Y + cellBounds.Height / 4));
             //}
 
-            if ((cellState & DataGridViewElementStates.Selected)!=0)
+            if ((cellState & DataGridViewElementStates.Selected) != 0)
             {
                 image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
             }
@@ -304,24 +330,12 @@ namespace  System.Windows.Forms
             {
                 image = check ? ESkin.Properties.Resources._16x16勾选 : ESkin.Properties.Resources._16x16_没勾选;
             }
-                    //switch (ControlState)
-                    //{
-                    //    case ControlState.Hover:
-                    //        image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
-                    //        break;
-                    //    case ControlState.Pressed:
-                    //        image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
-                    //        break;
-                    //    default:
-                    //        image = check ? ESkin.Properties.Resources._16x16勾选 : ESkin.Properties.Resources._16x16_没勾选;
-                    //        break;
-                    //}
-
-                    var rect = new Rectangle(cellBounds.X+4,cellBounds.Y+ cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
+            var rect = new Rectangle(cellBounds.X + 24, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
             //  image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
-                   graphics.DrawImage(image, rect);
+            graphics.DrawImage(image, rect);
+           // graphics.DrawImage(image, cellBounds.X + cellBounds.X / 2 - image.Width / 2, cellBounds.Y + 4);
             //CheckBoxRenderer.DrawCheckBox(graphics, new Point(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 4), CheckState);
-           // base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
+            // base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
         }
 
         /// <summary>
@@ -330,8 +344,13 @@ namespace  System.Windows.Forms
         /// </summary>
         private CheckBoxState CheckState { set; get; }
 
-       
 
+        protected override void OnMouseDown(DataGridViewCellMouseEventArgs e)
+        {
+            var check = (bool)Value;
+            CheckState = check ? CheckBoxState.CheckedPressed : CheckBoxState.UncheckedPressed;
+            base.OnMouseDown(e);
+        }
         protected override void OnMouseUp(DataGridViewCellMouseEventArgs e)
         {
             var check = (bool)Value;
@@ -576,7 +595,7 @@ namespace  System.Windows.Forms
               if (!string.IsNullOrEmpty(text))
               graphics.DrawString(text, cellStyle.Font, new SolidBrush(Selected ?
                 cellStyle.SelectionForeColor : cellStyle.ForeColor),
-                new Point(cellBounds.X + exWidth + image.Width, cellBounds.Y + exHeight));
+                new Point(cellBounds.X + exWidth + image.Width, cellBounds.Y + exHeight-4));
 
               if (image!=null)
              // var rect = new Rectangle(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);

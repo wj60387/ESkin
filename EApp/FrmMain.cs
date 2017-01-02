@@ -14,46 +14,43 @@ namespace EApp
         public FrmMain()
         {
             InitializeComponent();
+            //this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
             this.Load += FrmMain_Load;
         }
 
         void FrmMain_Load(object sender, EventArgs e)
         {
-           //System.Windows.Forms.CheckBoxExColumn col = new System.Windows.Forms.CheckBoxExColumn();
-            var checkColumn = new DataGridViewCheckBoxExColumn() { HeaderText = "" };
-            this.dataGridViewEx1.Columns.Add(checkColumn);
-            this.dataGridViewEx1.Columns.Add("C1C", "C1C");
-            this.dataGridViewEx1.Columns.Add("C2C", "C2C");
 
-            var btnDelColumn = new DataGridViewButtonExColumn("删除", EApp.Properties.Resources.删除点击状态, EApp.Properties.Resources.删除未点击) { HeaderText = "删除" };
-            this.dataGridViewEx1.Columns.Add(btnDelColumn);
+            this.nav1.NavItemList.Add(new NavItem(null, "LOGO") { ISNomal=false});
+            this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.听诊配置, "听诊配置"));
+            this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.听诊教学, "听诊教学"));
+            this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.听诊录音, "听诊录音"));
+            this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.云端听诊, "云端听诊"));
+            this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.远程教学, "远程教学"));
+            nav1.OnItemClick += nav1_OnItemClick;
+            nav1.OnXTClick += nav1_OnXTClick;
+            nav1.OnGYClick += nav1_OnGYClick;
 
+            var column = new DataGridViewCheckBoxExColumn() { Text="选择"};
+            this.dataGridViewEx1.Columns.Add(column);
 
-            var btnEditColumn = new DataGridViewButtonExColumn("", EApp.Properties.Resources.下载点击状态, EApp.Properties.Resources.下载未点击) { HeaderText = "下载" };
-            this.dataGridViewEx1.Columns.Add(btnEditColumn);
-            //var check = new DataGridViewCheckBoxTextColumn() { Text="测试"};
-            //this.dataGridViewEx1.Columns.Add(check);
-            
-            this.dataGridViewEx1.RowCount = 15;
-            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.选择);
-            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器所属人);
-            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器名称);
-            this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.删除);
-             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.下载);
-             ////System.Windows.Forms.CheckBoxEx ckBox = new System.Windows.Forms.CheckBoxEx();
-             ////ckBox.Text = "全选";
-             ////ckBox.Checked = true;
-             ////System.Drawing.Rectangle rect =
-             ////    dataGridView1.GetCellDisplayRectangle(0, -1, true);
-             ////ckBox.Size = new System.Drawing.Size(dataGridView1.Columns[0].Width, 18);
-             ////ckBox.Location = rect.Location;
-             ////dataGridView1.Controls.Add(ckBox);
-            foreach (DataGridViewRow row in this.dataGridViewEx1.Rows)
+            for (int i = 0; i < 5; i++)
             {
-                row.Cells[0].Value = row.Index % 2 == 0;
-                row.Cells[1].Value = row.Index + "RowData";
-                row.Cells[2].Value = row.Index + "RowData";
+                this.dataGridViewEx1.Rows.Add("DRF","DRF","DRF",i%2==0);
             }
+        }
+
+        void nav1_OnXTClick()
+        {
+            MessageBox.Show("系统");
+        }
+        void nav1_OnGYClick()
+        {
+            MessageBox.Show("关于");
+        }
+        void nav1_OnItemClick(NavItem obj)
+        {
+            MessageBox.Show(obj.Text);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -71,10 +68,9 @@ namespace EApp
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
 
-         
-
-        
-
-        
+        private void buttonEx1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
