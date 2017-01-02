@@ -87,6 +87,16 @@ namespace  System.Windows.Forms
 
             }
         }
+        protected override void OnScroll(ScrollEventArgs e)
+        {
+             
+            base.OnScroll(e);
+        }
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            
+        }
         public List<Image> ListColumnImage = new List<Image>();
         protected override void OnRowPostPaint(DataGridViewRowPostPaintEventArgs e)
         {

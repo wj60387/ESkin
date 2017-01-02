@@ -34,7 +34,7 @@ namespace EApp
             //var check = new DataGridViewCheckBoxTextColumn() { Text="测试"};
             //this.dataGridViewEx1.Columns.Add(check);
             
-            this.dataGridViewEx1.RowCount = 5;
+            this.dataGridViewEx1.RowCount = 15;
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.选择);
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器所属人);
             this.dataGridViewEx1.ListColumnImage.Add(EApp.Properties.Resources.听诊器名称);

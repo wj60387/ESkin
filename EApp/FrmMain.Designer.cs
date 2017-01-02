@@ -43,14 +43,7 @@
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.NavYCTZ = new System.Windows.Forms.ButtonEx();
-            this.NavYDTZ = new System.Windows.Forms.ButtonEx();
-            this.NavTZLY = new System.Windows.Forms.ButtonEx();
-            this.NavTZJX = new System.Windows.Forms.ButtonEx();
-            this.NavTZPZ = new System.Windows.Forms.ButtonEx();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
-            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBoxEx1
@@ -124,7 +117,7 @@
             this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewEx1.RowTemplate.Height = 32;
             this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEx1.Size = new System.Drawing.Size(664, 515);
+            this.dataGridViewEx1.Size = new System.Drawing.Size(611, 163);
             this.dataGridViewEx1.TabIndex = 37;
             // 
             // btnMin
@@ -236,116 +229,12 @@
             this.buttonEx2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEx2.UseVisualStyleBackColor = false;
             // 
-            // panelLeft
-            // 
-            this.panelLeft.Controls.Add(this.NavYCTZ);
-            this.panelLeft.Controls.Add(this.NavYDTZ);
-            this.panelLeft.Controls.Add(this.NavTZLY);
-            this.panelLeft.Controls.Add(this.NavTZJX);
-            this.panelLeft.Controls.Add(this.NavTZPZ);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(117, 672);
-            this.panelLeft.TabIndex = 40;
-            // 
-            // NavYCTZ
-            // 
-            this.NavYCTZ.BackColor = System.Drawing.Color.Transparent;
-            this.NavYCTZ.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavYCTZ.FlatAppearance.BorderSize = 0;
-            this.NavYCTZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.NavYCTZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.NavYCTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NavYCTZ.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.NavYCTZ.ForeColor = System.Drawing.Color.White;
-            this.NavYCTZ.Location = new System.Drawing.Point(0, 496);
-            this.NavYCTZ.Name = "NavYCTZ";
-            this.NavYCTZ.Size = new System.Drawing.Size(117, 124);
-            this.NavYCTZ.TabIndex = 43;
-            this.NavYCTZ.Text = "远程听诊";
-            this.NavYCTZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NavYCTZ.UseVisualStyleBackColor = false;
-            // 
-            // NavYDTZ
-            // 
-            this.NavYDTZ.BackColor = System.Drawing.Color.Transparent;
-            this.NavYDTZ.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavYDTZ.FlatAppearance.BorderSize = 0;
-            this.NavYDTZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.NavYDTZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.NavYDTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NavYDTZ.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.NavYDTZ.ForeColor = System.Drawing.Color.White;
-            this.NavYDTZ.Location = new System.Drawing.Point(0, 372);
-            this.NavYDTZ.Name = "NavYDTZ";
-            this.NavYDTZ.Size = new System.Drawing.Size(117, 124);
-            this.NavYDTZ.TabIndex = 42;
-            this.NavYDTZ.Text = "云端听诊";
-            this.NavYDTZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NavYDTZ.UseVisualStyleBackColor = false;
-            // 
-            // NavTZLY
-            // 
-            this.NavTZLY.BackColor = System.Drawing.Color.Transparent;
-            this.NavTZLY.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavTZLY.FlatAppearance.BorderSize = 0;
-            this.NavTZLY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.NavTZLY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.NavTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NavTZLY.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.NavTZLY.ForeColor = System.Drawing.Color.White;
-            this.NavTZLY.Location = new System.Drawing.Point(0, 248);
-            this.NavTZLY.Name = "NavTZLY";
-            this.NavTZLY.Size = new System.Drawing.Size(117, 124);
-            this.NavTZLY.TabIndex = 41;
-            this.NavTZLY.Text = "听诊录音";
-            this.NavTZLY.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NavTZLY.UseVisualStyleBackColor = false;
-            // 
-            // NavTZJX
-            // 
-            this.NavTZJX.BackColor = System.Drawing.Color.Transparent;
-            this.NavTZJX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavTZJX.FlatAppearance.BorderSize = 0;
-            this.NavTZJX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.NavTZJX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.NavTZJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NavTZJX.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.NavTZJX.ForeColor = System.Drawing.Color.White;
-            this.NavTZJX.Location = new System.Drawing.Point(0, 124);
-            this.NavTZJX.Name = "NavTZJX";
-            this.NavTZJX.Size = new System.Drawing.Size(117, 124);
-            this.NavTZJX.TabIndex = 40;
-            this.NavTZJX.Text = "听诊教学";
-            this.NavTZJX.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NavTZJX.UseVisualStyleBackColor = false;
-            // 
-            // NavTZPZ
-            // 
-            this.NavTZPZ.BackColor = System.Drawing.Color.Transparent;
-            this.NavTZPZ.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavTZPZ.FlatAppearance.BorderSize = 0;
-            this.NavTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.NavTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.NavTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NavTZPZ.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.NavTZPZ.ForeColor = System.Drawing.Color.White;
-            this.NavTZPZ.Location = new System.Drawing.Point(0, 0);
-            this.NavTZPZ.Name = "NavTZPZ";
-            this.NavTZPZ.Size = new System.Drawing.Size(117, 124);
-            this.NavTZPZ.TabIndex = 39;
-            this.NavTZPZ.Text = "听诊配置";
-            this.NavTZPZ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NavTZPZ.UseVisualStyleBackColor = false;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(816, 672);
-            this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.dataGridViewEx1);
             this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnBack);
@@ -360,7 +249,6 @@
             this.ShowIcon = false;
             this.Text = "";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
-            this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,12 +266,6 @@
         private System.Windows.Forms.ButtonEx btnMin;
         private System.Windows.Forms.DataGridViewEx dataGridViewEx1;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.ButtonEx NavYCTZ;
-        private System.Windows.Forms.ButtonEx NavYDTZ;
-        private System.Windows.Forms.ButtonEx NavTZLY;
-        private System.Windows.Forms.ButtonEx NavTZJX;
-        private System.Windows.Forms.ButtonEx NavTZPZ;
 
 
 
