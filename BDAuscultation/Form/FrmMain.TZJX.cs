@@ -11,5 +11,6 @@ namespace BDAuscultation
     partial class FrmMain
     {
 
+         
     }
 }

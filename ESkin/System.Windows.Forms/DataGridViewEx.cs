@@ -599,7 +599,7 @@ namespace  System.Windows.Forms
 
               if (image!=null)
              // var rect = new Rectangle(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
-              graphics.DrawImage(image, cellBounds.X + exWidth, cellBounds.Y+exHeight);
+              graphics.DrawImage(image, cellBounds.X + exWidth+8, cellBounds.Y+exHeight);
           }
       }
       public class DataGridViewButtonExColumn : DataGridViewColumn

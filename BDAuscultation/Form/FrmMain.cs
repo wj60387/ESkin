@@ -24,12 +24,8 @@ namespace BDAuscultation
         }
         void Init()
         {
-
-            this.Top = 0;
-            this.Left = 0;
-            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
-            this.Height = Screen.PrimaryScreen.WorkingArea.Height;
-            this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
+            
+             
 
             var btnEditColumn = new DataGridViewButtonExColumn("",
                 BDAuscultation.Properties.Resources.编辑点击, BDAuscultation.Properties.Resources.编辑未点击) { HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
@@ -75,6 +71,10 @@ namespace BDAuscultation
                 this.dgvTZJX.Rows[i].Cells[dgvTZJX.Columns.Count - 1].Value = i % 2 == 0;
 
             }
+            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            //this.WindowState = FormWindowState.Normal;
+            //this.OnDoubleClick(null);
         }
         void nav1_OnXTClick()
         {

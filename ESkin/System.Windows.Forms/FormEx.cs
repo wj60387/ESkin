@@ -46,14 +46,6 @@ namespace System.Windows.Forms
                     ControlStyles.SupportsTransparentBackColor,    // 控件接受 alpha 组件小于 255 的 BackColor 以模拟透明
                     true);                                         // 设置以上值为 true
             base.UpdateStyles();
-            //SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            //SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            //SetStyle(ControlStyles.UserPaint, true);
-            //SetStyle(ControlStyles.DoubleBuffer, true);
-            //base.UpdateStyles();
-            //this.btnClose.Location = new System.Drawing.Point(this.Width - 9 - btnClose.Width, 9);
-            //this.btnMax.Location = new System.Drawing.Point(this.Width - 9 - btnMax.Width - btnClose.Width, 9);
-            //this.btnMin.Location = new System.Drawing.Point(this.Width - 9 - btnMax.Width - btnClose.Width-btnMin.Width, 9);
 
         }
 
@@ -108,28 +100,7 @@ namespace System.Windows.Forms
             base.OnResize(e);
             this.Invalidate();
         }
-        //Size IconSize = new Size(12, 12);
-        //Rectangle rectColse
-        //{
-        //    get
-        //    {
-        //        return new Rectangle(this.ClientSize.Width - IconSize.Width - 6, 6, IconSize.Width, IconSize.Height);
-        //    }
-        //}
-        //Rectangle rectMax
-        //{
-        //    get
-        //    {
-        //        return new Rectangle(this.ClientSize.Width - 2 * IconSize.Width - 6 - 5, 6, IconSize.Width, IconSize.Height);
-        //    }
-        //}
-        //Rectangle rectMin
-        //{
-        //    get
-        //    {
-        //        return new Rectangle(this.ClientSize.Width - 3 * IconSize.Width - 6 - 10, 6, IconSize.Width, IconSize.Height);
-        //    }
-        //}
+      
         protected override void OnMouseDown(MouseEventArgs e)
         {
             var point = PointToScreen(MousePosition);
@@ -173,46 +144,20 @@ namespace System.Windows.Forms
 
                 this.Location = new Point(FormLocation.X - _x, FormLocation.Y - _y);
             }
-            //if (rectColse.Contains(e.Location) || rectMax.Contains(e.Location) || rectMin.Contains(e.Location))
-            //{
-            //    this.Invalidate(rectColse);
-            //    this.Invalidate(rectMax);
-            //    this.Invalidate(rectMin);
-            //}
+            
         }
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
-            //var clientPoint = this.PointToClient(MousePosition);
-            //if (rectColse.Contains(clientPoint))
-            //{
-            //    this.Close();
-            //}
-            //if (rectMax.Contains(clientPoint))
-            //{
-            //    if (MaximizeBox)
-            //        if (this.WindowState != FormWindowState.Maximized)
-            //            this.WindowState = FormWindowState.Maximized;
-            //        else
-            //            this.WindowState = FormWindowState.Normal;
-            //}
-            //if (rectMin.Contains(clientPoint))
-            //{
-            //    if (MinimizeBox)
-            //        if (this.WindowState != FormWindowState.Minimized)
-            //            this.WindowState = FormWindowState.Minimized;
-            //        else
-            //            this.WindowState = FormWindowState.Normal;
-            //}
         }
         protected override void OnDoubleClick(EventArgs e)
         {
-            //base.OnDoubleClick(e);
-            //if (MaximizeBox)
-            //    if (this.WindowState != FormWindowState.Maximized)
-            //        this.WindowState = FormWindowState.Maximized;
-            //    else
-            //        this.WindowState = FormWindowState.Normal;
+            base.OnDoubleClick(e);
+            if (MaximizeBox)
+                if (this.WindowState != FormWindowState.Maximized)
+                    this.WindowState = FormWindowState.Maximized;
+                else
+                    this.WindowState = FormWindowState.Normal;
         }
         protected override void OnMouseUp(MouseEventArgs e)
         {
@@ -232,29 +177,6 @@ namespace System.Windows.Forms
             var image = this.Icon.ToBitmap().GetThumbnailImage(18, 18, () => { return false; }, IntPtr.Zero);
             if (ShowIcon)
                 e.Graphics.DrawImage(image, 1, 1);
-            //var clientPoint = this.PointToClient(MousePosition);
-            //if (rectColse.Contains(clientPoint) && ControlBox)
-            //{
-            //    // e.Graphics.DrawRectangle(new Pen(Color.DarkOrange), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width - 1, rectColse.Height - 1));
-            //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(203, 209, 216)), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width, rectColse.Height));
-            //}
-            //if (rectMax.Contains(clientPoint) && MaximizeBox)
-            //{
-            //    // e.Graphics.DrawRectangle(new Pen(Color.DarkOrange), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width - 1, rectColse.Height - 1));
-            //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 255, 255)), new Rectangle(rectMax.X, rectMax.Y, rectMax.Width, rectMax.Height));
-            //}
-            //if (rectMin.Contains(clientPoint) && MinimizeBox)
-            //{
-            //    // e.Graphics.DrawRectangle(new Pen(Color.DarkOrange), new Rectangle(rectColse.X, rectColse.Y, rectColse.Width - 1, rectColse.Height - 1));
-            //    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(255, 255, 255)), new Rectangle(rectMin.X, rectMin.Y, rectMin.Width, rectMin.Height));
-            //}
-            //e.Graphics.DrawString(this.Text, Font, new SolidBrush(Color.Black), 2.5f + (ShowIcon ? image.Width : 0), 1.5f);
-            //if (ControlBox)
-            //    e.Graphics.DrawImage(ESkin.Properties.Resources.关闭按钮, rectColse);
-            //if (MaximizeBox)
-            //    e.Graphics.DrawImage(ESkin.Properties.Resources.还原按钮, rectMax);
-            //if (MinimizeBox)
-            //    e.Graphics.DrawImage(ESkin.Properties.Resources._16x1, rectMin,0, 0,ESkin.Properties.Resources._16x1.Width,ESkin.Properties.Resources._16x1.Height, GraphicsUnit.Pixel);
         }
         
         /// <summary>
