@@ -157,11 +157,17 @@
   <data name="听诊器备注" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器备注.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="听诊器序列号" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊器序列号.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="听诊器所属人" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器所属人.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="听诊器描述" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器描述.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="听诊器用途" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊器用途.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="听诊器编号" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器编号.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

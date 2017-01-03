@@ -152,7 +152,6 @@ namespace System.Windows.Forms
         {
             if(textImage!=null)
             {
-                 
                 e.Graphics.DrawImage(TextImage, ImageDrawRect.X + ImageDrawRect.Width / 2 - textImage.Width/2
                    ,ImageDrawRect.Y+ ImageDrawRect.Height/2-textImage.Height/2);
             }

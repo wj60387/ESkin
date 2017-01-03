@@ -27,22 +27,7 @@ namespace BDAuscultation
             
              
 
-            var btnEditColumn = new DataGridViewButtonExColumn("",
-                BDAuscultation.Properties.Resources.编辑点击, BDAuscultation.Properties.Resources.编辑未点击) { HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
-            this.dgvTZQPZ.Columns.Add(btnEditColumn);
-            var btnDelColumn = new DataGridViewButtonExColumn("",
-                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 40 };
-            this.dgvTZQPZ.Columns.Add(btnDelColumn);
-
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器编号);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.计算机名);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊类型);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器名字);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器所属人);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器描述);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器备注);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.编辑);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
+           
 
 
             dgvTZJX.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器编号);
@@ -52,6 +37,10 @@ namespace BDAuscultation
             dgvTZJX.ListColumnImage.Add(null);
             var tzjxBtnCheckColumn = new DataGridViewCheckBoxExColumn() { HeaderText = "选择", Text = "选择", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
             dgvTZJX.Columns.Add(tzjxBtnCheckColumn);
+
+            InitdgvTZPZ();
+
+            
         }
         void FrmMain_Load(object sender, EventArgs e)
         {
@@ -64,17 +53,14 @@ namespace BDAuscultation
             nav1.OnItemClick += nav1_OnItemClick;
             nav1.OnXTClick += nav1_OnXTClick;
             nav1.OnGYClick += nav1_OnGYClick;
-            for (int i = 0; i < 6; i++)
-            {
-                this.dgvTZQPZ.Rows.Add(i + "CellData1", i + "CellData2", i + "CellData3");
-                this.dgvTZJX.Rows.Add(i + "CellData1", i + "CellData2", i + "CellData3");
-                this.dgvTZJX.Rows[i].Cells[dgvTZJX.Columns.Count - 1].Value = i % 2 == 0;
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    this.dgvTZQPZ.Rows.Add(i + "CellData1", i + "CellData2", i + "CellData3");
+            //    this.dgvTZJX.Rows.Add(i + "CellData1", i + "CellData2", i + "CellData3");
+            //    this.dgvTZJX.Rows[i].Cells[dgvTZJX.Columns.Count - 1].Value = i % 2 == 0;
 
-            }
-            //this.Location = Screen.PrimaryScreen.WorkingArea.Location;
-            //this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            //this.WindowState = FormWindowState.Normal;
-            //this.OnDoubleClick(null);
+            //}
+             
         }
         void nav1_OnXTClick()
         {
@@ -142,10 +128,7 @@ namespace BDAuscultation
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
 
-        private void btnTZPZ_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
 
     }

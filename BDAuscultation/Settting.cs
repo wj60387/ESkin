@@ -17,13 +17,13 @@ namespace BDAuscultation
 {
     public static class Setting
     {
-        public static string[] FilePaths
-        {
-            get
-            {
-                return Directory.GetFiles(@"Image\Part");
-            }
-        }
+        //public static string[] FilePaths
+        //{
+        //    get
+        //    {
+        //        return Directory.GetFiles(@"Image\Part");
+        //    }
+        //}
         public static string serverUrl
         {
             get {
@@ -124,7 +124,8 @@ namespace BDAuscultation
         {
             string sql = "select * from StetInfo where StetName={0} and MAC={1}";
             var dt = Mediator.sqliteHelper.ExecuteDatatable(sql, StetName, Setting.authorizationInfo.MachineCode);
-            StetInfo stetInfo = new StetInfo() { StetName=StetName
+            StetInfo stetInfo = new StetInfo()
+            { StetName=StetName
             ,SN=Setting.authorizationInfo.AuthorizationNum,
             MAC=Setting.authorizationInfo.MachineCode,
             PCName=CommonUtil.GetMachineName(),

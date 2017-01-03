@@ -42,15 +42,8 @@
             this.tabTZPZ = new System.Windows.Forms.TabPage();
             this.btnTZPZ = new System.Windows.Forms.ButtonEx();
             this.dgvTZQPZ = new System.Windows.Forms.DataGridViewEx();
-            this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonEx1 = new System.Windows.Forms.ButtonEx();
-            this.comboBoxEx1 = new System.Windows.Forms.ComboBoxEx();
+            this.cbBoxTZPZ = new System.Windows.Forms.ComboBoxEx();
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
             this.tabTZJX = new System.Windows.Forms.TabPage();
             this.dgvTZJX = new System.Windows.Forms.DataGridViewEx();
@@ -101,6 +94,14 @@
             this.btnBack = new System.Windows.Forms.ButtonEx();
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.nav1 = new System.Windows.Forms.Nav();
+            this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlEx1.SuspendLayout();
             this.tabTZPZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTZQPZ)).BeginInit();
@@ -134,7 +135,7 @@
             this.tabControlEx1.Location = new System.Drawing.Point(123, 31);
             this.tabControlEx1.Name = "tabControlEx1";
             this.tabControlEx1.SelectedIndex = 0;
-            this.tabControlEx1.Size = new System.Drawing.Size(726, 578);
+            this.tabControlEx1.Size = new System.Drawing.Size(820, 578);
             this.tabControlEx1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlEx1.TabIndex = 43;
             // 
@@ -144,12 +145,12 @@
             this.tabTZPZ.Controls.Add(this.btnTZPZ);
             this.tabTZPZ.Controls.Add(this.dgvTZQPZ);
             this.tabTZPZ.Controls.Add(this.buttonEx1);
-            this.tabTZPZ.Controls.Add(this.comboBoxEx1);
+            this.tabTZPZ.Controls.Add(this.cbBoxTZPZ);
             this.tabTZPZ.Controls.Add(this.buttonEx2);
             this.tabTZPZ.Location = new System.Drawing.Point(0, 1);
             this.tabTZPZ.Name = "tabTZPZ";
             this.tabTZPZ.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTZPZ.Size = new System.Drawing.Size(724, 575);
+            this.tabTZPZ.Size = new System.Drawing.Size(818, 575);
             this.tabTZPZ.TabIndex = 0;
             this.tabTZPZ.Text = "tabPage1";
             // 
@@ -161,13 +162,12 @@
             this.btnTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTZPZ.Location = new System.Drawing.Point(567, 39);
+            this.btnTZPZ.Location = new System.Drawing.Point(639, 37);
             this.btnTZPZ.Name = "btnTZPZ";
             this.btnTZPZ.Size = new System.Drawing.Size(105, 34);
             this.btnTZPZ.TabIndex = 54;
             this.btnTZPZ.Text = "配置";
             this.btnTZPZ.UseVisualStyleBackColor = false;
-            this.btnTZPZ.Click += new System.EventHandler(this.btnTZPZ_Click);
             // 
             // dgvTZQPZ
             // 
@@ -177,7 +177,7 @@
             this.dgvTZQPZ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvTZQPZ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvTZQPZ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTZQPZ.BackgroundColor = System.Drawing.Color.White;
             this.dgvTZQPZ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTZQPZ.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -199,7 +199,8 @@
             this.dgvTZQPZStetName,
             this.dgvTZQPZStetOwner,
             this.dgvTZQPZMS,
-            this.dgvTZQPZBZ});
+            this.dgvTZQPZBZ,
+            this.dgvTZQPZStetConn});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -210,6 +211,7 @@
             this.dgvTZQPZ.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTZQPZ.EnableHeadersVisualStyles = false;
             this.dgvTZQPZ.Location = new System.Drawing.Point(10, 100);
+            this.dgvTZQPZ.MultiSelect = false;
             this.dgvTZQPZ.Name = "dgvTZQPZ";
             this.dgvTZQPZ.ReadOnly = true;
             this.dgvTZQPZ.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -226,57 +228,8 @@
             this.dgvTZQPZ.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvTZQPZ.RowTemplate.Height = 32;
             this.dgvTZQPZ.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTZQPZ.Size = new System.Drawing.Size(704, 469);
+            this.dgvTZQPZ.Size = new System.Drawing.Size(798, 469);
             this.dgvTZQPZ.TabIndex = 38;
-            // 
-            // dgvTZQPZStetNO
-            // 
-            this.dgvTZQPZStetNO.HeaderText = "听诊器编号";
-            this.dgvTZQPZStetNO.Name = "dgvTZQPZStetNO";
-            this.dgvTZQPZStetNO.ReadOnly = true;
-            this.dgvTZQPZStetNO.Width = 113;
-            // 
-            // dgvTZQPZPCNAME
-            // 
-            this.dgvTZQPZPCNAME.HeaderText = "计算机名";
-            this.dgvTZQPZPCNAME.Name = "dgvTZQPZPCNAME";
-            this.dgvTZQPZPCNAME.ReadOnly = true;
-            this.dgvTZQPZPCNAME.Width = 97;
-            // 
-            // dgvTZQPZStetType
-            // 
-            this.dgvTZQPZStetType.HeaderText = "听诊器类型";
-            this.dgvTZQPZStetType.Name = "dgvTZQPZStetType";
-            this.dgvTZQPZStetType.ReadOnly = true;
-            this.dgvTZQPZStetType.Width = 113;
-            // 
-            // dgvTZQPZStetName
-            // 
-            this.dgvTZQPZStetName.HeaderText = "听诊器名字";
-            this.dgvTZQPZStetName.Name = "dgvTZQPZStetName";
-            this.dgvTZQPZStetName.ReadOnly = true;
-            this.dgvTZQPZStetName.Width = 113;
-            // 
-            // dgvTZQPZStetOwner
-            // 
-            this.dgvTZQPZStetOwner.HeaderText = "听诊器所属人";
-            this.dgvTZQPZStetOwner.Name = "dgvTZQPZStetOwner";
-            this.dgvTZQPZStetOwner.ReadOnly = true;
-            this.dgvTZQPZStetOwner.Width = 129;
-            // 
-            // dgvTZQPZMS
-            // 
-            this.dgvTZQPZMS.HeaderText = "听诊器描述";
-            this.dgvTZQPZMS.Name = "dgvTZQPZMS";
-            this.dgvTZQPZMS.ReadOnly = true;
-            this.dgvTZQPZMS.Width = 113;
-            // 
-            // dgvTZQPZBZ
-            // 
-            this.dgvTZQPZBZ.HeaderText = "听诊器备注";
-            this.dgvTZQPZBZ.Name = "dgvTZQPZBZ";
-            this.dgvTZQPZBZ.ReadOnly = true;
-            this.dgvTZQPZBZ.Width = 113;
             // 
             // buttonEx1
             // 
@@ -293,20 +246,20 @@
             this.buttonEx1.Text = "选择听诊器";
             this.buttonEx1.UseVisualStyleBackColor = false;
             // 
-            // comboBoxEx1
+            // cbBoxTZPZ
             // 
-            this.comboBoxEx1.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx1.DropDownHeight = 150;
-            this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEx1.DwonImage = ((System.Drawing.Image)(resources.GetObject("comboBoxEx1.DwonImage")));
-            this.comboBoxEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxEx1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBoxEx1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBoxEx1.FormattingEnabled = true;
-            this.comboBoxEx1.IntegralHeight = false;
-            this.comboBoxEx1.ItemHeight = 24;
-            this.comboBoxEx1.Items.AddRange(new object[] {
+            this.cbBoxTZPZ.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxTZPZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxTZPZ.DropDownHeight = 194;
+            this.cbBoxTZPZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxTZPZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZPZ.DwonImage")));
+            this.cbBoxTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxTZPZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxTZPZ.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxTZPZ.FormattingEnabled = true;
+            this.cbBoxTZPZ.IntegralHeight = false;
+            this.cbBoxTZPZ.ItemHeight = 24;
+            this.cbBoxTZPZ.Items.AddRange(new object[] {
             "A",
             "B",
             "C",
@@ -315,11 +268,11 @@
             "F",
             "G",
             "H"});
-            this.comboBoxEx1.Location = new System.Drawing.Point(339, 41);
-            this.comboBoxEx1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxEx1.Name = "comboBoxEx1";
-            this.comboBoxEx1.Size = new System.Drawing.Size(219, 30);
-            this.comboBoxEx1.TabIndex = 31;
+            this.cbBoxTZPZ.Location = new System.Drawing.Point(339, 41);
+            this.cbBoxTZPZ.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxTZPZ.Name = "cbBoxTZPZ";
+            this.cbBoxTZPZ.Size = new System.Drawing.Size(280, 30);
+            this.cbBoxTZPZ.TabIndex = 31;
             // 
             // buttonEx2
             // 
@@ -350,7 +303,7 @@
             this.tabTZJX.Location = new System.Drawing.Point(0, 1);
             this.tabTZJX.Name = "tabTZJX";
             this.tabTZJX.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTZJX.Size = new System.Drawing.Size(724, 575);
+            this.tabTZJX.Size = new System.Drawing.Size(818, 575);
             this.tabTZJX.TabIndex = 1;
             this.tabTZJX.Text = "tabPage2";
             // 
@@ -408,7 +361,7 @@
             this.dgvTZJX.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvTZJX.RowTemplate.Height = 32;
             this.dgvTZJX.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTZJX.Size = new System.Drawing.Size(704, 469);
+            this.dgvTZJX.Size = new System.Drawing.Size(798, 469);
             this.dgvTZJX.TabIndex = 42;
             // 
             // dgvTZJXTZQNO
@@ -507,7 +460,7 @@
             this.tabTZLY.Controls.Add(this.panelLY);
             this.tabTZLY.Location = new System.Drawing.Point(0, 1);
             this.tabTZLY.Name = "tabTZLY";
-            this.tabTZLY.Size = new System.Drawing.Size(724, 575);
+            this.tabTZLY.Size = new System.Drawing.Size(818, 575);
             this.tabTZLY.TabIndex = 2;
             this.tabTZLY.Text = "tabPage3";
             // 
@@ -521,7 +474,7 @@
             this.panelLY.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLY.Location = new System.Drawing.Point(0, 0);
             this.panelLY.Name = "panelLY";
-            this.panelLY.Size = new System.Drawing.Size(724, 575);
+            this.panelLY.Size = new System.Drawing.Size(818, 575);
             this.panelLY.TabIndex = 0;
             // 
             // panelLY2
@@ -535,7 +488,7 @@
             this.panelLY2.Controls.Add(this.tabLY);
             this.panelLY2.Location = new System.Drawing.Point(7, 84);
             this.panelLY2.Name = "panelLY2";
-            this.panelLY2.Size = new System.Drawing.Size(713, 488);
+            this.panelLY2.Size = new System.Drawing.Size(807, 488);
             this.panelLY2.TabIndex = 45;
             // 
             // buttonEx8
@@ -580,7 +533,7 @@
             this.tabLY.Location = new System.Drawing.Point(3, 36);
             this.tabLY.Name = "tabLY";
             this.tabLY.SelectedIndex = 0;
-            this.tabLY.Size = new System.Drawing.Size(705, 449);
+            this.tabLY.Size = new System.Drawing.Size(799, 449);
             this.tabLY.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabLY.TabIndex = 0;
             // 
@@ -589,7 +542,7 @@
             this.tabLYLocal.Location = new System.Drawing.Point(0, 1);
             this.tabLYLocal.Name = "tabLYLocal";
             this.tabLYLocal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLYLocal.Size = new System.Drawing.Size(703, 446);
+            this.tabLYLocal.Size = new System.Drawing.Size(797, 446);
             this.tabLYLocal.TabIndex = 0;
             this.tabLYLocal.Text = "tabPage1";
             this.tabLYLocal.UseVisualStyleBackColor = true;
@@ -599,7 +552,7 @@
             this.tabLYDown.Location = new System.Drawing.Point(0, 1);
             this.tabLYDown.Name = "tabLYDown";
             this.tabLYDown.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLYDown.Size = new System.Drawing.Size(703, 446);
+            this.tabLYDown.Size = new System.Drawing.Size(797, 446);
             this.tabLYDown.TabIndex = 1;
             this.tabLYDown.Text = "tabPage2";
             this.tabLYDown.UseVisualStyleBackColor = true;
@@ -675,7 +628,7 @@
             this.tabYDTZ.Controls.Add(this.buttonEx12);
             this.tabYDTZ.Location = new System.Drawing.Point(0, 1);
             this.tabYDTZ.Name = "tabYDTZ";
-            this.tabYDTZ.Size = new System.Drawing.Size(724, 575);
+            this.tabYDTZ.Size = new System.Drawing.Size(818, 575);
             this.tabYDTZ.TabIndex = 3;
             this.tabYDTZ.Text = "tabPage4";
             // 
@@ -690,7 +643,7 @@
             this.panel2.Controls.Add(this.tabControlEx2);
             this.panel2.Location = new System.Drawing.Point(5, 78);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(713, 488);
+            this.panel2.Size = new System.Drawing.Size(807, 488);
             this.panel2.TabIndex = 49;
             // 
             // buttonEx9
@@ -735,7 +688,7 @@
             this.tabControlEx2.Location = new System.Drawing.Point(3, 36);
             this.tabControlEx2.Name = "tabControlEx2";
             this.tabControlEx2.SelectedIndex = 0;
-            this.tabControlEx2.Size = new System.Drawing.Size(705, 449);
+            this.tabControlEx2.Size = new System.Drawing.Size(799, 449);
             this.tabControlEx2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlEx2.TabIndex = 0;
             // 
@@ -744,7 +697,7 @@
             this.tabPage1.Location = new System.Drawing.Point(0, 1);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(703, 446);
+            this.tabPage1.Size = new System.Drawing.Size(797, 446);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -754,7 +707,7 @@
             this.tabPage2.Location = new System.Drawing.Point(0, 1);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(703, 446);
+            this.tabPage2.Size = new System.Drawing.Size(797, 446);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -831,7 +784,7 @@
             this.tabYCTZ.Controls.Add(this.buttonEx14);
             this.tabYCTZ.Location = new System.Drawing.Point(0, 1);
             this.tabYCTZ.Name = "tabYCTZ";
-            this.tabYCTZ.Size = new System.Drawing.Size(724, 575);
+            this.tabYCTZ.Size = new System.Drawing.Size(818, 575);
             this.tabYCTZ.TabIndex = 4;
             this.tabYCTZ.Text = "tabPage5";
             // 
@@ -907,7 +860,7 @@
             this.dataGridViewEx1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewEx1.RowTemplate.Height = 32;
             this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEx1.Size = new System.Drawing.Size(704, 469);
+            this.dataGridViewEx1.Size = new System.Drawing.Size(798, 469);
             this.dataGridViewEx1.TabIndex = 52;
             // 
             // dataGridViewTextBoxColumn1
@@ -1023,11 +976,12 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel1.Controls.Add(this.waterTextBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(120, 615);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 113);
+            this.panel1.Size = new System.Drawing.Size(824, 113);
             this.panel1.TabIndex = 44;
             // 
             // waterTextBox1
@@ -1036,10 +990,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.waterTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.waterTextBox1.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.waterTextBox1.Location = new System.Drawing.Point(76, 8);
+            this.waterTextBox1.Location = new System.Drawing.Point(56, 8);
             this.waterTextBox1.Multiline = true;
             this.waterTextBox1.Name = "waterTextBox1";
-            this.waterTextBox1.Size = new System.Drawing.Size(645, 98);
+            this.waterTextBox1.Size = new System.Drawing.Size(759, 98);
             this.waterTextBox1.TabIndex = 0;
             this.waterTextBox1.WaterText = "信息输出";
             // 
@@ -1053,7 +1007,7 @@
             this.btnMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.Location = new System.Drawing.Point(791, 9);
+            this.btnMin.Location = new System.Drawing.Point(885, 9);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(12, 12);
             this.btnMin.TabIndex = 42;
@@ -1070,7 +1024,7 @@
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(809, 9);
+            this.btnBack.Location = new System.Drawing.Point(903, 9);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(12, 12);
             this.btnBack.TabIndex = 41;
@@ -1086,7 +1040,7 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(827, 9);
+            this.btnClose.Location = new System.Drawing.Point(921, 9);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(12, 12);
             this.btnClose.TabIndex = 40;
@@ -1108,11 +1062,60 @@
             this.nav1.TabIndex = 45;
             this.nav1.Text = "nav1";
             // 
+            // dgvTZQPZStetNO
+            // 
+            this.dgvTZQPZStetNO.HeaderText = "听诊器编号";
+            this.dgvTZQPZStetNO.Name = "dgvTZQPZStetNO";
+            this.dgvTZQPZStetNO.ReadOnly = true;
+            // 
+            // dgvTZQPZPCNAME
+            // 
+            this.dgvTZQPZPCNAME.HeaderText = "计算机名";
+            this.dgvTZQPZPCNAME.Name = "dgvTZQPZPCNAME";
+            this.dgvTZQPZPCNAME.ReadOnly = true;
+            // 
+            // dgvTZQPZStetType
+            // 
+            this.dgvTZQPZStetType.HeaderText = "听诊器类型";
+            this.dgvTZQPZStetType.Name = "dgvTZQPZStetType";
+            this.dgvTZQPZStetType.ReadOnly = true;
+            // 
+            // dgvTZQPZStetName
+            // 
+            this.dgvTZQPZStetName.HeaderText = "听诊器名字";
+            this.dgvTZQPZStetName.Name = "dgvTZQPZStetName";
+            this.dgvTZQPZStetName.ReadOnly = true;
+            // 
+            // dgvTZQPZStetOwner
+            // 
+            this.dgvTZQPZStetOwner.HeaderText = "听诊器所属人";
+            this.dgvTZQPZStetOwner.Name = "dgvTZQPZStetOwner";
+            this.dgvTZQPZStetOwner.ReadOnly = true;
+            // 
+            // dgvTZQPZMS
+            // 
+            this.dgvTZQPZMS.HeaderText = "听诊器描述";
+            this.dgvTZQPZMS.Name = "dgvTZQPZMS";
+            this.dgvTZQPZMS.ReadOnly = true;
+            // 
+            // dgvTZQPZBZ
+            // 
+            this.dgvTZQPZBZ.HeaderText = "听诊器备注";
+            this.dgvTZQPZBZ.Name = "dgvTZQPZBZ";
+            this.dgvTZQPZBZ.ReadOnly = true;
+            // 
+            // dgvTZQPZStetConn
+            // 
+            this.dgvTZQPZStetConn.HeaderText = "连接状态";
+            this.dgvTZQPZStetConn.Name = "dgvTZQPZStetConn";
+            this.dgvTZQPZStetConn.ReadOnly = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 728);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(944, 728);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControlEx1);
             this.Controls.Add(this.btnMin);
@@ -1156,16 +1159,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ButtonEx buttonEx2;
         private System.Windows.Forms.ButtonEx buttonEx1;
-        private System.Windows.Forms.ComboBoxEx comboBoxEx1;
+        private System.Windows.Forms.ComboBoxEx cbBoxTZPZ;
         private System.Windows.Forms.WaterTextBox waterTextBox1;
         private System.Windows.Forms.DataGridViewEx dgvTZQPZ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZPCNAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetOwner;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZMS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZBZ;
         private System.Windows.Forms.Nav nav1;
         private System.Windows.Forms.DataGridViewEx dgvTZJX;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZJXTZQNO;
@@ -1207,6 +1203,14 @@
         private System.Windows.Forms.ButtonEx buttonEx14;
         private System.Windows.Forms.ButtonEx btnTCJX;
         private System.Windows.Forms.ButtonEx btnTZPZ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZPCNAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetOwner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZMS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZBZ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetConn;
     }
 }
 

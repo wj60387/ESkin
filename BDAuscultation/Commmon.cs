@@ -28,12 +28,7 @@ namespace BDAuscultation
             }
         }
         
-        [DefaultValue(false)]
-        public static bool isBusy
-        {
-            get;
-            set;
-        }
+      
         public static SqliteHelper sqliteHelper = new SqliteHelper(Setting.localSqliteConnectstring);
         public static SupSocket SuperSocket = new SupSocket(Setting.serverUrl);
         public static event ShowMessage ShowMessageEvent;

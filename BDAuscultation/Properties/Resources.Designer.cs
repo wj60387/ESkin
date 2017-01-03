@@ -193,6 +193,16 @@ namespace BDAuscultation.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 听诊器序列号 {
+            get {
+                object obj = ResourceManager.GetObject("听诊器序列号", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 听诊器所属人 {
             get {
                 object obj = ResourceManager.GetObject("听诊器所属人", resourceCulture);
@@ -206,6 +216,16 @@ namespace BDAuscultation.Properties {
         internal static System.Drawing.Bitmap 听诊器描述 {
             get {
                 object obj = ResourceManager.GetObject("听诊器描述", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 听诊器用途 {
+            get {
+                object obj = ResourceManager.GetObject("听诊器用途", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

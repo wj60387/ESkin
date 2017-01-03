@@ -13,6 +13,7 @@ using System.Text;
 using BDAuscultation.Models;
 using BDAuscultation.Utilities;
 using BDAuscultation.Devices;
+using BDAuscultation.Forms;
 
 namespace BDAuscultation
 {
@@ -66,75 +67,75 @@ namespace BDAuscultation
             var appLicensePath = Path.Combine(Application.StartupPath, "appLicense.txt");
             AuthorizationInfo authorizationInfo = null;
 
-            //#region 软件授权验证
-            //if (File.Exists(appLicensePath))
-            //{
-            //    var json = File.ReadAllText(appLicensePath);
-            //    authorizationInfo = GetAuthorizationInfo(json);
+            #region 软件授权验证
+            if (File.Exists(appLicensePath))
+            {
+                var json = File.ReadAllText(appLicensePath);
+                authorizationInfo = GetAuthorizationInfo(json);
 
-            //    if (null == authorizationInfo)
-            //    {
-            //        var mac = CommonUtil.GetMacAddressByNetworkInformation();
-            //        var regFrom = new FrmReg(mac);
-            //        if (DialogResult.OK != regFrom.ShowDialog())
-            //        {
-            //            return;
-            //        }
-            //        MessageBox.Show("注册成功，请重启程序!");
-            //        return;
-            //        authorizationInfo = GetAuthorizationInfo(regFrom.License);
-            //        if (authorizationInfo == null)
-            //        {
-            //            MessageBox.Show("再次验证,服务器验证异常:" + regFrom.License);
-            //            return;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        if (Setting.isConnected)
-            //        {
-            //            var code = Mediator.remoteService.AccountCredentials(authorizationInfo.MachineCode, authorizationInfo.AuthorizationNum);
-            //            var RegistCode = Newtonsoft.Json.JsonConvert.DeserializeObject<RegistCode>(code);
-            //            var path = Path.Combine(Application.StartupPath, "applicense.txt");
-            //            System.IO.File.WriteAllText(path, RegistCode.License);
-            //            if (!RegistCode.isLegal)
-            //            {
-            //                return;
-            //            }
+                if (null == authorizationInfo)
+                {
+                    var mac = CommonUtil.GetMacAddressByNetworkInformation();
+                    var regFrom = new FrmReg(mac);
+                    if (DialogResult.OK != regFrom.ShowDialog())
+                    {
+                        return;
+                    }
+                    MessageBox.Show("注册成功，请重启程序!");
+                    return;
+                    authorizationInfo = GetAuthorizationInfo(regFrom.License);
+                    if (authorizationInfo == null)
+                    {
+                        MessageBox.Show("再次验证,服务器验证异常:" + regFrom.License);
+                        return;
+                    }
+                }
+                else
+                {
+                    if (Setting.isConnected)
+                    {
+                        var code = Mediator.remoteService.AccountCredentials(authorizationInfo.MachineCode, authorizationInfo.AuthorizationNum);
+                        var RegistCode = Newtonsoft.Json.JsonConvert.DeserializeObject<RegistCode>(code);
+                        var path = Path.Combine(Application.StartupPath, "applicense.txt");
+                        System.IO.File.WriteAllText(path, RegistCode.License);
+                        if (!RegistCode.isLegal)
+                        {
+                            return;
+                        }
 
-            //            authorizationInfo = GetAuthorizationInfo(RegistCode.License);
-            //            if (authorizationInfo == null)
-            //            {
-            //                MessageBox.Show("刷新验证异常" + Setting.GetAuthorizationError(RegistCode.License));
-            //                return;
-            //            }
-            //        }
-            //        if (authorizationInfo == null)
-            //        {
-            //            MessageBox.Show("本地验证异常:" + json);
-            //            return;
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    var mac = CommonUtil.GetMacAddressByNetworkInformation();
-            //    var regFrom = new FrmReg(mac);
-            //    if (DialogResult.OK != regFrom.ShowDialog())
-            //    {
-            //        return;
-            //    }
-            //    MessageBox.Show("注册成功，请重启程序!");
-            //    return;
-            //    authorizationInfo = GetAuthorizationInfo(regFrom.License);
-            //    if (authorizationInfo == null)
-            //    {
-            //        MessageBox.Show("首次验证,服务器验证异常");
-            //        return;
-            //    }
-            //}
-            //Setting.authorizationInfo = authorizationInfo;
-            //#endregion
+                        authorizationInfo = GetAuthorizationInfo(RegistCode.License);
+                        if (authorizationInfo == null)
+                        {
+                            MessageBox.Show("刷新验证异常" + Setting.GetAuthorizationError(RegistCode.License));
+                            return;
+                        }
+                    }
+                    if (authorizationInfo == null)
+                    {
+                        MessageBox.Show("本地验证异常:" + json);
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                var mac = CommonUtil.GetMacAddressByNetworkInformation();
+                var regFrom = new FrmReg(mac);
+                if (DialogResult.OK != regFrom.ShowDialog())
+                {
+                    return;
+                }
+                MessageBox.Show("注册成功，请重启程序!");
+                return;
+                authorizationInfo = GetAuthorizationInfo(regFrom.License);
+                if (authorizationInfo == null)
+                {
+                    MessageBox.Show("首次验证,服务器验证异常");
+                    return;
+                }
+            }
+            Setting.authorizationInfo = authorizationInfo;
+            #endregion
             var formLogin = new FrmLogin();
             formLogin.StartPosition = FormStartPosition.CenterScreen;
             //formLogin.SN = authorizationInfo.AuthorizationNum;
@@ -145,8 +146,8 @@ namespace BDAuscultation
             Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
             var formMain = new FrmMain();
             formMain.WindowState = FormWindowState.Maximized;
+            //Application.Run(new FrmStetInfo());
             Application.Run(formMain);
-            //Application.Run(new FormEx());
             mutex.Close();
             Mediator.remoteService.Close();
             try

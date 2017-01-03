@@ -38,6 +38,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucTextBoxEx1 = new System.Windows.Forms.UCTextBoxEx();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +104,7 @@
             this.dataGridViewEx1.EnableHeadersVisualStyles = false;
             this.dataGridViewEx1.Location = new System.Drawing.Point(144, 67);
             this.dataGridViewEx1.Name = "dataGridViewEx1";
+            this.dataGridViewEx1.ReadOnly = true;
             this.dataGridViewEx1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -124,21 +126,38 @@
             // 
             this.Column1.HeaderText = "Column1";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Column2";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Column3";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // ucTextBoxEx1
+            // 
+            this.ucTextBoxEx1.BackColor = System.Drawing.Color.Transparent;
+            this.ucTextBoxEx1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucTextBoxEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ucTextBoxEx1.Location = new System.Drawing.Point(191, 411);
+            this.ucTextBoxEx1.Name = "ucTextBoxEx1";
+            this.ucTextBoxEx1.PasswordChar = '\0';
+            this.ucTextBoxEx1.Radius = 16;
+            this.ucTextBoxEx1.Size = new System.Drawing.Size(156, 30);
+            this.ucTextBoxEx1.TabIndex = 3;
+            this.ucTextBoxEx1.WaterText = "水印文字";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.ClientSize = new System.Drawing.Size(747, 500);
+            this.Controls.Add(this.ucTextBoxEx1);
             this.Controls.Add(this.dataGridViewEx1);
             this.Controls.Add(this.buttonEx1);
             this.Controls.Add(this.nav1);
@@ -156,6 +175,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.UCTextBoxEx ucTextBoxEx1;
 
        
 

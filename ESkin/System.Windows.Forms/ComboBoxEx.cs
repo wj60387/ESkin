@@ -39,7 +39,7 @@ namespace System.Windows.Forms
             e.Graphics.DrawImage(img, imgRect);
             //文本内容显示区域
             Rectangle textRect =
-                    new Rectangle(imgRect.Right + 2, this.Height / 2 - img.Height / 2, img.Width, img.Height);
+                    new Rectangle(imgRect.Right + 2, this.Height / 2 - img.Height / 2, this.Width - img.Width, img.Height);
             //获得项文本内容,绘制文本
             //文本格式垂直居中
             //StringFormat strFormat = new StringFormat();
@@ -47,7 +47,7 @@ namespace System.Windows.Forms
             StringFormat sfn = new StringFormat();
             sfn.Alignment = StringAlignment.Near;
             sfn.LineAlignment = StringAlignment.Center;
-            e.Graphics.DrawString(this.SelectedItem + "", this.Font, new SolidBrush(this.ForeColor), textRect, sfn);
+            e.Graphics.DrawString(""+this.SelectedItem, this.Font, new SolidBrush(this.ForeColor), textRect, sfn);
         }
         protected override void OnCreateControl()
         {
@@ -102,6 +102,7 @@ namespace System.Windows.Forms
 
         private void OverrideDropDown(Graphics g)
         {
+            this.DropDownHeight = ItemHeight * this.Items.Count + 2;
             //if (DesignMode) return;
             //Rectangle rect = new Rectangle(this.Width - DropDownButtonWidth, 0, DropDownButtonWidth, this.Height);
 
@@ -143,7 +144,7 @@ namespace System.Windows.Forms
             if ((e.State & DrawItemState.Selected) != 0)
             {
                 Rectangle borderRect = new Rectangle(0, e.Bounds.Y, e.Bounds.Width, e.Bounds.Height);
-                using (var brush = new SolidBrush(Color.DarkCyan))
+                using (var brush = new SolidBrush(Color.FromArgb(0,120,220)))
                 {
                     e.Graphics.FillRectangle(brush, borderRect);
                 }
@@ -177,7 +178,7 @@ namespace System.Windows.Forms
             StringFormat sfn = new StringFormat();
             sfn.Alignment = StringAlignment.Near;
             sfn.LineAlignment = StringAlignment.Center;
-            e.Graphics.DrawString(this.Items[e.Index] + "", this.Font, new SolidBrush(this.ForeColor), textRect, sfn);
+            e.Graphics.DrawString(this.Items[e.Index].ToString(), this.Font, new SolidBrush(this.ForeColor), textRect, sfn);
         }
 
         private bool _mouseEnter = false;
