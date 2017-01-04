@@ -19,11 +19,13 @@ namespace BDAuscultation
 
         void InitdgvTZPZ()
         {
+            dgvTZQPZStetNO.FillWeight = 200;
+
             var btnEditColumn = new DataGridViewButtonExColumn("",
-               BDAuscultation.Properties.Resources.编辑点击, BDAuscultation.Properties.Resources.编辑未点击) { Name = "dgvTZQPZEdit", HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
+               BDAuscultation.Properties.Resources.编辑点击, BDAuscultation.Properties.Resources.编辑未点击) { Name = "dgvTZQPZEdit", HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,FillWeight = 50 };
             this.dgvTZQPZ.Columns.Add(btnEditColumn);
             var btnDelColumn = new DataGridViewButtonExColumn("",
-                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "dgvTZQPZDelete", HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 40 };
+                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "dgvTZQPZDelete", HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,FillWeight=50 };
             this.dgvTZQPZ.Columns.Add(btnDelColumn);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器编号);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.计算机名);

@@ -87,7 +87,10 @@ namespace  System.Windows.Forms
                 {
                     if (ListColumnImage[i] == null) continue;
                     System.Drawing.Rectangle rect = this.GetCellDisplayRectangle(i, -1, true);
-                    e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width - ListColumnImage[i].Width - 10, rect.Y+rect.Height / 2 - ListColumnImage[i].Height / 2, ListColumnImage[i].Width, ListColumnImage[i].Height);
+
+                    var cloumnText=this.Columns[i].HeaderText;
+                    var textRect=TextRenderer.MeasureText(cloumnText,this.Font);
+                    e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width / 2 + textRect.Width/2,   rect.Height / 2 - ListColumnImage[i].Height / 2+2, ListColumnImage[i].Width, ListColumnImage[i].Height);
                    //  e.Graphics.DrawRectangle(  Pens.Red, rect);
                 }
             //if (CurCellInfo.RowIndex >= 0 && CurCellInfo.ColumnIndex >= 0)
