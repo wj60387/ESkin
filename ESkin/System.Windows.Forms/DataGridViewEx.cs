@@ -90,7 +90,7 @@ namespace  System.Windows.Forms
 
                     var cloumnText=this.Columns[i].HeaderText;
                     var textRect=TextRenderer.MeasureText(cloumnText,this.Font);
-                    e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width / 2 + textRect.Width/2,   rect.Height / 2 - ListColumnImage[i].Height / 2+2, ListColumnImage[i].Width, ListColumnImage[i].Height);
+                    e.Graphics.DrawImage(ListColumnImage[i], rect.X + rect.Width / 2 + textRect.Width/2-4,   rect.Height / 2 - ListColumnImage[i].Height / 2+2, ListColumnImage[i].Width, ListColumnImage[i].Height);
                    //  e.Graphics.DrawRectangle(  Pens.Red, rect);
                 }
             //if (CurCellInfo.RowIndex >= 0 && CurCellInfo.ColumnIndex >= 0)
@@ -102,9 +102,6 @@ namespace  System.Windows.Forms
             //    e.Graphics.DrawRectangle(new Pen(Color.Red), rowBounds);
 
             //}
-
-
-             //cellStyle.SelectionForeColor : cellStyle.ForeColor
         }
         protected override void OnScroll(ScrollEventArgs e)
         {

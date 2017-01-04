@@ -200,18 +200,22 @@ namespace System.Windows.Forms
         protected override void OnMouseLeave(EventArgs e)
         {
 
-            //_mouseEnter = false;
-            //IntPtr hDC = IntPtr.Zero;
-            //Graphics gdc = null;
-            //hDC = Win32.GetWindowDC(this.Handle);
-            //gdc = Graphics.FromHdc(hDC);
-            //// gdc.DrawImage(dwonImage, new Rectangle(this.Width - 20, 3, 16, 16));
-            //gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
-            //Win32.ReleaseDC(this.Handle, hDC);
+            _mouseEnter = false;
+            IntPtr hDC = IntPtr.Zero;
+            Graphics gdc = null;
+            hDC = Win32.GetWindowDC(this.Handle);
+            gdc = Graphics.FromHdc(hDC);
+            // gdc.DrawImage(dwonImage, new Rectangle(this.Width - 20, 3, 16, 16));
+            gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
+            Win32.ReleaseDC(this.Handle, hDC);
             base.OnMouseLeave(e);
         }
 
-
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            this.Invalidate();
+        }
 
 
         public Image DwonImage

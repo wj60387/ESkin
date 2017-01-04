@@ -71,8 +71,8 @@ namespace BDAuscultation
 #endif
                 cbBoxTZJX.Items.Add(item.Name);
             }
-            if (cbBoxTZJX.Items.Count > 0)
-                cbBoxTZJX.SelectedIndex = 0;
+            //if (cbBoxTZJX.Items.Count > 0)
+            //    cbBoxTZJX.SelectedIndex = 0;
         }
         IEnumerable<Stethoscope> GetStethoscope()
         {

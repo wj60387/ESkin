@@ -53,7 +53,7 @@ namespace BDAuscultation
                  return System.Configuration.ConfigurationManager.AppSettings["virtualMac"];
             }
         }
-       
+        public static Image ImageJCBG = BDAuscultation.Properties.Resources.jcbg;
         public static Color themeColor
         {
             get

@@ -81,6 +81,12 @@
   <ItemGroup>
     <Compile Include="Commmon.cs" />
     <Compile Include="Devices\StethoscopeManager.cs" />
+    <Compile Include="Forms\FrmAudioDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAudioDetail.designer.cs">
+      <DependentUpon>FrmAudioDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmAudioRecord.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,8 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="IGetAudioInfo\IGetFJ.cs" />
+    <Compile Include="IGetAudioInfo\IGetInfo.cs" />
     <Compile Include="IHandleMessage.cs" />
     <Compile Include="Models\AudioDownLoadInfo.cs" />
     <Compile Include="Models\AudioInfo.cs" />
@@ -147,6 +155,9 @@
     <Compile Include="Utilities\CommonUtil.cs" />
     <Compile Include="Utilities\Extensions.cs" />
     <Compile Include="Utilities\FileOperation.cs" />
+    <EmbeddedResource Include="Forms\FrmAudioDetail.resx">
+      <DependentUpon>FrmAudioDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAudioRecord.resx">
       <DependentUpon>FrmAudioRecord.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,9 +302,6 @@
     <None Include="Resources\下拉箭头.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\下载.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\下载点击状态.png" />
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +381,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\听诊器序列号.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\初步诊断.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\患者类型.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\患者姓名.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\医生姓名.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\备注.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分享时间.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分享者.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下载.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\下载时间.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jcbg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

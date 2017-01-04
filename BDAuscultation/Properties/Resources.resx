@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="jcbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jcbg.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="下拉箭头" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\下拉箭头.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="下载" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\下载.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="下载时间" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\下载时间.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="下载未点击" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\下载未点击.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,6 +139,15 @@
   <data name="云端听诊" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\云端听诊.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="分享时间" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\分享时间.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="分享者" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\分享者.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="初步诊断" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\初步诊断.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="删除" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\删除.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +156,9 @@
   </data>
   <data name="删除点击状态" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\删除点击状态.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="医生姓名" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\医生姓名.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="单选框未选中" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\单选框未选中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +208,9 @@
   <data name="听诊配置" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊配置.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="备注" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\备注.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="奔达听诊平台" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\奔达听诊平台.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -198,6 +219,12 @@
   </data>
   <data name="导航栏" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\导航栏.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="患者姓名" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\患者姓名.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="患者类型" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\患者类型.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="按钮" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\按钮.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

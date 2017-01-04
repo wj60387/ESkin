@@ -24,14 +24,6 @@ namespace BDAuscultation
         }
         void Init()
         {
-            
-             
-
-           
-
-
-           
-
             InitdgvTZPZ();
             InitdgvTZJX();
             InitdgvTZLY();
