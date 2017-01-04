@@ -81,37 +81,52 @@
   <ItemGroup>
     <Compile Include="Commmon.cs" />
     <Compile Include="Devices\StethoscopeManager.cs" />
-    <Compile Include="Form\FrmReg.cs">
+    <Compile Include="Forms\FrmAudioRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmReg.designer.cs">
+    <Compile Include="Forms\FrmAudioRecord.Designer.cs">
+      <DependentUpon>FrmAudioRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.TZLY.Local.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProcessBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProcessBar.designer.cs">
+      <DependentUpon>FrmProcessBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReg.designer.cs">
       <DependentUpon>FrmReg.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmStetInfo.cs">
+    <Compile Include="Forms\FrmStetInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmStetInfo.Designer.cs">
+    <Compile Include="Forms\FrmStetInfo.Designer.cs">
       <DependentUpon>FrmStetInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmMain.TZJX.cs">
+    <Compile Include="Forms\FrmMain.TZJX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmMain.TZLY.cs">
+    <Compile Include="Forms\FrmMain.TZLY.Down.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmMain.TZPZ.cs">
+    <Compile Include="Forms\FrmMain.TZPZ.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmLogin.cs">
+    <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmLogin.Designer.cs">
+    <Compile Include="Forms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmMain.cs">
+    <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmMain.Designer.cs">
+    <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="IHandleMessage.cs" />
@@ -132,16 +147,22 @@
     <Compile Include="Utilities\CommonUtil.cs" />
     <Compile Include="Utilities\Extensions.cs" />
     <Compile Include="Utilities\FileOperation.cs" />
-    <EmbeddedResource Include="Form\FrmReg.resx">
+    <EmbeddedResource Include="Forms\FrmAudioRecord.resx">
+      <DependentUpon>FrmAudioRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProcessBar.resx">
+      <DependentUpon>FrmProcessBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReg.resx">
       <DependentUpon>FrmReg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmStetInfo.resx">
+    <EmbeddedResource Include="Forms\FrmStetInfo.resx">
       <DependentUpon>FrmStetInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmLogin.resx">
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmMain.resx">
+    <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

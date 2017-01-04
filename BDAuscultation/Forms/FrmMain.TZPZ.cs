@@ -37,7 +37,7 @@ namespace BDAuscultation
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.连接状态);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.编辑);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
-            LoadStetInfo();
+            LoadStetInfoTZPZ();
             this.btnTZPZ.Click += new System.EventHandler(this.btnTZPZ_Click);
             dgvTZQPZ.CellClick += dgvTZQPZ_CellClick;
             foreach (DataGridViewColumn column in dgvTZQPZ.Columns )
@@ -155,7 +155,7 @@ namespace BDAuscultation
             {
                 Invoke(new MethodInvoker(delegate()
                 {
-                    LoadStetInfo();
+                    LoadStetInfoTZPZ();
                     MessageBox.Show("删除信息成功..");
                 }));
             }
@@ -204,9 +204,9 @@ namespace BDAuscultation
                     Mediator.ShowMsg("新增听诊器 " + formStetInfo.StetName + " 信息，并上传服务器失败...");
                 }
             }
-            LoadStetInfo();
+            LoadStetInfoTZPZ();
         }
-        void LoadStetInfo()
+        void LoadStetInfoTZPZ()
         {
             cbBoxTZPZ.Items.Clear();
             dgvTZQPZ.Rows.Clear();
@@ -236,7 +236,7 @@ namespace BDAuscultation
                 {
                     Invoke(new MethodInvoker(delegate()
                     {
-                        LoadStetInfo();
+                        LoadStetInfoTZPZ();
                         MessageBox.Show("修改信息成功..");
                     }));
                 }
@@ -250,7 +250,7 @@ namespace BDAuscultation
                 {
                     Invoke(new MethodInvoker(delegate()
                     {
-                        LoadStetInfo();
+                        LoadStetInfoTZPZ();
                         MessageBox.Show("新增信息成功..");
                     }));
 

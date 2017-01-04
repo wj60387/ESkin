@@ -30,17 +30,11 @@ namespace BDAuscultation
            
 
 
-            dgvTZJX.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器编号);
-            dgvTZJX.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器名字);
-            dgvTZJX.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器所属人);
-            dgvTZJX.ListColumnImage.Add(BDAuscultation.Properties.Resources.连接状态);
-            dgvTZJX.ListColumnImage.Add(null);
-            var tzjxBtnCheckColumn = new DataGridViewCheckBoxExColumn() { HeaderText = "选择", Text = "选择", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
-            dgvTZJX.Columns.Add(tzjxBtnCheckColumn);
+           
 
             InitdgvTZPZ();
-
-            
+            InitdgvTZJX();
+            InitdgvTZLY();
         }
         void FrmMain_Load(object sender, EventArgs e)
         {
@@ -127,6 +121,8 @@ namespace BDAuscultation
         {
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
+
+       
 
        
 
