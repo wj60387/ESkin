@@ -403,6 +403,56 @@ namespace BDAuscultation.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 年龄 {
+            get {
+                object obj = ResourceManager.GetObject("年龄", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 录制时间 {
+            get {
+                object obj = ResourceManager.GetObject("录制时间", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 录音未点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("录音未点击状态", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 录音点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("录音点击状态", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 性别 {
+            get {
+                object obj = ResourceManager.GetObject("性别", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 患者姓名 {
             get {
                 object obj = ResourceManager.GetObject("患者姓名", resourceCulture);
@@ -446,6 +496,46 @@ namespace BDAuscultation.Properties {
         internal static System.Drawing.Bitmap 按钮左半椭圆 {
             get {
                 object obj = ResourceManager.GetObject("按钮左半椭圆", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 播放未点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("播放未点击状态", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 播放点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("播放点击状态", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 时长 {
+            get {
+                object obj = ResourceManager.GetObject("时长", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 检查报告点击 {
+            get {
+                object obj = ResourceManager.GetObject("检查报告点击", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -536,6 +626,16 @@ namespace BDAuscultation.Properties {
         internal static System.Drawing.Bitmap 编辑点击 {
             get {
                 object obj = ResourceManager.GetObject("编辑点击", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 缩略图 {
+            get {
+                object obj = ResourceManager.GetObject("缩略图", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -636,6 +736,26 @@ namespace BDAuscultation.Properties {
         internal static System.Drawing.Bitmap 连接状态 {
             get {
                 object obj = ResourceManager.GetObject("连接状态", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 部位 {
+            get {
+                object obj = ResourceManager.GetObject("部位", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 附件 {
+            get {
+                object obj = ResourceManager.GetObject("附件", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

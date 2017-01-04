@@ -139,15 +139,26 @@ namespace  System.Windows.Forms
                // var g = e.Graphics;
                 //g.SmoothingMode = SmoothingMode.AntiAlias;
               //  e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
-                var eRect = new Rectangle(e.RowBounds.Left + this.RowHeadersWidth / 2+4 - this.RowHeadersWidth / 2, e.RowBounds.Top+4, e.RowBounds.Height-8, e.RowBounds.Height-8);
+                var eRect = new Rectangle(e.RowBounds.Left + headerBounds.Width / 2 - indexSize / 2, e.RowBounds.Top + headerBounds.Height / 2 - indexSize / 2, indexSize, indexSize);
                 e.Graphics.DrawEllipse(new Pen(color,2f), eRect);
                 e.Graphics.DrawString(rowIdx, this.Font, brush, eRect, centerFormat);
                 //e.Graphics.DrawRectangle(new Pen(color, 1f), new Rectangle(eRect.X + this.RowHeadersWidth - 2, e.RowBounds.Top, 2, this.RowTemplate.Height));
-                e.Graphics.FillRectangle(brush, new Rectangle(eRect.X + this.RowHeadersWidth - 2 - 18, eRect.Y, 2, eRect.Height));
+                e.Graphics.FillRectangle(brush, new Rectangle(e.RowBounds.Left + this.RowHeadersWidth -10, eRect.Y, 2, indexSize));
                 if (this.Rows[e.RowIndex].Selected)
-                    e.Graphics.DrawRectangle(new Pen(color), new Rectangle(e.RowBounds.X - 1, e.RowBounds.Y+4, e.RowBounds.Width + 1, e.RowBounds.Height - 1-7));
+                    e.Graphics.DrawRectangle(new Pen(color), new Rectangle(e.RowBounds.X - 1, e.RowBounds.Y + boderPad, e.RowBounds.Width + 1, headerBounds.Height - 2 * boderPad));
             }
             
+        }
+        int boderPad = 4;
+        public int BoderPad
+        {
+            get { return boderPad; }
+            set { boderPad = value; }
+        }
+        int indexSize = 24;
+        public int IndexSize {
+            get { return indexSize; }
+            set { indexSize = value; }
         }
         protected override void OnRowPrePaint(DataGridViewRowPrePaintEventArgs e)
         {
@@ -321,7 +332,8 @@ namespace  System.Windows.Forms
             //    cellStyle.SelectionForeColor : cellStyle.ForeColor),
             //    new Point(cellBounds.X + 25, cellBounds.Y + cellBounds.Height / 4));
             //}
-
+            //this.OwningRow.Height
+            //this.OwningColumn.Width
             if ((cellState & DataGridViewElementStates.Selected) != 0)
             {
                 image = check ? ESkin.Properties.Resources._16x16勾选点击状态 : ESkin.Properties.Resources._16x16_没勾选点击状态;
@@ -597,9 +609,11 @@ namespace  System.Windows.Forms
                 cellStyle.SelectionForeColor : cellStyle.ForeColor),
                 new Point(cellBounds.X + exWidth + image.Width, cellBounds.Y + exHeight-4));
 
+              var rect = new Rectangle(cellBounds.X + cellBounds.Width / 2 - image.Width / 2, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
+
               if (image!=null)
              // var rect = new Rectangle(cellBounds.X + 4, cellBounds.Y + cellBounds.Height / 2 - image.Height / 2, image.Width, image.Height);
-              graphics.DrawImage(image, cellBounds.X + exWidth+8, cellBounds.Y+exHeight);
+                  graphics.DrawImage(image, rect);
           }
       }
       public class DataGridViewButtonExColumn : DataGridViewColumn

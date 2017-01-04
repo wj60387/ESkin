@@ -144,9 +144,11 @@ namespace BDAuscultation.Forms
             // 
             // txtStetRemark
             // 
+            this.txtStetRemark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.txtStetRemark.BackColor = System.Drawing.Color.Transparent;
             this.txtStetRemark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetRemark.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtStetRemark.ForeColor = System.Drawing.Color.Black;
             this.txtStetRemark.Location = new System.Drawing.Point(141, 220);
             this.txtStetRemark.Name = "txtStetRemark";
             this.txtStetRemark.PasswordChar = '\0';
@@ -168,9 +170,11 @@ namespace BDAuscultation.Forms
             // 
             // txtStetFunc
             // 
+            this.txtStetFunc.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.txtStetFunc.BackColor = System.Drawing.Color.Transparent;
             this.txtStetFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetFunc.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtStetFunc.ForeColor = System.Drawing.Color.Black;
             this.txtStetFunc.Location = new System.Drawing.Point(139, 173);
             this.txtStetFunc.Name = "txtStetFunc";
             this.txtStetFunc.PasswordChar = '\0';
@@ -192,9 +196,11 @@ namespace BDAuscultation.Forms
             // 
             // txtStetOwner
             // 
+            this.txtStetOwner.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.txtStetOwner.BackColor = System.Drawing.Color.Transparent;
             this.txtStetOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetOwner.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtStetOwner.ForeColor = System.Drawing.Color.Black;
             this.txtStetOwner.Location = new System.Drawing.Point(139, 129);
             this.txtStetOwner.Name = "txtStetOwner";
             this.txtStetOwner.PasswordChar = '\0';
@@ -227,9 +233,11 @@ namespace BDAuscultation.Forms
             // 
             // txtStetChineseName
             // 
+            this.txtStetChineseName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.txtStetChineseName.BackColor = System.Drawing.Color.Transparent;
             this.txtStetChineseName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetChineseName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtStetChineseName.ForeColor = System.Drawing.Color.Black;
             this.txtStetChineseName.Location = new System.Drawing.Point(139, 91);
             this.txtStetChineseName.Name = "txtStetChineseName";
             this.txtStetChineseName.PasswordChar = '\0';

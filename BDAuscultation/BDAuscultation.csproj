@@ -383,9 +383,6 @@
     <None Include="Resources\听诊器序列号.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\初步诊断.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\患者类型.png" />
   </ItemGroup>
   <ItemGroup>
@@ -411,6 +408,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\jcbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放点击状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放未点击状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\录音点击状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\录音未点击状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\年龄.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\性别.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\部位.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\初步诊断.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\录制时间.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\时长.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\缩略图.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\附件.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\检查报告点击.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

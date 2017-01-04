@@ -13,6 +13,7 @@ namespace BDAuscultation
     {
         public FrmMain()
         {
+            this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);  
             InitializeComponent();
             Init();
             this.SizeChanged += FrmMain_SizeChanged;

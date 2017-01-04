@@ -29,10 +29,10 @@ namespace BDAuscultation.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAudioDetail));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelImages = new System.Windows.Forms.Panel();
@@ -49,14 +49,14 @@ namespace BDAuscultation.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewEx1 = new  DataGridViewEx();
-            this.btnReport = new  ButtonEx();
-            this.txtPatientId = new  WaterTextBox();
-            this.txtHis = new  WaterTextBox();
-            this.txtPatientName = new   WaterTextBox();
-            this.txtDocRemark = new  WaterTextBox();
-            this.txtDocDiagnose = new  WaterTextBox();
-            this.txtDocName = new  WaterTextBox();
+            this.dataGridViewEx1 = new System.Windows.Forms.DataGridViewEx();
+            this.btnReport = new System.Windows.Forms.ButtonEx();
+            this.txtPatientId = new System.Windows.Forms.WaterTextBox();
+            this.txtHis = new System.Windows.Forms.WaterTextBox();
+            this.txtPatientName = new System.Windows.Forms.WaterTextBox();
+            this.txtDocRemark = new System.Windows.Forms.WaterTextBox();
+            this.txtDocDiagnose = new System.Windows.Forms.WaterTextBox();
+            this.txtDocName = new System.Windows.Forms.WaterTextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
@@ -251,43 +251,53 @@ namespace BDAuscultation.Forms
             this.dataGridViewEx1.AllowUserToResizeRows = false;
             this.dataGridViewEx1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewEx1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridViewEx1.BoderPad = 0;
             this.dataGridViewEx1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewEx1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewEx1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 9F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewEx1.ColumnHeadersHeight = 40;
             this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("微软雅黑", 9F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewEx1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewEx1.EnableHeadersVisualStyles = false;
             this.dataGridViewEx1.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.dataGridViewEx1.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewEx1.IndexSize = 24;
             this.dataGridViewEx1.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewEx1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.dataGridViewEx1.MultiSelect = false;
             this.dataGridViewEx1.Name = "dataGridViewEx1";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("微软雅黑", 9F);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dataGridViewEx1.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridViewEx1.ReadOnly = true;
+            this.dataGridViewEx1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewEx1.RowHeadersWidth = 70;
+            this.dataGridViewEx1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dataGridViewEx1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewEx1.RowTemplate.Height = 23;
-            this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEx1.Size = new System.Drawing.Size(595, 352);
             this.dataGridViewEx1.TabIndex = 4;
             this.dataGridViewEx1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEx1_CellContentClick);
@@ -316,6 +326,8 @@ namespace BDAuscultation.Forms
             // 
             // txtPatientId
             // 
+            this.txtPatientId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPatientId.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.txtPatientId.Location = new System.Drawing.Point(376, 207);
             this.txtPatientId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPatientId.MaxLength = 512;
@@ -329,6 +341,8 @@ namespace BDAuscultation.Forms
             // 
             // txtHis
             // 
+            this.txtHis.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtHis.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.txtHis.Location = new System.Drawing.Point(211, 209);
             this.txtHis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHis.MaxLength = 512;
@@ -342,6 +356,8 @@ namespace BDAuscultation.Forms
             // 
             // txtPatientName
             // 
+            this.txtPatientName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPatientName.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.txtPatientName.Location = new System.Drawing.Point(80, 17);
             this.txtPatientName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPatientName.MaxLength = 512;
@@ -354,6 +370,8 @@ namespace BDAuscultation.Forms
             // 
             // txtDocRemark
             // 
+            this.txtDocRemark.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDocRemark.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.txtDocRemark.Location = new System.Drawing.Point(79, 148);
             this.txtDocRemark.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.txtDocRemark.MaxLength = 512;
@@ -367,6 +385,8 @@ namespace BDAuscultation.Forms
             // 
             // txtDocDiagnose
             // 
+            this.txtDocDiagnose.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDocDiagnose.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.txtDocDiagnose.Location = new System.Drawing.Point(79, 98);
             this.txtDocDiagnose.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.txtDocDiagnose.MaxLength = 512;
@@ -379,6 +399,8 @@ namespace BDAuscultation.Forms
             // 
             // txtDocName
             // 
+            this.txtDocName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDocName.Font = new System.Drawing.Font("微软雅黑", 9F);
             this.txtDocName.Location = new System.Drawing.Point(80, 56);
             this.txtDocName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.txtDocName.MaxLength = 512;
@@ -389,7 +411,7 @@ namespace BDAuscultation.Forms
             this.txtDocName.TabIndex = 6;
             this.txtDocName.WaterText = "医生姓名";
             // 
-            // FormAudioDetail
+            // FrmAudioDetail
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -403,7 +425,7 @@ namespace BDAuscultation.Forms
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormAudioDetail";
+            this.Name = "FrmAudioDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "听诊录音详情";
             this.panel2.ResumeLayout(false);

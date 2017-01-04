@@ -37,16 +37,30 @@ namespace System.Windows.Forms
            this.waterTextBox1.Enter += waterTextBox1_Enter;
            this.waterTextBox1.Leave += waterTextBox1_Leave;
         }
-        Color color = Color.Black;
+
+        Color activeColor = Color.FromArgb(100, 200, 250);
+          public Color ActiveColor
+        {
+            get
+            {
+                return activeColor;
+
+            }
+            set
+            {
+                activeColor = value;
+            }
+        }
+          Color color = Color.Black;
         void waterTextBox1_Leave(object sender, EventArgs e)
         {
-            color = Color.Black;
+            waterTextBox1.ForeColor = color = this.ForeColor;
             this.Invalidate();
         }
 
         void waterTextBox1_Enter(object sender, EventArgs e)
         {
-            color = Color.FromArgb(100,200,250);
+            waterTextBox1 .ForeColor=color = activeColor;
             this.Invalidate();
         }
          
@@ -68,6 +82,18 @@ namespace System.Windows.Forms
             set
             {
                 waterTextBox1.PasswordChar = value;
+            }
+
+        }
+        public bool ReadOnly
+        {
+            get
+            {
+                return waterTextBox1.ReadOnly;
+            }
+            set
+            {
+                waterTextBox1.ReadOnly = value;
             }
 
         }
@@ -98,9 +124,15 @@ namespace System.Windows.Forms
             this.Name = "UCTextBoxEx";
             this.Size = new System.Drawing.Size(210, 24);
             this.FontChanged += new System.EventHandler(this.UCTextBox_FontChanged);
+            this.ForeColorChanged += UCTextBoxEx_ForeColorChanged;
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        void UCTextBoxEx_ForeColorChanged(object sender, EventArgs e)
+        {
+            //this.waterTextBox1.ForeColor = this.ForeColor;
         }
         
         private void UCTextBox_FontChanged(object sender, EventArgs e)

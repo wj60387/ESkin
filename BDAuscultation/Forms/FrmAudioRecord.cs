@@ -26,23 +26,34 @@ namespace BDAuscultation.Forms
         void FormAudioRecord_Load(object sender, EventArgs e)
         {
             txtDocName.ReadOnly = true;
-            txtPatientId.ReadOnly = true;
-            if (string.IsNullOrEmpty(txtPatientId.Text))
-                txtPatientId.ReadOnly = false;
-            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "GUID", HeaderText = "GUID", Visible = false,Width=0 });
+            //txtPatientId.ReadOnly = true;
+            //if (string.IsNullOrEmpty(txtPatientId.Text))
+            //    txtPatientId.ReadOnly = false;
+            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "GUID", HeaderText = "GUID", Visible = false,Width=0  });
             dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { HeaderText = "缩略图" ,Width=60});
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Part", HeaderText = "部位",  Width = 80 });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "isRecord", HeaderText = "是否已录音", Width = 40, FillWeight = 150.0f });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "RecordTime", HeaderText = "录制时间", Width = 150 ,FillWeight= 250.0f});
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "TakeTime", HeaderText = "时长(秒)", Width = 40, FillWeight = 120.0f });
+            
             //dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnRecord", HeaderText = "录音", Image = Setting.ImageRecord });
             //dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnPlay", HeaderText = "播放", Image = Setting.ImagePlay });
             //dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnDelete", HeaderText = "删除", Image = Setting.ImageDelete });
+            var btnRecordColumn = new DataGridViewButtonExColumn("",
+               BDAuscultation.Properties.Resources.录音点击状态, BDAuscultation.Properties.Resources.录音未点击状态) { Name = "btnRecord", HeaderText = "录音" };
+            this.dataGridViewEx1.Columns.Add(btnRecordColumn);
+            var btnPlayColumn = new DataGridViewButtonExColumn("",
+               BDAuscultation.Properties.Resources.播放点击状态, BDAuscultation.Properties.Resources.播放未点击状态) { Name = "btnPlay", HeaderText = "播放" };
+            this.dataGridViewEx1.Columns.Add(btnPlayColumn);
+            var btnDelColumn = new DataGridViewButtonExColumn("",
+                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "btnDelete", HeaderText = "删除" };
+            this.dataGridViewEx1.Columns.Add(btnDelColumn);
+            
             dataGridViewEx1.RowTemplate.Height = 66;
             dataGridViewEx1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             LoadAudio();
-            this.dataGridViewEx1.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.Black, Alignment = DataGridViewContentAlignment.MiddleCenter };
-            this.dataGridViewEx1.RowTemplate.DefaultCellStyle.BackColor = Color.FromArgb(215, 228, 242);
+            this.dataGridViewEx1.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.FromArgb(100,200,250), Alignment = DataGridViewContentAlignment.MiddleCenter };
+            this.dataGridViewEx1.RowTemplate.DefaultCellStyle.BackColor = Color.White;
             //this.dataGridViewEx1.RowTemplate.DefaultCellStyle.ForeColor = Color.FromArgb(215, 228, 242);
             txtDocName.Text = Setting.GetStetInfoByStetName(StetName).Owner;
             PatientType = Setting.GetStetInfoByStetName(StetName).StetType;
@@ -157,21 +168,23 @@ namespace BDAuscultation.Forms
                 MessageBox.Show("添加成功");
             }
             CanEdit = false;
-            txtPatientId.ReadOnly = true;
+            //txtPatientId.ReadOnly = true;
         }
 
-        public string His { get { return txtHis.Text; } set { txtHis.Text = value; } }
+     //   public string His { get { return txtHis.Text; } set { txtHis.Text = value; } }
         public string PatientGUID { get; set; }
         public string StetName { get; set; }
         public int PatientType { get; set; }
         public int PatientGroupID { get { return Setting.authorizationInfo.GroupID;} }
-        public string PatientID { get { return txtPatientId.Text; } set { txtPatientId.Text = value; } }
+       // public string PatientID { get { return txtPatientId.Text; } set { txtPatientId.Text = value; } }
+        public string PatientID { get; set; }
+        public string His { get; set; }
         public string PatientSex { 
-            get { return radioButton1.Checked?"男":"女"; } 
+            get { return radioButtonEx1.Checked?"男":"女"; } 
             set {
                 if (!new string[] { "男", "女" }.Contains(value)) throw new Exception("性别为男女,不能为"+value);
-                radioButton1.Checked = "男" == value;
-                radioButton2.Checked = "男" != value;
+                radioButtonEx1.Checked = "男" == value;
+                radioButtonEx2.Checked = "男" != value;
             } 
         }
         public int PatientAge { get { return (int)numAge.Value; } set { numAge.Value = value; } }
@@ -191,15 +204,15 @@ namespace BDAuscultation.Forms
             }
             set
             {
-                txtHis.ReadOnly = !value;
-                txtPatientId.ReadOnly = !value;
+                //txtHis.ReadOnly = !value;
+                //txtPatientId.ReadOnly = !value;
                 txtDocDiagnose.ReadOnly = !value;
                 if(string.IsNullOrEmpty(txtDocName.Text))
                  txtDocName.ReadOnly = !value;
                 txtDocRemark.ReadOnly = !value;
                 txtPatientName.ReadOnly = !value;
-                radioButton1.Enabled = value;
-                radioButton2.Enabled = value;
+                radioButtonEx1.Enabled = value;
+                radioButtonEx2.Enabled = value;
                 numAge.ReadOnly = !value;
             }
         }
