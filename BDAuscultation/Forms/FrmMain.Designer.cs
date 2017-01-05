@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,18 +42,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlYDTZ = new System.Windows.Forms.TabControlEx();
             this.tabTZPZ = new System.Windows.Forms.TabPage();
+            this.btnTZPZ = new System.Windows.Forms.ButtonEx();
             this.dgvTZQPZ = new System.Windows.Forms.DataGridViewEx();
             this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +63,9 @@
             this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZQPZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEx1 = new System.Windows.Forms.ButtonEx();
+            this.cbBoxTZPZ = new System.Windows.Forms.ComboBoxEx();
+            this.buttonEx2 = new System.Windows.Forms.ButtonEx();
             this.tabTZJX = new System.Windows.Forms.TabPage();
             this.btnTeach = new System.Windows.Forms.ButtonEx();
             this.dgvTZJX = new System.Windows.Forms.DataGridViewEx();
@@ -68,10 +73,15 @@
             this.dgvTZJXStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZJXStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZJXStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbBoxTZJX = new System.Windows.Forms.ComboBoxEx();
+            this.buttonEx3 = new System.Windows.Forms.ButtonEx();
+            this.buttonEx4 = new System.Windows.Forms.ButtonEx();
             this.tabTZLY = new System.Windows.Forms.TabPage();
             this.panelLY = new System.Windows.Forms.Panel();
             this.btnTZLY = new System.Windows.Forms.ButtonEx();
             this.panelLY2 = new System.Windows.Forms.Panel();
+            this.btnLYDown = new System.Windows.Forms.ButtonEx();
+            this.btnLYLocal = new System.Windows.Forms.ButtonEx();
             this.tabLY = new System.Windows.Forms.TabControlEx();
             this.tabLYLocal = new System.Windows.Forms.TabPage();
             this.dgvTZLY_Local = new System.Windows.Forms.DataGridViewEx();
@@ -90,58 +100,49 @@
             this.dgvTZLY_DownSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZLY_DownShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZLY_DownDownTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEx5 = new System.Windows.Forms.ButtonEx();
+            this.cbBoxTZLY = new System.Windows.Forms.ComboBoxEx();
+            this.buttonEx6 = new System.Windows.Forms.ButtonEx();
             this.tabYDTZ = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnShare = new System.Windows.Forms.ButtonEx();
+            this.btnUpload = new System.Windows.Forms.ButtonEx();
             this.tabControlYDTZMain = new System.Windows.Forms.TabControlEx();
             this.tabYDTZUpLoad = new System.Windows.Forms.TabPage();
-            this.tabYDTZShare = new System.Windows.Forms.TabPage();
-            this.tabYCTZ = new System.Windows.Forms.TabPage();
-            this.dataGridViewEx1 = new System.Windows.Forms.DataGridViewEx();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMessage = new System.Windows.Forms.WaterTextBox();
             this.dgvYDTZUpLoad = new System.Windows.Forms.DataGridViewEx();
-            this.dgvYDTZShare = new System.Windows.Forms.DataGridViewEx();
             this.dgvYDTZUpLoadGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYDTZUpLoadUpTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabYDTZShare = new System.Windows.Forms.TabPage();
+            this.dgvYDTZShare = new System.Windows.Forms.DataGridViewEx();
             this.dgvYDTZShareGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYDTZSharePType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYDTZSharePName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYDTZUpLoadSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYDTZShareShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTZPZ = new System.Windows.Forms.ButtonEx();
-            this.buttonEx1 = new System.Windows.Forms.ButtonEx();
-            this.cbBoxTZPZ = new System.Windows.Forms.ComboBoxEx();
-            this.buttonEx2 = new System.Windows.Forms.ButtonEx();
-            this.cbBoxTZJX = new System.Windows.Forms.ComboBoxEx();
-            this.buttonEx3 = new System.Windows.Forms.ButtonEx();
-            this.buttonEx4 = new System.Windows.Forms.ButtonEx();
-            this.btnLYDown = new System.Windows.Forms.ButtonEx();
-            this.btnLYLocal = new System.Windows.Forms.ButtonEx();
-            this.buttonEx5 = new System.Windows.Forms.ButtonEx();
-            this.cbBoxTZLY = new System.Windows.Forms.ComboBoxEx();
-            this.buttonEx6 = new System.Windows.Forms.ButtonEx();
-            this.btnShare = new System.Windows.Forms.ButtonEx();
-            this.btnUpload = new System.Windows.Forms.ButtonEx();
             this.cbBoxYDTZ = new System.Windows.Forms.ComboBoxEx();
             this.buttonEx11 = new System.Windows.Forms.ButtonEx();
             this.buttonEx12 = new System.Windows.Forms.ButtonEx();
-            this.btnTCJX = new System.Windows.Forms.ButtonEx();
-            this.comboBoxEx5 = new System.Windows.Forms.ComboBoxEx();
+            this.tabYCTZ = new System.Windows.Forms.TabPage();
+            this.btnStart = new System.Windows.Forms.ButtonEx();
+            this.dgvYCTZ = new System.Windows.Forms.DataGridViewEx();
+            this.dgvYCTZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYCTZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYCTZMAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYCTZOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYCTZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbBoxYCTZ = new System.Windows.Forms.ComboBoxEx();
             this.btnJX = new System.Windows.Forms.ButtonEx();
             this.buttonEx14 = new System.Windows.Forms.ButtonEx();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMessage = new System.Windows.Forms.WaterTextBox();
             this.btnMin = new System.Windows.Forms.ButtonEx();
             this.btnBack = new System.Windows.Forms.ButtonEx();
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.nav1 = new System.Windows.Forms.Nav();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControlYDTZ.SuspendLayout();
             this.tabTZPZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTZQPZ)).BeginInit();
@@ -159,12 +160,12 @@
             this.panel2.SuspendLayout();
             this.tabControlYDTZMain.SuspendLayout();
             this.tabYDTZUpLoad.SuspendLayout();
-            this.tabYDTZShare.SuspendLayout();
-            this.tabYCTZ.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvYDTZUpLoad)).BeginInit();
+            this.tabYDTZShare.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvYDTZShare)).BeginInit();
+            this.tabYCTZ.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYCTZ)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlYDTZ
@@ -202,6 +203,21 @@
             this.tabTZPZ.TabIndex = 0;
             this.tabTZPZ.Text = "tabPage1";
             // 
+            // btnTZPZ
+            // 
+            this.btnTZPZ.BackColor = System.Drawing.Color.Transparent;
+            this.btnTZPZ.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
+            this.btnTZPZ.FlatAppearance.BorderSize = 0;
+            this.btnTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTZPZ.Location = new System.Drawing.Point(639, 37);
+            this.btnTZPZ.Name = "btnTZPZ";
+            this.btnTZPZ.Size = new System.Drawing.Size(105, 34);
+            this.btnTZPZ.TabIndex = 54;
+            this.btnTZPZ.Text = "配置";
+            this.btnTZPZ.UseVisualStyleBackColor = false;
+            // 
             // dgvTZQPZ
             // 
             this.dgvTZQPZ.AllowUserToAddRows = false;
@@ -210,7 +226,7 @@
             this.dgvTZQPZ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvTZQPZ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTZQPZ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTZQPZ.BackgroundColor = System.Drawing.Color.White;
             this.dgvTZQPZ.BoderPad = 4;
             this.dgvTZQPZ.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -271,48 +287,118 @@
             this.dgvTZQPZStetNO.HeaderText = "听诊器编号";
             this.dgvTZQPZStetNO.Name = "dgvTZQPZStetNO";
             this.dgvTZQPZStetNO.ReadOnly = true;
+            this.dgvTZQPZStetNO.Width = 113;
             // 
             // dgvTZQPZPCNAME
             // 
             this.dgvTZQPZPCNAME.HeaderText = "计算机名";
             this.dgvTZQPZPCNAME.Name = "dgvTZQPZPCNAME";
             this.dgvTZQPZPCNAME.ReadOnly = true;
+            this.dgvTZQPZPCNAME.Width = 97;
             // 
             // dgvTZQPZStetType
             // 
             this.dgvTZQPZStetType.HeaderText = "听诊器类型";
             this.dgvTZQPZStetType.Name = "dgvTZQPZStetType";
             this.dgvTZQPZStetType.ReadOnly = true;
+            this.dgvTZQPZStetType.Width = 113;
             // 
             // dgvTZQPZStetName
             // 
             this.dgvTZQPZStetName.HeaderText = "听诊器名字";
             this.dgvTZQPZStetName.Name = "dgvTZQPZStetName";
             this.dgvTZQPZStetName.ReadOnly = true;
+            this.dgvTZQPZStetName.Width = 113;
             // 
             // dgvTZQPZStetOwner
             // 
             this.dgvTZQPZStetOwner.HeaderText = "听诊器所属人";
             this.dgvTZQPZStetOwner.Name = "dgvTZQPZStetOwner";
             this.dgvTZQPZStetOwner.ReadOnly = true;
+            this.dgvTZQPZStetOwner.Width = 129;
             // 
             // dgvTZQPZMS
             // 
             this.dgvTZQPZMS.HeaderText = "听诊器描述";
             this.dgvTZQPZMS.Name = "dgvTZQPZMS";
             this.dgvTZQPZMS.ReadOnly = true;
+            this.dgvTZQPZMS.Width = 113;
             // 
             // dgvTZQPZBZ
             // 
             this.dgvTZQPZBZ.HeaderText = "听诊器备注";
             this.dgvTZQPZBZ.Name = "dgvTZQPZBZ";
             this.dgvTZQPZBZ.ReadOnly = true;
+            this.dgvTZQPZBZ.Width = 113;
             // 
             // dgvTZQPZStetConn
             // 
             this.dgvTZQPZStetConn.HeaderText = "连接状态";
             this.dgvTZQPZStetConn.Name = "dgvTZQPZStetConn";
             this.dgvTZQPZStetConn.ReadOnly = true;
+            this.dgvTZQPZStetConn.Width = 97;
+            // 
+            // buttonEx1
+            // 
+            this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.buttonEx1.FlatAppearance.BorderSize = 0;
+            this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx1.Location = new System.Drawing.Point(253, 41);
+            this.buttonEx1.Name = "buttonEx1";
+            this.buttonEx1.Size = new System.Drawing.Size(86, 30);
+            this.buttonEx1.TabIndex = 32;
+            this.buttonEx1.Text = "选择听诊器";
+            this.buttonEx1.UseVisualStyleBackColor = false;
+            // 
+            // cbBoxTZPZ
+            // 
+            this.cbBoxTZPZ.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxTZPZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxTZPZ.DropDownHeight = 194;
+            this.cbBoxTZPZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxTZPZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZPZ.DwonImage")));
+            this.cbBoxTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxTZPZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxTZPZ.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxTZPZ.FormattingEnabled = true;
+            this.cbBoxTZPZ.IntegralHeight = false;
+            this.cbBoxTZPZ.ItemHeight = 24;
+            this.cbBoxTZPZ.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"});
+            this.cbBoxTZPZ.Location = new System.Drawing.Point(339, 41);
+            this.cbBoxTZPZ.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxTZPZ.Name = "cbBoxTZPZ";
+            this.cbBoxTZPZ.Size = new System.Drawing.Size(280, 30);
+            this.cbBoxTZPZ.TabIndex = 31;
+            // 
+            // buttonEx2
+            // 
+            this.buttonEx2.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
+            this.buttonEx2.FlatAppearance.BorderSize = 0;
+            this.buttonEx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx2.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
+            this.buttonEx2.Location = new System.Drawing.Point(15, 15);
+            this.buttonEx2.Name = "buttonEx2";
+            this.buttonEx2.Size = new System.Drawing.Size(224, 63);
+            this.buttonEx2.TabIndex = 14;
+            this.buttonEx2.Text = "听诊器配置";
+            this.buttonEx2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEx2.UseVisualStyleBackColor = false;
             // 
             // tabTZJX
             // 
@@ -332,15 +418,16 @@
             // btnTeach
             // 
             this.btnTeach.BackColor = System.Drawing.Color.Transparent;
+            this.btnTeach.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
             this.btnTeach.FlatAppearance.BorderSize = 0;
             this.btnTeach.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTeach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTeach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeach.Location = new System.Drawing.Point(654, 43);
             this.btnTeach.Name = "btnTeach";
-            this.btnTeach.Size = new System.Drawing.Size(98, 28);
+            this.btnTeach.Size = new System.Drawing.Size(103, 35);
             this.btnTeach.TabIndex = 43;
-            this.btnTeach.Text = "buttonEx13";
+            this.btnTeach.Text = "开始教学";
             this.btnTeach.UseVisualStyleBackColor = false;
             // 
             // dgvTZJX
@@ -430,6 +517,68 @@
             this.dgvTZJXStetConn.ReadOnly = true;
             this.dgvTZJXStetConn.Width = 97;
             // 
+            // cbBoxTZJX
+            // 
+            this.cbBoxTZJX.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxTZJX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxTZJX.DropDownHeight = 194;
+            this.cbBoxTZJX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxTZJX.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZJX.DwonImage")));
+            this.cbBoxTZJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxTZJX.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxTZJX.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxTZJX.FormattingEnabled = true;
+            this.cbBoxTZJX.IntegralHeight = false;
+            this.cbBoxTZJX.ItemHeight = 24;
+            this.cbBoxTZJX.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"});
+            this.cbBoxTZJX.Location = new System.Drawing.Point(352, 45);
+            this.cbBoxTZJX.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxTZJX.Name = "cbBoxTZJX";
+            this.cbBoxTZJX.Size = new System.Drawing.Size(288, 30);
+            this.cbBoxTZJX.TabIndex = 40;
+            // 
+            // buttonEx3
+            // 
+            this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.buttonEx3.FlatAppearance.BorderSize = 0;
+            this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx3.Location = new System.Drawing.Point(266, 45);
+            this.buttonEx3.Name = "buttonEx3";
+            this.buttonEx3.Size = new System.Drawing.Size(86, 30);
+            this.buttonEx3.TabIndex = 41;
+            this.buttonEx3.Text = "选择听诊器";
+            this.buttonEx3.UseVisualStyleBackColor = false;
+            // 
+            // buttonEx4
+            // 
+            this.buttonEx4.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
+            this.buttonEx4.FlatAppearance.BorderSize = 0;
+            this.buttonEx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx4.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEx4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx4.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
+            this.buttonEx4.Location = new System.Drawing.Point(15, 15);
+            this.buttonEx4.Name = "buttonEx4";
+            this.buttonEx4.Size = new System.Drawing.Size(224, 63);
+            this.buttonEx4.TabIndex = 39;
+            this.buttonEx4.Text = "听诊教学";
+            this.buttonEx4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEx4.UseVisualStyleBackColor = false;
+            // 
             // tabTZLY
             // 
             this.tabTZLY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -457,16 +606,18 @@
             // btnTZLY
             // 
             this.btnTZLY.BackColor = System.Drawing.Color.Transparent;
+            this.btnTZLY.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
             this.btnTZLY.FlatAppearance.BorderSize = 0;
             this.btnTZLY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTZLY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTZLY.Location = new System.Drawing.Point(671, 41);
+            this.btnTZLY.Location = new System.Drawing.Point(625, 39);
             this.btnTZLY.Name = "btnTZLY";
-            this.btnTZLY.Size = new System.Drawing.Size(103, 30);
+            this.btnTZLY.Size = new System.Drawing.Size(103, 35);
             this.btnTZLY.TabIndex = 46;
-            this.btnTZLY.Text = "buttonEx13";
+            this.btnTZLY.Text = "新增录音";
             this.btnTZLY.UseVisualStyleBackColor = false;
+            this.btnTZLY.Click += new System.EventHandler(this.btnTZLY_Click);
             // 
             // panelLY2
             // 
@@ -481,6 +632,36 @@
             this.panelLY2.Name = "panelLY2";
             this.panelLY2.Size = new System.Drawing.Size(807, 488);
             this.panelLY2.TabIndex = 45;
+            // 
+            // btnLYDown
+            // 
+            this.btnLYDown.BackColor = System.Drawing.Color.Transparent;
+            this.btnLYDown.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
+            this.btnLYDown.FlatAppearance.BorderSize = 0;
+            this.btnLYDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLYDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLYDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLYDown.Location = new System.Drawing.Point(157, 4);
+            this.btnLYDown.Name = "btnLYDown";
+            this.btnLYDown.Size = new System.Drawing.Size(150, 30);
+            this.btnLYDown.TabIndex = 2;
+            this.btnLYDown.Text = "已下载听诊";
+            this.btnLYDown.UseVisualStyleBackColor = false;
+            // 
+            // btnLYLocal
+            // 
+            this.btnLYLocal.BackColor = System.Drawing.Color.Transparent;
+            this.btnLYLocal.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.btnLYLocal.FlatAppearance.BorderSize = 0;
+            this.btnLYLocal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLYLocal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLYLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLYLocal.Location = new System.Drawing.Point(7, 4);
+            this.btnLYLocal.Name = "btnLYLocal";
+            this.btnLYLocal.Size = new System.Drawing.Size(150, 30);
+            this.btnLYLocal.TabIndex = 1;
+            this.btnLYLocal.Text = "本地录音";
+            this.btnLYLocal.UseVisualStyleBackColor = false;
             // 
             // tabLY
             // 
@@ -721,570 +902,6 @@
             this.dgvTZLY_DownDownTime.Name = "dgvTZLY_DownDownTime";
             this.dgvTZLY_DownDownTime.ReadOnly = true;
             // 
-            // tabYDTZ
-            // 
-            this.tabYDTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.tabYDTZ.Controls.Add(this.panel2);
-            this.tabYDTZ.Controls.Add(this.cbBoxYDTZ);
-            this.tabYDTZ.Controls.Add(this.buttonEx11);
-            this.tabYDTZ.Controls.Add(this.buttonEx12);
-            this.tabYDTZ.Location = new System.Drawing.Point(0, 1);
-            this.tabYDTZ.Name = "tabYDTZ";
-            this.tabYDTZ.Size = new System.Drawing.Size(818, 575);
-            this.tabYDTZ.TabIndex = 3;
-            this.tabYDTZ.Text = "tabPage4";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnShare);
-            this.panel2.Controls.Add(this.btnUpload);
-            this.panel2.Controls.Add(this.tabControlYDTZMain);
-            this.panel2.Location = new System.Drawing.Point(5, 78);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(807, 488);
-            this.panel2.TabIndex = 49;
-            // 
-            // tabControlYDTZMain
-            // 
-            this.tabControlYDTZMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlYDTZMain.Controls.Add(this.tabYDTZUpLoad);
-            this.tabControlYDTZMain.Controls.Add(this.tabYDTZShare);
-            this.tabControlYDTZMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControlYDTZMain.ItemSize = new System.Drawing.Size(1, 1);
-            this.tabControlYDTZMain.Location = new System.Drawing.Point(3, 36);
-            this.tabControlYDTZMain.Name = "tabControlYDTZMain";
-            this.tabControlYDTZMain.SelectedIndex = 0;
-            this.tabControlYDTZMain.Size = new System.Drawing.Size(799, 449);
-            this.tabControlYDTZMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControlYDTZMain.TabIndex = 0;
-            // 
-            // tabYDTZUpLoad
-            // 
-            this.tabYDTZUpLoad.Controls.Add(this.dgvYDTZUpLoad);
-            this.tabYDTZUpLoad.Location = new System.Drawing.Point(0, 1);
-            this.tabYDTZUpLoad.Name = "tabYDTZUpLoad";
-            this.tabYDTZUpLoad.Padding = new System.Windows.Forms.Padding(3);
-            this.tabYDTZUpLoad.Size = new System.Drawing.Size(797, 446);
-            this.tabYDTZUpLoad.TabIndex = 0;
-            this.tabYDTZUpLoad.Text = "tabPage1";
-            this.tabYDTZUpLoad.UseVisualStyleBackColor = true;
-            // 
-            // tabYDTZShare
-            // 
-            this.tabYDTZShare.Controls.Add(this.dgvYDTZShare);
-            this.tabYDTZShare.Location = new System.Drawing.Point(0, 1);
-            this.tabYDTZShare.Name = "tabYDTZShare";
-            this.tabYDTZShare.Padding = new System.Windows.Forms.Padding(3);
-            this.tabYDTZShare.Size = new System.Drawing.Size(797, 446);
-            this.tabYDTZShare.TabIndex = 1;
-            this.tabYDTZShare.Text = "tabPage2";
-            this.tabYDTZShare.UseVisualStyleBackColor = true;
-            // 
-            // tabYCTZ
-            // 
-            this.tabYCTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.tabYCTZ.Controls.Add(this.btnTCJX);
-            this.tabYCTZ.Controls.Add(this.dataGridViewEx1);
-            this.tabYCTZ.Controls.Add(this.comboBoxEx5);
-            this.tabYCTZ.Controls.Add(this.btnJX);
-            this.tabYCTZ.Controls.Add(this.buttonEx14);
-            this.tabYCTZ.Location = new System.Drawing.Point(0, 1);
-            this.tabYCTZ.Name = "tabYCTZ";
-            this.tabYCTZ.Size = new System.Drawing.Size(818, 575);
-            this.tabYCTZ.TabIndex = 4;
-            this.tabYCTZ.Text = "tabPage5";
-            // 
-            // dataGridViewEx1
-            // 
-            this.dataGridViewEx1.AllowUserToAddRows = false;
-            this.dataGridViewEx1.AllowUserToDeleteRows = false;
-            this.dataGridViewEx1.AllowUserToResizeRows = false;
-            this.dataGridViewEx1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewEx1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridViewEx1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewEx1.BoderPad = 4;
-            this.dataGridViewEx1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewEx1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewEx1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridViewEx1.ColumnHeadersHeight = 40;
-            this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewEx1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridViewEx1.EnableHeadersVisualStyles = false;
-            this.dataGridViewEx1.IndexSize = 24;
-            this.dataGridViewEx1.Location = new System.Drawing.Point(12, 103);
-            this.dataGridViewEx1.Name = "dataGridViewEx1";
-            this.dataGridViewEx1.ReadOnly = true;
-            this.dataGridViewEx1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(41);
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridViewEx1.RowHeadersWidth = 70;
-            this.dataGridViewEx1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridViewEx1.RowTemplate.Height = 32;
-            this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEx1.Size = new System.Drawing.Size(798, 469);
-            this.dataGridViewEx1.TabIndex = 52;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "听诊器编号";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 113;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "计算机名";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 97;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "听诊器类型";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 113;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "听诊器名字";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 113;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "听诊器所属人";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 129;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "听诊器描述";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 113;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "听诊器备注";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 113;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.txtMessage);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(120, 615);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 113);
-            this.panel1.TabIndex = 44;
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMessage.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtMessage.Location = new System.Drawing.Point(8, 8);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(807, 98);
-            this.txtMessage.TabIndex = 0;
-            this.txtMessage.WaterText = "信息输出";
-            // 
-            // dgvYDTZUpLoad
-            // 
-            this.dgvYDTZUpLoad.AllowUserToAddRows = false;
-            this.dgvYDTZUpLoad.AllowUserToDeleteRows = false;
-            this.dgvYDTZUpLoad.AllowUserToResizeRows = false;
-            this.dgvYDTZUpLoad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvYDTZUpLoad.BackgroundColor = System.Drawing.Color.White;
-            this.dgvYDTZUpLoad.BoderPad = 4;
-            this.dgvYDTZUpLoad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvYDTZUpLoad.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvYDTZUpLoad.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvYDTZUpLoad.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvYDTZUpLoad.ColumnHeadersHeight = 40;
-            this.dgvYDTZUpLoad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvYDTZUpLoad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvYDTZUpLoadGUID,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dgvYDTZUpLoadUpTime});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvYDTZUpLoad.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvYDTZUpLoad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvYDTZUpLoad.EnableHeadersVisualStyles = false;
-            this.dgvYDTZUpLoad.IndexSize = 24;
-            this.dgvYDTZUpLoad.Location = new System.Drawing.Point(3, 3);
-            this.dgvYDTZUpLoad.MultiSelect = false;
-            this.dgvYDTZUpLoad.Name = "dgvYDTZUpLoad";
-            this.dgvYDTZUpLoad.ReadOnly = true;
-            this.dgvYDTZUpLoad.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(41);
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvYDTZUpLoad.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvYDTZUpLoad.RowHeadersWidth = 70;
-            this.dgvYDTZUpLoad.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvYDTZUpLoad.RowTemplate.Height = 32;
-            this.dgvYDTZUpLoad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYDTZUpLoad.Size = new System.Drawing.Size(791, 440);
-            this.dgvYDTZUpLoad.TabIndex = 40;
-            // 
-            // dgvYDTZShare
-            // 
-            this.dgvYDTZShare.AllowUserToAddRows = false;
-            this.dgvYDTZShare.AllowUserToDeleteRows = false;
-            this.dgvYDTZShare.AllowUserToResizeRows = false;
-            this.dgvYDTZShare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvYDTZShare.BackgroundColor = System.Drawing.Color.White;
-            this.dgvYDTZShare.BoderPad = 4;
-            this.dgvYDTZShare.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvYDTZShare.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvYDTZShare.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvYDTZShare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.dgvYDTZShare.ColumnHeadersHeight = 40;
-            this.dgvYDTZShare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvYDTZShare.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgvYDTZShareGUID,
-            this.dgvYDTZSharePType,
-            this.dgvYDTZSharePName,
-            this.dgvYDTZUpLoadSharer,
-            this.dgvYDTZShareShareTime});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvYDTZShare.DefaultCellStyle = dataGridViewCellStyle17;
-            this.dgvYDTZShare.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvYDTZShare.EnableHeadersVisualStyles = false;
-            this.dgvYDTZShare.IndexSize = 24;
-            this.dgvYDTZShare.Location = new System.Drawing.Point(3, 3);
-            this.dgvYDTZShare.MultiSelect = false;
-            this.dgvYDTZShare.Name = "dgvYDTZShare";
-            this.dgvYDTZShare.ReadOnly = true;
-            this.dgvYDTZShare.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(41);
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvYDTZShare.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dgvYDTZShare.RowHeadersWidth = 70;
-            this.dgvYDTZShare.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvYDTZShare.RowTemplate.Height = 32;
-            this.dgvYDTZShare.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYDTZShare.Size = new System.Drawing.Size(791, 440);
-            this.dgvYDTZShare.TabIndex = 40;
-            // 
-            // dgvYDTZUpLoadGUID
-            // 
-            this.dgvYDTZUpLoadGUID.HeaderText = "GUID";
-            this.dgvYDTZUpLoadGUID.Name = "dgvYDTZUpLoadGUID";
-            this.dgvYDTZUpLoadGUID.ReadOnly = true;
-            this.dgvYDTZUpLoadGUID.Visible = false;
-            this.dgvYDTZUpLoadGUID.Width = 74;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "患者类型";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 97;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "患者姓名";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 97;
-            // 
-            // dgvYDTZUpLoadUpTime
-            // 
-            this.dgvYDTZUpLoadUpTime.HeaderText = "上传时间";
-            this.dgvYDTZUpLoadUpTime.Name = "dgvYDTZUpLoadUpTime";
-            this.dgvYDTZUpLoadUpTime.ReadOnly = true;
-            this.dgvYDTZUpLoadUpTime.Width = 97;
-            // 
-            // dgvYDTZShareGUID
-            // 
-            this.dgvYDTZShareGUID.HeaderText = "GUID";
-            this.dgvYDTZShareGUID.Name = "dgvYDTZShareGUID";
-            this.dgvYDTZShareGUID.ReadOnly = true;
-            this.dgvYDTZShareGUID.Visible = false;
-            this.dgvYDTZShareGUID.Width = 74;
-            // 
-            // dgvYDTZSharePType
-            // 
-            this.dgvYDTZSharePType.HeaderText = "患者类型";
-            this.dgvYDTZSharePType.Name = "dgvYDTZSharePType";
-            this.dgvYDTZSharePType.ReadOnly = true;
-            this.dgvYDTZSharePType.Width = 97;
-            // 
-            // dgvYDTZSharePName
-            // 
-            this.dgvYDTZSharePName.HeaderText = "患者姓名";
-            this.dgvYDTZSharePName.Name = "dgvYDTZSharePName";
-            this.dgvYDTZSharePName.ReadOnly = true;
-            this.dgvYDTZSharePName.Width = 97;
-            // 
-            // dgvYDTZUpLoadSharer
-            // 
-            this.dgvYDTZUpLoadSharer.HeaderText = "分享者";
-            this.dgvYDTZUpLoadSharer.Name = "dgvYDTZUpLoadSharer";
-            this.dgvYDTZUpLoadSharer.ReadOnly = true;
-            this.dgvYDTZUpLoadSharer.Width = 81;
-            // 
-            // dgvYDTZShareShareTime
-            // 
-            this.dgvYDTZShareShareTime.HeaderText = "分享时间";
-            this.dgvYDTZShareShareTime.Name = "dgvYDTZShareShareTime";
-            this.dgvYDTZShareShareTime.ReadOnly = true;
-            this.dgvYDTZShareShareTime.Width = 97;
-            // 
-            // btnTZPZ
-            // 
-            this.btnTZPZ.BackColor = System.Drawing.Color.Transparent;
-            this.btnTZPZ.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
-            this.btnTZPZ.FlatAppearance.BorderSize = 0;
-            this.btnTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTZPZ.Location = new System.Drawing.Point(639, 37);
-            this.btnTZPZ.Name = "btnTZPZ";
-            this.btnTZPZ.Size = new System.Drawing.Size(105, 34);
-            this.btnTZPZ.TabIndex = 54;
-            this.btnTZPZ.Text = "配置";
-            this.btnTZPZ.UseVisualStyleBackColor = false;
-            // 
-            // buttonEx1
-            // 
-            this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx1.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.buttonEx1.FlatAppearance.BorderSize = 0;
-            this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx1.Location = new System.Drawing.Point(253, 41);
-            this.buttonEx1.Name = "buttonEx1";
-            this.buttonEx1.Size = new System.Drawing.Size(86, 30);
-            this.buttonEx1.TabIndex = 32;
-            this.buttonEx1.Text = "选择听诊器";
-            this.buttonEx1.UseVisualStyleBackColor = false;
-            // 
-            // cbBoxTZPZ
-            // 
-            this.cbBoxTZPZ.BackColor = System.Drawing.Color.Transparent;
-            this.cbBoxTZPZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxTZPZ.DropDownHeight = 194;
-            this.cbBoxTZPZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxTZPZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZPZ.DwonImage")));
-            this.cbBoxTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbBoxTZPZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbBoxTZPZ.ForeColor = System.Drawing.Color.Black;
-            this.cbBoxTZPZ.FormattingEnabled = true;
-            this.cbBoxTZPZ.IntegralHeight = false;
-            this.cbBoxTZPZ.ItemHeight = 24;
-            this.cbBoxTZPZ.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H"});
-            this.cbBoxTZPZ.Location = new System.Drawing.Point(339, 41);
-            this.cbBoxTZPZ.Margin = new System.Windows.Forms.Padding(0);
-            this.cbBoxTZPZ.Name = "cbBoxTZPZ";
-            this.cbBoxTZPZ.Size = new System.Drawing.Size(280, 30);
-            this.cbBoxTZPZ.TabIndex = 31;
-            // 
-            // buttonEx2
-            // 
-            this.buttonEx2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx2.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
-            this.buttonEx2.FlatAppearance.BorderSize = 0;
-            this.buttonEx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEx2.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx2.Location = new System.Drawing.Point(15, 15);
-            this.buttonEx2.Name = "buttonEx2";
-            this.buttonEx2.Size = new System.Drawing.Size(224, 63);
-            this.buttonEx2.TabIndex = 14;
-            this.buttonEx2.Text = "听诊器配置";
-            this.buttonEx2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEx2.UseVisualStyleBackColor = false;
-            // 
-            // cbBoxTZJX
-            // 
-            this.cbBoxTZJX.BackColor = System.Drawing.Color.Transparent;
-            this.cbBoxTZJX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxTZJX.DropDownHeight = 194;
-            this.cbBoxTZJX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxTZJX.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZJX.DwonImage")));
-            this.cbBoxTZJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbBoxTZJX.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbBoxTZJX.ForeColor = System.Drawing.Color.Black;
-            this.cbBoxTZJX.FormattingEnabled = true;
-            this.cbBoxTZJX.IntegralHeight = false;
-            this.cbBoxTZJX.ItemHeight = 24;
-            this.cbBoxTZJX.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H"});
-            this.cbBoxTZJX.Location = new System.Drawing.Point(339, 41);
-            this.cbBoxTZJX.Margin = new System.Windows.Forms.Padding(0);
-            this.cbBoxTZJX.Name = "cbBoxTZJX";
-            this.cbBoxTZJX.Size = new System.Drawing.Size(288, 30);
-            this.cbBoxTZJX.TabIndex = 40;
-            // 
-            // buttonEx3
-            // 
-            this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.buttonEx3.FlatAppearance.BorderSize = 0;
-            this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx3.Location = new System.Drawing.Point(253, 41);
-            this.buttonEx3.Name = "buttonEx3";
-            this.buttonEx3.Size = new System.Drawing.Size(86, 30);
-            this.buttonEx3.TabIndex = 41;
-            this.buttonEx3.Text = "选择听诊器";
-            this.buttonEx3.UseVisualStyleBackColor = false;
-            // 
-            // buttonEx4
-            // 
-            this.buttonEx4.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx4.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
-            this.buttonEx4.FlatAppearance.BorderSize = 0;
-            this.buttonEx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx4.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonEx4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEx4.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx4.Location = new System.Drawing.Point(15, 15);
-            this.buttonEx4.Name = "buttonEx4";
-            this.buttonEx4.Size = new System.Drawing.Size(224, 63);
-            this.buttonEx4.TabIndex = 39;
-            this.buttonEx4.Text = "听诊教学";
-            this.buttonEx4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEx4.UseVisualStyleBackColor = false;
-            // 
-            // btnLYDown
-            // 
-            this.btnLYDown.BackColor = System.Drawing.Color.Transparent;
-            this.btnLYDown.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
-            this.btnLYDown.FlatAppearance.BorderSize = 0;
-            this.btnLYDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLYDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLYDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLYDown.Location = new System.Drawing.Point(157, 4);
-            this.btnLYDown.Name = "btnLYDown";
-            this.btnLYDown.Size = new System.Drawing.Size(150, 30);
-            this.btnLYDown.TabIndex = 2;
-            this.btnLYDown.Text = "已下载听诊";
-            this.btnLYDown.UseVisualStyleBackColor = false;
-            // 
-            // btnLYLocal
-            // 
-            this.btnLYLocal.BackColor = System.Drawing.Color.Transparent;
-            this.btnLYLocal.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.btnLYLocal.FlatAppearance.BorderSize = 0;
-            this.btnLYLocal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLYLocal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLYLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLYLocal.Location = new System.Drawing.Point(7, 4);
-            this.btnLYLocal.Name = "btnLYLocal";
-            this.btnLYLocal.Size = new System.Drawing.Size(150, 30);
-            this.btnLYLocal.TabIndex = 1;
-            this.btnLYLocal.Text = "本地录音";
-            this.btnLYLocal.UseVisualStyleBackColor = false;
-            // 
             // buttonEx5
             // 
             this.buttonEx5.BackColor = System.Drawing.Color.Transparent;
@@ -1347,6 +964,33 @@
             this.buttonEx6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEx6.UseVisualStyleBackColor = false;
             // 
+            // tabYDTZ
+            // 
+            this.tabYDTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tabYDTZ.Controls.Add(this.panel2);
+            this.tabYDTZ.Controls.Add(this.cbBoxYDTZ);
+            this.tabYDTZ.Controls.Add(this.buttonEx11);
+            this.tabYDTZ.Controls.Add(this.buttonEx12);
+            this.tabYDTZ.Location = new System.Drawing.Point(0, 1);
+            this.tabYDTZ.Name = "tabYDTZ";
+            this.tabYDTZ.Size = new System.Drawing.Size(818, 575);
+            this.tabYDTZ.TabIndex = 3;
+            this.tabYDTZ.Text = "tabPage4";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnShare);
+            this.panel2.Controls.Add(this.btnUpload);
+            this.panel2.Controls.Add(this.tabControlYDTZMain);
+            this.panel2.Location = new System.Drawing.Point(5, 78);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(807, 488);
+            this.panel2.TabIndex = 49;
+            // 
             // btnShare
             // 
             this.btnShare.BackColor = System.Drawing.Color.Transparent;
@@ -1376,6 +1020,227 @@
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "我上传的听诊";
             this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // tabControlYDTZMain
+            // 
+            this.tabControlYDTZMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlYDTZMain.Controls.Add(this.tabYDTZUpLoad);
+            this.tabControlYDTZMain.Controls.Add(this.tabYDTZShare);
+            this.tabControlYDTZMain.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControlYDTZMain.ItemSize = new System.Drawing.Size(1, 1);
+            this.tabControlYDTZMain.Location = new System.Drawing.Point(3, 36);
+            this.tabControlYDTZMain.Name = "tabControlYDTZMain";
+            this.tabControlYDTZMain.SelectedIndex = 0;
+            this.tabControlYDTZMain.Size = new System.Drawing.Size(799, 449);
+            this.tabControlYDTZMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControlYDTZMain.TabIndex = 0;
+            // 
+            // tabYDTZUpLoad
+            // 
+            this.tabYDTZUpLoad.Controls.Add(this.dgvYDTZUpLoad);
+            this.tabYDTZUpLoad.Location = new System.Drawing.Point(0, 1);
+            this.tabYDTZUpLoad.Name = "tabYDTZUpLoad";
+            this.tabYDTZUpLoad.Padding = new System.Windows.Forms.Padding(3);
+            this.tabYDTZUpLoad.Size = new System.Drawing.Size(797, 446);
+            this.tabYDTZUpLoad.TabIndex = 0;
+            this.tabYDTZUpLoad.Text = "tabPage1";
+            this.tabYDTZUpLoad.UseVisualStyleBackColor = true;
+            // 
+            // dgvYDTZUpLoad
+            // 
+            this.dgvYDTZUpLoad.AllowUserToAddRows = false;
+            this.dgvYDTZUpLoad.AllowUserToDeleteRows = false;
+            this.dgvYDTZUpLoad.AllowUserToResizeRows = false;
+            this.dgvYDTZUpLoad.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvYDTZUpLoad.BackgroundColor = System.Drawing.Color.White;
+            this.dgvYDTZUpLoad.BoderPad = 4;
+            this.dgvYDTZUpLoad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvYDTZUpLoad.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvYDTZUpLoad.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvYDTZUpLoad.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgvYDTZUpLoad.ColumnHeadersHeight = 40;
+            this.dgvYDTZUpLoad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvYDTZUpLoad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvYDTZUpLoadGUID,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dgvYDTZUpLoadUpTime});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvYDTZUpLoad.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvYDTZUpLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvYDTZUpLoad.EnableHeadersVisualStyles = false;
+            this.dgvYDTZUpLoad.IndexSize = 24;
+            this.dgvYDTZUpLoad.Location = new System.Drawing.Point(3, 3);
+            this.dgvYDTZUpLoad.MultiSelect = false;
+            this.dgvYDTZUpLoad.Name = "dgvYDTZUpLoad";
+            this.dgvYDTZUpLoad.ReadOnly = true;
+            this.dgvYDTZUpLoad.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(41);
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvYDTZUpLoad.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvYDTZUpLoad.RowHeadersWidth = 70;
+            this.dgvYDTZUpLoad.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvYDTZUpLoad.RowTemplate.Height = 32;
+            this.dgvYDTZUpLoad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvYDTZUpLoad.Size = new System.Drawing.Size(791, 440);
+            this.dgvYDTZUpLoad.TabIndex = 40;
+            // 
+            // dgvYDTZUpLoadGUID
+            // 
+            this.dgvYDTZUpLoadGUID.HeaderText = "GUID";
+            this.dgvYDTZUpLoadGUID.Name = "dgvYDTZUpLoadGUID";
+            this.dgvYDTZUpLoadGUID.ReadOnly = true;
+            this.dgvYDTZUpLoadGUID.Visible = false;
+            this.dgvYDTZUpLoadGUID.Width = 74;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "患者类型";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 97;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "患者姓名";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 97;
+            // 
+            // dgvYDTZUpLoadUpTime
+            // 
+            this.dgvYDTZUpLoadUpTime.HeaderText = "上传时间";
+            this.dgvYDTZUpLoadUpTime.Name = "dgvYDTZUpLoadUpTime";
+            this.dgvYDTZUpLoadUpTime.ReadOnly = true;
+            this.dgvYDTZUpLoadUpTime.Width = 97;
+            // 
+            // tabYDTZShare
+            // 
+            this.tabYDTZShare.Controls.Add(this.dgvYDTZShare);
+            this.tabYDTZShare.Location = new System.Drawing.Point(0, 1);
+            this.tabYDTZShare.Name = "tabYDTZShare";
+            this.tabYDTZShare.Padding = new System.Windows.Forms.Padding(3);
+            this.tabYDTZShare.Size = new System.Drawing.Size(797, 446);
+            this.tabYDTZShare.TabIndex = 1;
+            this.tabYDTZShare.Text = "tabPage2";
+            this.tabYDTZShare.UseVisualStyleBackColor = true;
+            // 
+            // dgvYDTZShare
+            // 
+            this.dgvYDTZShare.AllowUserToAddRows = false;
+            this.dgvYDTZShare.AllowUserToDeleteRows = false;
+            this.dgvYDTZShare.AllowUserToResizeRows = false;
+            this.dgvYDTZShare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvYDTZShare.BackgroundColor = System.Drawing.Color.White;
+            this.dgvYDTZShare.BoderPad = 4;
+            this.dgvYDTZShare.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvYDTZShare.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvYDTZShare.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvYDTZShare.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvYDTZShare.ColumnHeadersHeight = 40;
+            this.dgvYDTZShare.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvYDTZShare.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvYDTZShareGUID,
+            this.dgvYDTZSharePType,
+            this.dgvYDTZSharePName,
+            this.dgvYDTZUpLoadSharer,
+            this.dgvYDTZShareShareTime});
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvYDTZShare.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvYDTZShare.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvYDTZShare.EnableHeadersVisualStyles = false;
+            this.dgvYDTZShare.IndexSize = 24;
+            this.dgvYDTZShare.Location = new System.Drawing.Point(3, 3);
+            this.dgvYDTZShare.MultiSelect = false;
+            this.dgvYDTZShare.Name = "dgvYDTZShare";
+            this.dgvYDTZShare.ReadOnly = true;
+            this.dgvYDTZShare.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.Padding = new System.Windows.Forms.Padding(41);
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvYDTZShare.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvYDTZShare.RowHeadersWidth = 70;
+            this.dgvYDTZShare.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvYDTZShare.RowTemplate.Height = 32;
+            this.dgvYDTZShare.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvYDTZShare.Size = new System.Drawing.Size(791, 440);
+            this.dgvYDTZShare.TabIndex = 40;
+            // 
+            // dgvYDTZShareGUID
+            // 
+            this.dgvYDTZShareGUID.HeaderText = "GUID";
+            this.dgvYDTZShareGUID.Name = "dgvYDTZShareGUID";
+            this.dgvYDTZShareGUID.ReadOnly = true;
+            this.dgvYDTZShareGUID.Visible = false;
+            this.dgvYDTZShareGUID.Width = 74;
+            // 
+            // dgvYDTZSharePType
+            // 
+            this.dgvYDTZSharePType.HeaderText = "患者类型";
+            this.dgvYDTZSharePType.Name = "dgvYDTZSharePType";
+            this.dgvYDTZSharePType.ReadOnly = true;
+            this.dgvYDTZSharePType.Width = 97;
+            // 
+            // dgvYDTZSharePName
+            // 
+            this.dgvYDTZSharePName.HeaderText = "患者姓名";
+            this.dgvYDTZSharePName.Name = "dgvYDTZSharePName";
+            this.dgvYDTZSharePName.ReadOnly = true;
+            this.dgvYDTZSharePName.Width = 97;
+            // 
+            // dgvYDTZUpLoadSharer
+            // 
+            this.dgvYDTZUpLoadSharer.HeaderText = "分享者";
+            this.dgvYDTZUpLoadSharer.Name = "dgvYDTZUpLoadSharer";
+            this.dgvYDTZUpLoadSharer.ReadOnly = true;
+            this.dgvYDTZUpLoadSharer.Width = 81;
+            // 
+            // dgvYDTZShareShareTime
+            // 
+            this.dgvYDTZShareShareTime.HeaderText = "分享时间";
+            this.dgvYDTZShareShareTime.Name = "dgvYDTZShareShareTime";
+            this.dgvYDTZShareShareTime.ReadOnly = true;
+            this.dgvYDTZShareShareTime.Width = 97;
             // 
             // cbBoxYDTZ
             // 
@@ -1390,7 +1255,7 @@
             this.cbBoxYDTZ.FormattingEnabled = true;
             this.cbBoxYDTZ.IntegralHeight = false;
             this.cbBoxYDTZ.ItemHeight = 24;
-            this.cbBoxYDTZ.Location = new System.Drawing.Point(330, 35);
+            this.cbBoxYDTZ.Location = new System.Drawing.Point(330, 36);
             this.cbBoxYDTZ.Margin = new System.Windows.Forms.Padding(0);
             this.cbBoxYDTZ.Name = "cbBoxYDTZ";
             this.cbBoxYDTZ.Size = new System.Drawing.Size(290, 30);
@@ -1404,7 +1269,7 @@
             this.buttonEx11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonEx11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx11.Location = new System.Drawing.Point(244, 35);
+            this.buttonEx11.Location = new System.Drawing.Point(244, 36);
             this.buttonEx11.Name = "buttonEx11";
             this.buttonEx11.Size = new System.Drawing.Size(86, 30);
             this.buttonEx11.TabIndex = 48;
@@ -1422,7 +1287,7 @@
             this.buttonEx12.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonEx12.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx12.Location = new System.Drawing.Point(13, 9);
+            this.buttonEx12.Location = new System.Drawing.Point(15, 15);
             this.buttonEx12.Name = "buttonEx12";
             this.buttonEx12.Size = new System.Drawing.Size(224, 63);
             this.buttonEx12.TabIndex = 46;
@@ -1430,35 +1295,152 @@
             this.buttonEx12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEx12.UseVisualStyleBackColor = false;
             // 
-            // btnTCJX
+            // tabYCTZ
             // 
-            this.btnTCJX.BackColor = System.Drawing.Color.Transparent;
-            this.btnTCJX.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
-            this.btnTCJX.FlatAppearance.BorderSize = 0;
-            this.btnTCJX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTCJX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnTCJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTCJX.Location = new System.Drawing.Point(563, 38);
-            this.btnTCJX.Name = "btnTCJX";
-            this.btnTCJX.Size = new System.Drawing.Size(101, 34);
-            this.btnTCJX.TabIndex = 53;
-            this.btnTCJX.Text = "发起会诊";
-            this.btnTCJX.UseVisualStyleBackColor = false;
+            this.tabYCTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tabYCTZ.Controls.Add(this.btnStart);
+            this.tabYCTZ.Controls.Add(this.dgvYCTZ);
+            this.tabYCTZ.Controls.Add(this.cbBoxYCTZ);
+            this.tabYCTZ.Controls.Add(this.btnJX);
+            this.tabYCTZ.Controls.Add(this.buttonEx14);
+            this.tabYCTZ.Location = new System.Drawing.Point(0, 1);
+            this.tabYCTZ.Name = "tabYCTZ";
+            this.tabYCTZ.Size = new System.Drawing.Size(818, 575);
+            this.tabYCTZ.TabIndex = 4;
+            this.tabYCTZ.Text = "tabPage5";
             // 
-            // comboBoxEx5
+            // btnStart
             // 
-            this.comboBoxEx5.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxEx5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx5.DropDownHeight = 150;
-            this.comboBoxEx5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEx5.DwonImage = ((System.Drawing.Image)(resources.GetObject("comboBoxEx5.DwonImage")));
-            this.comboBoxEx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBoxEx5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBoxEx5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.comboBoxEx5.FormattingEnabled = true;
-            this.comboBoxEx5.IntegralHeight = false;
-            this.comboBoxEx5.ItemHeight = 24;
-            this.comboBoxEx5.Items.AddRange(new object[] {
+            this.btnStart.BackColor = System.Drawing.Color.Transparent;
+            this.btnStart.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Location = new System.Drawing.Point(653, 41);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(103, 34);
+            this.btnStart.TabIndex = 53;
+            this.btnStart.Text = "发起会诊";
+            this.btnStart.UseVisualStyleBackColor = false;
+            // 
+            // dgvYCTZ
+            // 
+            this.dgvYCTZ.AllowUserToAddRows = false;
+            this.dgvYCTZ.AllowUserToDeleteRows = false;
+            this.dgvYCTZ.AllowUserToResizeRows = false;
+            this.dgvYCTZ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvYCTZ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvYCTZ.BackgroundColor = System.Drawing.Color.White;
+            this.dgvYCTZ.BoderPad = 4;
+            this.dgvYCTZ.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvYCTZ.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvYCTZ.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvYCTZ.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dgvYCTZ.ColumnHeadersHeight = 40;
+            this.dgvYCTZ.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvYCTZ.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvYCTZStetName,
+            this.dgvYCTZStetNO,
+            this.dataGridViewTextBoxColumn2,
+            this.dgvYCTZMAC,
+            this.dgvYCTZOwner,
+            this.dgvYCTZStetConn});
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvYCTZ.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dgvYCTZ.EnableHeadersVisualStyles = false;
+            this.dgvYCTZ.IndexSize = 24;
+            this.dgvYCTZ.Location = new System.Drawing.Point(12, 103);
+            this.dgvYCTZ.Name = "dgvYCTZ";
+            this.dgvYCTZ.ReadOnly = true;
+            this.dgvYCTZ.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(41);
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvYCTZ.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvYCTZ.RowHeadersWidth = 70;
+            this.dgvYCTZ.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvYCTZ.RowTemplate.Height = 32;
+            this.dgvYCTZ.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvYCTZ.Size = new System.Drawing.Size(798, 469);
+            this.dgvYCTZ.TabIndex = 52;
+            // 
+            // dgvYCTZStetName
+            // 
+            this.dgvYCTZStetName.HeaderText = "听诊器名称";
+            this.dgvYCTZStetName.Name = "dgvYCTZStetName";
+            this.dgvYCTZStetName.ReadOnly = true;
+            this.dgvYCTZStetName.Width = 113;
+            // 
+            // dgvYCTZStetNO
+            // 
+            this.dgvYCTZStetNO.HeaderText = "听诊器编号";
+            this.dgvYCTZStetNO.Name = "dgvYCTZStetNO";
+            this.dgvYCTZStetNO.ReadOnly = true;
+            this.dgvYCTZStetNO.Width = 113;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "计算机名";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 97;
+            // 
+            // dgvYCTZMAC
+            // 
+            this.dgvYCTZMAC.HeaderText = "MAC";
+            this.dgvYCTZMAC.Name = "dgvYCTZMAC";
+            this.dgvYCTZMAC.ReadOnly = true;
+            this.dgvYCTZMAC.Width = 71;
+            // 
+            // dgvYCTZOwner
+            // 
+            this.dgvYCTZOwner.HeaderText = "听诊器所属人";
+            this.dgvYCTZOwner.Name = "dgvYCTZOwner";
+            this.dgvYCTZOwner.ReadOnly = true;
+            this.dgvYCTZOwner.Width = 129;
+            // 
+            // dgvYCTZStetConn
+            // 
+            this.dgvYCTZStetConn.HeaderText = "连接状态";
+            this.dgvYCTZStetConn.Name = "dgvYCTZStetConn";
+            this.dgvYCTZStetConn.ReadOnly = true;
+            this.dgvYCTZStetConn.Width = 97;
+            // 
+            // cbBoxYCTZ
+            // 
+            this.cbBoxYCTZ.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxYCTZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxYCTZ.DropDownHeight = 194;
+            this.cbBoxYCTZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxYCTZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxYCTZ.DwonImage")));
+            this.cbBoxYCTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxYCTZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxYCTZ.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxYCTZ.FormattingEnabled = true;
+            this.cbBoxYCTZ.IntegralHeight = false;
+            this.cbBoxYCTZ.ItemHeight = 24;
+            this.cbBoxYCTZ.Items.AddRange(new object[] {
             "A",
             "B",
             "C",
@@ -1467,11 +1449,11 @@
             "F",
             "G",
             "H"});
-            this.comboBoxEx5.Location = new System.Drawing.Point(329, 39);
-            this.comboBoxEx5.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxEx5.Name = "comboBoxEx5";
-            this.comboBoxEx5.Size = new System.Drawing.Size(219, 30);
-            this.comboBoxEx5.TabIndex = 50;
+            this.cbBoxYCTZ.Location = new System.Drawing.Point(342, 43);
+            this.cbBoxYCTZ.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxYCTZ.Name = "cbBoxYCTZ";
+            this.cbBoxYCTZ.Size = new System.Drawing.Size(298, 30);
+            this.cbBoxYCTZ.TabIndex = 50;
             // 
             // btnJX
             // 
@@ -1481,7 +1463,7 @@
             this.btnJX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnJX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnJX.Location = new System.Drawing.Point(243, 39);
+            this.btnJX.Location = new System.Drawing.Point(256, 43);
             this.btnJX.Name = "btnJX";
             this.btnJX.Size = new System.Drawing.Size(86, 30);
             this.btnJX.TabIndex = 51;
@@ -1499,13 +1481,38 @@
             this.buttonEx14.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonEx14.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx14.Location = new System.Drawing.Point(12, 13);
+            this.buttonEx14.Location = new System.Drawing.Point(15, 15);
             this.buttonEx14.Name = "buttonEx14";
             this.buttonEx14.Size = new System.Drawing.Size(224, 63);
             this.buttonEx14.TabIndex = 49;
             this.buttonEx14.Text = "远程教学";
             this.buttonEx14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEx14.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.txtMessage);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(120, 615);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(824, 113);
+            this.panel1.TabIndex = 44;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMessage.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.txtMessage.Location = new System.Drawing.Point(6, 4);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtMessage.Size = new System.Drawing.Size(809, 103);
+            this.txtMessage.TabIndex = 0;
+            this.txtMessage.WaterText = "信息输出";
             // 
             // btnMin
             // 
@@ -1572,11 +1579,15 @@
             this.nav1.TabIndex = 45;
             this.nav1.Text = "nav1";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(162)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(944, 728);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControlYDTZ);
@@ -1604,13 +1615,13 @@
             this.panel2.ResumeLayout(false);
             this.tabControlYDTZMain.ResumeLayout(false);
             this.tabYDTZUpLoad.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYDTZUpLoad)).EndInit();
             this.tabYDTZShare.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYDTZShare)).EndInit();
             this.tabYCTZ.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYCTZ)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvYDTZUpLoad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvYDTZShare)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1660,18 +1671,11 @@
         private System.Windows.Forms.ButtonEx buttonEx11;
         private System.Windows.Forms.ComboBoxEx cbBoxYDTZ;
         private System.Windows.Forms.ButtonEx buttonEx12;
-        private System.Windows.Forms.DataGridViewEx dataGridViewEx1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewEx dgvYCTZ;
         private System.Windows.Forms.ButtonEx btnJX;
-        private System.Windows.Forms.ComboBoxEx comboBoxEx5;
+        private System.Windows.Forms.ComboBoxEx cbBoxYCTZ;
         private System.Windows.Forms.ButtonEx buttonEx14;
-        private System.Windows.Forms.ButtonEx btnTCJX;
+        private System.Windows.Forms.ButtonEx btnStart;
         private System.Windows.Forms.ButtonEx btnTZPZ;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZPCNAME;
@@ -1709,6 +1713,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZSharePName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZUpLoadSharer;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZShareShareTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZStetName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZStetNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZMAC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZOwner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZStetConn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

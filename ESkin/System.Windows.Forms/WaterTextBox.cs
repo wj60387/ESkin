@@ -27,6 +27,7 @@ namespace System.Windows.Forms
         }
         public WaterTextBox()
         {
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BorderStyle = Forms.BorderStyle.None;
             this.SuspendLayout();
             this.Font = new System.Drawing.Font("微软雅黑", 9f);

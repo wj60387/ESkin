@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace BDAuscultation
@@ -16,13 +17,11 @@ namespace BDAuscultation
         {
             this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);  
             InitializeComponent();
-            Init();
+           
             this.SizeChanged += FrmMain_SizeChanged;
-            this.Load += FrmMain_Load;
             
-            //this.toolStripEx1.RenderMode = ToolStripRenderMode
-            //    .Custom;
-            Mediator.ShowMessageEvent += Mediator_ShowMessageEvent;
+            
+           this.Load+=FrmMain_Load;
         }
 
         void Mediator_ShowMessageEvent(string Msg)
@@ -45,13 +44,25 @@ namespace BDAuscultation
         }
         void Init()
         {
+            Mediator.ShowMessageEvent += Mediator_ShowMessageEvent;
+            if (Setting.isConnected)
+            {
+                InitSocket();
+                LoadStetInfo();
+                Thread thread = new Thread(LoadAudioFile);
+                thread.Start("DevicesData\\AudioFiles");
+            }
+             
             InitdgvTZPZ();
             InitdgvTZJX();
             InitdgvTZLY();
             InitdgvYDTZ();
-        }
-        void FrmMain_Load(object sender, EventArgs e)
-        {
+            InitdgvYCTZ();
+            this.timer1.Tick += timer1_Tick;
+            timer1.Start();
+            this.FormClosing += FrmMain_FormClosing;
+
+
             this.nav1.NavItemList.Add(new NavItem(null, "LOGO") { ISNomal = false });
             this.nav1.NavItemList.Add(new NavItem(BDAuscultation.Properties.Resources.听诊配置, "听诊配置"));
             this.nav1.NavItemList.Add(new NavItem(BDAuscultation.Properties.Resources.听诊教学, "听诊教学"));
@@ -61,13 +72,23 @@ namespace BDAuscultation
             nav1.OnItemClick += nav1_OnItemClick;
             nav1.OnXTClick += nav1_OnXTClick;
             nav1.OnGYClick += nav1_OnGYClick;
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    this.dgvTZQPZ.Rows.Add(i + "CellData1", i + "CellData2", i + "CellData3");
-            //    this.dgvTZJX.Rows.Add(i + "CellData1", i + "CellData2", i + "CellData3");
-            //    this.dgvTZJX.Rows[i].Cells[dgvTZJX.Columns.Count - 1].Value = i % 2 == 0;
+        }
 
-            //}
+        void timer1_Tick(object sender, EventArgs e)
+        {
+            Times++;
+           // lblCurTime.Text = "当前时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+          
+        }
+
+        void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer1.Stop();
+        }
+        void FrmMain_Load(object sender, EventArgs e)
+        {
+
+            Init();
              
         }
         void nav1_OnXTClick()
@@ -135,6 +156,13 @@ namespace BDAuscultation
         {
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
+
+       
+         
+
+       
+
+        
 
        
 

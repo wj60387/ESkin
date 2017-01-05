@@ -73,6 +73,16 @@ namespace BDAuscultation.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap MAC {
+            get {
+                object obj = ResourceManager.GetObject("MAC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 上传时间 {
             get {
                 object obj = ResourceManager.GetObject("上传时间", resourceCulture);
@@ -273,6 +283,16 @@ namespace BDAuscultation.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 听诊器名称 {
+            get {
+                object obj = ResourceManager.GetObject("听诊器名称", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 听诊器图片 {
             get {
                 object obj = ResourceManager.GetObject("听诊器图片", resourceCulture);
@@ -456,6 +476,16 @@ namespace BDAuscultation.Properties {
         internal static System.Drawing.Bitmap 录制时间 {
             get {
                 object obj = ResourceManager.GetObject("录制时间", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 录音 {
+            get {
+                object obj = ResourceManager.GetObject("录音", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -776,6 +806,16 @@ namespace BDAuscultation.Properties {
         internal static System.Drawing.Bitmap 连接状态 {
             get {
                 object obj = ResourceManager.GetObject("连接状态", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 选择 {
+            get {
+                object obj = ResourceManager.GetObject("选择", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

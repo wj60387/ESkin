@@ -94,6 +94,11 @@ namespace BDAuscultation
                 return;
             }
             var arrRecvStethoscope = GetStethoscope();
+            if (arrRecvStethoscope.Where(s=>!s.IsConnected).Any())
+            {
+                MessageBox.Show("设备尚未全部准备就绪！");
+                return;
+            }
             if (!arrRecvStethoscope.Any())
             {
                 MessageBox.Show("请选择听诊器！");
@@ -153,6 +158,7 @@ namespace BDAuscultation
             stethoscope.StopAudioInput();
             foreach (var recvStethoscope in arrRecvStethoscope)
             {
+                if (recvStethoscope.IsConnected)
                 recvStethoscope.StopAudioOutput();
             }
             Mediator.ShowMsg("音频教学完毕...");

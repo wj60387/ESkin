@@ -54,17 +54,62 @@ namespace BDAuscultation.Forms
                 var btnPlayColumn = new DataGridViewButtonExColumn("",
                 BDAuscultation.Properties.Resources.播放点击状态, BDAuscultation.Properties.Resources.播放未点击状态) { Name = "btnPlay", HeaderText = "播放" };
                 this.dataGridViewEx1.Columns.Add(btnPlayColumn);
+                dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.播放未点击状态);
             }
             
-            var btnDelColumn = new DataGridViewButtonExColumn("",
-                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "btnDelete", HeaderText = "删除" };
-            this.dataGridViewEx1.Columns.Add(btnDelColumn);
+            //var btnDelColumn = new DataGridViewButtonExColumn("",
+            //    BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "btnDelete", HeaderText = "删除" };
+            //this.dataGridViewEx1.Columns.Add(btnDelColumn);
             dataGridViewEx1.RowTemplate.Height = 66;
             dataGridViewEx1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             LoadAudio();
             this.dataGridViewEx1.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.Black, Alignment = DataGridViewContentAlignment.MiddleCenter };
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.缩略图);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.部位);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录音未点击状态);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录制时间);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.时长);
+            //dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
             LoadFile();
-               
+            dataGridViewEx1.CellClick += dataGridViewEx1_CellClick;
+        }
+
+        void dataGridViewEx1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                var part = dataGridViewEx1.Rows[e.RowIndex].Cells["Part"].Value + "";
+                switch (dataGridViewEx1.Columns[e.ColumnIndex].Name)
+                {
+
+                    case "btnPlay":
+                        {
+                            if ((dataGridViewEx1.Rows[e.RowIndex].Cells["isRecord"].Value + "").Equals("否"))
+                            {
+                                MessageBox.Show("该部位未录音！");
+                                return;
+                            }
+                            var recordTime = (DateTime)dataGridViewEx1.Rows[e.RowIndex].Cells["RecordTime"].Value;
+                            var takeTime = (int)dataGridViewEx1.Rows[e.RowIndex].Cells["TakeTime"].Value;
+                            var guid = Mediator.sqliteHelper.ExecuteScalar("select Guid from AudioInfoDown where PGUID={0} and Part={1}", PatientGUID, part) + "";
+                            if (string.IsNullOrEmpty(guid))
+                            {
+                                MessageBox.Show("未找到录音");
+                                return;
+                            }
+                            //string filePath = Path.Combine(Setting.localData, @"DevicesData\AudioFiles\" + stetName + "\\" + recordTime.Year
+                            string filePath = Path.Combine(Setting.localData, @"DevicesData\DowmLoad\" + recordTime.Year
+                  + "\\" + recordTime.Month + "\\" + recordTime.Day + "\\" + guid + ".MP3");
+                            if (File.Exists(filePath))
+                                PlayAudio(filePath, takeTime);
+                        }
+                        break;
+                    case "btnDelete":
+                        MessageBox.Show("业务待确认,暂时不实现");
+                        break;
+                }
+
+            }
         }
         void LoadAudio()
         {

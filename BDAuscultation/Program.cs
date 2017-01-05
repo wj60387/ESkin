@@ -141,7 +141,7 @@ namespace BDAuscultation
             //formLogin.SN = authorizationInfo.AuthorizationNum;
             if (DialogResult.OK != formLogin.ShowDialog())
             {
-                //return;
+               return;
             }
             Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
             var formMain = new FrmMain();
@@ -162,16 +162,16 @@ namespace BDAuscultation
             }
             catch { }
             try
-            {  
-                ////防止用户更改时间
-                //if (authorizationInfo != null)
-                //{
-                //    authorizationInfo.LastUseTime =
-                //    authorizationInfo.LastUseTime.AddSeconds(formMain.Times) >= DateTime.Now ?
-                //    authorizationInfo.LastUseTime.AddSeconds(formMain.Times) : DateTime.Now;
-                //    WriteAuth(appLicensePath, authorizationInfo);
+            {
+                //防止用户更改时间
+                if (authorizationInfo != null)
+                {
+                    authorizationInfo.LastUseTime =
+                    authorizationInfo.LastUseTime.AddSeconds(formMain.Times) >= DateTime.Now ?
+                    authorizationInfo.LastUseTime.AddSeconds(formMain.Times) : DateTime.Now;
+                    WriteAuth(appLicensePath, authorizationInfo);
 
-                //}
+                }
             }
             catch { }
 

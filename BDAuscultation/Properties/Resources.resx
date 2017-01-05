@@ -121,6 +121,9 @@
   <data name="jcbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jcbg.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MAC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MAC.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="上传时间" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\上传时间.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,6 +184,9 @@
   <data name="听诊器名字" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器名字.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="听诊器名称" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\听诊器名称.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="听诊器图片" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\听诊器图片.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -237,6 +243,9 @@
   </data>
   <data name="录制时间" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\录制时间.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="录音" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\录音.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="录音未点击状态" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\录音未点击状态.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -333,6 +342,9 @@
   </data>
   <data name="连接状态" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\连接状态.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="选择" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\选择.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="部位" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\部位.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

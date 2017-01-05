@@ -8,6 +8,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 namespace BDAuscultation
 {
@@ -21,11 +22,16 @@ namespace BDAuscultation
         {
             dgvTZQPZStetNO.FillWeight = 200;
 
+            var btnConnColumn = new DataGridViewButtonExColumn("",
+               BDAuscultation.Properties.Resources.分享点击状态, BDAuscultation.Properties.Resources.分享未点击) 
+               {  Name = "dgvTZQPZConn", HeaderText = "连接", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 50 };
+            this.dgvTZQPZ.Columns.Add(btnConnColumn);
+
             var btnEditColumn = new DataGridViewButtonExColumn("",
-               BDAuscultation.Properties.Resources.编辑点击, BDAuscultation.Properties.Resources.编辑未点击) { Name = "dgvTZQPZEdit", HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,FillWeight = 50 };
+               BDAuscultation.Properties.Resources.编辑点击, BDAuscultation.Properties.Resources.编辑未点击) { Name = "dgvTZQPZEdit", HeaderText = "编辑", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 50 };
             this.dgvTZQPZ.Columns.Add(btnEditColumn);
             var btnDelColumn = new DataGridViewButtonExColumn("",
-                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "dgvTZQPZDelete", HeaderText = "", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,FillWeight=50 };
+                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "dgvTZQPZDelete", HeaderText = "删除", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 50 };
             this.dgvTZQPZ.Columns.Add(btnDelColumn);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器编号);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.计算机名);
@@ -35,6 +41,7 @@ namespace BDAuscultation
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器描述);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器备注);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.连接状态);
+            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.分享未点击);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.编辑);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
             LoadStetInfoTZPZ();
@@ -44,7 +51,7 @@ namespace BDAuscultation
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-
+            dgvTZQPZ.AllowUserToResizeColumns = false;
         }
 
         void dgvTZQPZ_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -142,10 +149,119 @@ namespace BDAuscultation
                             }
                         }
                         break;
+                    case "dgvTZQPZConn":
+                        {
+                            var stetNo = dgvTZQPZ.Rows[e.RowIndex].Cells[0].Value + "";
+                            if (!string.IsNullOrEmpty(stetNo))
+                            {
+                                 var b = StethoscopeManager.StethoscopeList.Where(s => s.Name == stetNo && s.IsConnected).Any();
+                                //if (stethoscopes.Any()) return;
+                                //var stethoscope = stethoscopes.First();
+                                 if (!b)
+                                     OpenStethoscope(stetNo);
+                                 else
+                                     CloseStethoscope(stetNo);
+
+                                 LoadStetInfoTZPZ();
+                            }
+                        }
+                        break;
                 }
             }
         }
+        bool OpenStethoscope(string stethoscopeName)
+        {
+            var stethoscopes = StethoscopeManager.StethoscopeList.Where(s => s.Name == stethoscopeName);
+            if (stethoscopes.Count() == 0) return false;
+            var stethoscope = stethoscopes.First();
+            var formProcessBar = new FrmProcessBar(false, string.Format("正在开启设备{0}连接！", stethoscopeName))
+            {
+                CancelBtnVisible = false
+            }; ;
+            Thread pairThread = new Thread(() =>
+            {
+                //var _stethoscope = obj as Stethoscope;
+                try
+                {
+                    if (!stethoscope.IsConnected)
+                    {
+                        stethoscope.Connect();
+                        Mediator.ShowMsg(string.Format("听诊器{0}连接成功", stethoscope.Name));
+                    }
 
+                }
+                catch (Exception ex)
+                {
+                    Mediator.ShowMsg(string.Format("听诊器{0}连接失败", stethoscope.Name));
+                    //MessageBox.Show("听诊器连接失败,请确认听诊器是否开启了蓝牙连接状态！");
+                    Mediator.ShowMsg("听诊器连接失败,请确认听诊器是否开启了蓝牙连接状态！");
+
+                }
+                finally
+                {
+                    Invoke(new MethodInvoker(delegate()
+                    {
+                        formProcessBar.Close();
+                    }));
+
+                }
+
+            });
+            pairThread.Start();
+            formProcessBar.ShowDialog();
+            return stethoscope.IsConnected;
+        }
+
+        bool CloseStethoscope(string stethoscopeName)
+        {
+            var stethoscopes = StethoscopeManager.StethoscopeList.Where(s => s.Name == stethoscopeName);
+            if (stethoscopes.Count() == 0) return false;
+            var stethoscope = stethoscopes.First();
+
+            var formProcessBar = new FrmProcessBar(false, string.Format("正在断设备 {0} 连接！", stethoscopeName))
+            {
+                CancelBtnVisible = false
+            };
+            Thread pairThread = new Thread(() =>
+            {
+                //var _stethoscope = obj as Stethoscope;
+                try
+                {
+                    if (stethoscope.IsConnected)
+                    {
+                        stethoscope.Disconnected += (s, arg) =>
+                        {
+                            Invoke(new MethodInvoker(() =>
+                            {
+                                formProcessBar.Close();
+                            }));
+                        };
+                        stethoscope.Disconnect();
+                        Mediator.ShowMsg(string.Format("听诊器{0}断开成功", stethoscope.Name));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Mediator.ShowMsg(string.Format("听诊器{0}断开失败", stethoscope.Name));
+                    //好像从来没有进来过
+
+                }
+                finally
+                {
+                    Invoke(new MethodInvoker(delegate()
+                    {
+                        formProcessBar.Close();
+                    }));
+                }
+
+
+
+            });
+            pairThread.Start();
+            formProcessBar.ShowDialog();
+            return stethoscope.IsConnected;
+
+        }
         
         public void HandleMessage(StetInfoDelCode message)
         {

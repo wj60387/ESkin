@@ -107,6 +107,7 @@ namespace System.Windows.Forms
             this.waterTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.waterTextBox1.BackColor = System.Drawing.Color.Transparent;
             this.waterTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.waterTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.waterTextBox1.Location = new System.Drawing.Point(12, 2);
@@ -124,7 +125,6 @@ namespace System.Windows.Forms
             this.Name = "UCTextBoxEx";
             this.Size = new System.Drawing.Size(210, 24);
             this.FontChanged += new System.EventHandler(this.UCTextBox_FontChanged);
-            this.ForeColorChanged += UCTextBoxEx_ForeColorChanged;
             this.ResumeLayout(false);
             this.PerformLayout();
 

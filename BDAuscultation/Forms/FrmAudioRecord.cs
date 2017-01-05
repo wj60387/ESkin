@@ -22,7 +22,7 @@ namespace BDAuscultation.Forms
             InitializeComponent();
             this.Load += new EventHandler(FormAudioRecord_Load);
         }
-
+        public IGetInfo IInfo { get; set; }
         void FormAudioRecord_Load(object sender, EventArgs e)
         {
             txtDocName.ReadOnly = true;
@@ -39,6 +39,8 @@ namespace BDAuscultation.Forms
             //dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnRecord", HeaderText = "录音", Image = Setting.ImageRecord });
             //dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnPlay", HeaderText = "播放", Image = Setting.ImagePlay });
             //dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnDelete", HeaderText = "删除", Image = Setting.ImageDelete });
+
+
             var btnRecordColumn = new DataGridViewButtonExColumn("",
                BDAuscultation.Properties.Resources.录音点击状态, BDAuscultation.Properties.Resources.录音未点击状态) { Name = "btnRecord", HeaderText = "录音" };
             this.dataGridViewEx1.Columns.Add(btnRecordColumn);
@@ -51,6 +53,15 @@ namespace BDAuscultation.Forms
             
             dataGridViewEx1.RowTemplate.Height = 66;
             dataGridViewEx1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.缩略图);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.部位);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录音未点击状态);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录制时间);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.时长);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录音未点击状态);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.播放未点击状态);
+            dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
+
             LoadAudio();
             this.dataGridViewEx1.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.FromArgb(100,200,250), Alignment = DataGridViewContentAlignment.MiddleCenter };
             this.dataGridViewEx1.RowTemplate.DefaultCellStyle.BackColor = Color.White;
@@ -63,6 +74,156 @@ namespace BDAuscultation.Forms
                 PatientSex = Setting.GetPatientSexByGUID(PatientGUID);
             }
             LoadFile();
+            dataGridViewEx1.CellClick += dataGridViewEx1_CellClick;
+        }
+
+        void dataGridViewEx1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                //var his=this.cbHis.Text;
+                var part = dataGridViewEx1.Rows[e.RowIndex].Cells["Part"].Value + "";
+                switch (dataGridViewEx1.Columns[e.ColumnIndex].Name)
+                {
+                    #region 录音
+                    case "btnRecord":
+                        {
+                            if ((dataGridViewEx1.Rows[e.RowIndex].Cells["isRecord"].Value + "").Equals("是"))
+                            {
+                                MessageBox.Show("该部位已经录音！");
+                                return;
+                            }
+                            //if (!isSave)
+                            //{
+                            //    MessageBox.Show("请先保存患者信息");
+                            //    return;
+                            //}
+                            var stethoscopeArr = StethoscopeManager.StethoscopeList.Where(s => s.Name == StetName);
+                            if (stethoscopeArr.Count() == 0)
+                                throw new Exception("目前没有检测到听诊器,请检测设备设置！");
+                            var stethoscope = stethoscopeArr.First();
+                            if (!stethoscope.IsConnected)
+                            {
+                                MessageBox.Show(string.Format("听诊器 {0} 尚未连接!", stethoscope.Name));
+                                return;
+                            }
+                            var formProcessBar = new FrmProcessBar(true);
+                            var dtNow = DateTime.Now;
+                            var guid = Guid.NewGuid().ToString();
+                            Thread pairThread = new Thread(() =>
+                            {
+                                formProcessBar.TimerCallBackEvent += () =>
+                                {
+                                    Invoke(new MethodInvoker(delegate()
+                                    {
+                                        formProcessBar.Title = string.Format("音频录制中... {0} 秒", formProcessBar.Times);
+                                    }));
+                                };
+                                stethoscope.StartAudioInput();
+                                Mediator.ShowMsg(string.Format("听诊器 {0} 开始录音...", stethoscope.Name));
+                                using (var stream = new MemoryStream())
+                                {
+                                    while (formProcessBar.DialogResult != System.Windows.Forms.DialogResult.Cancel)
+                                    {
+                                        byte[] packet = new byte[128];
+                                        int bytesRead = stethoscope.AudioInputStream.Read(packet, 0, packet.Length);
+                                        stream.Write(packet, 0, bytesRead);
+                                    }
+                                    stethoscope.StopAudioInput();
+                                    var bytes = stream.GetBuffer();
+                                    stream.Close();
+
+
+                                    // string audioFilePath = Path.Combine(Setting.localData, @"DevicesData\AudioFiles\" + stethoscope.Name + "\\" + dtNow.Year + "\\" + dtNow.Month + "\\" + dtNow.Day + "\\" + guid + ".MP3");
+                                    string audioFilePath = Path.Combine(Setting.localData, @"DevicesData\AudioFiles\" + dtNow.Year + "\\" + dtNow.Month + "\\" + dtNow.Day + "\\" + guid + ".MP3");
+                                    if (!Directory.Exists(Path.GetDirectoryName(audioFilePath)))
+                                    {
+                                        Directory.CreateDirectory(Path.GetDirectoryName(audioFilePath));
+                                    }
+                                    File.WriteAllBytes(audioFilePath, bytes);
+                                    Mediator.ShowMsg(string.Format("听诊器 {0} 录音完毕，时长 {1} 秒", stethoscope.Name, formProcessBar.Times));
+                                    Mediator.WriteLog(this.Name, "音频录制成功...");
+                                    //                                    string sqlInsert = @"insert into AudioInfo(GUID,PGUID,StetName,Part,TakeTime,RecordTime)
+                                    //                                    select {0},{1},{2},{3},{4},{5}";
+                                    //                                    var k = Mediator.sqliteHelper.ExecuteNonQuery(sqlInsert, guid, PatientGUID,
+                                    //                                        StetName, part, formProcessBar.Times,
+                                    //                                        dtNow );
+                                }
+                            });
+                            pairThread.Start();
+                            formProcessBar.ShowDialog();
+                            dataGridViewEx1.Rows[e.RowIndex].Cells["GUID"].Value = guid;
+                            dataGridViewEx1.Rows[e.RowIndex].Cells["isRecord"].Value = "是";
+                            dataGridViewEx1.Rows[e.RowIndex].Cells["RecordTime"].Value = dtNow;
+                            dataGridViewEx1.Rows[e.RowIndex].Cells["TakeTime"].Value = formProcessBar.Times;
+
+                        }
+                        break;
+                    #endregion
+                    #region 播放
+                    case "btnPlay":
+                        {
+                            if ((dataGridViewEx1.Rows[e.RowIndex].Cells["isRecord"].Value + "").Equals("否"))
+                            {
+                                MessageBox.Show("该部位未录音！");
+                                return;
+                            }
+                            var recordTime = (DateTime)dataGridViewEx1.Rows[e.RowIndex].Cells["RecordTime"].Value;
+                            var takeTime = (int)dataGridViewEx1.Rows[e.RowIndex].Cells["TakeTime"].Value;
+                            var guid = dataGridViewEx1.Rows[e.RowIndex].Cells["GUID"].Value + "";//Mediator.sqliteHelper.ExecuteScalar("select Guid from AudioInfo where PGUID={0} and Part={1}", PatientGUID, part) + "";
+                            if (string.IsNullOrEmpty(guid))
+                            {
+                                MessageBox.Show("未找到录音");
+                                return;
+                            }
+                            //string filePath = Path.Combine(Setting.localData, @"DevicesData\AudioFiles\" + stetName + "\\" + recordTime.Year
+                            string filePath = Path.Combine(Setting.localData, @"DevicesData\AudioFiles\" + recordTime.Year
+                  + "\\" + recordTime.Month + "\\" + recordTime.Day + "\\" + guid + ".MP3");
+                            PlayAudio(filePath, takeTime);
+                        }
+                        break;
+                    #endregion
+                    #region 删除
+                    case "btnDelete":
+                        {
+                            if ((dataGridViewEx1.Rows[e.RowIndex].Cells["isRecord"].Value + "").Equals("否"))
+                            {
+                                MessageBox.Show("该部位未录音！");
+                                return;
+                            }
+                            if (DialogResult.OK == MessageBox.Show("你确定要删除该记录及其文件吗", "删除录音提示", MessageBoxButtons.OKCancel))
+                            {
+
+                                var recordTime = (DateTime)dataGridViewEx1.Rows[e.RowIndex].Cells["RecordTime"].Value;
+                                var takeTime = (int)dataGridViewEx1.Rows[e.RowIndex].Cells["TakeTime"].Value;
+                                var guid = dataGridViewEx1.Rows[e.RowIndex].Cells["GUID"].Value + "";//Mediator.sqliteHelper.ExecuteScalar("select GUID from AudioInfo where PGUID={0} and Part={1}", PatientGUID, part) + "";
+                                if (string.IsNullOrEmpty(guid))
+                                {
+                                    MessageBox.Show("未找到录音");
+                                    return;
+                                }
+                                // string filePath = Path.Combine(Setting.localData, @"DevicesData\AudioFiles\" + StetName + "\\" + recordTime.Year
+                                string filePath = Path.Combine(Setting.localData, @"DevicesData\AudioFiles\" + recordTime.Year
+                      + "\\" + recordTime.Month + "\\" + recordTime.Day + "\\" + guid + ".MP3");
+                                if (Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfo set DelFlag=1 where GUID={0}", guid) > 0)
+                                {
+                                    if (File.Exists(filePath))
+                                    {
+                                        File.Delete(filePath);
+                                    }
+                                }
+                                dataGridViewEx1.Rows[e.RowIndex].Cells["GUID"].Value = "";
+                                dataGridViewEx1.Rows[e.RowIndex].Cells["isRecord"].Value = "否";
+                                dataGridViewEx1.Rows[e.RowIndex].Cells["RecordTime"].Value = null;
+                                dataGridViewEx1.Rows[e.RowIndex].Cells["TakeTime"].Value = null;
+
+                            }
+                        }
+                        break;
+                    #endregion
+                }
+            }
         }
         void LoadAudio()
         {
@@ -302,6 +463,7 @@ namespace BDAuscultation.Forms
                     var localFiles = Directory.GetFiles(localDir);
 
                     var remoteFiles = Mediator.remoteService.GetFolderFiles(remoteFile, "*.*", true);
+                    if (remoteFiles!=null)
                     foreach (var file in remoteFiles)
                     {
                         if(!localFiles.Select(f=>Path.GetFileName(f)).Contains(Path.GetFileName(file)))

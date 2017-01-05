@@ -209,6 +209,7 @@ namespace System.Windows.Forms
             gdc.DrawImage(dwonImage, new Rectangle(this.Width - dwonImage.Width - right, this.Height / 2 - dwonImage.Height / 2, dwonImage.Width, dwonImage.Height));
             Win32.ReleaseDC(this.Handle, hDC);
             base.OnMouseLeave(e);
+            this.Invalidate();
         }
 
         protected override void OnMouseMove(MouseEventArgs e)
