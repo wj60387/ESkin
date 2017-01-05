@@ -168,5 +168,7 @@ namespace BDAuscultation.Forms
             this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Close();
         }
+
+         
     }
 }

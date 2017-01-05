@@ -219,7 +219,7 @@ namespace BDAuscultation
                         if (message.StetNames[i] != this.cbBoxYCTZ.Text)
 #endif
 #if !DEBUG
-                        if (message.StetNames[i] != this.cboStethoscope.Text && message.isConnected[i])
+                        if (message.StetNames[i] != this.cbBoxYCTZ.Text && message.isConnected[i])
 #endif
                         {
                             if (!isExistDeviceInfo(message.SrcMac, message.StetNames[i]))
