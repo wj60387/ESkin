@@ -81,6 +81,12 @@
   <ItemGroup>
     <Compile Include="Commmon.cs" />
     <Compile Include="Devices\StethoscopeManager.cs" />
+    <Compile Include="Forms\FrmShare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmShare.Designer.cs">
+      <DependentUpon>FrmShare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmAudioDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <Compile Include="Forms\FrmAudioRecord.Designer.cs">
       <DependentUpon>FrmAudioRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.YDTZ.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmMain.TZLY.Local.cs">
       <SubType>Form</SubType>
@@ -155,6 +164,9 @@
     <Compile Include="Utilities\CommonUtil.cs" />
     <Compile Include="Utilities\Extensions.cs" />
     <Compile Include="Utilities\FileOperation.cs" />
+    <EmbeddedResource Include="Forms\FrmShare.resx">
+      <DependentUpon>FrmShare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAudioDetail.resx">
       <DependentUpon>FrmAudioDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -447,6 +459,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\检查报告点击.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分享.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分享点击状态.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分享未点击.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\上传时间.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

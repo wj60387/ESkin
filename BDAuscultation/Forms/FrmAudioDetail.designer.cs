@@ -32,176 +32,29 @@ namespace BDAuscultation.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAudioDetail));
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelImages = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numAge = new System.Windows.Forms.NumericUpDown();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblPatientId = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblPatientName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewEx1 = new System.Windows.Forms.DataGridViewEx();
-            this.btnReport = new System.Windows.Forms.ButtonEx();
-            this.txtPatientId = new System.Windows.Forms.WaterTextBox();
-            this.txtHis = new System.Windows.Forms.WaterTextBox();
-            this.txtPatientName = new System.Windows.Forms.WaterTextBox();
-            this.txtDocRemark = new System.Windows.Forms.WaterTextBox();
-            this.txtDocDiagnose = new System.Windows.Forms.WaterTextBox();
-            this.txtDocName = new System.Windows.Forms.WaterTextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.radioButtonEx2 = new System.Windows.Forms.RadioButtonEx();
+            this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPatientName = new System.Windows.Forms.UCTextBoxEx();
+            this.numAge = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtDocRemark = new System.Windows.Forms.UCTextBoxEx();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDocDiagnose = new System.Windows.Forms.UCTextBoxEx();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtDocName = new System.Windows.Forms.UCTextBoxEx();
+            this.panelImages = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panelImages);
-            this.panel2.Controls.Add(this.btnReport);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.numAge);
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtPatientId);
-            this.panel2.Controls.Add(this.lblPatientId);
-            this.panel2.Controls.Add(this.txtHis);
-            this.panel2.Controls.Add(this.txtPatientName);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.lblPatientName);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtDocRemark);
-            this.panel2.Controls.Add(this.txtDocDiagnose);
-            this.panel2.Controls.Add(this.txtDocName);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 352);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(595, 235);
-            this.panel2.TabIndex = 3;
-            // 
-            // panelImages
-            // 
-            this.panelImages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelImages.Location = new System.Drawing.Point(369, 102);
-            this.panelImages.Name = "panelImages";
-            this.panelImages.Size = new System.Drawing.Size(217, 32);
-            this.panelImages.TabIndex = 36;
-            // 
-            // label8
-            // 
-            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(297, 98);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 18);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "检查报告：";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // numAge
-            // 
-            this.numAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numAge.Enabled = false;
-            this.numAge.Location = new System.Drawing.Point(524, 16);
-            this.numAge.Name = "numAge";
-            this.numAge.ReadOnly = true;
-            this.numAge.Size = new System.Drawing.Size(63, 23);
-            this.numAge.TabIndex = 30;
-            this.numAge.Value = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(406, 18);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(38, 21);
-            this.radioButton2.TabIndex = 29;
-            this.radioButton2.Text = "女";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(371, 18);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(38, 21);
-            this.radioButton1.TabIndex = 28;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "男";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(450, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 17);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "患者年龄：";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(307, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 17);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "患者性别：";
-            // 
-            // lblPatientId
-            // 
-            this.lblPatientId.AutoSize = true;
-            this.lblPatientId.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblPatientId.Location = new System.Drawing.Point(307, 211);
-            this.lblPatientId.Name = "lblPatientId";
-            this.lblPatientId.Size = new System.Drawing.Size(57, 17);
-            this.lblPatientId.TabIndex = 8;
-            this.lblPatientId.Text = "患者ID：";
-            this.lblPatientId.Visible = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(146, 211);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 17);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "标识：";
-            this.label5.Visible = false;
-            // 
-            // lblPatientName
-            // 
-            this.lblPatientName.AutoSize = true;
-            this.lblPatientName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblPatientName.Location = new System.Drawing.Point(10, 20);
-            this.lblPatientName.Name = "lblPatientName";
-            this.lblPatientName.Size = new System.Drawing.Size(68, 17);
-            this.lblPatientName.TabIndex = 5;
-            this.lblPatientName.Text = "患者姓名：";
             // 
             // label4
             // 
@@ -213,210 +66,277 @@ namespace BDAuscultation.Forms
             this.label4.TabIndex = 17;
             this.label4.Text = "诊断版本：";
             // 
-            // label3
+            // panel2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(26, 153);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "备注：";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(6, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "初步诊断：";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(6, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "医生姓名：";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtDocRemark);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txtDocDiagnose);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.txtDocName);
+            this.panel2.Controls.Add(this.panelImages);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.radioButtonEx2);
+            this.panel2.Controls.Add(this.radioButtonEx1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtPatientName);
+            this.panel2.Controls.Add(this.numAge);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 373);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(873, 169);
+            this.panel2.TabIndex = 3;
             // 
             // dataGridViewEx1
             // 
             this.dataGridViewEx1.AllowUserToAddRows = false;
             this.dataGridViewEx1.AllowUserToDeleteRows = false;
-            this.dataGridViewEx1.AllowUserToResizeColumns = false;
             this.dataGridViewEx1.AllowUserToResizeRows = false;
             this.dataGridViewEx1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewEx1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridViewEx1.BoderPad = 0;
+            this.dataGridViewEx1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewEx1.BoderPad = 1;
             this.dataGridViewEx1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewEx1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewEx1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F);
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewEx1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewEx1.ColumnHeadersHeight = 40;
             this.dataGridViewEx1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewEx1.EnableHeadersVisualStyles = false;
-            this.dataGridViewEx1.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.dataGridViewEx1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewEx1.IndexSize = 24;
             this.dataGridViewEx1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewEx1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.dataGridViewEx1.MultiSelect = false;
             this.dataGridViewEx1.Name = "dataGridViewEx1";
             this.dataGridViewEx1.ReadOnly = true;
             this.dataGridViewEx1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(41);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewEx1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewEx1.RowHeadersWidth = 70;
             this.dataGridViewEx1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dataGridViewEx1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewEx1.RowTemplate.Height = 23;
+            this.dataGridViewEx1.RowTemplate.Height = 32;
             this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEx1.Size = new System.Drawing.Size(595, 352);
-            this.dataGridViewEx1.TabIndex = 4;
-            this.dataGridViewEx1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEx1_CellContentClick);
+            this.dataGridViewEx1.Size = new System.Drawing.Size(873, 373);
+            this.dataGridViewEx1.TabIndex = 40;
             // 
-            // btnReport
+            // label7
             // 
-            this.btnReport.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnReport.BackColor = System.Drawing.Color.Transparent;
-            this.btnReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
-            this.btnReport.Location = new System.Drawing.Point(79, 206);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(60, 24);
-            this.btnReport.TabIndex = 35;
-            this.btnReport.Text = "附件";
-            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Visible = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            this.label7.Image = global::BDAuscultation.Properties.Resources.年龄;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(557, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 25);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "患者年龄：";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtPatientId
+            // label5
             // 
-            this.txtPatientId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPatientId.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtPatientId.Location = new System.Drawing.Point(376, 207);
-            this.txtPatientId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPatientId.MaxLength = 512;
-            this.txtPatientId.Multiline = true;
-            this.txtPatientId.Name = "txtPatientId";
-            this.txtPatientId.ReadOnly = true;
-            this.txtPatientId.Size = new System.Drawing.Size(113, 21);
-            this.txtPatientId.TabIndex = 15;
-            this.txtPatientId.Visible = false;
-            this.txtPatientId.WaterText = "患者ID";
+            this.label5.Image = global::BDAuscultation.Properties.Resources.性别;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(292, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 25);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "患者性别：";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtHis
+            // radioButtonEx2
             // 
-            this.txtHis.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHis.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtHis.Location = new System.Drawing.Point(211, 209);
-            this.txtHis.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtHis.MaxLength = 512;
-            this.txtHis.Multiline = true;
-            this.txtHis.Name = "txtHis";
-            this.txtHis.ReadOnly = true;
-            this.txtHis.Size = new System.Drawing.Size(88, 21);
-            this.txtHis.TabIndex = 21;
-            this.txtHis.Visible = false;
-            this.txtHis.WaterText = "标识说明";
+            this.radioButtonEx2.AutoSize = true;
+            this.radioButtonEx2.Location = new System.Drawing.Point(451, 24);
+            this.radioButtonEx2.Name = "radioButtonEx2";
+            this.radioButtonEx2.Size = new System.Drawing.Size(38, 21);
+            this.radioButtonEx2.TabIndex = 54;
+            this.radioButtonEx2.Text = "女";
+            this.radioButtonEx2.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonEx1
+            // 
+            this.radioButtonEx1.AutoSize = true;
+            this.radioButtonEx1.Checked = true;
+            this.radioButtonEx1.Location = new System.Drawing.Point(393, 24);
+            this.radioButtonEx1.Name = "radioButtonEx1";
+            this.radioButtonEx1.Size = new System.Drawing.Size(38, 21);
+            this.radioButtonEx1.TabIndex = 53;
+            this.radioButtonEx1.TabStop = true;
+            this.radioButtonEx1.Text = "男";
+            this.radioButtonEx1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Image = global::BDAuscultation.Properties.Resources.患者姓名;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 25);
+            this.label1.TabIndex = 52;
+            this.label1.Text = "患者姓名：";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtPatientName
             // 
-            this.txtPatientName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPatientName.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtPatientName.Location = new System.Drawing.Point(80, 17);
-            this.txtPatientName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPatientName.MaxLength = 512;
-            this.txtPatientName.Multiline = true;
+            this.txtPatientName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtPatientName.BackColor = System.Drawing.Color.Transparent;
+            this.txtPatientName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtPatientName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtPatientName.ForeColor = System.Drawing.Color.Black;
+            this.txtPatientName.Location = new System.Drawing.Point(96, 22);
             this.txtPatientName.Name = "txtPatientName";
-            this.txtPatientName.ReadOnly = true;
-            this.txtPatientName.Size = new System.Drawing.Size(210, 21);
-            this.txtPatientName.TabIndex = 16;
+            this.txtPatientName.PasswordChar = '\0';
+            this.txtPatientName.Radius = 24;
+            this.txtPatientName.ReadOnly = false;
+            this.txtPatientName.Size = new System.Drawing.Size(179, 24);
+            this.txtPatientName.TabIndex = 51;
             this.txtPatientName.WaterText = "患者姓名";
+            // 
+            // numAge
+            // 
+            this.numAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numAge.Location = new System.Drawing.Point(650, 24);
+            this.numAge.Name = "numAge";
+            this.numAge.Size = new System.Drawing.Size(53, 23);
+            this.numAge.TabIndex = 50;
+            this.numAge.Value = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            // 
+            // label6
+            // 
+            this.label6.Image = global::BDAuscultation.Properties.Resources.附件;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(557, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 25);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "检查报告：";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDocRemark
             // 
-            this.txtDocRemark.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDocRemark.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtDocRemark.Location = new System.Drawing.Point(79, 148);
-            this.txtDocRemark.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.txtDocRemark.MaxLength = 512;
-            this.txtDocRemark.Multiline = true;
+            this.txtDocRemark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtDocRemark.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocRemark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtDocRemark.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDocRemark.ForeColor = System.Drawing.Color.Black;
+            this.txtDocRemark.Location = new System.Drawing.Point(96, 112);
             this.txtDocRemark.Name = "txtDocRemark";
-            this.txtDocRemark.ReadOnly = true;
-            this.txtDocRemark.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtDocRemark.Size = new System.Drawing.Size(507, 51);
-            this.txtDocRemark.TabIndex = 10;
+            this.txtDocRemark.PasswordChar = '\0';
+            this.txtDocRemark.Radius = 24;
+            this.txtDocRemark.ReadOnly = false;
+            this.txtDocRemark.Size = new System.Drawing.Size(448, 50);
+            this.txtDocRemark.TabIndex = 63;
             this.txtDocRemark.WaterText = "备注";
+            // 
+            // label3
+            // 
+            this.label3.Image = global::BDAuscultation.Properties.Resources.备注;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(18, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 25);
+            this.label3.TabIndex = 62;
+            this.label3.Text = "备注:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDocDiagnose
             // 
-            this.txtDocDiagnose.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDocDiagnose.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtDocDiagnose.Location = new System.Drawing.Point(79, 98);
-            this.txtDocDiagnose.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.txtDocDiagnose.MaxLength = 512;
-            this.txtDocDiagnose.Multiline = true;
+            this.txtDocDiagnose.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtDocDiagnose.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocDiagnose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtDocDiagnose.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDocDiagnose.ForeColor = System.Drawing.Color.Black;
+            this.txtDocDiagnose.Location = new System.Drawing.Point(372, 73);
             this.txtDocDiagnose.Name = "txtDocDiagnose";
-            this.txtDocDiagnose.ReadOnly = true;
-            this.txtDocDiagnose.Size = new System.Drawing.Size(211, 36);
-            this.txtDocDiagnose.TabIndex = 9;
+            this.txtDocDiagnose.PasswordChar = '\0';
+            this.txtDocDiagnose.Radius = 24;
+            this.txtDocDiagnose.ReadOnly = false;
+            this.txtDocDiagnose.Size = new System.Drawing.Size(179, 24);
+            this.txtDocDiagnose.TabIndex = 61;
             this.txtDocDiagnose.WaterText = "初步诊断";
+            // 
+            // label2
+            // 
+            this.label2.Image = global::BDAuscultation.Properties.Resources.初步诊断;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(292, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "初步诊断：";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.Image = global::BDAuscultation.Properties.Resources.患者姓名;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.Location = new System.Drawing.Point(7, 72);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 25);
+            this.label8.TabIndex = 59;
+            this.label8.Text = "医生姓名：";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtDocName
             // 
-            this.txtDocName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDocName.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtDocName.Location = new System.Drawing.Point(80, 56);
-            this.txtDocName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
-            this.txtDocName.MaxLength = 512;
-            this.txtDocName.Multiline = true;
+            this.txtDocName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtDocName.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtDocName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDocName.ForeColor = System.Drawing.Color.Black;
+            this.txtDocName.Location = new System.Drawing.Point(96, 73);
             this.txtDocName.Name = "txtDocName";
-            this.txtDocName.ReadOnly = true;
-            this.txtDocName.Size = new System.Drawing.Size(210, 25);
-            this.txtDocName.TabIndex = 6;
+            this.txtDocName.PasswordChar = '\0';
+            this.txtDocName.Radius = 24;
+            this.txtDocName.ReadOnly = false;
+            this.txtDocName.Size = new System.Drawing.Size(179, 24);
+            this.txtDocName.TabIndex = 58;
             this.txtDocName.WaterText = "医生姓名";
+            // 
+            // panelImages
+            // 
+            this.panelImages.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelImages.Location = new System.Drawing.Point(650, 80);
+            this.panelImages.Name = "panelImages";
+            this.panelImages.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.panelImages.Size = new System.Drawing.Size(216, 32);
+            this.panelImages.TabIndex = 57;
             // 
             // FrmAudioDetail
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 587);
+            this.ClientSize = new System.Drawing.Size(873, 542);
             this.Controls.Add(this.dataGridViewEx1);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -430,37 +350,32 @@ namespace BDAuscultation.Forms
             this.Text = "听诊录音详情";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private  DataGridViewEx dataGridViewEx1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        internal  WaterTextBox txtDocRemark;
-        internal  WaterTextBox txtDocDiagnose;
-        internal  WaterTextBox txtDocName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        internal  WaterTextBox txtPatientId;
-        private System.Windows.Forms.Label lblPatientId;
-        internal  WaterTextBox txtPatientName;
-        private System.Windows.Forms.Label lblPatientName;
-        internal  WaterTextBox txtHis;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numAge;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private  ButtonEx btnReport;
-        private System.Windows.Forms.Panel panelImages;
+        private Label label4;
+        private Panel panel2;
+        private DataGridViewEx dataGridViewEx1;
+        private Label label7;
+        private Label label5;
+        private RadioButtonEx radioButtonEx2;
+        private RadioButtonEx radioButtonEx1;
+        private Label label1;
+        private UCTextBoxEx txtPatientName;
+        private NumericUpDown numAge;
+        private Label label6;
+        private UCTextBoxEx txtDocRemark;
+        private Label label3;
+        private UCTextBoxEx txtDocDiagnose;
+        private Label label2;
+        private Label label8;
+        private UCTextBoxEx txtDocName;
+        private Panel panelImages;
 
     }
 }

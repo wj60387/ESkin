@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -21,13 +22,33 @@ namespace BDAuscultation
             
             //this.toolStripEx1.RenderMode = ToolStripRenderMode
             //    .Custom;
-            
+            Mediator.ShowMessageEvent += Mediator_ShowMessageEvent;
+        }
+
+        void Mediator_ShowMessageEvent(string Msg)
+        {
+            Invoke(new MethodInvoker(() =>
+            {
+                var info = ">" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n" + Msg + "\r\n";
+                // var msg = ">" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "\r\n使用的激活码:"+Setting.authorizationInfo.AuthorizationNum+"\r\n" + Msg + "\r\n";
+
+                txtMessage.AppendText(info);
+
+                var dir = Path.Combine(Application.StartupPath, "Logs" + "\\" + DateTime.Now.Year + "\\" + DateTime.Now.Month);
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+                var filePath = Path.Combine(dir, DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
+                File.AppendAllText(filePath, info, Encoding.UTF8);
+            }));
         }
         void Init()
         {
             InitdgvTZPZ();
             InitdgvTZJX();
             InitdgvTZLY();
+            InitdgvYDTZ();
         }
         void FrmMain_Load(object sender, EventArgs e)
         {
@@ -62,20 +83,20 @@ namespace BDAuscultation
             switch (obj.Text)
             {
                 case "听诊配置":
-            this.tabControlEx1.SelectedTab = tabTZPZ;
+            this.tabControlYDTZ.SelectedTab = tabTZPZ;
 
                     break;
                 case "听诊教学":
-            this.tabControlEx1.SelectedTab = tabTZJX;
+            this.tabControlYDTZ.SelectedTab = tabTZJX;
                     break;
                 case "听诊录音":
-            this.tabControlEx1.SelectedTab = tabTZLY;
+            this.tabControlYDTZ.SelectedTab = tabTZLY;
                     break;
                 case "云端听诊":
-            this.tabControlEx1.SelectedTab = tabYDTZ;
+            this.tabControlYDTZ.SelectedTab = tabYDTZ;
                     break;
                 case "远程教学":
-            this.tabControlEx1.SelectedTab = tabYCTZ;
+            this.tabControlYDTZ.SelectedTab = tabYCTZ;
                     break;
 
             }
@@ -94,9 +115,9 @@ namespace BDAuscultation
 
         void FrmMain_SizeChanged(object sender, EventArgs e)
         {
-            if(tabControlEx1.SelectedTab!=null)
+            if(tabControlYDTZ.SelectedTab!=null)
             {
-                tabControlEx1.SelectedTab.Invalidate();
+                tabControlYDTZ.SelectedTab.Invalidate();
             }
         }
 

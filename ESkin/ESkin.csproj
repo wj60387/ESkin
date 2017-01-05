@@ -76,6 +76,7 @@
     <Compile Include="System.Windows.Forms\TabControlEx.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="System.Windows.Forms\TreeNodeEx.cs" />
     <Compile Include="System.Windows.Forms\UCTextBoxEX.cs">
       <SubType>UserControl</SubType>
     </Compile>

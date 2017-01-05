@@ -73,6 +73,16 @@ namespace BDAuscultation.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 上传时间 {
+            get {
+                object obj = ResourceManager.GetObject("上传时间", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 下拉箭头 {
             get {
                 object obj = ResourceManager.GetObject("下拉箭头", resourceCulture);
@@ -133,9 +143,39 @@ namespace BDAuscultation.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 分享 {
+            get {
+                object obj = ResourceManager.GetObject("分享", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 分享时间 {
             get {
                 object obj = ResourceManager.GetObject("分享时间", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 分享未点击 {
+            get {
+                object obj = ResourceManager.GetObject("分享未点击", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 分享点击状态 {
+            get {
+                object obj = ResourceManager.GetObject("分享点击状态", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

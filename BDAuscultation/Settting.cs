@@ -54,6 +54,11 @@ namespace BDAuscultation
             }
         }
         public static Image ImageJCBG = BDAuscultation.Properties.Resources.检查报告点击;
+
+
+        public static Image RootImage = BDAuscultation.Properties.Resources.计算机名;
+        public static Image OnlineImage = BDAuscultation.Properties.Resources.听诊小图标;
+        public static Image OfflineImage = GetDarkImage(OnlineImage);
         public static Color themeColor
         {
             get

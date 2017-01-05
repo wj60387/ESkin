@@ -97,7 +97,7 @@ namespace BDAuscultation
                                 PatientName = row["PatientName"] + "",
                                 DocName = row["DocName"] + "",
                                 PatientSex = row["PatientSex"] + "",
-                                PatientAge = (int)row["PatientAge"],
+                                PatientAge = int.Parse(("0"+row["PatientAge"])),
                                 DocDiagnose = row["DocDiagnose"] + "",
                                 DocRemark = row["DocRemark"] + "",
                                 His = row["Flag"] + "",
@@ -211,7 +211,7 @@ namespace BDAuscultation
         {
             if (!string.IsNullOrEmpty(cbBoxTZLY.SelectedItem + "") && tabLY.SelectedTab != null)
             {
-                UpdateData(cbBoxTZLY.SelectedItem + "", tabLY.SelectedTab.Name);
+                UpdateDataTZLY(cbBoxTZLY.SelectedItem + "", tabLY.SelectedTab.Name);
             }
         }
 
@@ -243,11 +243,12 @@ namespace BDAuscultation
 
             if (!string.IsNullOrEmpty(cbBoxTZLY.SelectedItem + "") && tabLY.SelectedTab != null)
             {
-                UpdateData(cbBoxTZLY.SelectedItem + "", tabLY.SelectedTab.Name);
+                UpdateDataTZLY(cbBoxTZLY.SelectedItem + "", tabLY.SelectedTab.Name);
             }
         }
-        public void UpdateData(string stetName, string tabPageName)
+        public void UpdateDataTZLY(string stetName, string tabPageName)
         {
+            if (string.IsNullOrEmpty(stetName)) return;
             switch (tabPageName)
             {
                 case "tabLYLocal":

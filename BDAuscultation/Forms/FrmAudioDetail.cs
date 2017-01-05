@@ -20,22 +20,22 @@ namespace BDAuscultation.Forms
             InitializeComponent();
             this.Load += new EventHandler(FormAudioDetail_Load);
         }
-        public string His { get { return txtHis.Text; } set { txtHis.Text = value; } }
+        public string His { get; set; }
         public string PatientGUID { get; set; }
         public string StetName { get; set; }
         public int PatientType { get; set; }
         public int PatientGroupID { get { return Setting.authorizationInfo.GroupID; } }
-        public string PatientID { get { return txtPatientId.Text; } set { txtPatientId.Text = value; } }
+        public string PatientID { get; set; }
         public string PatientName { get { return txtPatientName.Text; } set { txtPatientName.Text = value; } }
         public int PatientAge { get { return (int)numAge.Value; } set { numAge.Value = value; } }
         public string PatientSex
         {
-            get { return radioButton1.Checked ? "男" : "女"; }
+            get { return radioButtonEx1.Checked ? "男" : "女"; }
             set
             {
-                if (!new string[] { "男", "女" }.Contains(value)) throw new Exception("性别为男女,不能为" + value);
-                radioButton1.Checked = "男" == value;
-                radioButton2.Checked = "男" != value;
+                //if (!new string[] { "男", "女" }.Contains(value??"男")) throw new Exception("性别为男女,不能为" + value);
+                radioButtonEx1.Checked = "女" == value;
+                radioButtonEx2.Checked = "女" != value;
             }
         }
         public string DocName { get { return txtDocName.Text; } set { txtDocName.Text = value; } }
@@ -43,15 +43,22 @@ namespace BDAuscultation.Forms
         public string DocRemark { get { return txtDocRemark.Text; } set { txtDocRemark.Text = value; } }
         void FormAudioDetail_Load(object sender, EventArgs e)
         {
-            var filePaths = Directory.GetFiles(@"Image\Part");
+           // var filePaths = Directory.GetFiles(@"Image\Part");
             dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { HeaderText = "缩略图" });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Part", HeaderText = "部位", Width = 80 });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "isRecord", HeaderText = "是否已录音", Width = 40, FillWeight = 150.0f });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "RecordTime", HeaderText = "录制时间", Width = 150, FillWeight = 250.0f });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "TakeTime", HeaderText = "时长(秒)", Width = 40, FillWeight = 120.0f });
-            //if (IInfo.isPlay)
-            //    dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnPlay", HeaderText = "播放", Image = Setting.ImagePlay });
-            //dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { Name = "btnDelete", HeaderText = "删除", Image = Setting.ImageDelete });
+            if (IInfo.isPlay)
+            {
+                var btnPlayColumn = new DataGridViewButtonExColumn("",
+                BDAuscultation.Properties.Resources.播放点击状态, BDAuscultation.Properties.Resources.播放未点击状态) { Name = "btnPlay", HeaderText = "播放" };
+                this.dataGridViewEx1.Columns.Add(btnPlayColumn);
+            }
+            
+            var btnDelColumn = new DataGridViewButtonExColumn("",
+                BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "btnDelete", HeaderText = "删除" };
+            this.dataGridViewEx1.Columns.Add(btnDelColumn);
             dataGridViewEx1.RowTemplate.Height = 66;
             dataGridViewEx1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             LoadAudio();
@@ -217,6 +224,8 @@ namespace BDAuscultation.Forms
                 return true;
             return false;
         }
+
+        
 
     }
 }
