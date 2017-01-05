@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -51,9 +50,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tabControlYDTZ = new System.Windows.Forms.TabControlEx();
             this.tabTZPZ = new System.Windows.Forms.TabPage();
-            this.btnTZPZ = new System.Windows.Forms.ButtonEx();
             this.dgvTZQPZ = new System.Windows.Forms.DataGridViewEx();
             this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,25 +62,15 @@
             this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZQPZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonEx1 = new System.Windows.Forms.ButtonEx();
-            this.cbBoxTZPZ = new System.Windows.Forms.ComboBoxEx();
-            this.buttonEx2 = new System.Windows.Forms.ButtonEx();
             this.tabTZJX = new System.Windows.Forms.TabPage();
-            this.btnTeach = new System.Windows.Forms.ButtonEx();
             this.dgvTZJX = new System.Windows.Forms.DataGridViewEx();
             this.dgvTZJXTZQNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZJXStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZJXStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZJXStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbBoxTZJX = new System.Windows.Forms.ComboBoxEx();
-            this.buttonEx3 = new System.Windows.Forms.ButtonEx();
-            this.buttonEx4 = new System.Windows.Forms.ButtonEx();
             this.tabTZLY = new System.Windows.Forms.TabPage();
             this.panelLY = new System.Windows.Forms.Panel();
-            this.btnTZLY = new System.Windows.Forms.ButtonEx();
             this.panelLY2 = new System.Windows.Forms.Panel();
-            this.btnLYDown = new System.Windows.Forms.ButtonEx();
-            this.btnLYLocal = new System.Windows.Forms.ButtonEx();
             this.tabLY = new System.Windows.Forms.TabControlEx();
             this.tabLYLocal = new System.Windows.Forms.TabPage();
             this.dgvTZLY_Local = new System.Windows.Forms.DataGridViewEx();
@@ -100,13 +89,8 @@
             this.dgvTZLY_DownSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZLY_DownShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvTZLY_DownDownTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonEx5 = new System.Windows.Forms.ButtonEx();
-            this.cbBoxTZLY = new System.Windows.Forms.ComboBoxEx();
-            this.buttonEx6 = new System.Windows.Forms.ButtonEx();
             this.tabYDTZ = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnShare = new System.Windows.Forms.ButtonEx();
-            this.btnUpload = new System.Windows.Forms.ButtonEx();
             this.tabControlYDTZMain = new System.Windows.Forms.TabControlEx();
             this.tabYDTZUpLoad = new System.Windows.Forms.TabPage();
             this.dgvYDTZUpLoad = new System.Windows.Forms.DataGridViewEx();
@@ -121,11 +105,7 @@
             this.dgvYDTZSharePName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYDTZUpLoadSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYDTZShareShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbBoxYDTZ = new System.Windows.Forms.ComboBoxEx();
-            this.buttonEx11 = new System.Windows.Forms.ButtonEx();
-            this.buttonEx12 = new System.Windows.Forms.ButtonEx();
             this.tabYCTZ = new System.Windows.Forms.TabPage();
-            this.btnStart = new System.Windows.Forms.ButtonEx();
             this.dgvYCTZ = new System.Windows.Forms.DataGridViewEx();
             this.dgvYCTZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYCTZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,16 +113,37 @@
             this.dgvYCTZMAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYCTZOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvYCTZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtMessage = new System.Windows.Forms.WaterTextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnTZPZ = new System.Windows.Forms.ButtonEx();
+            this.buttonEx1 = new System.Windows.Forms.ButtonEx();
+            this.cbBoxTZPZ = new System.Windows.Forms.ComboBoxEx();
+            this.buttonEx2 = new System.Windows.Forms.ButtonEx();
+            this.btnTeach = new System.Windows.Forms.ButtonEx();
+            this.cbBoxTZJX = new System.Windows.Forms.ComboBoxEx();
+            this.buttonEx3 = new System.Windows.Forms.ButtonEx();
+            this.buttonEx4 = new System.Windows.Forms.ButtonEx();
+            this.btnTZLY = new System.Windows.Forms.ButtonEx();
+            this.btnLYDown = new System.Windows.Forms.ButtonEx();
+            this.btnLYLocal = new System.Windows.Forms.ButtonEx();
+            this.buttonEx5 = new System.Windows.Forms.ButtonEx();
+            this.cbBoxTZLY = new System.Windows.Forms.ComboBoxEx();
+            this.buttonEx6 = new System.Windows.Forms.ButtonEx();
+            this.btnShare = new System.Windows.Forms.ButtonEx();
+            this.btnUpload = new System.Windows.Forms.ButtonEx();
+            this.cbBoxYDTZ = new System.Windows.Forms.ComboBoxEx();
+            this.buttonEx11 = new System.Windows.Forms.ButtonEx();
+            this.buttonEx12 = new System.Windows.Forms.ButtonEx();
+            this.btnStart = new System.Windows.Forms.ButtonEx();
             this.cbBoxYCTZ = new System.Windows.Forms.ComboBoxEx();
             this.btnJX = new System.Windows.Forms.ButtonEx();
             this.buttonEx14 = new System.Windows.Forms.ButtonEx();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtMessage = new System.Windows.Forms.WaterTextBox();
             this.btnMin = new System.Windows.Forms.ButtonEx();
             this.btnBack = new System.Windows.Forms.ButtonEx();
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.nav1 = new System.Windows.Forms.Nav();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlYDTZ.SuspendLayout();
             this.tabTZPZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTZQPZ)).BeginInit();
@@ -202,21 +203,6 @@
             this.tabTZPZ.Size = new System.Drawing.Size(818, 575);
             this.tabTZPZ.TabIndex = 0;
             this.tabTZPZ.Text = "tabPage1";
-            // 
-            // btnTZPZ
-            // 
-            this.btnTZPZ.BackColor = System.Drawing.Color.Transparent;
-            this.btnTZPZ.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
-            this.btnTZPZ.FlatAppearance.BorderSize = 0;
-            this.btnTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTZPZ.Location = new System.Drawing.Point(639, 37);
-            this.btnTZPZ.Name = "btnTZPZ";
-            this.btnTZPZ.Size = new System.Drawing.Size(105, 34);
-            this.btnTZPZ.TabIndex = 54;
-            this.btnTZPZ.Text = "配置";
-            this.btnTZPZ.UseVisualStyleBackColor = false;
             // 
             // dgvTZQPZ
             // 
@@ -338,68 +324,6 @@
             this.dgvTZQPZStetConn.ReadOnly = true;
             this.dgvTZQPZStetConn.Width = 97;
             // 
-            // buttonEx1
-            // 
-            this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx1.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.buttonEx1.FlatAppearance.BorderSize = 0;
-            this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx1.Location = new System.Drawing.Point(253, 41);
-            this.buttonEx1.Name = "buttonEx1";
-            this.buttonEx1.Size = new System.Drawing.Size(86, 30);
-            this.buttonEx1.TabIndex = 32;
-            this.buttonEx1.Text = "选择听诊器";
-            this.buttonEx1.UseVisualStyleBackColor = false;
-            // 
-            // cbBoxTZPZ
-            // 
-            this.cbBoxTZPZ.BackColor = System.Drawing.Color.Transparent;
-            this.cbBoxTZPZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxTZPZ.DropDownHeight = 194;
-            this.cbBoxTZPZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxTZPZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZPZ.DwonImage")));
-            this.cbBoxTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbBoxTZPZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbBoxTZPZ.ForeColor = System.Drawing.Color.Black;
-            this.cbBoxTZPZ.FormattingEnabled = true;
-            this.cbBoxTZPZ.IntegralHeight = false;
-            this.cbBoxTZPZ.ItemHeight = 24;
-            this.cbBoxTZPZ.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H"});
-            this.cbBoxTZPZ.Location = new System.Drawing.Point(339, 41);
-            this.cbBoxTZPZ.Margin = new System.Windows.Forms.Padding(0);
-            this.cbBoxTZPZ.Name = "cbBoxTZPZ";
-            this.cbBoxTZPZ.Size = new System.Drawing.Size(280, 30);
-            this.cbBoxTZPZ.TabIndex = 31;
-            // 
-            // buttonEx2
-            // 
-            this.buttonEx2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx2.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
-            this.buttonEx2.FlatAppearance.BorderSize = 0;
-            this.buttonEx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEx2.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx2.Location = new System.Drawing.Point(15, 15);
-            this.buttonEx2.Name = "buttonEx2";
-            this.buttonEx2.Size = new System.Drawing.Size(224, 63);
-            this.buttonEx2.TabIndex = 14;
-            this.buttonEx2.Text = "听诊器配置";
-            this.buttonEx2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEx2.UseVisualStyleBackColor = false;
-            // 
             // tabTZJX
             // 
             this.tabTZJX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -414,21 +338,6 @@
             this.tabTZJX.Size = new System.Drawing.Size(818, 575);
             this.tabTZJX.TabIndex = 1;
             this.tabTZJX.Text = "tabPage2";
-            // 
-            // btnTeach
-            // 
-            this.btnTeach.BackColor = System.Drawing.Color.Transparent;
-            this.btnTeach.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
-            this.btnTeach.FlatAppearance.BorderSize = 0;
-            this.btnTeach.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTeach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnTeach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeach.Location = new System.Drawing.Point(654, 43);
-            this.btnTeach.Name = "btnTeach";
-            this.btnTeach.Size = new System.Drawing.Size(103, 35);
-            this.btnTeach.TabIndex = 43;
-            this.btnTeach.Text = "开始教学";
-            this.btnTeach.UseVisualStyleBackColor = false;
             // 
             // dgvTZJX
             // 
@@ -517,68 +426,6 @@
             this.dgvTZJXStetConn.ReadOnly = true;
             this.dgvTZJXStetConn.Width = 97;
             // 
-            // cbBoxTZJX
-            // 
-            this.cbBoxTZJX.BackColor = System.Drawing.Color.Transparent;
-            this.cbBoxTZJX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxTZJX.DropDownHeight = 194;
-            this.cbBoxTZJX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxTZJX.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZJX.DwonImage")));
-            this.cbBoxTZJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbBoxTZJX.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbBoxTZJX.ForeColor = System.Drawing.Color.Black;
-            this.cbBoxTZJX.FormattingEnabled = true;
-            this.cbBoxTZJX.IntegralHeight = false;
-            this.cbBoxTZJX.ItemHeight = 24;
-            this.cbBoxTZJX.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H"});
-            this.cbBoxTZJX.Location = new System.Drawing.Point(352, 45);
-            this.cbBoxTZJX.Margin = new System.Windows.Forms.Padding(0);
-            this.cbBoxTZJX.Name = "cbBoxTZJX";
-            this.cbBoxTZJX.Size = new System.Drawing.Size(288, 30);
-            this.cbBoxTZJX.TabIndex = 40;
-            // 
-            // buttonEx3
-            // 
-            this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.buttonEx3.FlatAppearance.BorderSize = 0;
-            this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx3.Location = new System.Drawing.Point(266, 45);
-            this.buttonEx3.Name = "buttonEx3";
-            this.buttonEx3.Size = new System.Drawing.Size(86, 30);
-            this.buttonEx3.TabIndex = 41;
-            this.buttonEx3.Text = "选择听诊器";
-            this.buttonEx3.UseVisualStyleBackColor = false;
-            // 
-            // buttonEx4
-            // 
-            this.buttonEx4.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx4.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
-            this.buttonEx4.FlatAppearance.BorderSize = 0;
-            this.buttonEx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx4.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonEx4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEx4.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx4.Location = new System.Drawing.Point(15, 15);
-            this.buttonEx4.Name = "buttonEx4";
-            this.buttonEx4.Size = new System.Drawing.Size(224, 63);
-            this.buttonEx4.TabIndex = 39;
-            this.buttonEx4.Text = "听诊教学";
-            this.buttonEx4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEx4.UseVisualStyleBackColor = false;
-            // 
             // tabTZLY
             // 
             this.tabTZLY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -603,22 +450,6 @@
             this.panelLY.Size = new System.Drawing.Size(818, 575);
             this.panelLY.TabIndex = 0;
             // 
-            // btnTZLY
-            // 
-            this.btnTZLY.BackColor = System.Drawing.Color.Transparent;
-            this.btnTZLY.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
-            this.btnTZLY.FlatAppearance.BorderSize = 0;
-            this.btnTZLY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnTZLY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTZLY.Location = new System.Drawing.Point(625, 39);
-            this.btnTZLY.Name = "btnTZLY";
-            this.btnTZLY.Size = new System.Drawing.Size(103, 35);
-            this.btnTZLY.TabIndex = 46;
-            this.btnTZLY.Text = "新增录音";
-            this.btnTZLY.UseVisualStyleBackColor = false;
-            this.btnTZLY.Click += new System.EventHandler(this.btnTZLY_Click);
-            // 
             // panelLY2
             // 
             this.panelLY2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -632,36 +463,6 @@
             this.panelLY2.Name = "panelLY2";
             this.panelLY2.Size = new System.Drawing.Size(807, 488);
             this.panelLY2.TabIndex = 45;
-            // 
-            // btnLYDown
-            // 
-            this.btnLYDown.BackColor = System.Drawing.Color.Transparent;
-            this.btnLYDown.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
-            this.btnLYDown.FlatAppearance.BorderSize = 0;
-            this.btnLYDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLYDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLYDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLYDown.Location = new System.Drawing.Point(157, 4);
-            this.btnLYDown.Name = "btnLYDown";
-            this.btnLYDown.Size = new System.Drawing.Size(150, 30);
-            this.btnLYDown.TabIndex = 2;
-            this.btnLYDown.Text = "已下载听诊";
-            this.btnLYDown.UseVisualStyleBackColor = false;
-            // 
-            // btnLYLocal
-            // 
-            this.btnLYLocal.BackColor = System.Drawing.Color.Transparent;
-            this.btnLYLocal.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.btnLYLocal.FlatAppearance.BorderSize = 0;
-            this.btnLYLocal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLYLocal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLYLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLYLocal.Location = new System.Drawing.Point(7, 4);
-            this.btnLYLocal.Name = "btnLYLocal";
-            this.btnLYLocal.Size = new System.Drawing.Size(150, 30);
-            this.btnLYLocal.TabIndex = 1;
-            this.btnLYLocal.Text = "本地录音";
-            this.btnLYLocal.UseVisualStyleBackColor = false;
             // 
             // tabLY
             // 
@@ -902,68 +703,6 @@
             this.dgvTZLY_DownDownTime.Name = "dgvTZLY_DownDownTime";
             this.dgvTZLY_DownDownTime.ReadOnly = true;
             // 
-            // buttonEx5
-            // 
-            this.buttonEx5.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx5.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.buttonEx5.FlatAppearance.BorderSize = 0;
-            this.buttonEx5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx5.Location = new System.Drawing.Point(246, 41);
-            this.buttonEx5.Name = "buttonEx5";
-            this.buttonEx5.Size = new System.Drawing.Size(86, 30);
-            this.buttonEx5.TabIndex = 44;
-            this.buttonEx5.Text = "选择听诊器";
-            this.buttonEx5.UseVisualStyleBackColor = false;
-            // 
-            // cbBoxTZLY
-            // 
-            this.cbBoxTZLY.BackColor = System.Drawing.Color.Transparent;
-            this.cbBoxTZLY.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxTZLY.DropDownHeight = 194;
-            this.cbBoxTZLY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxTZLY.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZLY.DwonImage")));
-            this.cbBoxTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbBoxTZLY.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbBoxTZLY.ForeColor = System.Drawing.Color.Black;
-            this.cbBoxTZLY.FormattingEnabled = true;
-            this.cbBoxTZLY.IntegralHeight = false;
-            this.cbBoxTZLY.ItemHeight = 24;
-            this.cbBoxTZLY.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H"});
-            this.cbBoxTZLY.Location = new System.Drawing.Point(332, 41);
-            this.cbBoxTZLY.Margin = new System.Windows.Forms.Padding(0);
-            this.cbBoxTZLY.Name = "cbBoxTZLY";
-            this.cbBoxTZLY.Size = new System.Drawing.Size(290, 30);
-            this.cbBoxTZLY.TabIndex = 43;
-            // 
-            // buttonEx6
-            // 
-            this.buttonEx6.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx6.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
-            this.buttonEx6.FlatAppearance.BorderSize = 0;
-            this.buttonEx6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx6.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonEx6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEx6.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx6.Location = new System.Drawing.Point(15, 15);
-            this.buttonEx6.Name = "buttonEx6";
-            this.buttonEx6.Size = new System.Drawing.Size(224, 63);
-            this.buttonEx6.TabIndex = 42;
-            this.buttonEx6.Text = "听诊录音";
-            this.buttonEx6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEx6.UseVisualStyleBackColor = false;
-            // 
             // tabYDTZ
             // 
             this.tabYDTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -990,37 +729,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(807, 488);
             this.panel2.TabIndex = 49;
-            // 
-            // btnShare
-            // 
-            this.btnShare.BackColor = System.Drawing.Color.Transparent;
-            this.btnShare.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
-            this.btnShare.FlatAppearance.BorderSize = 0;
-            this.btnShare.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnShare.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnShare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShare.Location = new System.Drawing.Point(157, 4);
-            this.btnShare.Name = "btnShare";
-            this.btnShare.Size = new System.Drawing.Size(150, 30);
-            this.btnShare.TabIndex = 2;
-            this.btnShare.Text = "分享给我的听诊";
-            this.btnShare.UseVisualStyleBackColor = false;
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpload.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.btnUpload.FlatAppearance.BorderSize = 0;
-            this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Location = new System.Drawing.Point(7, 4);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(150, 30);
-            this.btnUpload.TabIndex = 1;
-            this.btnUpload.Text = "我上传的听诊";
-            this.btnUpload.UseVisualStyleBackColor = false;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // tabControlYDTZMain
             // 
@@ -1242,59 +950,6 @@
             this.dgvYDTZShareShareTime.ReadOnly = true;
             this.dgvYDTZShareShareTime.Width = 97;
             // 
-            // cbBoxYDTZ
-            // 
-            this.cbBoxYDTZ.BackColor = System.Drawing.Color.Transparent;
-            this.cbBoxYDTZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxYDTZ.DropDownHeight = 2;
-            this.cbBoxYDTZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBoxYDTZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxYDTZ.DwonImage")));
-            this.cbBoxYDTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbBoxYDTZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbBoxYDTZ.ForeColor = System.Drawing.Color.Black;
-            this.cbBoxYDTZ.FormattingEnabled = true;
-            this.cbBoxYDTZ.IntegralHeight = false;
-            this.cbBoxYDTZ.ItemHeight = 24;
-            this.cbBoxYDTZ.Location = new System.Drawing.Point(330, 36);
-            this.cbBoxYDTZ.Margin = new System.Windows.Forms.Padding(0);
-            this.cbBoxYDTZ.Name = "cbBoxYDTZ";
-            this.cbBoxYDTZ.Size = new System.Drawing.Size(290, 30);
-            this.cbBoxYDTZ.TabIndex = 47;
-            // 
-            // buttonEx11
-            // 
-            this.buttonEx11.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx11.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
-            this.buttonEx11.FlatAppearance.BorderSize = 0;
-            this.buttonEx11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx11.Location = new System.Drawing.Point(244, 36);
-            this.buttonEx11.Name = "buttonEx11";
-            this.buttonEx11.Size = new System.Drawing.Size(86, 30);
-            this.buttonEx11.TabIndex = 48;
-            this.buttonEx11.Text = "选择听诊器";
-            this.buttonEx11.UseVisualStyleBackColor = false;
-            // 
-            // buttonEx12
-            // 
-            this.buttonEx12.BackColor = System.Drawing.Color.Transparent;
-            this.buttonEx12.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
-            this.buttonEx12.FlatAppearance.BorderSize = 0;
-            this.buttonEx12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonEx12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx12.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonEx12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonEx12.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
-            this.buttonEx12.Location = new System.Drawing.Point(15, 15);
-            this.buttonEx12.Name = "buttonEx12";
-            this.buttonEx12.Size = new System.Drawing.Size(224, 63);
-            this.buttonEx12.TabIndex = 46;
-            this.buttonEx12.Text = "云端听诊";
-            this.buttonEx12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonEx12.UseVisualStyleBackColor = false;
-            // 
             // tabYCTZ
             // 
             this.tabYCTZ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -1308,21 +963,6 @@
             this.tabYCTZ.Size = new System.Drawing.Size(818, 575);
             this.tabYCTZ.TabIndex = 4;
             this.tabYCTZ.Text = "tabPage5";
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.Transparent;
-            this.btnStart.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Location = new System.Drawing.Point(653, 41);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(103, 34);
-            this.btnStart.TabIndex = 53;
-            this.btnStart.Text = "发起会诊";
-            this.btnStart.UseVisualStyleBackColor = false;
             // 
             // dgvYCTZ
             // 
@@ -1427,6 +1067,396 @@
             this.dgvYCTZStetConn.ReadOnly = true;
             this.dgvYCTZStetConn.Width = 97;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.txtMessage);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(120, 615);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(824, 113);
+            this.panel1.TabIndex = 44;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMessage.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.txtMessage.Location = new System.Drawing.Point(6, 4);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtMessage.Size = new System.Drawing.Size(809, 103);
+            this.txtMessage.TabIndex = 0;
+            this.txtMessage.WaterText = "信息输出";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
+            // btnTZPZ
+            // 
+            this.btnTZPZ.BackColor = System.Drawing.Color.Transparent;
+            this.btnTZPZ.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
+            this.btnTZPZ.FlatAppearance.BorderSize = 0;
+            this.btnTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTZPZ.Location = new System.Drawing.Point(639, 37);
+            this.btnTZPZ.Name = "btnTZPZ";
+            this.btnTZPZ.Size = new System.Drawing.Size(105, 34);
+            this.btnTZPZ.TabIndex = 54;
+            this.btnTZPZ.Text = "配置";
+            this.btnTZPZ.UseVisualStyleBackColor = false;
+            // 
+            // buttonEx1
+            // 
+            this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.buttonEx1.FlatAppearance.BorderSize = 0;
+            this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx1.Location = new System.Drawing.Point(253, 41);
+            this.buttonEx1.Name = "buttonEx1";
+            this.buttonEx1.Size = new System.Drawing.Size(86, 30);
+            this.buttonEx1.TabIndex = 32;
+            this.buttonEx1.Text = "选择听诊器";
+            this.buttonEx1.UseVisualStyleBackColor = false;
+            // 
+            // cbBoxTZPZ
+            // 
+            this.cbBoxTZPZ.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxTZPZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxTZPZ.DropDownHeight = 194;
+            this.cbBoxTZPZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxTZPZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZPZ.DwonImage")));
+            this.cbBoxTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxTZPZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxTZPZ.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxTZPZ.FormattingEnabled = true;
+            this.cbBoxTZPZ.IntegralHeight = false;
+            this.cbBoxTZPZ.ItemHeight = 24;
+            this.cbBoxTZPZ.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"});
+            this.cbBoxTZPZ.Location = new System.Drawing.Point(339, 41);
+            this.cbBoxTZPZ.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxTZPZ.Name = "cbBoxTZPZ";
+            this.cbBoxTZPZ.Size = new System.Drawing.Size(280, 30);
+            this.cbBoxTZPZ.TabIndex = 31;
+            // 
+            // buttonEx2
+            // 
+            this.buttonEx2.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
+            this.buttonEx2.FlatAppearance.BorderSize = 0;
+            this.buttonEx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx2.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
+            this.buttonEx2.Location = new System.Drawing.Point(15, 15);
+            this.buttonEx2.Name = "buttonEx2";
+            this.buttonEx2.Size = new System.Drawing.Size(224, 63);
+            this.buttonEx2.TabIndex = 14;
+            this.buttonEx2.Text = "听诊器配置";
+            this.buttonEx2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEx2.UseVisualStyleBackColor = false;
+            // 
+            // btnTeach
+            // 
+            this.btnTeach.BackColor = System.Drawing.Color.Transparent;
+            this.btnTeach.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
+            this.btnTeach.FlatAppearance.BorderSize = 0;
+            this.btnTeach.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTeach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTeach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeach.Location = new System.Drawing.Point(654, 43);
+            this.btnTeach.Name = "btnTeach";
+            this.btnTeach.Size = new System.Drawing.Size(103, 35);
+            this.btnTeach.TabIndex = 43;
+            this.btnTeach.Text = "开始教学";
+            this.btnTeach.UseVisualStyleBackColor = false;
+            // 
+            // cbBoxTZJX
+            // 
+            this.cbBoxTZJX.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxTZJX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxTZJX.DropDownHeight = 194;
+            this.cbBoxTZJX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxTZJX.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZJX.DwonImage")));
+            this.cbBoxTZJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxTZJX.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxTZJX.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxTZJX.FormattingEnabled = true;
+            this.cbBoxTZJX.IntegralHeight = false;
+            this.cbBoxTZJX.ItemHeight = 24;
+            this.cbBoxTZJX.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"});
+            this.cbBoxTZJX.Location = new System.Drawing.Point(352, 45);
+            this.cbBoxTZJX.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxTZJX.Name = "cbBoxTZJX";
+            this.cbBoxTZJX.Size = new System.Drawing.Size(288, 30);
+            this.cbBoxTZJX.TabIndex = 40;
+            // 
+            // buttonEx3
+            // 
+            this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.buttonEx3.FlatAppearance.BorderSize = 0;
+            this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx3.Location = new System.Drawing.Point(266, 45);
+            this.buttonEx3.Name = "buttonEx3";
+            this.buttonEx3.Size = new System.Drawing.Size(86, 30);
+            this.buttonEx3.TabIndex = 41;
+            this.buttonEx3.Text = "选择听诊器";
+            this.buttonEx3.UseVisualStyleBackColor = false;
+            // 
+            // buttonEx4
+            // 
+            this.buttonEx4.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
+            this.buttonEx4.FlatAppearance.BorderSize = 0;
+            this.buttonEx4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx4.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEx4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx4.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
+            this.buttonEx4.Location = new System.Drawing.Point(15, 15);
+            this.buttonEx4.Name = "buttonEx4";
+            this.buttonEx4.Size = new System.Drawing.Size(224, 63);
+            this.buttonEx4.TabIndex = 39;
+            this.buttonEx4.Text = "听诊教学";
+            this.buttonEx4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEx4.UseVisualStyleBackColor = false;
+            // 
+            // btnTZLY
+            // 
+            this.btnTZLY.BackColor = System.Drawing.Color.Transparent;
+            this.btnTZLY.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
+            this.btnTZLY.FlatAppearance.BorderSize = 0;
+            this.btnTZLY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTZLY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTZLY.Location = new System.Drawing.Point(625, 39);
+            this.btnTZLY.Name = "btnTZLY";
+            this.btnTZLY.Size = new System.Drawing.Size(103, 35);
+            this.btnTZLY.TabIndex = 46;
+            this.btnTZLY.Text = "新增录音";
+            this.btnTZLY.UseVisualStyleBackColor = false;
+            this.btnTZLY.Click += new System.EventHandler(this.btnTZLY_Click);
+            // 
+            // btnLYDown
+            // 
+            this.btnLYDown.BackColor = System.Drawing.Color.Transparent;
+            this.btnLYDown.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
+            this.btnLYDown.FlatAppearance.BorderSize = 0;
+            this.btnLYDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLYDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLYDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLYDown.Location = new System.Drawing.Point(157, 4);
+            this.btnLYDown.Name = "btnLYDown";
+            this.btnLYDown.Size = new System.Drawing.Size(150, 30);
+            this.btnLYDown.TabIndex = 2;
+            this.btnLYDown.Text = "已下载听诊";
+            this.btnLYDown.UseVisualStyleBackColor = false;
+            // 
+            // btnLYLocal
+            // 
+            this.btnLYLocal.BackColor = System.Drawing.Color.Transparent;
+            this.btnLYLocal.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.btnLYLocal.FlatAppearance.BorderSize = 0;
+            this.btnLYLocal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLYLocal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLYLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLYLocal.Location = new System.Drawing.Point(7, 4);
+            this.btnLYLocal.Name = "btnLYLocal";
+            this.btnLYLocal.Size = new System.Drawing.Size(150, 30);
+            this.btnLYLocal.TabIndex = 1;
+            this.btnLYLocal.Text = "本地录音";
+            this.btnLYLocal.UseVisualStyleBackColor = false;
+            // 
+            // buttonEx5
+            // 
+            this.buttonEx5.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx5.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.buttonEx5.FlatAppearance.BorderSize = 0;
+            this.buttonEx5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx5.Location = new System.Drawing.Point(246, 41);
+            this.buttonEx5.Name = "buttonEx5";
+            this.buttonEx5.Size = new System.Drawing.Size(86, 30);
+            this.buttonEx5.TabIndex = 44;
+            this.buttonEx5.Text = "选择听诊器";
+            this.buttonEx5.UseVisualStyleBackColor = false;
+            // 
+            // cbBoxTZLY
+            // 
+            this.cbBoxTZLY.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxTZLY.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxTZLY.DropDownHeight = 194;
+            this.cbBoxTZLY.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxTZLY.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZLY.DwonImage")));
+            this.cbBoxTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxTZLY.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxTZLY.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxTZLY.FormattingEnabled = true;
+            this.cbBoxTZLY.IntegralHeight = false;
+            this.cbBoxTZLY.ItemHeight = 24;
+            this.cbBoxTZLY.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"});
+            this.cbBoxTZLY.Location = new System.Drawing.Point(332, 41);
+            this.cbBoxTZLY.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxTZLY.Name = "cbBoxTZLY";
+            this.cbBoxTZLY.Size = new System.Drawing.Size(290, 30);
+            this.cbBoxTZLY.TabIndex = 43;
+            // 
+            // buttonEx6
+            // 
+            this.buttonEx6.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx6.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
+            this.buttonEx6.FlatAppearance.BorderSize = 0;
+            this.buttonEx6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx6.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEx6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx6.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
+            this.buttonEx6.Location = new System.Drawing.Point(15, 15);
+            this.buttonEx6.Name = "buttonEx6";
+            this.buttonEx6.Size = new System.Drawing.Size(224, 63);
+            this.buttonEx6.TabIndex = 42;
+            this.buttonEx6.Text = "听诊录音";
+            this.buttonEx6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEx6.UseVisualStyleBackColor = false;
+            // 
+            // btnShare
+            // 
+            this.btnShare.BackColor = System.Drawing.Color.Transparent;
+            this.btnShare.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
+            this.btnShare.FlatAppearance.BorderSize = 0;
+            this.btnShare.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnShare.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnShare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShare.Location = new System.Drawing.Point(157, 4);
+            this.btnShare.Name = "btnShare";
+            this.btnShare.Size = new System.Drawing.Size(150, 30);
+            this.btnShare.TabIndex = 2;
+            this.btnShare.Text = "分享给我的听诊";
+            this.btnShare.UseVisualStyleBackColor = false;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpload.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.btnUpload.FlatAppearance.BorderSize = 0;
+            this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Location = new System.Drawing.Point(7, 4);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(150, 30);
+            this.btnUpload.TabIndex = 1;
+            this.btnUpload.Text = "我上传的听诊";
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // cbBoxYDTZ
+            // 
+            this.cbBoxYDTZ.BackColor = System.Drawing.Color.Transparent;
+            this.cbBoxYDTZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbBoxYDTZ.DropDownHeight = 2;
+            this.cbBoxYDTZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBoxYDTZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxYDTZ.DwonImage")));
+            this.cbBoxYDTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbBoxYDTZ.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbBoxYDTZ.ForeColor = System.Drawing.Color.Black;
+            this.cbBoxYDTZ.FormattingEnabled = true;
+            this.cbBoxYDTZ.IntegralHeight = false;
+            this.cbBoxYDTZ.ItemHeight = 24;
+            this.cbBoxYDTZ.Location = new System.Drawing.Point(330, 36);
+            this.cbBoxYDTZ.Margin = new System.Windows.Forms.Padding(0);
+            this.cbBoxYDTZ.Name = "cbBoxYDTZ";
+            this.cbBoxYDTZ.Size = new System.Drawing.Size(290, 30);
+            this.cbBoxYDTZ.TabIndex = 47;
+            // 
+            // buttonEx11
+            // 
+            this.buttonEx11.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx11.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
+            this.buttonEx11.FlatAppearance.BorderSize = 0;
+            this.buttonEx11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx11.Location = new System.Drawing.Point(244, 36);
+            this.buttonEx11.Name = "buttonEx11";
+            this.buttonEx11.Size = new System.Drawing.Size(86, 30);
+            this.buttonEx11.TabIndex = 48;
+            this.buttonEx11.Text = "选择听诊器";
+            this.buttonEx11.UseVisualStyleBackColor = false;
+            // 
+            // buttonEx12
+            // 
+            this.buttonEx12.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx12.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
+            this.buttonEx12.FlatAppearance.BorderSize = 0;
+            this.buttonEx12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx12.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonEx12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx12.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
+            this.buttonEx12.Location = new System.Drawing.Point(15, 15);
+            this.buttonEx12.Name = "buttonEx12";
+            this.buttonEx12.Size = new System.Drawing.Size(224, 63);
+            this.buttonEx12.TabIndex = 46;
+            this.buttonEx12.Text = "云端听诊";
+            this.buttonEx12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonEx12.UseVisualStyleBackColor = false;
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.Transparent;
+            this.btnStart.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Location = new System.Drawing.Point(653, 41);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(103, 34);
+            this.btnStart.TabIndex = 53;
+            this.btnStart.Text = "发起会诊";
+            this.btnStart.UseVisualStyleBackColor = false;
+            // 
             // cbBoxYCTZ
             // 
             this.cbBoxYCTZ.BackColor = System.Drawing.Color.Transparent;
@@ -1489,31 +1519,6 @@
             this.buttonEx14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonEx14.UseVisualStyleBackColor = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.txtMessage);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(120, 615);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 113);
-            this.panel1.TabIndex = 44;
-            // 
-            // txtMessage
-            // 
-            this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMessage.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.txtMessage.Location = new System.Drawing.Point(6, 4);
-            this.txtMessage.Multiline = true;
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMessage.Size = new System.Drawing.Size(809, 103);
-            this.txtMessage.TabIndex = 0;
-            this.txtMessage.WaterText = "信息输出";
-            // 
             // btnMin
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1528,6 +1533,7 @@
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(12, 12);
             this.btnMin.TabIndex = 42;
+            this.toolTip1.SetToolTip(this.btnMin, "最小化");
             this.btnMin.UseVisualStyleBackColor = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
@@ -1545,6 +1551,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(12, 12);
             this.btnBack.TabIndex = 41;
+            this.toolTip1.SetToolTip(this.btnBack, "还原");
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -1561,6 +1568,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(12, 12);
             this.btnClose.TabIndex = 40;
+            this.toolTip1.SetToolTip(this.btnClose, "关闭");
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -1578,10 +1586,6 @@
             this.nav1.Size = new System.Drawing.Size(120, 728);
             this.nav1.TabIndex = 45;
             this.nav1.Text = "nav1";
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
             // 
             // FrmMain
             // 
@@ -1720,6 +1724,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZStetConn;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

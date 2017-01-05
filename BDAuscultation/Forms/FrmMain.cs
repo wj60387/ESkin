@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BDAuscultation.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,11 +94,13 @@ namespace BDAuscultation
         }
         void nav1_OnXTClick()
         {
-           // MessageBox.Show("系统");
+            
         }
         void nav1_OnGYClick()
         {
-            //MessageBox.Show("关于");
+            var  formAbout = new FrmAbout();
+            formAbout.StartPosition = FormStartPosition.CenterScreen;
+            formAbout.ShowDialog();
         }
         void nav1_OnItemClick(NavItem obj)
         {
@@ -157,6 +160,7 @@ namespace BDAuscultation
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
 
+       
        
          
 
