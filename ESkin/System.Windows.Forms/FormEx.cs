@@ -175,8 +175,8 @@ namespace System.Windows.Forms
 
             base.OnPaint(e);
             var image = this.Icon.ToBitmap().GetThumbnailImage(18, 18, () => { return false; }, IntPtr.Zero);
-            if (ShowIcon)
-                e.Graphics.DrawImage(image, 1, 1);
+            //if (ShowIcon)
+            //    e.Graphics.DrawImage(image, 1, 1);
         }
         
         /// <summary>
