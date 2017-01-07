@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -206,14 +206,18 @@
             // 
             // btnTZPZ
             // 
+            this.btnTZPZ.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnTZPZ.ArcRadius")));
             this.btnTZPZ.BackColor = System.Drawing.Color.Transparent;
-            this.btnTZPZ.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
             this.btnTZPZ.FlatAppearance.BorderSize = 0;
             this.btnTZPZ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTZPZ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTZPZ.Location = new System.Drawing.Point(639, 37);
             this.btnTZPZ.Name = "btnTZPZ";
+            this.btnTZPZ.NormalColor = System.Drawing.Color.Silver;
+            this.btnTZPZ.PressColor = System.Drawing.Color.Silver;
+            this.btnTZPZ.Radius = 16;
             this.btnTZPZ.Size = new System.Drawing.Size(105, 34);
             this.btnTZPZ.TabIndex = 54;
             this.btnTZPZ.Text = "配置";
@@ -341,14 +345,19 @@
             // 
             // buttonEx1
             // 
+            this.buttonEx1.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx1.ArcRadius")));
             this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx1.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
             this.buttonEx1.FlatAppearance.BorderSize = 0;
             this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx1.Location = new System.Drawing.Point(253, 41);
             this.buttonEx1.Name = "buttonEx1";
+            this.buttonEx1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx1.Radius = 16;
             this.buttonEx1.Size = new System.Drawing.Size(86, 30);
             this.buttonEx1.TabIndex = 32;
             this.buttonEx1.Text = "选择听诊器";
@@ -384,6 +393,7 @@
             // 
             // buttonEx2
             // 
+            this.buttonEx2.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx2.ArcRadius")));
             this.buttonEx2.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx2.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
             this.buttonEx2.FlatAppearance.BorderSize = 0;
@@ -392,9 +402,13 @@
             this.buttonEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx2.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
             this.buttonEx2.Location = new System.Drawing.Point(15, 15);
             this.buttonEx2.Name = "buttonEx2";
+            this.buttonEx2.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx2.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx2.Radius = 16;
             this.buttonEx2.Size = new System.Drawing.Size(224, 63);
             this.buttonEx2.TabIndex = 14;
             this.buttonEx2.Text = "听诊器配置";
@@ -418,14 +432,19 @@
             // 
             // btnTeach
             // 
+            this.btnTeach.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnTeach.ArcRadius")));
             this.btnTeach.BackColor = System.Drawing.Color.Transparent;
             this.btnTeach.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
             this.btnTeach.FlatAppearance.BorderSize = 0;
             this.btnTeach.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTeach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTeach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeach.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnTeach.Location = new System.Drawing.Point(654, 43);
             this.btnTeach.Name = "btnTeach";
+            this.btnTeach.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnTeach.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnTeach.Radius = 16;
             this.btnTeach.Size = new System.Drawing.Size(103, 35);
             this.btnTeach.TabIndex = 43;
             this.btnTeach.Text = "开始教学";
@@ -548,14 +567,19 @@
             // 
             // buttonEx3
             // 
+            this.buttonEx3.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx3.ArcRadius")));
             this.buttonEx3.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx3.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
             this.buttonEx3.FlatAppearance.BorderSize = 0;
             this.buttonEx3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx3.Location = new System.Drawing.Point(266, 45);
             this.buttonEx3.Name = "buttonEx3";
+            this.buttonEx3.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx3.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx3.Radius = 16;
             this.buttonEx3.Size = new System.Drawing.Size(86, 30);
             this.buttonEx3.TabIndex = 41;
             this.buttonEx3.Text = "选择听诊器";
@@ -563,6 +587,7 @@
             // 
             // buttonEx4
             // 
+            this.buttonEx4.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx4.ArcRadius")));
             this.buttonEx4.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx4.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
             this.buttonEx4.FlatAppearance.BorderSize = 0;
@@ -571,9 +596,13 @@
             this.buttonEx4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx4.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx4.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
             this.buttonEx4.Location = new System.Drawing.Point(15, 15);
             this.buttonEx4.Name = "buttonEx4";
+            this.buttonEx4.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx4.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx4.Radius = 16;
             this.buttonEx4.Size = new System.Drawing.Size(224, 63);
             this.buttonEx4.TabIndex = 39;
             this.buttonEx4.Text = "听诊教学";
@@ -606,19 +635,24 @@
             // 
             // btnTZLY
             // 
+            this.btnTZLY.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnTZLY.ArcRadius")));
             this.btnTZLY.BackColor = System.Drawing.Color.Transparent;
             this.btnTZLY.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
             this.btnTZLY.FlatAppearance.BorderSize = 0;
             this.btnTZLY.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTZLY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTZLY.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnTZLY.Location = new System.Drawing.Point(625, 39);
             this.btnTZLY.Name = "btnTZLY";
+            this.btnTZLY.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnTZLY.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnTZLY.Radius = 16;
             this.btnTZLY.Size = new System.Drawing.Size(103, 35);
             this.btnTZLY.TabIndex = 46;
             this.btnTZLY.Text = "新增录音";
             this.btnTZLY.UseVisualStyleBackColor = false;
-            this.btnTZLY.Click += new System.EventHandler(this.btnTZLY_Click);
+             
             // 
             // panelLY2
             // 
@@ -636,14 +670,18 @@
             // 
             // btnLYDown
             // 
+            this.btnLYDown.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnLYDown.ArcRadius")));
             this.btnLYDown.BackColor = System.Drawing.Color.Transparent;
-            this.btnLYDown.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
             this.btnLYDown.FlatAppearance.BorderSize = 0;
             this.btnLYDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnLYDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLYDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLYDown.Location = new System.Drawing.Point(157, 4);
+            this.btnLYDown.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnLYDown.Location = new System.Drawing.Point(163, 4);
             this.btnLYDown.Name = "btnLYDown";
+            this.btnLYDown.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnLYDown.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnLYDown.Radius = 16;
             this.btnLYDown.Size = new System.Drawing.Size(150, 30);
             this.btnLYDown.TabIndex = 2;
             this.btnLYDown.Text = "已下载听诊";
@@ -651,14 +689,18 @@
             // 
             // btnLYLocal
             // 
+            this.btnLYLocal.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnLYLocal.ArcRadius")));
             this.btnLYLocal.BackColor = System.Drawing.Color.Transparent;
-            this.btnLYLocal.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
             this.btnLYLocal.FlatAppearance.BorderSize = 0;
             this.btnLYLocal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnLYLocal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLYLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLYLocal.Location = new System.Drawing.Point(7, 4);
+            this.btnLYLocal.HoverColor = System.Drawing.Color.Gray;
+            this.btnLYLocal.Location = new System.Drawing.Point(19, 4);
             this.btnLYLocal.Name = "btnLYLocal";
+            this.btnLYLocal.NormalColor = System.Drawing.Color.Gray;
+            this.btnLYLocal.PressColor = System.Drawing.Color.Gray;
+            this.btnLYLocal.Radius = 16;
             this.btnLYLocal.Size = new System.Drawing.Size(150, 30);
             this.btnLYLocal.TabIndex = 1;
             this.btnLYLocal.Text = "本地录音";
@@ -905,14 +947,19 @@
             // 
             // buttonEx5
             // 
+            this.buttonEx5.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx5.ArcRadius")));
             this.buttonEx5.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx5.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
             this.buttonEx5.FlatAppearance.BorderSize = 0;
             this.buttonEx5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonEx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx5.Location = new System.Drawing.Point(246, 41);
             this.buttonEx5.Name = "buttonEx5";
+            this.buttonEx5.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx5.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx5.Radius = 16;
             this.buttonEx5.Size = new System.Drawing.Size(86, 30);
             this.buttonEx5.TabIndex = 44;
             this.buttonEx5.Text = "选择听诊器";
@@ -948,6 +995,7 @@
             // 
             // buttonEx6
             // 
+            this.buttonEx6.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx6.ArcRadius")));
             this.buttonEx6.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx6.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
             this.buttonEx6.FlatAppearance.BorderSize = 0;
@@ -956,9 +1004,13 @@
             this.buttonEx6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx6.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx6.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
             this.buttonEx6.Location = new System.Drawing.Point(15, 15);
             this.buttonEx6.Name = "buttonEx6";
+            this.buttonEx6.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx6.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx6.Radius = 16;
             this.buttonEx6.Size = new System.Drawing.Size(224, 63);
             this.buttonEx6.TabIndex = 42;
             this.buttonEx6.Text = "听诊录音";
@@ -994,14 +1046,18 @@
             // 
             // btnShare
             // 
+            this.btnShare.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnShare.ArcRadius")));
             this.btnShare.BackColor = System.Drawing.Color.Transparent;
-            this.btnShare.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮右半椭圆;
             this.btnShare.FlatAppearance.BorderSize = 0;
             this.btnShare.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnShare.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnShare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShare.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnShare.Location = new System.Drawing.Point(157, 4);
             this.btnShare.Name = "btnShare";
+            this.btnShare.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnShare.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.btnShare.Radius = 16;
             this.btnShare.Size = new System.Drawing.Size(150, 30);
             this.btnShare.TabIndex = 2;
             this.btnShare.Text = "分享给我的听诊";
@@ -1009,14 +1065,18 @@
             // 
             // btnUpload
             // 
+            this.btnUpload.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnUpload.ArcRadius")));
             this.btnUpload.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpload.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
             this.btnUpload.FlatAppearance.BorderSize = 0;
             this.btnUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.HoverColor = System.Drawing.Color.Gray;
             this.btnUpload.Location = new System.Drawing.Point(7, 4);
             this.btnUpload.Name = "btnUpload";
+            this.btnUpload.NormalColor = System.Drawing.Color.Gray;
+            this.btnUpload.PressColor = System.Drawing.Color.Gray;
+            this.btnUpload.Radius = 16;
             this.btnUpload.Size = new System.Drawing.Size(150, 30);
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "我上传的听诊";
@@ -1264,14 +1324,19 @@
             // 
             // buttonEx11
             // 
+            this.buttonEx11.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx11.ArcRadius")));
             this.buttonEx11.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx11.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
             this.buttonEx11.FlatAppearance.BorderSize = 0;
             this.buttonEx11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonEx11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx11.Location = new System.Drawing.Point(244, 36);
             this.buttonEx11.Name = "buttonEx11";
+            this.buttonEx11.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx11.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx11.Radius = 16;
             this.buttonEx11.Size = new System.Drawing.Size(86, 30);
             this.buttonEx11.TabIndex = 48;
             this.buttonEx11.Text = "选择听诊器";
@@ -1279,6 +1344,7 @@
             // 
             // buttonEx12
             // 
+            this.buttonEx12.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx12.ArcRadius")));
             this.buttonEx12.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx12.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
             this.buttonEx12.FlatAppearance.BorderSize = 0;
@@ -1287,9 +1353,13 @@
             this.buttonEx12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx12.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx12.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx12.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
             this.buttonEx12.Location = new System.Drawing.Point(15, 15);
             this.buttonEx12.Name = "buttonEx12";
+            this.buttonEx12.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx12.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx12.Radius = 16;
             this.buttonEx12.Size = new System.Drawing.Size(224, 63);
             this.buttonEx12.TabIndex = 46;
             this.buttonEx12.Text = "云端听诊";
@@ -1312,14 +1382,19 @@
             // 
             // btnStart
             // 
+            this.btnStart.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnStart.ArcRadius")));
             this.btnStart.BackColor = System.Drawing.Color.Transparent;
             this.btnStart.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnStart.Location = new System.Drawing.Point(653, 41);
             this.btnStart.Name = "btnStart";
+            this.btnStart.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnStart.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnStart.Radius = 16;
             this.btnStart.Size = new System.Drawing.Size(103, 34);
             this.btnStart.TabIndex = 53;
             this.btnStart.Text = "发起会诊";
@@ -1458,14 +1533,19 @@
             // 
             // btnJX
             // 
+            this.btnJX.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnJX.ArcRadius")));
             this.btnJX.BackColor = System.Drawing.Color.Transparent;
             this.btnJX.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮左半椭圆;
             this.btnJX.FlatAppearance.BorderSize = 0;
             this.btnJX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnJX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnJX.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnJX.Location = new System.Drawing.Point(256, 43);
             this.btnJX.Name = "btnJX";
+            this.btnJX.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnJX.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnJX.Radius = 16;
             this.btnJX.Size = new System.Drawing.Size(86, 30);
             this.btnJX.TabIndex = 51;
             this.btnJX.Text = "选择听诊器";
@@ -1473,6 +1553,7 @@
             // 
             // buttonEx14
             // 
+            this.buttonEx14.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx14.ArcRadius")));
             this.buttonEx14.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx14.BackgroundImage = global::BDAuscultation.Properties.Resources.听诊器配置;
             this.buttonEx14.FlatAppearance.BorderSize = 0;
@@ -1481,9 +1562,13 @@
             this.buttonEx14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx14.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.buttonEx14.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEx14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.buttonEx14.Image = global::BDAuscultation.Properties.Resources.听诊器图片;
             this.buttonEx14.Location = new System.Drawing.Point(15, 15);
             this.buttonEx14.Name = "buttonEx14";
+            this.buttonEx14.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx14.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx14.Radius = 16;
             this.buttonEx14.Size = new System.Drawing.Size(224, 63);
             this.buttonEx14.TabIndex = 49;
             this.buttonEx14.Text = "远程教学";
@@ -1522,6 +1607,7 @@
             // btnMin
             // 
             this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnMin.ArcRadius")));
             this.btnMin.BackColor = System.Drawing.Color.Transparent;
             this.btnMin.BackgroundImage = global::BDAuscultation.Properties.Resources.系统按钮最小化;
             this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -1529,8 +1615,12 @@
             this.btnMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnMin.Location = new System.Drawing.Point(885, 9);
             this.btnMin.Name = "btnMin";
+            this.btnMin.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnMin.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnMin.Radius = 16;
             this.btnMin.Size = new System.Drawing.Size(12, 12);
             this.btnMin.TabIndex = 42;
             this.toolTip1.SetToolTip(this.btnMin, "最小化");
@@ -1540,6 +1630,7 @@
             // btnBack
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnBack.ArcRadius")));
             this.btnBack.BackColor = System.Drawing.Color.Transparent;
             this.btnBack.BackgroundImage = global::BDAuscultation.Properties.Resources.系统按钮还原;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1547,8 +1638,12 @@
             this.btnBack.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnBack.Location = new System.Drawing.Point(903, 9);
             this.btnBack.Name = "btnBack";
+            this.btnBack.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnBack.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnBack.Radius = 16;
             this.btnBack.Size = new System.Drawing.Size(12, 12);
             this.btnBack.TabIndex = 41;
             this.toolTip1.SetToolTip(this.btnBack, "还原");
@@ -1558,14 +1653,19 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnClose.ArcRadius")));
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImage = global::BDAuscultation.Properties.Resources.系统按钮关闭;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnClose.Location = new System.Drawing.Point(921, 9);
             this.btnClose.Name = "btnClose";
+            this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnClose.Radius = 16;
             this.btnClose.Size = new System.Drawing.Size(12, 12);
             this.btnClose.TabIndex = 40;
             this.toolTip1.SetToolTip(this.btnClose, "关闭");

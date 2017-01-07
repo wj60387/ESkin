@@ -49,13 +49,7 @@ namespace BDAuscultation.Forms
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "isRecord", HeaderText = "是否已录音", Width = 40, FillWeight = 150.0f });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "RecordTime", HeaderText = "录制时间", Width = 150, FillWeight = 250.0f });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "TakeTime", HeaderText = "时长(秒)", Width = 40, FillWeight = 120.0f });
-            if (IInfo.isPlay)
-            {
-                var btnPlayColumn = new DataGridViewButtonExColumn("",
-                BDAuscultation.Properties.Resources.播放点击状态, BDAuscultation.Properties.Resources.播放未点击状态) { Name = "btnPlay", HeaderText = "播放" };
-                this.dataGridViewEx1.Columns.Add(btnPlayColumn);
-                dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.播放未点击状态);
-            }
+            
             
             //var btnDelColumn = new DataGridViewButtonExColumn("",
             //    BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) { Name = "btnDelete", HeaderText = "删除" };
@@ -63,13 +57,20 @@ namespace BDAuscultation.Forms
             dataGridViewEx1.RowTemplate.Height = 66;
             dataGridViewEx1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             LoadAudio();
-            this.dataGridViewEx1.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.Black, Alignment = DataGridViewContentAlignment.MiddleCenter };
+           // this.dataGridViewEx1.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.Black, Alignment = DataGridViewContentAlignment.MiddleCenter };
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.缩略图);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.部位);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录音未点击状态);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录制时间);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.时长);
             //dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
+            if (IInfo.isPlay)
+            {
+                var btnPlayColumn = new DataGridViewButtonExColumn("",
+                BDAuscultation.Properties.Resources.播放点击状态, BDAuscultation.Properties.Resources.播放未点击状态) { Name = "btnPlay", HeaderText = "播放" };
+                this.dataGridViewEx1.Columns.Add(btnPlayColumn);
+                dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.播放未点击状态);
+            }
             LoadFile();
             dataGridViewEx1.CellClick += dataGridViewEx1_CellClick;
         }

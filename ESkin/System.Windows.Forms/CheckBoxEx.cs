@@ -110,7 +110,7 @@ namespace System.Windows.Forms
 
             Color backColor = ControlPaint.Light(_baseColor);
 
-            if (Enabled)
+           if (Enabled ||true)
             {
                 switch (ControlState)
                 {

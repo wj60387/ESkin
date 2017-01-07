@@ -62,6 +62,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnClose.ArcRadius")));
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImage = global::BDAuscultation.Properties.Resources.系统按钮关闭;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -69,8 +70,12 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(140)))), ((int)(((byte)(230)))));
             this.btnClose.Location = new System.Drawing.Point(582, 6);
             this.btnClose.Name = "btnClose";
+            this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(145)))), ((int)(((byte)(251)))));
+            this.btnClose.Radius = 16;
             this.btnClose.Size = new System.Drawing.Size(12, 12);
             this.btnClose.TabIndex = 6;
             this.toolTip1.SetToolTip(this.btnClose, "关闭");
@@ -79,8 +84,8 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnLogin.ArcRadius")));
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.BackgroundImage = global::BDAuscultation.Properties.Resources.登入框登录200x40;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -88,8 +93,12 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogin.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnLogin.Location = new System.Drawing.Point(60, 290);
             this.btnLogin.Name = "btnLogin";
+            this.btnLogin.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnLogin.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnLogin.Radius = 40;
             this.btnLogin.Size = new System.Drawing.Size(220, 40);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "登录";

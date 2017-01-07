@@ -4,6 +4,7 @@ using BDAuscultation.IGetAudioInfo;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.ServiceModel;
@@ -23,7 +24,7 @@ namespace BDAuscultation
             cbBoxYDTZ.DropDown += cbBoxYDTZ_DropDown;
             cbBoxYDTZ.SelectedIndexChanged += cbBoxYDTZ_SelectedIndexChanged;
             this.btnUpload.Click += btnUpload_Click;
-            this.btnShare.Click+=FrmMain_Click;
+            this.btnShare.Click += btnShare_Click;
             LoadYDTZStet();
             //列点击事件
             dgvYDTZUpLoad.CellClick += dgvYDTZUpLoad_CellClick;
@@ -668,15 +669,21 @@ namespace BDAuscultation
             LoadYDTZStet();
         }
 
-        void FrmMain_Click(object sender, EventArgs e)
+        void btnShare_Click(object sender, EventArgs e)
         {
             this.tabControlYDTZMain.SelectedTab = tabYDTZShare;
+
+            btnShare.HoverColor = btnShare.PressColor = btnShare.NormalColor = Color.Gray;
+            btnUpload.HoverColor = btnUpload.PressColor = btnUpload.NormalColor = Color.FromArgb(200, 200, 200);
+      
         }
 
         void btnUpload_Click(object sender, EventArgs e)
         {
             this.tabControlYDTZMain.SelectedTab = tabYDTZUpLoad;
-
+            btnUpload.HoverColor = btnUpload.PressColor = btnUpload.NormalColor = Color.Gray;
+            btnShare.HoverColor = btnShare.PressColor = btnShare.NormalColor = Color.FromArgb(200, 200, 200);
+      
         }
 
          

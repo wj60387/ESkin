@@ -65,7 +65,6 @@ namespace  System.Windows.Forms
             base.OnMouseMove(e);
             CurCellInfo = this.HitTest(e.X, e.Y);
             this.Invalidate();
-             
         }
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -123,12 +122,12 @@ namespace  System.Windows.Forms
                 Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Center,
 
-
+                
             };
             var color = this.Rows[e.RowIndex].Selected ? Color.FromArgb(100, 200, 250) : Color.Black;
             var rowBounds = new Rectangle(e.RowBounds.X - 1, e.RowBounds.Y, e.RowBounds.Width + 1, e.RowBounds.Height - 1);
            
-
+           
             //var _color = this.SelectedRows[0].Index == e.RowIndex ?
             //       this.Rows[e.RowIndex].DefaultCellStyle.SelectionForeColor :
             //       this.Rows[e.RowIndex].DefaultCellStyle.ForeColor;

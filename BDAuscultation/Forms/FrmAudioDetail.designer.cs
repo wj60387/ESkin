@@ -114,7 +114,7 @@ namespace BDAuscultation.Forms
             this.txtDocRemark.Name = "txtDocRemark";
             this.txtDocRemark.PasswordChar = '\0';
             this.txtDocRemark.Radius = 24;
-            this.txtDocRemark.ReadOnly = false;
+            this.txtDocRemark.ReadOnly = true;
             this.txtDocRemark.Size = new System.Drawing.Size(448, 50);
             this.txtDocRemark.TabIndex = 63;
             this.txtDocRemark.WaterText = "备注";
@@ -141,7 +141,7 @@ namespace BDAuscultation.Forms
             this.txtDocDiagnose.Name = "txtDocDiagnose";
             this.txtDocDiagnose.PasswordChar = '\0';
             this.txtDocDiagnose.Radius = 24;
-            this.txtDocDiagnose.ReadOnly = false;
+            this.txtDocDiagnose.ReadOnly = true;
             this.txtDocDiagnose.Size = new System.Drawing.Size(179, 24);
             this.txtDocDiagnose.TabIndex = 61;
             this.txtDocDiagnose.WaterText = "初步诊断";
@@ -179,7 +179,7 @@ namespace BDAuscultation.Forms
             this.txtDocName.Name = "txtDocName";
             this.txtDocName.PasswordChar = '\0';
             this.txtDocName.Radius = 24;
-            this.txtDocName.ReadOnly = false;
+            this.txtDocName.ReadOnly = true;
             this.txtDocName.Size = new System.Drawing.Size(179, 24);
             this.txtDocName.TabIndex = 58;
             this.txtDocName.WaterText = "医生姓名";
@@ -219,6 +219,7 @@ namespace BDAuscultation.Forms
             // radioButtonEx2
             // 
             this.radioButtonEx2.AutoSize = true;
+            this.radioButtonEx2.Enabled = false;
             this.radioButtonEx2.Location = new System.Drawing.Point(451, 24);
             this.radioButtonEx2.Name = "radioButtonEx2";
             this.radioButtonEx2.Size = new System.Drawing.Size(38, 21);
@@ -230,6 +231,7 @@ namespace BDAuscultation.Forms
             // 
             this.radioButtonEx1.AutoSize = true;
             this.radioButtonEx1.Checked = true;
+            this.radioButtonEx1.Enabled = false;
             this.radioButtonEx1.Location = new System.Drawing.Point(393, 24);
             this.radioButtonEx1.Name = "radioButtonEx1";
             this.radioButtonEx1.Size = new System.Drawing.Size(38, 21);
@@ -260,7 +262,7 @@ namespace BDAuscultation.Forms
             this.txtPatientName.Name = "txtPatientName";
             this.txtPatientName.PasswordChar = '\0';
             this.txtPatientName.Radius = 24;
-            this.txtPatientName.ReadOnly = false;
+            this.txtPatientName.ReadOnly = true;
             this.txtPatientName.Size = new System.Drawing.Size(179, 24);
             this.txtPatientName.TabIndex = 51;
             this.txtPatientName.WaterText = "患者姓名";
@@ -270,6 +272,7 @@ namespace BDAuscultation.Forms
             this.numAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numAge.Location = new System.Drawing.Point(650, 24);
             this.numAge.Name = "numAge";
+            this.numAge.ReadOnly = true;
             this.numAge.Size = new System.Drawing.Size(53, 23);
             this.numAge.TabIndex = 50;
             this.numAge.Value = new decimal(new int[] {

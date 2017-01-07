@@ -38,7 +38,8 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ucTextBoxEx1 = new System.Windows.Forms.UCTextBoxEx();
+            this.buttonEx2 = new System.Windows.Forms.ButtonEx();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,8 +50,12 @@
             this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEx1.Location = new System.Drawing.Point(649, 12);
+            this.buttonEx1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(140)))), ((int)(((byte)(230)))));
+            this.buttonEx1.Location = new System.Drawing.Point(225, 300);
             this.buttonEx1.Name = "buttonEx1";
+            this.buttonEx1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(145)))), ((int)(((byte)(251)))));
+            this.buttonEx1.Radius = 16;
             this.buttonEx1.Size = new System.Drawing.Size(75, 23);
             this.buttonEx1.TabIndex = 1;
             this.buttonEx1.Text = "buttonEx1";
@@ -77,6 +82,7 @@
             this.dataGridViewEx1.AllowUserToAddRows = false;
             this.dataGridViewEx1.AllowUserToDeleteRows = false;
             this.dataGridViewEx1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewEx1.BoderPad = 4;
             this.dataGridViewEx1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewEx1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewEx1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -102,7 +108,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewEx1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewEx1.EnableHeadersVisualStyles = false;
-            this.dataGridViewEx1.Location = new System.Drawing.Point(144, 67);
+            this.dataGridViewEx1.IndexSize = 24;
+            this.dataGridViewEx1.Location = new System.Drawing.Point(126, 26);
             this.dataGridViewEx1.Name = "dataGridViewEx1";
             this.dataGridViewEx1.ReadOnly = true;
             this.dataGridViewEx1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -119,7 +126,7 @@
             this.dataGridViewEx1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewEx1.RowTemplate.Height = 23;
             this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEx1.Size = new System.Drawing.Size(607, 309);
+            this.dataGridViewEx1.Size = new System.Drawing.Size(442, 233);
             this.dataGridViewEx1.TabIndex = 2;
             // 
             // Column1
@@ -140,24 +147,38 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // ucTextBoxEx1
+            // buttonEx2
             // 
-            this.ucTextBoxEx1.BackColor = System.Drawing.Color.Transparent;
-            this.ucTextBoxEx1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucTextBoxEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucTextBoxEx1.Location = new System.Drawing.Point(191, 411);
-            this.ucTextBoxEx1.Name = "ucTextBoxEx1";
-            this.ucTextBoxEx1.PasswordChar = '\0';
-            this.ucTextBoxEx1.Radius = 16;
-            this.ucTextBoxEx1.Size = new System.Drawing.Size(156, 30);
-            this.ucTextBoxEx1.TabIndex = 3;
-            this.ucTextBoxEx1.WaterText = "水印文字";
+            this.buttonEx2.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.FlatAppearance.BorderSize = 0;
+            this.buttonEx2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx2.Location = new System.Drawing.Point(225, 339);
+            this.buttonEx2.Name = "buttonEx2";
+            this.buttonEx2.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx2.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(155)))), ((int)(((byte)(251)))));
+            this.buttonEx2.Radius = 16;
+            this.buttonEx2.Size = new System.Drawing.Size(75, 23);
+            this.buttonEx2.TabIndex = 3;
+            this.buttonEx2.Text = "buttonEx2";
+            this.buttonEx2.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(368, 276);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 4;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.ClientSize = new System.Drawing.Size(747, 500);
-            this.Controls.Add(this.ucTextBoxEx1);
+            this.Controls.Add(this.buttonEx2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewEx1);
             this.Controls.Add(this.buttonEx1);
             this.Controls.Add(this.nav1);
@@ -175,7 +196,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.UCTextBoxEx ucTextBoxEx1;
+        private System.Windows.Forms.ButtonEx buttonEx2;
+        private System.Windows.Forms.Panel panel1;
 
        
 

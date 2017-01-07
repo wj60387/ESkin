@@ -167,6 +167,7 @@ namespace System.Windows.Forms
             return gp;
         }
 
+
         public string Text
         {
             get

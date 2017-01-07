@@ -4,6 +4,7 @@ using BDAuscultation.IGetAudioInfo;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.ServiceModel;
@@ -218,11 +219,15 @@ namespace BDAuscultation
         void btnLYDown_Click(object sender, EventArgs e)
         {
             this.tabLY.SelectedTab = tabLYDown;
+            btnLYDown.HoverColor = btnLYDown.PressColor = btnLYDown.NormalColor = Color.Gray;
+            btnLYLocal.HoverColor = btnLYLocal.PressColor = btnLYLocal.NormalColor = Color.FromArgb(200, 200, 200);
         }
 
         void btnLYLocal_Click(object sender, EventArgs e)
         {
             this.tabLY.SelectedTab = tabLYLocal;
+            btnLYLocal.HoverColor = btnLYLocal.PressColor = btnLYLocal.NormalColor = Color.Gray;
+            btnLYDown.HoverColor = btnLYDown.PressColor = btnLYDown.NormalColor = Color.FromArgb(200, 200, 200);
         }
 
         void cbBoxTZLY_DropDown(object sender, EventArgs e)

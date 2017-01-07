@@ -29,7 +29,7 @@ namespace BDAuscultation.Forms
             //txtPatientId.ReadOnly = true;
             //if (string.IsNullOrEmpty(txtPatientId.Text))
             //    txtPatientId.ReadOnly = false;
-            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "GUID", HeaderText = "GUID", Visible = false,Width=0  });
+             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "GUID", HeaderText = "GUID", Visible = false,Width=0  });
             dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { HeaderText = "缩略图" ,Width=60});
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Part", HeaderText = "部位",  Width = 80 });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "isRecord", HeaderText = "是否已录音", Width = 40, FillWeight = 150.0f });
@@ -53,11 +53,13 @@ namespace BDAuscultation.Forms
             
             dataGridViewEx1.RowTemplate.Height = 66;
             dataGridViewEx1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewEx1.ListColumnImage.Add(null);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.缩略图);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.部位);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录音未点击状态);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录制时间);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.时长);
+
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.录音未点击状态);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.播放未点击状态);
             dataGridViewEx1.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
@@ -865,6 +867,11 @@ namespace BDAuscultation.Forms
                     panelImages.Controls.Add(_panel);
                 }
             }
+        }
+
+        private void FrmAudioRecord_Load(object sender, EventArgs e)
+        {
+
         }
          
     }
