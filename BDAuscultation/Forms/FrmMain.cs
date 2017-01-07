@@ -88,8 +88,9 @@ namespace BDAuscultation
         }
         void FrmMain_Load(object sender, EventArgs e)
         {
-
+            this.Visible = false;
             Init();
+            this.Visible = true;
              
         }
         void nav1_OnXTClick()

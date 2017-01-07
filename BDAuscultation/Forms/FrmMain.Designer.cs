@@ -213,7 +213,7 @@
             this.btnTZPZ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTZPZ.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnTZPZ.Location = new System.Drawing.Point(639, 37);
+            this.btnTZPZ.Location = new System.Drawing.Point(645, 37);
             this.btnTZPZ.Name = "btnTZPZ";
             this.btnTZPZ.NormalColor = System.Drawing.Color.Silver;
             this.btnTZPZ.PressColor = System.Drawing.Color.Silver;
@@ -440,7 +440,7 @@
             this.btnTeach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTeach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeach.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnTeach.Location = new System.Drawing.Point(654, 43);
+            this.btnTeach.Location = new System.Drawing.Point(645, 37);
             this.btnTeach.Name = "btnTeach";
             this.btnTeach.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnTeach.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -559,10 +559,10 @@
             "F",
             "G",
             "H"});
-            this.cbBoxTZJX.Location = new System.Drawing.Point(352, 45);
+            this.cbBoxTZJX.Location = new System.Drawing.Point(338, 41);
             this.cbBoxTZJX.Margin = new System.Windows.Forms.Padding(0);
             this.cbBoxTZJX.Name = "cbBoxTZJX";
-            this.cbBoxTZJX.Size = new System.Drawing.Size(288, 30);
+            this.cbBoxTZJX.Size = new System.Drawing.Size(280, 30);
             this.cbBoxTZJX.TabIndex = 40;
             // 
             // buttonEx3
@@ -575,7 +575,7 @@
             this.buttonEx3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.buttonEx3.Location = new System.Drawing.Point(266, 45);
+            this.buttonEx3.Location = new System.Drawing.Point(253, 41);
             this.buttonEx3.Name = "buttonEx3";
             this.buttonEx3.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.buttonEx3.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -643,7 +643,7 @@
             this.btnTZLY.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTZLY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTZLY.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnTZLY.Location = new System.Drawing.Point(625, 39);
+            this.btnTZLY.Location = new System.Drawing.Point(645, 37);
             this.btnTZLY.Name = "btnTZLY";
             this.btnTZLY.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnTZLY.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -652,7 +652,6 @@
             this.btnTZLY.TabIndex = 46;
             this.btnTZLY.Text = "新增录音";
             this.btnTZLY.UseVisualStyleBackColor = false;
-             
             // 
             // panelLY2
             // 
@@ -955,7 +954,7 @@
             this.buttonEx5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.buttonEx5.Location = new System.Drawing.Point(246, 41);
+            this.buttonEx5.Location = new System.Drawing.Point(253, 41);
             this.buttonEx5.Name = "buttonEx5";
             this.buttonEx5.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.buttonEx5.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -987,10 +986,10 @@
             "F",
             "G",
             "H"});
-            this.cbBoxTZLY.Location = new System.Drawing.Point(332, 41);
+            this.cbBoxTZLY.Location = new System.Drawing.Point(338, 41);
             this.cbBoxTZLY.Margin = new System.Windows.Forms.Padding(0);
             this.cbBoxTZLY.Name = "cbBoxTZLY";
-            this.cbBoxTZLY.Size = new System.Drawing.Size(290, 30);
+            this.cbBoxTZLY.Size = new System.Drawing.Size(280, 30);
             this.cbBoxTZLY.TabIndex = 43;
             // 
             // buttonEx6
@@ -1316,10 +1315,10 @@
             this.cbBoxYDTZ.FormattingEnabled = true;
             this.cbBoxYDTZ.IntegralHeight = false;
             this.cbBoxYDTZ.ItemHeight = 24;
-            this.cbBoxYDTZ.Location = new System.Drawing.Point(330, 36);
+            this.cbBoxYDTZ.Location = new System.Drawing.Point(338, 41);
             this.cbBoxYDTZ.Margin = new System.Windows.Forms.Padding(0);
             this.cbBoxYDTZ.Name = "cbBoxYDTZ";
-            this.cbBoxYDTZ.Size = new System.Drawing.Size(290, 30);
+            this.cbBoxYDTZ.Size = new System.Drawing.Size(280, 30);
             this.cbBoxYDTZ.TabIndex = 47;
             // 
             // buttonEx11
@@ -1332,7 +1331,7 @@
             this.buttonEx11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonEx11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEx11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.buttonEx11.Location = new System.Drawing.Point(244, 36);
+            this.buttonEx11.Location = new System.Drawing.Point(253, 41);
             this.buttonEx11.Name = "buttonEx11";
             this.buttonEx11.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.buttonEx11.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -1390,7 +1389,7 @@
             this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnStart.Location = new System.Drawing.Point(653, 41);
+            this.btnStart.Location = new System.Drawing.Point(645, 37);
             this.btnStart.Name = "btnStart";
             this.btnStart.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnStart.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -1525,10 +1524,10 @@
             "F",
             "G",
             "H"});
-            this.cbBoxYCTZ.Location = new System.Drawing.Point(342, 43);
+            this.cbBoxYCTZ.Location = new System.Drawing.Point(338, 41);
             this.cbBoxYCTZ.Margin = new System.Windows.Forms.Padding(0);
             this.cbBoxYCTZ.Name = "cbBoxYCTZ";
-            this.cbBoxYCTZ.Size = new System.Drawing.Size(298, 30);
+            this.cbBoxYCTZ.Size = new System.Drawing.Size(280, 30);
             this.cbBoxYCTZ.TabIndex = 50;
             // 
             // btnJX
@@ -1541,7 +1540,7 @@
             this.btnJX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnJX.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnJX.Location = new System.Drawing.Point(256, 43);
+            this.btnJX.Location = new System.Drawing.Point(253, 41);
             this.btnJX.Name = "btnJX";
             this.btnJX.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnJX.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));

@@ -180,5 +180,13 @@ namespace System.Windows.Forms
                 this.waterTextBox1.Text = value;
             }
         }
+        public bool Multiline
+        {
+            get { return waterTextBox1.Multiline; }
+            set {   waterTextBox1.Multiline=value;
+            waterTextBox1.Height = this.Height - waterTextBox1.Location.Y * 2;
+            this.Invalidate();
+            }
+        }
     }
 }

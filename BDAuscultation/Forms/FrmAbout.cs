@@ -19,11 +19,9 @@ namespace BDAuscultation.Forms
         private void FormAbout_Load(object sender, EventArgs e)
         {
             this.waterTextBox1.Text = Setting.authorizationInfo.AuthorizationNum;
-            this.waterTextBox2.Text = Setting.authorizationInfo.MachineCode;
             this.waterTextBox3.Text = Setting.authorizationInfo.AuthStartTime.ToString("yyyy-MM-dd HH:mm:ss");
             this.waterTextBox4.Text = Setting.authorizationInfo.AuthDays.ToString();
             this.waterTextBox5.Text = "V"+Setting.Version;
-            this.waterTextBox1.Select(0, 0);
         }
 
         private void waterTextBox1_TextChanged(object sender, EventArgs e)

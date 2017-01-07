@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace System.Windows.Forms
 {
+    /// <summary>
+    /// 带图标的输入框
+    /// </summary>
     public class UCTextBox:UserControl
     {
         private WaterTextBox waterTextBox1;
