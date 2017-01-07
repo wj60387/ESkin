@@ -28,7 +28,12 @@ namespace System.Windows.Forms
             this.itemHeight = 100;
         }
 
-
+        int logoHeight = 110;
+        public int LogoHeight
+        {
+            get { return logoHeight; }
+            set {   logoHeight=value; }
+        }
 
         public List<NavItem> NavItemList = new List<NavItem>();
 
@@ -71,7 +76,7 @@ namespace System.Windows.Forms
             {
                 OnItemClick(ActiveItem);
             }
-            Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * NavItemList.Count + 16, this.Width, 21);
+            Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * NavItemList.Count + 16 + LogoHeight, this.Width, 21);
             Rectangle xtRect = new Rectangle(sysBtnRect.X  , sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
             Rectangle gyRect = new Rectangle(sysBtnRect.X + sysBtnRect.Width / 2  , sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
 
@@ -95,7 +100,7 @@ namespace System.Windows.Forms
         {
             for (int i = 0; i < NavItemList.Count; i++)
             {
-                var boundItem = new Rectangle(0, i * itemHeight, this.Width, this.itemHeight);
+                var boundItem = new Rectangle(0, i * itemHeight+LogoHeight, this.Width, this.itemHeight);
 
                 if (boundItem.Contains(clientPoint))
                 {
@@ -114,11 +119,17 @@ namespace System.Windows.Forms
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
+            //
+            var logoRect = new Rectangle(0, 0, this.Width, LogoHeight);
+            e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f), Brushes.Black, logoRect, new StringFormat() { 
+            Alignment= StringAlignment.Center,
+            LineAlignment= StringAlignment.Center
+            });
             for (int i = 0; i < NavItemList.Count; i++)
             {
                 //  if (!NavItemList[i].ISNomal) continue;
-                var boundItem = new Rectangle(0, i * itemHeight, this.Width, this.itemHeight);
-                if (ActiveItem == NavItemList[i] && NavItemList[i].ISNomal)
+                var boundItem = new Rectangle(0, i * itemHeight + LogoHeight, this.Width, this.itemHeight);
+                if (ActiveItem == NavItemList[i]  )
                 {
                     e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), boundItem);
                     var _rect = new Rectangle(boundItem.X + boundItem.Width - 5, boundItem.Y, 6, boundItem.Height);
@@ -126,7 +137,7 @@ namespace System.Windows.Forms
                 }
 
                 var curpoint = this.PointToClient(MousePosition);
-                if (ActiveItem != NavItemList[i] && boundItem.Contains(curpoint) && NavItemList[i].ISNomal)
+                if (ActiveItem != NavItemList[i] && boundItem.Contains(curpoint) )
                 {
                     e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 161, 133)), boundItem);
                     var _rect = new Rectangle(boundItem.X + boundItem.Width - 5, boundItem.Y, 6, boundItem.Height);
@@ -153,7 +164,7 @@ namespace System.Windows.Forms
             }
 
             {
-                var rect = new Rectangle(0, this.itemHeight * NavItemList.Count + 60, this.Width, 40);
+                var rect = new Rectangle(0, this.itemHeight * NavItemList.Count + 60 + LogoHeight, this.Width, 40);
                 var point = this.PointToClient(MousePosition);
                 var text = string.Format("{0}:{1}", point.X, point.Y);
                 using (var brush = new SolidBrush(this.ForeColor))
@@ -161,7 +172,7 @@ namespace System.Windows.Forms
                     e.Graphics.DrawString(text, this.Font, brush, rect, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
 
 
-                    Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * NavItemList.Count + 16, this.Width, 21);
+                    Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * NavItemList.Count + 16 + LogoHeight, this.Width, 21);
                     Rectangle xtRect = new Rectangle(sysBtnRect.X + 21, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
                     Rectangle gyRect = new Rectangle(sysBtnRect.X + sysBtnRect.Width / 2 + 21, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
 

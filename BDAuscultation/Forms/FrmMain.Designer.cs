@@ -55,14 +55,6 @@
             this.tabTZPZ = new System.Windows.Forms.TabPage();
             this.btnTZPZ = new System.Windows.Forms.ButtonEx();
             this.dgvTZQPZ = new System.Windows.Forms.DataGridViewEx();
-            this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonEx1 = new System.Windows.Forms.ButtonEx();
             this.cbBoxTZPZ = new System.Windows.Forms.ComboBoxEx();
             this.buttonEx2 = new System.Windows.Forms.ButtonEx();
@@ -144,6 +136,14 @@
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.nav1 = new System.Windows.Forms.Nav();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlYDTZ.SuspendLayout();
             this.tabTZPZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTZQPZ)).BeginInit();
@@ -231,7 +231,6 @@
             this.dgvTZQPZ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvTZQPZ.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTZQPZ.BackgroundColor = System.Drawing.Color.White;
             this.dgvTZQPZ.BoderPad = 4;
             this.dgvTZQPZ.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -286,62 +285,6 @@
             this.dgvTZQPZ.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTZQPZ.Size = new System.Drawing.Size(798, 469);
             this.dgvTZQPZ.TabIndex = 38;
-            // 
-            // dgvTZQPZStetNO
-            // 
-            this.dgvTZQPZStetNO.HeaderText = "听诊器编号";
-            this.dgvTZQPZStetNO.Name = "dgvTZQPZStetNO";
-            this.dgvTZQPZStetNO.ReadOnly = true;
-            this.dgvTZQPZStetNO.Width = 113;
-            // 
-            // dgvTZQPZPCNAME
-            // 
-            this.dgvTZQPZPCNAME.HeaderText = "计算机名";
-            this.dgvTZQPZPCNAME.Name = "dgvTZQPZPCNAME";
-            this.dgvTZQPZPCNAME.ReadOnly = true;
-            this.dgvTZQPZPCNAME.Width = 97;
-            // 
-            // dgvTZQPZStetType
-            // 
-            this.dgvTZQPZStetType.HeaderText = "听诊器类型";
-            this.dgvTZQPZStetType.Name = "dgvTZQPZStetType";
-            this.dgvTZQPZStetType.ReadOnly = true;
-            this.dgvTZQPZStetType.Width = 113;
-            // 
-            // dgvTZQPZStetName
-            // 
-            this.dgvTZQPZStetName.HeaderText = "听诊器名字";
-            this.dgvTZQPZStetName.Name = "dgvTZQPZStetName";
-            this.dgvTZQPZStetName.ReadOnly = true;
-            this.dgvTZQPZStetName.Width = 113;
-            // 
-            // dgvTZQPZStetOwner
-            // 
-            this.dgvTZQPZStetOwner.HeaderText = "听诊器所属人";
-            this.dgvTZQPZStetOwner.Name = "dgvTZQPZStetOwner";
-            this.dgvTZQPZStetOwner.ReadOnly = true;
-            this.dgvTZQPZStetOwner.Width = 129;
-            // 
-            // dgvTZQPZMS
-            // 
-            this.dgvTZQPZMS.HeaderText = "听诊器描述";
-            this.dgvTZQPZMS.Name = "dgvTZQPZMS";
-            this.dgvTZQPZMS.ReadOnly = true;
-            this.dgvTZQPZMS.Width = 113;
-            // 
-            // dgvTZQPZBZ
-            // 
-            this.dgvTZQPZBZ.HeaderText = "听诊器备注";
-            this.dgvTZQPZBZ.Name = "dgvTZQPZBZ";
-            this.dgvTZQPZBZ.ReadOnly = true;
-            this.dgvTZQPZBZ.Width = 113;
-            // 
-            // dgvTZQPZStetConn
-            // 
-            this.dgvTZQPZStetConn.HeaderText = "连接状态";
-            this.dgvTZQPZStetConn.Name = "dgvTZQPZStetConn";
-            this.dgvTZQPZStetConn.ReadOnly = true;
-            this.dgvTZQPZStetConn.Width = 97;
             // 
             // buttonEx1
             // 
@@ -1686,6 +1629,56 @@
             this.nav1.TabIndex = 45;
             this.nav1.Text = "nav1";
             // 
+            // dgvTZQPZStetNO
+            // 
+            this.dgvTZQPZStetNO.HeaderText = "听诊器编号";
+            this.dgvTZQPZStetNO.Name = "dgvTZQPZStetNO";
+            this.dgvTZQPZStetNO.ReadOnly = true;
+            this.dgvTZQPZStetNO.Width = 220;
+            // 
+            // dgvTZQPZPCNAME
+            // 
+            this.dgvTZQPZPCNAME.HeaderText = "计算机名";
+            this.dgvTZQPZPCNAME.Name = "dgvTZQPZPCNAME";
+            this.dgvTZQPZPCNAME.ReadOnly = true;
+            // 
+            // dgvTZQPZStetType
+            // 
+            this.dgvTZQPZStetType.HeaderText = "听诊器类型";
+            this.dgvTZQPZStetType.Name = "dgvTZQPZStetType";
+            this.dgvTZQPZStetType.ReadOnly = true;
+            // 
+            // dgvTZQPZStetName
+            // 
+            this.dgvTZQPZStetName.HeaderText = "听诊器名字";
+            this.dgvTZQPZStetName.Name = "dgvTZQPZStetName";
+            this.dgvTZQPZStetName.ReadOnly = true;
+            // 
+            // dgvTZQPZStetOwner
+            // 
+            this.dgvTZQPZStetOwner.HeaderText = "听诊器所属人";
+            this.dgvTZQPZStetOwner.Name = "dgvTZQPZStetOwner";
+            this.dgvTZQPZStetOwner.ReadOnly = true;
+            this.dgvTZQPZStetOwner.Width = 120;
+            // 
+            // dgvTZQPZMS
+            // 
+            this.dgvTZQPZMS.HeaderText = "听诊器描述";
+            this.dgvTZQPZMS.Name = "dgvTZQPZMS";
+            this.dgvTZQPZMS.ReadOnly = true;
+            // 
+            // dgvTZQPZBZ
+            // 
+            this.dgvTZQPZBZ.HeaderText = "听诊器备注";
+            this.dgvTZQPZBZ.Name = "dgvTZQPZBZ";
+            this.dgvTZQPZBZ.ReadOnly = true;
+            // 
+            // dgvTZQPZStetConn
+            // 
+            this.dgvTZQPZStetConn.HeaderText = "连接状态";
+            this.dgvTZQPZStetConn.Name = "dgvTZQPZStetConn";
+            this.dgvTZQPZStetConn.ReadOnly = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1780,14 +1773,6 @@
         private System.Windows.Forms.ButtonEx buttonEx14;
         private System.Windows.Forms.ButtonEx btnStart;
         private System.Windows.Forms.ButtonEx btnTZPZ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZPCNAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetOwner;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZMS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZBZ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetConn;
         private System.Windows.Forms.ButtonEx btnTeach;
         private System.Windows.Forms.ButtonEx btnTZLY;
         private System.Windows.Forms.DataGridViewEx dgvTZLY_Local;
@@ -1824,6 +1809,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZStetConn;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZPCNAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetOwner;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZMS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZBZ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetConn;
     }
 }
 
