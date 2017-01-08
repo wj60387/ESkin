@@ -83,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commmon.cs" />
+    <Compile Include="Coustom\CButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Devices\StethoscopeManager.cs" />
     <Compile Include="Forms\FrmAbout.cs">
       <SubType>Form</SubType>
@@ -186,6 +189,9 @@
     <Compile Include="Utilities\CommonUtil.cs" />
     <Compile Include="Utilities\Extensions.cs" />
     <Compile Include="Utilities\FileOperation.cs" />
+    <EmbeddedResource Include="Coustom\CButton.resx">
+      <DependentUpon>CButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>

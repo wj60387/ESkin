@@ -8,11 +8,11 @@ namespace BDAuscultation
 {
     public static class MyResouces
     {
-        public static Image ImageTZPZ = GetImage(BDAuscultation.Properties.Resources.听诊配置, 0.8f);
+        public static Image ImageTZPZ = GetImage(BDAuscultation.Properties.Resources.听诊配置, 0.7f);
         public static Image ImageTZJX = GetImage(BDAuscultation.Properties.Resources.听诊教学, 0.8f);
         public static Image ImageTZLY = GetImage(BDAuscultation.Properties.Resources.听诊录音, 0.8f);
-        public static Image ImageYDTZ = GetImage(BDAuscultation.Properties.Resources.云端听诊, 0.8f);
-        public static Image ImageYCTZ = GetImage(BDAuscultation.Properties.Resources.远程教学, 0.8f);
+        public static Image ImageYDTZ = GetImage(BDAuscultation.Properties.Resources.云端听诊, 0.70f);
+        public static Image ImageYCTZ = GetImage(BDAuscultation.Properties.Resources.远程教学, 0.75f);
        /// <summary>
        /// 获取图片的缩略图
        /// </summary>
@@ -35,7 +35,7 @@ namespace BDAuscultation
         /// <param name="image">原图</param>
         /// <param name="scale">缩略比例</param>
         /// <returns></returns>
-         static Image GetImage(Image image, float scale=1.0f)
+         public static Image GetImage(Image image, float scale=1.0f)
          {
              return image.GetThumbnailImage((int)(image.Width * scale), (int)(image.Height * scale), () => { return true; }, IntPtr.Zero);
          }

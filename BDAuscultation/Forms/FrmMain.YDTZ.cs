@@ -30,8 +30,8 @@ namespace BDAuscultation
             dgvYDTZUpLoad.CellClick += dgvYDTZUpLoad_CellClick;
             dgvYDTZShare.CellClick += dgvYDTZShare_CellClick;
             //列设置
-            dgvYDTZUpLoad.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvYDTZShare.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dgvYDTZUpLoad.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dgvYDTZShare.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             var btnDownUpLoadColumn = new DataGridViewButtonExColumn("",
                BDAuscultation.Properties.Resources.下载点击状态, BDAuscultation.Properties.Resources.下载)
@@ -39,7 +39,7 @@ namespace BDAuscultation
                 Name = "dgvYDTZUpLoadDown",
                 HeaderText = "下载",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.None,
-                Width = 60
+                Width = 70
             };
             this.dgvYDTZUpLoad.Columns.Add(btnDownUpLoadColumn);
             var btnShareUpLoadColumn = new DataGridViewButtonExColumn("",
@@ -48,14 +48,14 @@ namespace BDAuscultation
                 Name = "dgvYDTZUpLoadShare",
                 HeaderText = "分享",
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.None,
-                Width = 60
+                Width = 70
             };
             this.dgvYDTZUpLoad.Columns.Add(btnShareUpLoadColumn);
 
             var btnDetailUpLoadColumn = new DataGridViewButtonExColumn("",
                BDAuscultation.Properties.Resources.详情点击状态, BDAuscultation.Properties.Resources.详情未点击) 
                { Name = "dgvYDTZLoaclDetail", HeaderText = "详情",
-               AutoSizeMode= DataGridViewAutoSizeColumnMode.None,Width=60};
+               AutoSizeMode= DataGridViewAutoSizeColumnMode.None,Width=70};
             this.dgvYDTZUpLoad.Columns.Add(btnDetailUpLoadColumn);
             //var btnDelUpLoadColumn = new DataGridViewButtonExColumn("",
             //    BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击)

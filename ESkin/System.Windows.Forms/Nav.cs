@@ -28,7 +28,7 @@ namespace System.Windows.Forms
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BackgroundImage = ESkin.Properties.Resources.导航栏;
-            this.itemHeight = 100;
+             
         }
 
         int logoHeight = 110;
@@ -39,20 +39,23 @@ namespace System.Windows.Forms
         }
 
         public List<NavItem> NavItemList = new List<NavItem>();
-
-        private int itemHeight = 0;
-        public int ItemHeight
+         static Image GetImage(Image image, float scale = 1.0f)
         {
-            get
-            {
-                return itemHeight;
-
-            }
-            set
-            {
-                itemHeight = value;
-            }
+            return image.GetThumbnailImage((int)(image.Width * scale), (int)(image.Height * scale), () => { return true; }, IntPtr.Zero);
         }
+        //private int itemHeight = 0;
+        //public int ItemHeight
+        //{
+        //    get
+        //    {
+        //        return itemHeight;
+
+        //    }
+        //    set
+        //    {
+        //        itemHeight = value;
+        //    }
+        //}
         private int padding = 0;
         public int Pading
         {
@@ -75,11 +78,16 @@ namespace System.Windows.Forms
         {
             base.OnMouseDown(e);
             ActiveItem = GetItemByPoint(e.Location);
-            if (ActiveItem != null)
+            if (ActiveItem != null && OnItemClick != null)
             {
                 OnItemClick(ActiveItem);
             }
-            Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * NavItemList.Count + 16 + LogoHeight, this.Width, 21);
+            var height = LogoHeight;
+            foreach (var item in NavItemList)
+            {
+                height += item.Height;
+            }
+            Rectangle sysBtnRect = new Rectangle(0, height + 16, this.Width, 21);
             Rectangle xtRect = new Rectangle(sysBtnRect.X, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
             Rectangle gyRect = new Rectangle(sysBtnRect.X + sysBtnRect.Width / 2, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
 
@@ -101,10 +109,11 @@ namespace System.Windows.Forms
         }
         NavItem GetItemByPoint(Point clientPoint)
         {
+            var height = LogoHeight;
             for (int i = 0; i < NavItemList.Count; i++)
             {
-                var boundItem = new Rectangle(0, i * itemHeight + LogoHeight, this.Width, this.itemHeight);
-
+                var boundItem = new Rectangle(0, height, this.Width, NavItemList[i].Height);
+                height += NavItemList[i].Height;
                 if (boundItem.Contains(clientPoint))
                 {
                     return NavItemList[i];
@@ -120,18 +129,18 @@ namespace System.Windows.Forms
 
         Size ImageSize = new Size(64, 64);
 
-        Image imageXT = ESkin.Properties.Resources.系统设置;
-        Image imageGY = ESkin.Properties.Resources.系统关于;
-        public Image ImageXT
-        {
-            get { return imageXT; }
-            set { imageXT = value; this.Invalidate(); }
-        }
-        public Image ImageGY
-        {
-            get { return imageGY; }
-            set { imageGY = value; this.Invalidate(); }
-        }
+        Image imageXT = GetImage( ESkin.Properties.Resources.系统设置,0.8f);
+        Image imageGY = GetImage(ESkin.Properties.Resources.系统关于, 0.8f);
+        //public Image ImageXT
+        //{
+        //    get { return imageXT; }
+        //    set { imageXT = value; this.Invalidate(); }
+        //}
+        //public Image ImageGY
+        //{
+        //    get { return imageGY; }
+        //    set { imageGY = value; this.Invalidate(); }
+        //}
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -146,10 +155,12 @@ namespace System.Windows.Forms
                 Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Center
             });
+            int height = LogoHeight;
             for (int i = 0; i < NavItemList.Count; i++)
             {
                 //  if (!NavItemList[i].ISNomal) continue;
-                var boundItem = new Rectangle(0, i * itemHeight + LogoHeight, this.Width, this.itemHeight);
+                var boundItem = new Rectangle(0, height, this.Width, NavItemList[i].Height);
+                height += NavItemList[i].Height;
                 if (ActiveItem == NavItemList[i])
                 {
                     e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), boundItem);
@@ -172,10 +183,10 @@ namespace System.Windows.Forms
 
                 var rectImage = new Rectangle(boundItem.X + Pading, boundItem.Y + 10, ImageSize.Width, ImageSize.Height);
                 if (image != null)
-                    e.Graphics.DrawImage(image, rectImage, new Rectangle(0, 0, image.Width, image.Height), GraphicsUnit.Pixel);
-
+                    //e.Graphics.DrawImage(image, rectImage, new Rectangle(0, 0, image.Width, image.Height), GraphicsUnit.Pixel);
+                    e.Graphics.DrawImage(image, rectImage.X + rectImage.Width / 2 - image.Width / 2, rectImage.Y);
                 var text = NavItemList[i].Text ?? string.Empty;
-                var rect = new Rectangle(0, boundItem.Y + +10 + 64, this.Width, boundItem.Height - 10 - 64);
+                var rect = new Rectangle(0, boundItem.Y + 10 + NavItemList[i].Image.Height, this.Width, boundItem.Height - 10 - NavItemList[i].Image.Height);
                 using (var brush = new SolidBrush(this.ForeColor))
                 {
                     e.Graphics.DrawString(text, this.Font, brush, rect, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
@@ -185,20 +196,20 @@ namespace System.Windows.Forms
             }
 
             {
-                var rect = new Rectangle(0, this.itemHeight * NavItemList.Count + 60 + LogoHeight, this.Width, 40);
+                var rect = new Rectangle(0, height + 60, this.Width, 40);
                 var point = this.PointToClient(MousePosition);
                 var text = string.Format("{0}:{1}", point.X, point.Y);
                 using (var brush = new SolidBrush(this.ForeColor))
                 {
-                    e.Graphics.DrawString(text, this.Font, brush, rect, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
-                    Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * NavItemList.Count + 16 + LogoHeight, this.Width, 21);
-                    Rectangle xtRect = new Rectangle(sysBtnRect.X + 21, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
-                    Rectangle gyRect = new Rectangle(sysBtnRect.X + sysBtnRect.Width / 2 + 21, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
+                   // e.Graphics.DrawString(text, this.Font, brush, rect, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                    Rectangle sysBtnRect = new Rectangle(0, 16 + height, this.Width, 21);
+                    Rectangle xtRect = new Rectangle(sysBtnRect.X + imageXT.Width, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
+                    Rectangle gyRect = new Rectangle(sysBtnRect.X + sysBtnRect.Width / 2 + imageGY.Width, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
 
-                    e.Graphics.DrawImage(imageXT, 0, sysBtnRect.Y);
-                    e.Graphics.DrawString("系统", this.Font, brush, xtRect, new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
-                    e.Graphics.DrawImage(imageGY, sysBtnRect.Width / 2, sysBtnRect.Y);
-                    e.Graphics.DrawString("关于", this.Font, brush, gyRect, new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
+                    e.Graphics.DrawImage(imageXT, 0, sysBtnRect.Y + 21 / 2 - imageXT.Height/2);
+                    e.Graphics.DrawString("系统", new Font("微软雅黑", 9f), brush, xtRect, new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
+                    e.Graphics.DrawImage(imageGY, sysBtnRect.Width / 2, sysBtnRect.Y + 21 / 2 - imageXT.Height / 2);
+                    e.Graphics.DrawString("关于", new Font("微软雅黑",9f), brush, gyRect, new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
 
                     // e.Graphics.DrawRectangle(Pens.Red, sysBtnRect);
                 }
@@ -522,7 +533,18 @@ namespace System.Windows.Forms
                 text = value;
             }
         }
-
+        int height = 88;
+        public int Height
+        {
+            get
+            {
+                return height;
+            }
+            set
+            {
+                height = value;
+            }
+        }
 
         public int CompareTo(object obj)
         {

@@ -69,7 +69,6 @@
             this.nav1.Dock = System.Windows.Forms.DockStyle.Left;
             this.nav1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.nav1.ForeColor = System.Drawing.Color.White;
-            this.nav1.ItemHeight = 88;
             this.nav1.Location = new System.Drawing.Point(0, 0);
             this.nav1.Name = "nav1";
             this.nav1.Pading = 30;

@@ -13,17 +13,190 @@ namespace System.Windows.Forms
 {
     public class ChatListBox : Control
     {
+         public event Action<ChatListItem> OnItemClick;
+        public event Action OnXTClick;
+        public event Action OnGYClick;
         public ChatListBox()
         {
-            this.Size = new Size(150, 250);
+            this.Size = new Size(120, 400);
+            //this.navItems = new NavItemCollection(this);
             this.BackColor = Color.White;
             this.ForeColor = Color.DarkOrange;
-
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.SetStyle(ControlStyles.UserPaint, true);
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.BackgroundImage = ESkin.Properties.Resources.导航栏;
+            this.itemHeight = 100;
+        }
+
+        int logoHeight = 110;
+        public int LogoHeight
+        {
+            get { return logoHeight; }
+            set { logoHeight = value; }
+        }
+
+      //  public List<NavItem> NavItemList = new List<NavItem>();
+
+        private int itemHeight = 0;
+        public int ItemHeight
+        {
+            get
+            {
+                return itemHeight;
+
+            }
+            set
+            {
+                itemHeight = value;
+            }
+        }
+        private int padding = 0;
+        public int Pading
+        {
+            get
+            {
+                return padding;
+
+            }
+            set
+            {
+                padding = value;
+            }
+        }
+        ChatListItem ActiveItem = null;
+        protected override void OnClick(EventArgs e)
+        {
+            base.OnClick(e);
+            this.Invalidate();
+        }
+        protected override void OnMouseDown(MouseEventArgs e)
+        {
+            base.OnMouseDown(e);
+            ActiveItem = GetItemByPoint(e.Location);
+            if (ActiveItem != null && OnItemClick!=null)
+            {
+                OnItemClick(ActiveItem);
+            }
+            Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * Items.Count + 16 + LogoHeight, this.Width, 21);
+            Rectangle xtRect = new Rectangle(sysBtnRect.X, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
+            Rectangle gyRect = new Rectangle(sysBtnRect.X + sysBtnRect.Width / 2, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
+
+            if (xtRect.Contains(e.Location))
+            {
+                if (OnXTClick != null)
+                {
+                    OnXTClick();
+                }
+            }
+            if (gyRect.Contains(e.Location))
+            {
+                if (OnGYClick != null)
+                {
+                    OnGYClick();
+                }
+            }
+            this.Invalidate();
+        }
+        ChatListItem GetItemByPoint(Point clientPoint)
+        {
+            for (int i = 0; i < Items.Count; i++)
+            {
+                var boundItem = new Rectangle(0, i * itemHeight + LogoHeight, this.Width, this.itemHeight);
+
+                if (boundItem.Contains(clientPoint))
+                {
+                    return Items[i];
+                }
+            }
+            return null;
+        }
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+            this.Invalidate();
+        }
+
+        Size ImageSize = new Size(64, 64);
+
+        Image imageXT = ESkin.Properties.Resources.系统设置;
+        Image imageGY = ESkin.Properties.Resources.系统关于;
+        public Image ImageXT
+        {
+            get { return imageXT; }
+            set { imageXT = value; this.Invalidate(); }
+        }
+        public Image ImageGY
+        {
+            get { return imageGY; }
+            set { imageGY = value; this.Invalidate(); }
+        }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+             
+            var logoRect = new Rectangle(0, 0, this.Width, LogoHeight);
+            e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f), Brushes.Black, logoRect, new StringFormat()
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            });
+            for (int i = 0; i < Items.Count; i++)
+            {
+                //  if (!NavItemList[i].ISNomal) continue;
+                var boundItem = new Rectangle(0, i * itemHeight + LogoHeight, this.Width, this.itemHeight);
+                if (ActiveItem == Items[i])
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 61, 133)), boundItem);
+                    var _rect = new Rectangle(boundItem.X + boundItem.Width - 5, boundItem.Y, 6, boundItem.Height);
+                    e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), _rect);
+                }
+
+                var curpoint = this.PointToClient(MousePosition);
+                if (ActiveItem != Items[i] && boundItem.Contains(curpoint))
+                {
+                    e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(9, 161, 133)), boundItem);
+                    var _rect = new Rectangle(boundItem.X + boundItem.Width - 5, boundItem.Y, 6, boundItem.Height);
+                    e.Graphics.FillRectangle(new SolidBrush(Color.DarkGoldenrod), _rect);
+                }
+                // e.Graphics.DrawRectangle(Pens.Red, boundItem);
+                var image = Items[i].Image;
+
+                var rectImage = new Rectangle(boundItem.X + Pading, boundItem.Y + 10, ImageSize.Width, ImageSize.Height);
+                if (image != null)
+                    e.Graphics.DrawImage(image, rectImage, new Rectangle(0, 0, image.Width, image.Height), GraphicsUnit.Pixel);
+
+                var text = Items[i].Text ?? string.Empty;
+                var rect = new Rectangle(0, boundItem.Y + +10 + 64, this.Width, boundItem.Height - 10 - 64);
+                using (var brush = new SolidBrush(this.ForeColor))
+                {
+                    e.Graphics.DrawString(text, this.Font, brush, rect, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                }
+                // e.Graphics.DrawImage(image, boundItem.X  - Pading + itemHeight / 2 - image.Width/2, boundItem.Y + Pading);
+
+            }
+
+            {
+                var rect = new Rectangle(0, this.itemHeight * Items.Count + 60 + LogoHeight, this.Width, 40);
+                var point = this.PointToClient(MousePosition);
+                var text = string.Format("{0}:{1}", point.X, point.Y);
+                using (var brush = new SolidBrush(this.ForeColor))
+                {
+                    e.Graphics.DrawString(text, this.Font, brush, rect, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+                    Rectangle sysBtnRect = new Rectangle(0, this.itemHeight * Items.Count + 16 + LogoHeight, this.Width, 21);
+                    Rectangle xtRect = new Rectangle(sysBtnRect.X + 21, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
+                    Rectangle gyRect = new Rectangle(sysBtnRect.X + sysBtnRect.Width / 2 + 21, sysBtnRect.Y, sysBtnRect.Width / 2, sysBtnRect.Height);
+
+                    e.Graphics.DrawImage(imageXT, 0, sysBtnRect.Y);
+                    e.Graphics.DrawString("系统", this.Font, brush, xtRect, new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
+                    e.Graphics.DrawImage(imageGY, sysBtnRect.Width / 2, sysBtnRect.Y);
+                    e.Graphics.DrawString("关于", this.Font, brush, gyRect, new StringFormat() { Alignment = StringAlignment.Near, LineAlignment = StringAlignment.Center });
+
+                    // e.Graphics.DrawRectangle(Pens.Red, sysBtnRect);
+                }
+            }
         }
         private ChatListItemCollection items;
         /// <summary>
@@ -39,17 +212,6 @@ namespace System.Windows.Forms
                 return items;
             }
         }
-        //private NavItemCollection navItems;
-        //[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
-        //public NavItemCollection NavItems
-        //{
-        //    get
-        //    {
-        //        if (navItems == null)
-        //            navItems = new NavItemCollection(this);
-        //        return navItems;
-        //    }
-        //}
     }
     //自定义列表项集合
     public class ChatListItemCollection : IList, ICollection, IEnumerable
@@ -145,8 +307,6 @@ namespace System.Windows.Forms
             {
                 m_arrItem[index] = null;
                 m_arrItem = m_arrItem.Where(a => a != null).ToArray();
-                //for (int i = index, Len = this.count; i < Len; i++)
-                //    m_arrItem[i] = m_arrItem[i + 1];
                 this.count--;
                 this.owner.Invalidate();
             }

@@ -117,12 +117,99 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnTZLY.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
+        AAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="btnLYDown.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAe
+        AAAAHgAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="btnLYLocal.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
+        AAAAAAAAAB4AAAAeAAAACw==
+</value>
+  </data>
+  <data name="buttonEx5.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
+        AAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cbBoxTZLY.DwonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABGdBTUEAALGPC/xhBQAAADFJREFUGFdj
+        AIL/UIwLwOWJVggD6AIYCmAAp8L//7Gqx9AAUQgi0HTAFcLk/v//zwAAWlMo2Jtg/x8AAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="btnBgTZLY.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
+        AAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="btnShare.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAe
+        AAAAHgAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="btnUpload.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
+        AAAAAAAAAB4AAAAeAAAACw==
+</value>
+  </data>
+  <data name="cbBoxYDTZ.DwonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABGdBTUEAALGPC/xhBQAAADFJREFUGFdj
+        AIL/UIwLwOWJVggD6AIYCmAAp8L//7Gqx9AAUQgi0HTAFcLk/v//zwAAWlMo2Jtg/x8AAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="buttonEx11.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
+        AAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
+  <data name="btnBgYDTZ.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
+        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
+        AAAAAAAAAAAAAAAAAAAACw==
+</value>
+  </data>
   <data name="btnTZPZ.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
         YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAj
-        AAAAIwAAACMAAAAjAAAACw==
+        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAe
+        AAAAHgAAAB4AAAAeAAAACw==
 </value>
   </data>
   <metadata name="dgvTZQPZStetNO.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -157,7 +244,6 @@
         AAAAAAAAAAAAAAAAAAAACw==
 </value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cbBoxTZPZ.DwonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABGdBTUEAALGPC/xhBQAAADFJREFUGFdj
@@ -165,7 +251,7 @@
         YII=
 </value>
   </data>
-  <data name="buttonEx2.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="btnBgTZPZ.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
         YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
@@ -208,36 +294,12 @@
         AAAAAAAAAAAAAAAAAAAACw==
 </value>
   </data>
-  <data name="buttonEx4.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="btnBgTZJX.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
         YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
         AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
         AAAAAAAAAAAAAAAAAAAACw==
-</value>
-  </data>
-  <data name="btnTZLY.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
-        AAAAAAAAAAAAAAAAAAAACw==
-</value>
-  </data>
-  <data name="btnLYDown.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAe
-        AAAAHgAAAAAAAAAAAAAACw==
-</value>
-  </data>
-  <data name="btnLYLocal.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
-        AAAAAAAAAB4AAAAeAAAACw==
 </value>
   </data>
   <metadata name="dgvTZLY_LocalGUID.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -279,45 +341,6 @@
   <metadata name="dgvTZLY_DownDownTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="buttonEx5.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
-        AAAAAAAAAAAAAAAAAAAACw==
-</value>
-  </data>
-  <data name="cbBoxTZLY.DwonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABGdBTUEAALGPC/xhBQAAADFJREFUGFdj
-        AIL/UIwLwOWJVggD6AIYCmAAp8L//7Gqx9AAUQgi0HTAFcLk/v//zwAAWlMo2Jtg/x8AAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="buttonEx6.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
-        AAAAAAAAAAAAAAAAAAAACw==
-</value>
-  </data>
-  <data name="btnShare.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAe
-        AAAAHgAAAAAAAAAAAAAACw==
-</value>
-  </data>
-  <data name="btnUpload.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
-        AAAAAAAAAB4AAAAeAAAACw==
-</value>
-  </data>
   <metadata name="dgvYDTZUpLoadGUID.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -345,29 +368,6 @@
   <metadata name="dgvYDTZShareShareTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="cbBoxYDTZ.DwonImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAABGdBTUEAALGPC/xhBQAAADFJREFUGFdj
-        AIL/UIwLwOWJVggD6AIYCmAAp8L//7Gqx9AAUQgi0HTAFcLk/v//zwAAWlMo2Jtg/x8AAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="buttonEx11.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
-        AAAAAAAAAAAAAAAAAAAACw==
-</value>
-  </data>
-  <data name="buttonEx12.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
-        YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
-        AAAADF9yaWdodEJvdHRvbQlfcmlnaHRUb3ALX2xlZnRCb3R0b20IX2xlZnRUb3AAAAAACAgICAIAAAAA
-        AAAAAAAAAAAAAAAAAAAACw==
-</value>
-  </data>
   <data name="btnStart.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
@@ -409,7 +409,7 @@
         AAAAAAAAAAAAAAAAAAAACw==
 </value>
   </data>
-  <data name="buttonEx14.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="btnBgYCTZ.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
         YWwsIFB1YmxpY0tleVRva2VuPW51bGwFAQAAAB5TeXN0ZW0uV2luZG93cy5Gb3Jtcy5BcmNSYWRpdXME
@@ -420,6 +420,9 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>107, 17</value>
+  </metadata>
   <data name="btnMin.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
@@ -428,9 +431,6 @@
         AAAAAAAAAAAAAAAAAAAACw==
 </value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>107, 17</value>
-  </metadata>
   <data name="btnBack.ArcRadius" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAADxFU2tpbiwgVmVyc2lvbj0xLjAuMC4wLCBDdWx0dXJlPW5ldXRy
@@ -543,31 +543,9 @@
         YII=
 </value>
   </data>
-  <data name="nav1.ImageGY" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAY9JREFUOE+N
-        lVsuBEEUhicuMxFEYhOIeLIELMD1hWcZlwTL4JU1eDG7QURETMIKSMR4Kf9XXWdy+mK6/+SLqlPn/Lqr
-        Tte0QghVtMWeuBVvYiC+xFOK7QpySrWlgNgUL6JO5GyJXL2fjItLYXoUF2JJdBKMibFmoobakqGZfYsj
-        YUlTYjVhMf6eCrYCURt9zGxHIBLWhcVhRZjmhF/bEGaKRzRkc9+JSPxXXwCjDOFEoA/RJrAfpyE8iOFe
-        OGYETw0TKeahhlp0QOAuG4dzUUyGeXGYqGwVQS3qMeln43iCxUSoe2VYFKjP5Ccbx7YoJkITQ54cDZh8
-        ZuN/X6eJIfuMouFzNo6PXUyEJobLAsVXrjuUJoZnAsVDsba5F1VtU2dIDbUoto1vbJq0WLAgXhOzKeY5
-        FojG7liQ6wjxGa0JXzAK/+nhkbscrgTicuiKMeHXPaz5y4HauOaT2ItrYeKKYrN55UkxLThNYv76uhHD
-        vfeGxrZoesHGG8aTmzg4KE6/J/gJ+E0wJsZaxYcQWn9b3TH0ufEhrgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="nav1.ImageXT" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAAb9JREFUOE+N
-        1D1IXUEQhmGVCCoECy1TRURTBBFtBCEWQgpvp5AiIGKwCgg2Ntqk0S6gFoKVoASigiGKpLCQNKKCgZBf
-        rCQBfwollQhKfL/DzmHuejzX4oGzszNzl727Wza0e11KFXbxG9/Rjay8VGYww3+nK8TuFAfasI6HYfwM
-        k7iENV1CAVYzh0E3Lmr6HP+gwh0shu+7rGLGjftQjqKmH+GLzAeM4RVG8Q5ZeVeoQVHTaizAkvbRDp9j
-        HmMNlqs/sBW3ViraHyV9w4MQy6P9V/6eixU1fQr75YYQK6US51DNixBLmjbiCeahSe2tLyzlLVS3Ae1p
-        tYIHIWhGEBfm6YHVnuGXgqcuKP2IC/P4bUso+DcKDiMuzKNr6+uTps1owfsQ1KGPC/O8geq+QBeg4Cc7
-        ockL1IbYffyB6oYsFifo9ihh08XyzMJWmRx88Qk6c8tQkqygHj7H507Dcj8hnbePCugRsSSjB2YKveiA
-        XqcJHCLO/Qr9WNpUSx+AJWzjsxtn+QndeRvriUyutjU1L6FmNtaZ9Q+HbOE1NK+V/cB4GCfSjxx18E0f
-        ISsvlRmMNOEIxziBznVWXnBddgMIk1aF8mnUxQAAAABJRU5ErkJggg==
-</value>
-  </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>107, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

@@ -33,8 +33,8 @@ namespace BDAuscultation
             dgvTZLY_Local.CellClick += dgvTZLY_Local_CellClick;
             dgvTZLY_Down.CellClick += dgvTZLY_Down_CellClick;
             //列设置
-            dgvTZLY_Local.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvTZLY_Down.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dgvTZLY_Local.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dgvTZLY_Down.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
 
             var btnDetailLocalColumn = new DataGridViewButtonExColumn("",
@@ -57,11 +57,11 @@ namespace BDAuscultation
 
             var btnDetailDownColumn = new DataGridViewButtonExColumn("",
               BDAuscultation.Properties.Resources.详情点击状态, BDAuscultation.Properties.Resources.详情未点击)
-              { Name = "dgvTZLYDwonDetail", HeaderText = "详情" };
+              { Name = "dgvTZLYDwonDetail", HeaderText = "详情" ,Width=70};
             this.dgvTZLY_Down.Columns.Add(btnDetailDownColumn);
             var btnDelDownColumn = new DataGridViewButtonExColumn("",
                 BDAuscultation.Properties.Resources.删除点击状态, BDAuscultation.Properties.Resources.删除未点击) 
-                { Name = "dgvTZLYDownDelete", HeaderText = "删除"};
+                { Name = "dgvTZLYDownDelete", HeaderText = "删除", Width = 70 };
             this.dgvTZLY_Down.Columns.Add(btnDelDownColumn);
             dgvTZLY_Down.ListColumnImage.Add(null);
             dgvTZLY_Down.ListColumnImage.Add(BDAuscultation.Properties.Resources.患者类型);

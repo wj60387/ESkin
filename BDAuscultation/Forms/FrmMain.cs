@@ -45,6 +45,10 @@ namespace BDAuscultation
         }
         void Init()
         {
+            this.btnBgTZJX.Image = this.btnBgTZPZ.Image = this.btnBgTZLY.Image = this.btnBgYCTZ.Image
+                = this.btnBgYDTZ.Image = 
+                MyResouces.GetImage(BDAuscultation.Properties.Resources.听诊器图片,0.85f);
+
             Mediator.ShowMessageEvent += Mediator_ShowMessageEvent;
             if (Setting.isConnected)
             {
@@ -66,15 +70,15 @@ namespace BDAuscultation
 
             //this.nav1.NavItemList.Add(new NavItem(null, "LOGO") { ISNomal = false });
             this.nav1.NavItemList.Add(
-                new NavItem(MyResouces.ImageTZPZ, "听诊配置"));
+                new NavItem(MyResouces.ImageTZPZ, "听诊配置") { Height=100});
             this.nav1.NavItemList.Add(
-                new NavItem(MyResouces.ImageTZJX, "听诊教学"));
+                new NavItem(MyResouces.ImageTZJX, "听诊教学") { Height = 100 });
             this.nav1.NavItemList.Add(
-                new NavItem(MyResouces.ImageTZLY, "听诊录音"));
+                new NavItem(MyResouces.ImageTZLY, "听诊录音") { Height = 110 });
             this.nav1.NavItemList.Add(
-                new NavItem(MyResouces.ImageYDTZ, "云端听诊"));
+                new NavItem(MyResouces.ImageYDTZ, "云端听诊") { Height = 90 });
             this.nav1.NavItemList.Add(
-                new NavItem(MyResouces.ImageYCTZ, "远程教学"));
+                new NavItem(MyResouces.ImageYCTZ, "远程教学") { Height = 100 });
             nav1.OnItemClick += nav1_OnItemClick;
             nav1.OnXTClick += nav1_OnXTClick;
             nav1.OnGYClick += nav1_OnGYClick;
@@ -165,6 +169,8 @@ namespace BDAuscultation
         {
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
+
+         
 
        
        

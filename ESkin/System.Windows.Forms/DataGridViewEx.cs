@@ -125,7 +125,7 @@ namespace  System.Windows.Forms
                 
             };
             var color = this.Rows[e.RowIndex].Selected ? Color.FromArgb(100, 200, 250) : Color.Black;
-            var rowBounds = new Rectangle(e.RowBounds.X - 1, e.RowBounds.Y, e.RowBounds.Width + 1, e.RowBounds.Height - 1);
+            var rowBounds = new Rectangle(e.RowBounds.X, e.RowBounds.Y, e.RowBounds.Width, e.RowBounds.Height - 1);
            
            
             //var _color = this.SelectedRows[0].Index == e.RowIndex ?
@@ -154,7 +154,7 @@ namespace  System.Windows.Forms
             get { return boderPad; }
             set { boderPad = value; }
         }
-        int indexSize = 24;
+        int indexSize = 23;
         public int IndexSize {
             get { return indexSize; }
             set { indexSize = value; }
