@@ -76,6 +76,10 @@
     <Compile Include="System.Windows.Forms\TabControlEx.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="System.Windows.Forms\Test\ChatListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="System.Windows.Forms\Test\ChatListItem.cs" />
     <Compile Include="System.Windows.Forms\TreeNodeEx.cs" />
     <Compile Include="System.Windows.Forms\UCTextBoxEX.cs">
       <SubType>UserControl</SubType>
@@ -98,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="System.Windows.Forms\FormEx.resx">
       <DependentUpon>FormEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System.Windows.Forms\Test\ChatListBox.resx">
+      <DependentUpon>ChatListBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="System.Windows.Forms\UCTextBoxEX.resx">
       <DependentUpon>UCTextBoxEX.cs</DependentUpon>

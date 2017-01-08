@@ -543,6 +543,31 @@
         YII=
 </value>
   </data>
+  <data name="nav1.ImageGY" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAY9JREFUOE+N
+        lVsuBEEUhicuMxFEYhOIeLIELMD1hWcZlwTL4JU1eDG7QURETMIKSMR4Kf9XXWdy+mK6/+SLqlPn/Lqr
+        Tte0QghVtMWeuBVvYiC+xFOK7QpySrWlgNgUL6JO5GyJXL2fjItLYXoUF2JJdBKMibFmoobakqGZfYsj
+        YUlTYjVhMf6eCrYCURt9zGxHIBLWhcVhRZjmhF/bEGaKRzRkc9+JSPxXXwCjDOFEoA/RJrAfpyE8iOFe
+        OGYETw0TKeahhlp0QOAuG4dzUUyGeXGYqGwVQS3qMeln43iCxUSoe2VYFKjP5Ccbx7YoJkITQ54cDZh8
+        ZuN/X6eJIfuMouFzNo6PXUyEJobLAsVXrjuUJoZnAsVDsba5F1VtU2dIDbUoto1vbJq0WLAgXhOzKeY5
+        FojG7liQ6wjxGa0JXzAK/+nhkbscrgTicuiKMeHXPaz5y4HauOaT2ItrYeKKYrN55UkxLThNYv76uhHD
+        vfeGxrZoesHGG8aTmzg4KE6/J/gJ+E0wJsZaxYcQWn9b3TH0ufEhrgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="nav1.ImageXT" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAAb9JREFUOE+N
+        1D1IXUEQhmGVCCoECy1TRURTBBFtBCEWQgpvp5AiIGKwCgg2Ntqk0S6gFoKVoASigiGKpLCQNKKCgZBf
+        rCQBfwollQhKfL/DzmHuejzX4oGzszNzl727Wza0e11KFXbxG9/Rjay8VGYww3+nK8TuFAfasI6HYfwM
+        k7iENV1CAVYzh0E3Lmr6HP+gwh0shu+7rGLGjftQjqKmH+GLzAeM4RVG8Q5ZeVeoQVHTaizAkvbRDp9j
+        HmMNlqs/sBW3ViraHyV9w4MQy6P9V/6eixU1fQr75YYQK6US51DNixBLmjbiCeahSe2tLyzlLVS3Ae1p
+        tYIHIWhGEBfm6YHVnuGXgqcuKP2IC/P4bUso+DcKDiMuzKNr6+uTps1owfsQ1KGPC/O8geq+QBeg4Cc7
+        ockL1IbYffyB6oYsFifo9ihh08XyzMJWmRx88Qk6c8tQkqygHj7H507Dcj8hnbePCugRsSSjB2YKveiA
+        XqcJHCLO/Qr9WNpUSx+AJWzjsxtn+QndeRvriUyutjU1L6FmNtaZ9Q+HbOE1NK+V/cB4GCfSjxx18E0f
+        ISsvlRmMNOEIxziBznVWXnBddgMIk1aF8mnUxQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

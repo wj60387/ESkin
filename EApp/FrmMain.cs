@@ -21,7 +21,7 @@ namespace EApp
         void FrmMain_Load(object sender, EventArgs e)
         {
 
-            this.nav1.NavItemList.Add(new NavItem(null, "LOGO") { ISNomal=false});
+            this.nav1.NavItemList.Add(new NavItem(null, "LOGO")  );
             this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.听诊配置, "听诊配置"));
             this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.听诊教学, "听诊教学"));
             this.nav1.NavItemList.Add(new NavItem(EApp.Properties.Resources.听诊录音, "听诊录音"));
