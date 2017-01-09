@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EApp", "EApp\EApp.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDAuscultation", "BDAuscultation\BDAuscultation.csproj", "{F24AAD72-8314-4119-A09F-6AB20FCB73D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDUpdate", "BDUpdate\BDUpdate.csproj", "{7DD54CCE-0522-4BA3-BF90-D18BA021D53D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F24AAD72-8314-4119-A09F-6AB20FCB73D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F24AAD72-8314-4119-A09F-6AB20FCB73D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F24AAD72-8314-4119-A09F-6AB20FCB73D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD54CCE-0522-4BA3-BF90-D18BA021D53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD54CCE-0522-4BA3-BF90-D18BA021D53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD54CCE-0522-4BA3-BF90-D18BA021D53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD54CCE-0522-4BA3-BF90-D18BA021D53D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

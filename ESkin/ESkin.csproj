@@ -70,6 +70,9 @@
     <Compile Include="System.Windows.Forms\Nav.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="System.Windows.Forms\ProcessBarEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="System.Windows.Forms\RadioButtonEx.cs">
       <SubType>Component</SubType>
     </Compile>
