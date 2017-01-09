@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DD54CCE-0522-4BA3-BF90-D18BA021D53D}</ProjectGuid>
+    <ProjectGuid>{C8440946-8AC4-468A-BF65-390CFAECBAFC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BDUpdate</RootNamespace>
-    <AssemblyName>BDUpdate</AssemblyName>
+    <RootNamespace>BDVersionPub</RootNamespace>
+    <AssemblyName>BDVersionPub</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,9 +52,6 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProcessBarEx.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\AuscultationService\Reference.cs">
@@ -73,7 +70,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
@@ -104,6 +100,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ESkin\ESkin.csproj">
+      <Project>{534b884e-3de0-4a0c-bd73-9d23a5f82687}</Project>
+      <Name>ESkin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
@@ -120,15 +122,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1412245306736.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zuixiaohua.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\关闭按钮.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

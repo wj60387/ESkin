@@ -27,6 +27,25 @@ namespace BDAuscultation
               
             }
         }
+        public static bool isUpdate()
+        {
+            using (OperationContextScope scope = new OperationContextScope(remoteService.InnerChannel))
+            {
+                MessageHeader header = MessageHeader.CreateHeader("SN", "http://tempuri.org", Setting.authorizationInfo.AuthorizationNum);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                header = MessageHeader.CreateHeader("MAC", "http://tempuri.org", Setting.authorizationInfo.MachineCode);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                string sql = @"SELECT  Version FROM VersionMajor WHERE Enable=1";
+                var ds = remoteService.ExecuteDataset(sql, null);
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    var major = ds.Tables[0].Rows[0][0] + "";
+                    return !major.Equals(Setting.Version);
+                }
+                   
+            }
+            return false;
+        }
         public static bool isBusy = false;
       
         public static SqliteHelper sqliteHelper = new SqliteHelper(Setting.localSqliteConnectstring);

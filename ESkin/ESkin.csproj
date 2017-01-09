@@ -84,6 +84,9 @@
     </Compile>
     <Compile Include="System.Windows.Forms\Test\ChatListItem.cs" />
     <Compile Include="System.Windows.Forms\TreeNodeEx.cs" />
+    <Compile Include="System.Windows.Forms\TreeViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="System.Windows.Forms\UCTextBoxEX.cs">
       <SubType>UserControl</SubType>
     </Compile>

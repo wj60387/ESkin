@@ -28,65 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnDown = new System.Windows.Forms.ButtonEx();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMsg = new System.Windows.Forms.Label();
+            this.lblProcess = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.processBarEx1 = new System.Windows.Forms.ProcessBarEx();
-            this.btnMin = new System.Windows.Forms.ButtonEx();
-            this.btnClose = new System.Windows.Forms.ButtonEx();
             this.SuspendLayout();
-            // 
-            // btnDown
-            // 
-            this.btnDown.BackColor = System.Drawing.Color.Transparent;
-            this.btnDown.FlatAppearance.BorderSize = 0;
-            this.btnDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDown.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDown.ForeColor = System.Drawing.Color.White;
-            this.btnDown.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnDown.Location = new System.Drawing.Point(163, 115);
-            this.btnDown.Name = "btnDown";
-            this.btnDown.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnDown.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnDown.Radius = 16;
-            this.btnDown.Size = new System.Drawing.Size(60, 23);
-            this.btnDown.TabIndex = 3;
-            this.btnDown.Text = "下载";
-            this.btnDown.UseVisualStyleBackColor = false;
-            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
-            // 
-            // processBarEx1
-            // 
-            this.processBarEx1.BackColor = System.Drawing.Color.White;
-            this.processBarEx1.Font = new System.Drawing.Font("微软雅黑", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.processBarEx1.ForeColor = System.Drawing.Color.Blue;
-            this.processBarEx1.Location = new System.Drawing.Point(0, 217);
-            this.processBarEx1.MaxValue = 100;
-            this.processBarEx1.Name = "processBarEx1";
-            this.processBarEx1.Size = new System.Drawing.Size(392, 3);
-            this.processBarEx1.TabIndex = 2;
-            this.processBarEx1.Text = "processBarEx1";
-            this.processBarEx1.Value = 30;
-            // 
-            // btnMin
-            // 
-            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMin.BackColor = System.Drawing.Color.Transparent;
-            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.HoverColor = System.Drawing.Color.Transparent;
-            this.btnMin.Image = global::BDUpdate.Properties.Resources.zuixiaohua;
-            this.btnMin.Location = new System.Drawing.Point(353, 7);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.NormalColor = System.Drawing.Color.Transparent;
-            this.btnMin.PressColor = System.Drawing.Color.Transparent;
-            this.btnMin.Radius = 16;
-            this.btnMin.Size = new System.Drawing.Size(12, 12);
-            this.btnMin.TabIndex = 1;
-            this.btnMin.UseVisualStyleBackColor = false;
             // 
             // btnClose
             // 
@@ -97,16 +47,59 @@
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnClose.Location = new System.Drawing.Point(371, 7);
+            this.btnClose.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(372, 7);
             this.btnClose.Name = "btnClose";
-            this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnClose.Radius = 16;
             this.btnClose.Size = new System.Drawing.Size(12, 12);
-            this.btnClose.TabIndex = 0;
+            this.btnClose.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnClose, "关闭");
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "奔达医学听诊软件更新程序";
+            // 
+            // lblMsg
+            // 
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.BackColor = System.Drawing.Color.Transparent;
+            this.lblMsg.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMsg.ForeColor = System.Drawing.Color.White;
+            this.lblMsg.Location = new System.Drawing.Point(6, 229);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(0, 17);
+            this.lblMsg.TabIndex = 7;
+            // 
+            // lblProcess
+            // 
+            this.lblProcess.AutoSize = true;
+            this.lblProcess.BackColor = System.Drawing.Color.Transparent;
+            this.lblProcess.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblProcess.ForeColor = System.Drawing.Color.Green;
+            this.lblProcess.Location = new System.Drawing.Point(120, 111);
+            this.lblProcess.Name = "lblProcess";
+            this.lblProcess.Size = new System.Drawing.Size(89, 17);
+            this.lblProcess.TabIndex = 8;
+            this.lblProcess.Text = "准备更新文件...";
+            // 
+            // processBarEx1
+            // 
+            this.processBarEx1.Location = new System.Drawing.Point(0, 219);
+            this.processBarEx1.MaxValue = 100;
+            this.processBarEx1.Name = "processBarEx1";
+            this.processBarEx1.Size = new System.Drawing.Size(392, 3);
+            this.processBarEx1.TabIndex = 0;
+            this.processBarEx1.Value = 0;
             // 
             // FrmMain
             // 
@@ -115,23 +108,29 @@
             this.BackgroundImage = global::BDUpdate.Properties.Resources.BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(392, 254);
-            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.lblProcess);
+            this.Controls.Add(this.lblMsg);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.processBarEx1);
-            this.Controls.Add(this.btnMin);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "奔达医学听诊软件更新程序";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ButtonEx btnClose;
-        private System.Windows.Forms.ButtonEx btnMin;
         private System.Windows.Forms.ProcessBarEx processBarEx1;
-        private System.Windows.Forms.ButtonEx btnDown;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMsg;
+        private System.Windows.Forms.Label lblProcess;
+        private System.Windows.Forms.ToolTip toolTip1;
 
     }
 }

@@ -14,6 +14,9 @@ using BDAuscultation.Models;
 using BDAuscultation.Utilities;
 using BDAuscultation.Devices;
 using BDAuscultation.Forms;
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.Threading;
 
 namespace BDAuscultation
 {
@@ -134,7 +137,18 @@ namespace BDAuscultation
                     return;
                 }
             }
+
+            
+
             Setting.authorizationInfo = authorizationInfo;
+
+            if (Mediator.isUpdate())
+            {
+                var updateExe = Path.Combine(Application.StartupPath, "BDUpdate.exe");
+                // ProcessStartInfo process = new ProcessStartInfo(updateExe);
+                System.Diagnostics.Process.Start(updateExe);
+                return;
+            }
             #endregion
             var formLogin = new FrmLogin();
             formLogin.StartPosition = FormStartPosition.CenterScreen;
@@ -179,7 +193,7 @@ namespace BDAuscultation
 
         }
 
-
+       
         static void Application_ApplicationExit(object sender, EventArgs e)
         {
 
