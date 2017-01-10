@@ -29,6 +29,7 @@ namespace BDAuscultation.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStetInfo));
             this.buttonEx1 = new System.Windows.Forms.ButtonEx();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,12 +53,13 @@ namespace BDAuscultation.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.ButtonEx();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonEx1
             // 
-            this.buttonEx1.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("buttonEx1.ArcRadius")));
             this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
             this.buttonEx1.BackgroundImage = global::BDAuscultation.Properties.Resources.按钮;
             this.buttonEx1.FlatAppearance.BorderSize = 0;
@@ -105,7 +107,7 @@ namespace BDAuscultation.Forms
             // txtStetName
             // 
             this.txtStetName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtStetName.BackColor = System.Drawing.Color.Transparent;
+            this.txtStetName.BackColor = System.Drawing.Color.White;
             this.txtStetName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetName.ForeColor = System.Drawing.Color.Black;
@@ -121,7 +123,6 @@ namespace BDAuscultation.Forms
             // 
             // btnCancel
             // 
-            this.btnCancel.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnCancel.ArcRadius")));
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -142,7 +143,6 @@ namespace BDAuscultation.Forms
             // 
             // btnSure
             // 
-            this.btnSure.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnSure.ArcRadius")));
             this.btnSure.BackColor = System.Drawing.Color.Transparent;
             this.btnSure.FlatAppearance.BorderSize = 0;
             this.btnSure.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -165,7 +165,7 @@ namespace BDAuscultation.Forms
             // txtStetRemark
             // 
             this.txtStetRemark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtStetRemark.BackColor = System.Drawing.Color.Transparent;
+            this.txtStetRemark.BackColor = System.Drawing.Color.White;
             this.txtStetRemark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetRemark.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetRemark.ForeColor = System.Drawing.Color.Black;
@@ -193,7 +193,7 @@ namespace BDAuscultation.Forms
             // txtStetFunc
             // 
             this.txtStetFunc.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtStetFunc.BackColor = System.Drawing.Color.Transparent;
+            this.txtStetFunc.BackColor = System.Drawing.Color.White;
             this.txtStetFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetFunc.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetFunc.ForeColor = System.Drawing.Color.Black;
@@ -221,7 +221,7 @@ namespace BDAuscultation.Forms
             // txtStetOwner
             // 
             this.txtStetOwner.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtStetOwner.BackColor = System.Drawing.Color.Transparent;
+            this.txtStetOwner.BackColor = System.Drawing.Color.White;
             this.txtStetOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetOwner.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetOwner.ForeColor = System.Drawing.Color.Black;
@@ -260,7 +260,7 @@ namespace BDAuscultation.Forms
             // txtStetChineseName
             // 
             this.txtStetChineseName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtStetChineseName.BackColor = System.Drawing.Color.Transparent;
+            this.txtStetChineseName.BackColor = System.Drawing.Color.White;
             this.txtStetChineseName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetChineseName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetChineseName.ForeColor = System.Drawing.Color.Black;
@@ -363,11 +363,33 @@ namespace BDAuscultation.Forms
             this.label1.TabIndex = 1;
             this.label1.Text = " ";
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = global::BDAuscultation.Properties.Resources.系统按钮关闭;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
+            this.btnClose.Location = new System.Drawing.Point(424, 9);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnClose.Radius = 16;
+            this.btnClose.Size = new System.Drawing.Size(12, 12);
+            this.btnClose.TabIndex = 41;
+            this.toolTip1.SetToolTip(this.btnClose, "关闭");
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmStetInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 508);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.buttonEx1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
@@ -376,7 +398,7 @@ namespace BDAuscultation.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
@@ -414,5 +436,7 @@ namespace BDAuscultation.Forms
         private ButtonEx btnCancel;
         private ButtonEx btnSure;
         private UCTextBoxEx txtStetName;
+        private ButtonEx btnClose;
+        private ToolTip toolTip1;
     }
 }

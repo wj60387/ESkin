@@ -18,6 +18,7 @@ namespace System.Windows.Forms
             
             InitializeComponent();
             waterTextBox1.Font = this.Font;
+            waterTextBox1.BackColor = this.BackColor;
             this.waterTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.DoubleBuffered = true;
@@ -36,6 +37,12 @@ namespace System.Windows.Forms
 
            this.waterTextBox1.Enter += waterTextBox1_Enter;
            this.waterTextBox1.Leave += waterTextBox1_Leave;
+           this.BackColorChanged += UCTextBoxEx_BackColorChanged;
+        }
+
+        void UCTextBoxEx_BackColorChanged(object sender, EventArgs e)
+        {
+            waterTextBox1.BackColor = this.BackColor;
         }
 
         Color activeColor = Color.FromArgb(100, 200, 250);

@@ -675,7 +675,7 @@ namespace BDAuscultation
 
             btnShare.HoverColor = btnShare.PressColor = btnShare.NormalColor = Color.Gray;
             btnUpload.HoverColor = btnUpload.PressColor = btnUpload.NormalColor = Color.FromArgb(200, 200, 200);
-      
+            UpdateDataYDTZ(cbBoxYDTZ.Text, tabControlYDTZMain.SelectedTab.Name);
         }
 
         void btnUpload_Click(object sender, EventArgs e)
@@ -683,7 +683,7 @@ namespace BDAuscultation
             this.tabControlYDTZMain.SelectedTab = tabYDTZUpLoad;
             btnUpload.HoverColor = btnUpload.PressColor = btnUpload.NormalColor = Color.Gray;
             btnShare.HoverColor = btnShare.PressColor = btnShare.NormalColor = Color.FromArgb(200, 200, 200);
-      
+            UpdateDataYDTZ(cbBoxYDTZ.Text, tabControlYDTZMain.SelectedTab.Name);
         }
 
          

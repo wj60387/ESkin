@@ -139,8 +139,13 @@ namespace  System.Windows.Forms
                 //g.SmoothingMode = SmoothingMode.AntiAlias;
               //  e.Graphics.SmoothingMode = SmoothingMode.HighQuality;
                 var eRect = new Rectangle(e.RowBounds.Left + headerBounds.Width / 2 - indexSize / 2, e.RowBounds.Top + headerBounds.Height / 2 - indexSize / 2, indexSize, indexSize);
-                e.Graphics.DrawEllipse(new Pen(color,2f), eRect);
-                e.Graphics.DrawString(rowIdx, this.Font, brush, eRect, centerFormat);
+                if (this.Rows[e.RowIndex].Selected)
+                    e.Graphics.DrawImage(ESkin.Properties.Resources.圆亮, eRect);
+                else
+                    e.Graphics.DrawImage(ESkin.Properties.Resources.圆黑, eRect);
+                    // e.Graphics.DrawEllipse(new Pen(color,2f), eRect);
+                var textRect = new Rectangle(eRect.X, eRect.Y, eRect.Width-1, eRect.Height);
+                e.Graphics.DrawString(rowIdx, new Font(this.Font.FontFamily,9f), brush, textRect, centerFormat);
                 //e.Graphics.DrawRectangle(new Pen(color, 1f), new Rectangle(eRect.X + this.RowHeadersWidth - 2, e.RowBounds.Top, 2, this.RowTemplate.Height));
                 e.Graphics.FillRectangle(brush, new Rectangle(e.RowBounds.Left + this.RowHeadersWidth -10, eRect.Y, 2, indexSize));
                 if (this.Rows[e.RowIndex].Selected)

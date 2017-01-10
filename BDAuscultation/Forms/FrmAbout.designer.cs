@@ -80,7 +80,6 @@ namespace BDAuscultation.Forms
             // btnSure
             // 
             this.btnSure.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSure.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnSure.ArcRadius")));
             this.btnSure.BackColor = System.Drawing.Color.Transparent;
             this.btnSure.FlatAppearance.BorderSize = 0;
             this.btnSure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -100,10 +99,11 @@ namespace BDAuscultation.Forms
             // waterTextBox3
             // 
             this.waterTextBox3.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.waterTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.waterTextBox3.BackColor = System.Drawing.Color.White;
             this.waterTextBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.waterTextBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.waterTextBox3.Location = new System.Drawing.Point(79, 93);
+            this.waterTextBox3.Multiline = false;
             this.waterTextBox3.Name = "waterTextBox3";
             this.waterTextBox3.PasswordChar = '\0';
             this.waterTextBox3.Radius = 16;
@@ -115,10 +115,11 @@ namespace BDAuscultation.Forms
             // waterTextBox1
             // 
             this.waterTextBox1.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.waterTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.waterTextBox1.BackColor = System.Drawing.Color.White;
             this.waterTextBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.waterTextBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.waterTextBox1.Location = new System.Drawing.Point(79, 54);
+            this.waterTextBox1.Multiline = false;
             this.waterTextBox1.Name = "waterTextBox1";
             this.waterTextBox1.PasswordChar = '\0';
             this.waterTextBox1.Radius = 16;
@@ -130,10 +131,11 @@ namespace BDAuscultation.Forms
             // waterTextBox4
             // 
             this.waterTextBox4.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.waterTextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.waterTextBox4.BackColor = System.Drawing.Color.White;
             this.waterTextBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.waterTextBox4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.waterTextBox4.Location = new System.Drawing.Point(79, 132);
+            this.waterTextBox4.Multiline = false;
             this.waterTextBox4.Name = "waterTextBox4";
             this.waterTextBox4.PasswordChar = '\0';
             this.waterTextBox4.Radius = 16;
@@ -145,10 +147,11 @@ namespace BDAuscultation.Forms
             // waterTextBox5
             // 
             this.waterTextBox5.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.waterTextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.waterTextBox5.BackColor = System.Drawing.Color.White;
             this.waterTextBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.waterTextBox5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.waterTextBox5.Location = new System.Drawing.Point(79, 16);
+            this.waterTextBox5.Multiline = false;
             this.waterTextBox5.Name = "waterTextBox5";
             this.waterTextBox5.PasswordChar = '\0';
             this.waterTextBox5.Radius = 16;

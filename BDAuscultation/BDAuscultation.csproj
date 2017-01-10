@@ -519,6 +519,8 @@
     <None Include="Resources\缩略图.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\圆黑.png" />
+    <None Include="Resources\圆亮.png" />
     <Content Include="布迪亨1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

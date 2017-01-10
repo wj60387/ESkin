@@ -106,7 +106,7 @@ namespace BDAuscultation.Forms
             // txtDocRemark
             // 
             this.txtDocRemark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtDocRemark.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocRemark.BackColor = System.Drawing.Color.White;
             this.txtDocRemark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtDocRemark.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDocRemark.ForeColor = System.Drawing.Color.Black;
@@ -134,7 +134,7 @@ namespace BDAuscultation.Forms
             // txtDocDiagnose
             // 
             this.txtDocDiagnose.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtDocDiagnose.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocDiagnose.BackColor = System.Drawing.Color.White;
             this.txtDocDiagnose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtDocDiagnose.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDocDiagnose.ForeColor = System.Drawing.Color.Black;
@@ -173,7 +173,7 @@ namespace BDAuscultation.Forms
             // txtDocName
             // 
             this.txtDocName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtDocName.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocName.BackColor = System.Drawing.Color.White;
             this.txtDocName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtDocName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDocName.ForeColor = System.Drawing.Color.Black;
@@ -257,7 +257,7 @@ namespace BDAuscultation.Forms
             // txtPatientName
             // 
             this.txtPatientName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtPatientName.BackColor = System.Drawing.Color.Transparent;
+            this.txtPatientName.BackColor = System.Drawing.Color.White;
             this.txtPatientName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtPatientName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtPatientName.ForeColor = System.Drawing.Color.Black;

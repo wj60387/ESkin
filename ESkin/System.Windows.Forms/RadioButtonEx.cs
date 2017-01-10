@@ -46,13 +46,13 @@ namespace  System.Windows.Forms
 
              Color backColor = ControlPaint.Light(_baseColor);
 
-             if (Enabled)
-             {
+             //if (Enabled)
+             //{
                   
                  image = !Checked?ESkin.Properties.Resources.单选框未选中:
                          
                           ESkin.Properties.Resources.单选框选中;
-             }
+             //}
              DrawCheckedFlag(g, checkButtonRect, image);
              Color textColor = Enabled ? ForeColor : SystemColors.GrayText;
              TextRenderer.DrawText(

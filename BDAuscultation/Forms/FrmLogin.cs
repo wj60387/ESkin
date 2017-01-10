@@ -13,9 +13,7 @@ namespace BDAuscultation
 {
     public partial class FrmLogin : Form
     {
-        private bool isMouseDown = false;
-        private Point FormLocation;     //form的location
-        private Point mouseOffset;      //鼠标的按下位置
+       
         public FrmLogin()
         {
             InitializeComponent();
@@ -52,6 +50,11 @@ namespace BDAuscultation
             }
             lbMsg.Text = "用户名或者密码错误";
         }
+
+
+        private bool isMouseDown = false;
+        private Point FormLocation;     //form的location
+        private Point mouseOffset;      //鼠标的按下位置
         protected override void OnMouseDown(MouseEventArgs e)
         {
             var point = PointToScreen(MousePosition);
