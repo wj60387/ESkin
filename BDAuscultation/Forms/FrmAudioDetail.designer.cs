@@ -36,21 +36,21 @@ namespace BDAuscultation.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtDocRemark = new System.Windows.Forms.UCTextBoxEx();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtDocDiagnose = new System.Windows.Forms.UCTextBoxEx();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtDocName = new System.Windows.Forms.UCTextBoxEx();
             this.panelImages = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numAge = new System.Windows.Forms.NumericUpDown();
-            this.dataGridViewEx1 = new System.Windows.Forms.DataGridViewEx();
-            this.txtDocRemark = new System.Windows.Forms.UCTextBoxEx();
-            this.txtDocDiagnose = new System.Windows.Forms.UCTextBoxEx();
-            this.txtDocName = new System.Windows.Forms.UCTextBoxEx();
             this.radioButtonEx2 = new System.Windows.Forms.RadioButtonEx();
             this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPatientName = new System.Windows.Forms.UCTextBoxEx();
+            this.numAge = new System.Windows.Forms.NumericUpDown();
+            this.dataGridViewEx1 = new System.Windows.Forms.DataGridViewEx();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEx1)).BeginInit();
@@ -103,6 +103,23 @@ namespace BDAuscultation.Forms
             this.label6.Text = "检查报告：";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtDocRemark
+            // 
+            this.txtDocRemark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtDocRemark.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocRemark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtDocRemark.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDocRemark.ForeColor = System.Drawing.Color.Black;
+            this.txtDocRemark.Location = new System.Drawing.Point(96, 112);
+            this.txtDocRemark.Multiline = true;
+            this.txtDocRemark.Name = "txtDocRemark";
+            this.txtDocRemark.PasswordChar = '\0';
+            this.txtDocRemark.Radius = 24;
+            this.txtDocRemark.ReadOnly = true;
+            this.txtDocRemark.Size = new System.Drawing.Size(448, 50);
+            this.txtDocRemark.TabIndex = 63;
+            this.txtDocRemark.WaterText = "备注";
+            // 
             // label3
             // 
             this.label3.Image = global::BDAuscultation.Properties.Resources.备注;
@@ -113,6 +130,23 @@ namespace BDAuscultation.Forms
             this.label3.TabIndex = 62;
             this.label3.Text = "备注:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtDocDiagnose
+            // 
+            this.txtDocDiagnose.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtDocDiagnose.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocDiagnose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtDocDiagnose.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDocDiagnose.ForeColor = System.Drawing.Color.Black;
+            this.txtDocDiagnose.Location = new System.Drawing.Point(372, 73);
+            this.txtDocDiagnose.Multiline = false;
+            this.txtDocDiagnose.Name = "txtDocDiagnose";
+            this.txtDocDiagnose.PasswordChar = '\0';
+            this.txtDocDiagnose.Radius = 24;
+            this.txtDocDiagnose.ReadOnly = true;
+            this.txtDocDiagnose.Size = new System.Drawing.Size(179, 24);
+            this.txtDocDiagnose.TabIndex = 61;
+            this.txtDocDiagnose.WaterText = "初步诊断";
             // 
             // label2
             // 
@@ -135,6 +169,23 @@ namespace BDAuscultation.Forms
             this.label8.TabIndex = 59;
             this.label8.Text = "医生姓名：";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtDocName
+            // 
+            this.txtDocName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtDocName.BackColor = System.Drawing.Color.Transparent;
+            this.txtDocName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtDocName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDocName.ForeColor = System.Drawing.Color.Black;
+            this.txtDocName.Location = new System.Drawing.Point(96, 73);
+            this.txtDocName.Multiline = false;
+            this.txtDocName.Name = "txtDocName";
+            this.txtDocName.PasswordChar = '\0';
+            this.txtDocName.Radius = 24;
+            this.txtDocName.ReadOnly = true;
+            this.txtDocName.Size = new System.Drawing.Size(179, 24);
+            this.txtDocName.TabIndex = 58;
+            this.txtDocName.WaterText = "医生姓名";
             // 
             // panelImages
             // 
@@ -168,6 +219,30 @@ namespace BDAuscultation.Forms
             this.label5.Text = "患者性别：";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // radioButtonEx2
+            // 
+            this.radioButtonEx2.AutoSize = true;
+            this.radioButtonEx2.Enabled = false;
+            this.radioButtonEx2.Location = new System.Drawing.Point(451, 24);
+            this.radioButtonEx2.Name = "radioButtonEx2";
+            this.radioButtonEx2.Size = new System.Drawing.Size(38, 21);
+            this.radioButtonEx2.TabIndex = 54;
+            this.radioButtonEx2.Text = "女";
+            this.radioButtonEx2.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonEx1
+            // 
+            this.radioButtonEx1.AutoSize = true;
+            this.radioButtonEx1.Checked = true;
+            this.radioButtonEx1.Enabled = false;
+            this.radioButtonEx1.Location = new System.Drawing.Point(393, 24);
+            this.radioButtonEx1.Name = "radioButtonEx1";
+            this.radioButtonEx1.Size = new System.Drawing.Size(38, 21);
+            this.radioButtonEx1.TabIndex = 53;
+            this.radioButtonEx1.TabStop = true;
+            this.radioButtonEx1.Text = "男";
+            this.radioButtonEx1.UseVisualStyleBackColor = true;
+            // 
             // label1
             // 
             this.label1.Image = global::BDAuscultation.Properties.Resources.患者姓名;
@@ -179,9 +254,27 @@ namespace BDAuscultation.Forms
             this.label1.Text = "患者姓名：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtPatientName
+            // 
+            this.txtPatientName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.txtPatientName.BackColor = System.Drawing.Color.Transparent;
+            this.txtPatientName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtPatientName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtPatientName.ForeColor = System.Drawing.Color.Black;
+            this.txtPatientName.Location = new System.Drawing.Point(96, 22);
+            this.txtPatientName.Multiline = false;
+            this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.PasswordChar = '\0';
+            this.txtPatientName.Radius = 24;
+            this.txtPatientName.ReadOnly = true;
+            this.txtPatientName.Size = new System.Drawing.Size(179, 24);
+            this.txtPatientName.TabIndex = 51;
+            this.txtPatientName.WaterText = "患者姓名";
+            // 
             // numAge
             // 
             this.numAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numAge.Enabled = false;
             this.numAge.Location = new System.Drawing.Point(650, 24);
             this.numAge.Name = "numAge";
             this.numAge.ReadOnly = true;
@@ -245,98 +338,6 @@ namespace BDAuscultation.Forms
             this.dataGridViewEx1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEx1.Size = new System.Drawing.Size(873, 369);
             this.dataGridViewEx1.TabIndex = 40;
-            // 
-            // txtDocRemark
-            // 
-            this.txtDocRemark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtDocRemark.BackColor = System.Drawing.Color.Transparent;
-            this.txtDocRemark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtDocRemark.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDocRemark.ForeColor = System.Drawing.Color.Black;
-            this.txtDocRemark.Location = new System.Drawing.Point(96, 112);
-            this.txtDocRemark.Multiline = true;
-            this.txtDocRemark.Name = "txtDocRemark";
-            this.txtDocRemark.PasswordChar = '\0';
-            this.txtDocRemark.Radius = 24;
-            this.txtDocRemark.ReadOnly = true;
-            this.txtDocRemark.Size = new System.Drawing.Size(448, 50);
-            this.txtDocRemark.TabIndex = 63;
-            this.txtDocRemark.WaterText = "备注";
-            // 
-            // txtDocDiagnose
-            // 
-            this.txtDocDiagnose.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtDocDiagnose.BackColor = System.Drawing.Color.Transparent;
-            this.txtDocDiagnose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtDocDiagnose.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDocDiagnose.ForeColor = System.Drawing.Color.Black;
-            this.txtDocDiagnose.Location = new System.Drawing.Point(372, 73);
-            this.txtDocDiagnose.Multiline = false;
-            this.txtDocDiagnose.Name = "txtDocDiagnose";
-            this.txtDocDiagnose.PasswordChar = '\0';
-            this.txtDocDiagnose.Radius = 24;
-            this.txtDocDiagnose.ReadOnly = true;
-            this.txtDocDiagnose.Size = new System.Drawing.Size(179, 24);
-            this.txtDocDiagnose.TabIndex = 61;
-            this.txtDocDiagnose.WaterText = "初步诊断";
-            // 
-            // txtDocName
-            // 
-            this.txtDocName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtDocName.BackColor = System.Drawing.Color.Transparent;
-            this.txtDocName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtDocName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDocName.ForeColor = System.Drawing.Color.Black;
-            this.txtDocName.Location = new System.Drawing.Point(96, 73);
-            this.txtDocName.Multiline = false;
-            this.txtDocName.Name = "txtDocName";
-            this.txtDocName.PasswordChar = '\0';
-            this.txtDocName.Radius = 24;
-            this.txtDocName.ReadOnly = true;
-            this.txtDocName.Size = new System.Drawing.Size(179, 24);
-            this.txtDocName.TabIndex = 58;
-            this.txtDocName.WaterText = "医生姓名";
-            // 
-            // radioButtonEx2
-            // 
-            this.radioButtonEx2.AutoSize = true;
-            this.radioButtonEx2.Enabled = false;
-            this.radioButtonEx2.Location = new System.Drawing.Point(451, 24);
-            this.radioButtonEx2.Name = "radioButtonEx2";
-            this.radioButtonEx2.Size = new System.Drawing.Size(38, 21);
-            this.radioButtonEx2.TabIndex = 54;
-            this.radioButtonEx2.Text = "女";
-            this.radioButtonEx2.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonEx1
-            // 
-            this.radioButtonEx1.AutoSize = true;
-            this.radioButtonEx1.Checked = true;
-            this.radioButtonEx1.Enabled = false;
-            this.radioButtonEx1.Location = new System.Drawing.Point(393, 24);
-            this.radioButtonEx1.Name = "radioButtonEx1";
-            this.radioButtonEx1.Size = new System.Drawing.Size(38, 21);
-            this.radioButtonEx1.TabIndex = 53;
-            this.radioButtonEx1.TabStop = true;
-            this.radioButtonEx1.Text = "男";
-            this.radioButtonEx1.UseVisualStyleBackColor = true;
-            // 
-            // txtPatientName
-            // 
-            this.txtPatientName.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.txtPatientName.BackColor = System.Drawing.Color.Transparent;
-            this.txtPatientName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtPatientName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPatientName.ForeColor = System.Drawing.Color.Black;
-            this.txtPatientName.Location = new System.Drawing.Point(96, 22);
-            this.txtPatientName.Multiline = false;
-            this.txtPatientName.Name = "txtPatientName";
-            this.txtPatientName.PasswordChar = '\0';
-            this.txtPatientName.Radius = 24;
-            this.txtPatientName.ReadOnly = true;
-            this.txtPatientName.Size = new System.Drawing.Size(179, 24);
-            this.txtPatientName.TabIndex = 51;
-            this.txtPatientName.WaterText = "患者姓名";
             // 
             // FrmAudioDetail
             // 
