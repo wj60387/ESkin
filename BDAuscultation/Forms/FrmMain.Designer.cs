@@ -94,12 +94,6 @@
             this.dgvTZLY_LocalCreateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabLYDown = new System.Windows.Forms.TabPage();
             this.dgvTZLY_Down = new System.Windows.Forms.DataGridViewEx();
-            this.dgvTZLY_DownGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZLY_DownPType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZLY_DownPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZLY_DownSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZLY_DownShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZLY_DownDownTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonEx5 = new System.Windows.Forms.ButtonEx();
             this.cbBoxTZLY = new System.Windows.Forms.ComboBoxEx();
             this.btnBgTZLY = new System.Windows.Forms.ButtonEx();
@@ -116,11 +110,6 @@
             this.dgvYDTZUpLoadUpTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabYDTZShare = new System.Windows.Forms.TabPage();
             this.dgvYDTZShare = new System.Windows.Forms.DataGridViewEx();
-            this.dgvYDTZShareGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvYDTZSharePType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvYDTZSharePName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvYDTZUpLoadSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvYDTZShareShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbBoxYDTZ = new System.Windows.Forms.ComboBoxEx();
             this.buttonEx11 = new System.Windows.Forms.ButtonEx();
             this.btnBgYDTZ = new System.Windows.Forms.ButtonEx();
@@ -144,6 +133,17 @@
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.nav1 = new System.Windows.Forms.Nav();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dgvTZLY_DownGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZLY_DownPType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZLY_DownPName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZLY_DownSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZLY_DownShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZLY_DownDownTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYDTZShareGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYDTZSharePType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYDTZSharePName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYDTZUpLoadSharer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvYDTZShareShareTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlYDTZ.SuspendLayout();
             this.tabTZPZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTZQPZ)).BeginInit();
@@ -858,7 +858,6 @@
             this.dgvTZLY_Down.AllowUserToAddRows = false;
             this.dgvTZLY_Down.AllowUserToDeleteRows = false;
             this.dgvTZLY_Down.AllowUserToResizeRows = false;
-            this.dgvTZLY_Down.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTZLY_Down.BackgroundColor = System.Drawing.Color.White;
             this.dgvTZLY_Down.BoderPad = 4;
             this.dgvTZLY_Down.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -912,43 +911,6 @@
             this.dgvTZLY_Down.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTZLY_Down.Size = new System.Drawing.Size(659, 452);
             this.dgvTZLY_Down.TabIndex = 40;
-            // 
-            // dgvTZLY_DownGUID
-            // 
-            this.dgvTZLY_DownGUID.HeaderText = "GUID";
-            this.dgvTZLY_DownGUID.Name = "dgvTZLY_DownGUID";
-            this.dgvTZLY_DownGUID.ReadOnly = true;
-            this.dgvTZLY_DownGUID.Visible = false;
-            // 
-            // dgvTZLY_DownPType
-            // 
-            this.dgvTZLY_DownPType.HeaderText = "患者类型";
-            this.dgvTZLY_DownPType.Name = "dgvTZLY_DownPType";
-            this.dgvTZLY_DownPType.ReadOnly = true;
-            // 
-            // dgvTZLY_DownPName
-            // 
-            this.dgvTZLY_DownPName.HeaderText = "患者姓名";
-            this.dgvTZLY_DownPName.Name = "dgvTZLY_DownPName";
-            this.dgvTZLY_DownPName.ReadOnly = true;
-            // 
-            // dgvTZLY_DownSharer
-            // 
-            this.dgvTZLY_DownSharer.HeaderText = "分享者";
-            this.dgvTZLY_DownSharer.Name = "dgvTZLY_DownSharer";
-            this.dgvTZLY_DownSharer.ReadOnly = true;
-            // 
-            // dgvTZLY_DownShareTime
-            // 
-            this.dgvTZLY_DownShareTime.HeaderText = "分享时间";
-            this.dgvTZLY_DownShareTime.Name = "dgvTZLY_DownShareTime";
-            this.dgvTZLY_DownShareTime.ReadOnly = true;
-            // 
-            // dgvTZLY_DownDownTime
-            // 
-            this.dgvTZLY_DownDownTime.HeaderText = "下载时间";
-            this.dgvTZLY_DownDownTime.Name = "dgvTZLY_DownDownTime";
-            this.dgvTZLY_DownDownTime.ReadOnly = true;
             // 
             // buttonEx5
             // 
@@ -1218,7 +1180,6 @@
             this.dgvYDTZShare.AllowUserToAddRows = false;
             this.dgvYDTZShare.AllowUserToDeleteRows = false;
             this.dgvYDTZShare.AllowUserToResizeRows = false;
-            this.dgvYDTZShare.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvYDTZShare.BackgroundColor = System.Drawing.Color.White;
             this.dgvYDTZShare.BoderPad = 4;
             this.dgvYDTZShare.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1271,42 +1232,6 @@
             this.dgvYDTZShare.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvYDTZShare.Size = new System.Drawing.Size(660, 441);
             this.dgvYDTZShare.TabIndex = 40;
-            // 
-            // dgvYDTZShareGUID
-            // 
-            this.dgvYDTZShareGUID.HeaderText = "GUID";
-            this.dgvYDTZShareGUID.Name = "dgvYDTZShareGUID";
-            this.dgvYDTZShareGUID.ReadOnly = true;
-            this.dgvYDTZShareGUID.Visible = false;
-            this.dgvYDTZShareGUID.Width = 74;
-            // 
-            // dgvYDTZSharePType
-            // 
-            this.dgvYDTZSharePType.HeaderText = "患者类型";
-            this.dgvYDTZSharePType.Name = "dgvYDTZSharePType";
-            this.dgvYDTZSharePType.ReadOnly = true;
-            this.dgvYDTZSharePType.Width = 97;
-            // 
-            // dgvYDTZSharePName
-            // 
-            this.dgvYDTZSharePName.HeaderText = "患者姓名";
-            this.dgvYDTZSharePName.Name = "dgvYDTZSharePName";
-            this.dgvYDTZSharePName.ReadOnly = true;
-            this.dgvYDTZSharePName.Width = 97;
-            // 
-            // dgvYDTZUpLoadSharer
-            // 
-            this.dgvYDTZUpLoadSharer.HeaderText = "分享者";
-            this.dgvYDTZUpLoadSharer.Name = "dgvYDTZUpLoadSharer";
-            this.dgvYDTZUpLoadSharer.ReadOnly = true;
-            this.dgvYDTZUpLoadSharer.Width = 81;
-            // 
-            // dgvYDTZShareShareTime
-            // 
-            this.dgvYDTZShareShareTime.HeaderText = "分享时间";
-            this.dgvYDTZShareShareTime.Name = "dgvYDTZShareShareTime";
-            this.dgvYDTZShareShareTime.ReadOnly = true;
-            this.dgvYDTZShareShareTime.Width = 97;
             // 
             // cbBoxYDTZ
             // 
@@ -1691,6 +1616,85 @@
             this.nav1.TabIndex = 45;
             this.nav1.Text = "nav1";
             // 
+            // dgvTZLY_DownGUID
+            // 
+            this.dgvTZLY_DownGUID.HeaderText = "GUID";
+            this.dgvTZLY_DownGUID.Name = "dgvTZLY_DownGUID";
+            this.dgvTZLY_DownGUID.ReadOnly = true;
+            this.dgvTZLY_DownGUID.Visible = false;
+            this.dgvTZLY_DownGUID.Width = 5;
+            // 
+            // dgvTZLY_DownPType
+            // 
+            this.dgvTZLY_DownPType.HeaderText = "患者类型";
+            this.dgvTZLY_DownPType.Name = "dgvTZLY_DownPType";
+            this.dgvTZLY_DownPType.ReadOnly = true;
+            this.dgvTZLY_DownPType.Width = 125;
+            // 
+            // dgvTZLY_DownPName
+            // 
+            this.dgvTZLY_DownPName.HeaderText = "患者姓名";
+            this.dgvTZLY_DownPName.Name = "dgvTZLY_DownPName";
+            this.dgvTZLY_DownPName.ReadOnly = true;
+            this.dgvTZLY_DownPName.Width = 125;
+            // 
+            // dgvTZLY_DownSharer
+            // 
+            this.dgvTZLY_DownSharer.HeaderText = "分享者";
+            this.dgvTZLY_DownSharer.Name = "dgvTZLY_DownSharer";
+            this.dgvTZLY_DownSharer.ReadOnly = true;
+            this.dgvTZLY_DownSharer.Width = 125;
+            // 
+            // dgvTZLY_DownShareTime
+            // 
+            this.dgvTZLY_DownShareTime.HeaderText = "分享时间";
+            this.dgvTZLY_DownShareTime.Name = "dgvTZLY_DownShareTime";
+            this.dgvTZLY_DownShareTime.ReadOnly = true;
+            this.dgvTZLY_DownShareTime.Width = 125;
+            // 
+            // dgvTZLY_DownDownTime
+            // 
+            this.dgvTZLY_DownDownTime.HeaderText = "下载时间";
+            this.dgvTZLY_DownDownTime.Name = "dgvTZLY_DownDownTime";
+            this.dgvTZLY_DownDownTime.ReadOnly = true;
+            this.dgvTZLY_DownDownTime.Width = 125;
+            // 
+            // dgvYDTZShareGUID
+            // 
+            this.dgvYDTZShareGUID.HeaderText = "GUID";
+            this.dgvYDTZShareGUID.Name = "dgvYDTZShareGUID";
+            this.dgvYDTZShareGUID.ReadOnly = true;
+            this.dgvYDTZShareGUID.Visible = false;
+            this.dgvYDTZShareGUID.Width = 5;
+            // 
+            // dgvYDTZSharePType
+            // 
+            this.dgvYDTZSharePType.HeaderText = "患者类型";
+            this.dgvYDTZSharePType.Name = "dgvYDTZSharePType";
+            this.dgvYDTZSharePType.ReadOnly = true;
+            this.dgvYDTZSharePType.Width = 125;
+            // 
+            // dgvYDTZSharePName
+            // 
+            this.dgvYDTZSharePName.HeaderText = "患者姓名";
+            this.dgvYDTZSharePName.Name = "dgvYDTZSharePName";
+            this.dgvYDTZSharePName.ReadOnly = true;
+            this.dgvYDTZSharePName.Width = 125;
+            // 
+            // dgvYDTZUpLoadSharer
+            // 
+            this.dgvYDTZUpLoadSharer.HeaderText = "分享者";
+            this.dgvYDTZUpLoadSharer.Name = "dgvYDTZUpLoadSharer";
+            this.dgvYDTZUpLoadSharer.ReadOnly = true;
+            this.dgvYDTZUpLoadSharer.Width = 125;
+            // 
+            // dgvYDTZShareShareTime
+            // 
+            this.dgvYDTZShareShareTime.HeaderText = "分享时间";
+            this.dgvYDTZShareShareTime.Name = "dgvYDTZShareShareTime";
+            this.dgvYDTZShareShareTime.ReadOnly = true;
+            this.dgvYDTZShareShareTime.Width = 125;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1785,19 +1789,8 @@
         private System.Windows.Forms.ButtonEx btnTZLY;
         private System.Windows.Forms.DataGridViewEx dgvTZLY_Local;
         private System.Windows.Forms.DataGridViewEx dgvTZLY_Down;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownGUID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownPType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownPName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownSharer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownShareTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownDownTime;
         private System.Windows.Forms.DataGridViewEx dgvYDTZUpLoad;
         private System.Windows.Forms.DataGridViewEx dgvYDTZShare;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZShareGUID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZSharePType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZSharePName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZUpLoadSharer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZShareShareTime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZQPZStetNO;
@@ -1829,6 +1822,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZMAC;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZOwner;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvYCTZStetConn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownGUID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownPType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownPName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownSharer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownShareTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvTZLY_DownDownTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZShareGUID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZSharePType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZSharePName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZUpLoadSharer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvYDTZShareShareTime;
     }
 }
 

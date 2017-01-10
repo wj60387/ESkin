@@ -217,9 +217,9 @@ namespace BDAuscultation
         {
             switch (type)
             {
-                case 1:
-                    return "儿科";
                 case 2:
+                    return "儿科";
+                case 1:
                     return "成人";
             }
             return "未知患者类型";
