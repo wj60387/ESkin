@@ -22,6 +22,7 @@ namespace BDVersionPub
             this.Load += FrmMain_Load;
             
         }
+        string dirPath = System.Configuration.ConfigurationManager.AppSettings["Path"];
         string SN = System.Configuration.ConfigurationManager.AppSettings["SN"];
         string MAC = System.Configuration.ConfigurationManager.AppSettings["MAC"];
         string MainExeName = System.Configuration.ConfigurationManager.AppSettings["MainExeName"];
@@ -43,11 +44,11 @@ namespace BDVersionPub
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog folderDialog = new FolderBrowserDialog();
-            if (DialogResult.OK == folderDialog.ShowDialog())
-            {
+            //FolderBrowserDialog folderDialog = new FolderBrowserDialog();
+            //if (DialogResult.OK == folderDialog.ShowDialog())
+            //{
                 this.treeView1.Nodes.Clear();
-                var folderPath = folderDialog.SelectedPath;
+                var folderPath = dirPath;//folderDialog.SelectedPath;
                 TreeNode node = new TreeNode(Path.GetFileName(folderPath));
                 node.Nodes.Add(new TreeNode() { Name="Test"});
                 node.Tag = NodeType.Dir;
@@ -57,7 +58,7 @@ namespace BDVersionPub
                 var mainExeName = Path.Combine(folderPath,MainExeName);
                 var info=FileVersionInfo.GetVersionInfo(mainExeName);
                 ucTextBoxEx2.Text = info.ProductVersion;
-            }
+            //}
         }
 
 

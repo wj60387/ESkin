@@ -74,6 +74,18 @@ namespace System.Windows.Forms
         {
             base.OnClick(e);
         }
+        public Rectangle SysBtnRect
+        {
+            get
+            {
+                var height = LogoHeight;
+                foreach (var item in NavItemList)
+                {
+                    height += item.Height;
+                }
+                return new Rectangle(0, height + 16, this.Width, 21);
+            }
+        }
         protected override void OnMouseDown(MouseEventArgs e)
         {
             base.OnMouseDown(e);

@@ -56,7 +56,7 @@
             this.btnOpen});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(741, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(864, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -83,8 +83,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(741, 386);
-            this.splitContainer1.SplitterDistance = 247;
+            this.splitContainer1.Size = new System.Drawing.Size(864, 386);
+            this.splitContainer1.SplitterDistance = 288;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -98,7 +98,7 @@
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(247, 386);
+            this.treeView1.Size = new System.Drawing.Size(288, 386);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterCheck);
             this.treeView1.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.treeView1_BeforeExpand);
@@ -112,7 +112,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 386);
+            this.panel1.Size = new System.Drawing.Size(571, 386);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -127,7 +127,7 @@
             // ucTextBoxEx1
             // 
             this.ucTextBoxEx1.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.ucTextBoxEx1.BackColor = System.Drawing.Color.Transparent;
+            this.ucTextBoxEx1.BackColor = System.Drawing.Color.White;
             this.ucTextBoxEx1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ucTextBoxEx1.Location = new System.Drawing.Point(144, 17);
@@ -151,14 +151,13 @@
             this.groupBox2.Controls.Add(this.ucTextBoxEx2);
             this.groupBox2.Location = new System.Drawing.Point(23, 53);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(463, 285);
+            this.groupBox2.Size = new System.Drawing.Size(545, 285);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "版本升级";
             // 
             // btnPub
             // 
-            this.btnPub.ArcRadius = ((System.Windows.Forms.ArcRadius)(resources.GetObject("btnPub.ArcRadius")));
             this.btnPub.BackColor = System.Drawing.Color.Transparent;
             this.btnPub.FlatAppearance.BorderSize = 0;
             this.btnPub.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -167,11 +166,15 @@
             this.btnPub.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPub.ForeColor = System.Drawing.Color.White;
             this.btnPub.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
+            this.btnPub.LeftBottom = 0;
+            this.btnPub.LeftTop = 0;
             this.btnPub.Location = new System.Drawing.Point(121, 197);
             this.btnPub.Name = "btnPub";
             this.btnPub.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnPub.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
             this.btnPub.Radius = 16;
+            this.btnPub.RightBottom = 0;
+            this.btnPub.RightTop = 0;
             this.btnPub.Size = new System.Drawing.Size(156, 40);
             this.btnPub.TabIndex = 4;
             this.btnPub.Text = "发布";
@@ -199,7 +202,7 @@
             // ucTextBoxEx3
             // 
             this.ucTextBoxEx3.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.ucTextBoxEx3.BackColor = System.Drawing.Color.Transparent;
+            this.ucTextBoxEx3.BackColor = System.Drawing.Color.White;
             this.ucTextBoxEx3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxEx3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ucTextBoxEx3.Location = new System.Drawing.Point(121, 95);
@@ -215,7 +218,7 @@
             // ucTextBoxEx2
             // 
             this.ucTextBoxEx2.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.ucTextBoxEx2.BackColor = System.Drawing.Color.Transparent;
+            this.ucTextBoxEx2.BackColor = System.Drawing.Color.White;
             this.ucTextBoxEx2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxEx2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ucTextBoxEx2.Location = new System.Drawing.Point(121, 43);
@@ -232,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 411);
+            this.ClientSize = new System.Drawing.Size(864, 411);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

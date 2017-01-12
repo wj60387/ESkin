@@ -40,8 +40,8 @@ namespace BDAuscultation
                 OperationContext.Current.OutgoingMessageHeaders.Add(header);
                 header = MessageHeader.CreateHeader("MAC", "http://tempuri.org", Setting.authorizationInfo.MachineCode);
                 OperationContext.Current.OutgoingMessageHeaders.Add(header);
-                string sql = "select 1 from UserInfo where   UserName={0} and PWD={1}";
-                var r = Mediator.remoteService.ExecuteScalar(sql, new string[] { txtUserName.Text.Trim(), txtPwd.Text.Trim() });
+                string sql = "select 1 from UserInfo where   UserName={0} and PWD={1} and SN={2}";
+                var r = Mediator.remoteService.ExecuteScalar(sql, new string[] { txtUserName.Text.Trim(), txtPwd.Text.Trim(), Setting.authorizationInfo.AuthorizationNum });
                 if (!string.IsNullOrEmpty(r))
                 {
                     lbMsg.Text = "登录成功";

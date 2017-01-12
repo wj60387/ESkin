@@ -54,7 +54,11 @@ namespace System.Windows.Forms
             base.OnCreateControl();
             if (this.Items.Count != 0)
             {
-                this.DropDownHeight = this.Items.Count * DropDownButtonWidth;
+                this.DropDownHeight = this.Items.Count * DropDownButtonWidth  ;
+            }
+            else
+            {
+                this.DropDownHeight = 24;
             }
         }
 
@@ -102,7 +106,14 @@ namespace System.Windows.Forms
 
         private void OverrideDropDown(Graphics g)
         {
-            this.DropDownHeight = ItemHeight * this.Items.Count + 2;
+            if (this.Items.Count != 0)
+            {
+                this.DropDownHeight = this.Items.Count * ItemHeight+2;
+            }
+            else
+            {
+                this.DropDownHeight = DropDownButtonWidth;
+            }
             //if (DesignMode) return;
             //Rectangle rect = new Rectangle(this.Width - DropDownButtonWidth, 0, DropDownButtonWidth, this.Height);
 

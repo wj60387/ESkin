@@ -62,8 +62,12 @@ namespace BDAuscultation.Forms
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
+            this.btnCancel.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnCancel.Location = new System.Drawing.Point(138, 61);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnCancel.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnCancel.Radius = 16;
             this.btnCancel.Size = new System.Drawing.Size(75, 24);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "停止录音";

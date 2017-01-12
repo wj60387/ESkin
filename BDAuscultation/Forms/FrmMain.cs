@@ -104,7 +104,7 @@ namespace BDAuscultation
         }
         void nav1_OnXTClick()
         {
-            
+            this.contextMenuStrip1.Show(nav1, new Point(0, nav1.SysBtnRect.Y+nav1.SysBtnRect.Height));
         }
         void nav1_OnGYClick()
         {
@@ -170,20 +170,35 @@ namespace BDAuscultation
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
 
-         
+        private void 退出系统ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
 
-       
-       
-         
-
-       
-
-        
-
-       
-
-       
-
+        private void 操作日志ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowLog(DateTime.Now);
+            this.tabControlYDTZ.SelectedTab = tabOperLog;
+        }
+        void ShowLog(DateTime Date)
+        {
+            var dir = Path.Combine(Application.StartupPath, "Logs" + "\\" + Date.Year + "\\" + Date.Month);
+            var filePath = Path.Combine(dir, Date.ToString("yyyy-MM-dd") + ".txt");
+            if (File.Exists(filePath))
+            {
+                var text = File.ReadAllText(filePath, Encoding.UTF8);
+                this.txtLog.Text = text;
+            }
+            else
+            {
+                MessageBox.Show("今日无操作");
+            }
+        }
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            ShowLog(dateTimePicker1.Value);
+        }
 
     }
 }

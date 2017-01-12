@@ -145,8 +145,8 @@ namespace BDAuscultation
             if (Mediator.isUpdate())
             {
                 var updateExe = Path.Combine(Application.StartupPath, "BDUpdate.exe");
-                // ProcessStartInfo process = new ProcessStartInfo(updateExe);
-                System.Diagnostics.Process.Start(updateExe);
+                  ProcessStartInfo process = new ProcessStartInfo(updateExe);
+                System.Diagnostics.Process.Start(updateExe, authorizationInfo.AuthorizationNum + " " + authorizationInfo.MachineCode);
                 return;
             }
             #endregion

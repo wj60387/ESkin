@@ -85,11 +85,15 @@ namespace BDAuscultation.Forms
             this.btnSure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSure.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSure.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnSure.Location = new System.Drawing.Point(312, 131);
+            this.btnSure.LeftBottom = 0;
+            this.btnSure.LeftTop = 0;
+            this.btnSure.Location = new System.Drawing.Point(299, 132);
             this.btnSure.Name = "btnSure";
             this.btnSure.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnSure.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
             this.btnSure.Radius = 16;
+            this.btnSure.RightBottom = 0;
+            this.btnSure.RightTop = 0;
             this.btnSure.Size = new System.Drawing.Size(75, 24);
             this.btnSure.TabIndex = 10;
             this.btnSure.Text = "确定";

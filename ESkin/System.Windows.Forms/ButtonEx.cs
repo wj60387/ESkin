@@ -138,7 +138,21 @@ namespace  System.Windows.Forms
             }
 
         }
-        public ArcRadius ArcRadius { get; set; }
+        public int LeftTop{get;set;}
+
+        public int RightTop{get;set;}
+
+        public int LeftBottom{get;set;}
+
+        public int RightBottom { get; set; }
+
+        private ArcRadius ArcRadius
+        {
+            get
+            {
+                return new ArcRadius(LeftTop, RightTop, LeftBottom, RightBottom);
+            }
+        }
          
         public   GraphicsPath DrawRoundRect(int x, int y, int width, int height, int radius)
         {
@@ -153,242 +167,76 @@ namespace  System.Windows.Forms
             return GraphicsPathHelper.CreateRoundPath(rect,ArcRadius );
         }
     }
-
-    public class ArcRadiusConverter : TypeConverter
+     
+    public class ArcRadius
     {
-        public override bool CanConvertFrom(ITypeDescriptorContext context,
-   Type sourceType)
-        {
-            if (sourceType == typeof(string)) return true;//字符串，如："Jonny,Sun,33" 
-            return base.CanConvertFrom(context, sourceType);
-        }
-
-        public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
-        {
-            if (destinationType == typeof(string)) return true;
-            if (destinationType == typeof(InstanceDescriptor)) return true;
-            return base.CanConvertTo(context, destinationType);
-        }
-
-        public override object ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, object value)
-        {
-            string s = value as string;
-            if (s == null) return base.ConvertFrom(context, culture, value);
-            //字符串，如："Jonny,Sun,33" 
-            string[] ps = s.Split(new char[] { char.Parse(",") });
-            if (ps.Length != 4)
-                throw new ArgumentException("参数异常");
-            //解析字符串并实例化对象 
-            return new ArcRadius(int.Parse(ps[0]), int.Parse(ps[1]), int.Parse(ps[2]), int.Parse(ps[3]));
-        }
-
-        public override object ConvertTo(ITypeDescriptorContext context,
-        CultureInfo culture,
-        object value,
-        Type destinationType)
-        {
-            //将对象转换为字符串，如："Jonny,Sun,33" 
-            if ((destinationType == typeof(string)) && (value is ArcRadius))
-            {
-                var obj = (ArcRadius)value;
-                return string.Join(",", new string[]{obj.LeftTop.ToString()
-              ,obj.RightTop.ToString()
-              ,obj.LeftBottom.ToString()
-              ,obj.RightBottom.ToString()});
-            }
-            //生成设计时的构造器代码 
-            // this.testComponent1.Person = new CSFramework.MyTypeConverter.Person("Jonny", "Sun", 33); 
-            if (destinationType == typeof(InstanceDescriptor) && value is ArcRadius)
-            {
-                ArcRadius obj = (ArcRadius)value;
-                ConstructorInfo ctor = typeof(ArcRadius).GetConstructor(
-                new Type[] { typeof(int), typeof(int), typeof(int), typeof(int) });
-                return new InstanceDescriptor(ctor, new object[] { obj.LeftTop
-              ,obj.RightTop
-              ,obj.LeftBottom
-              ,obj.RightBottom });
-            }
-            return base.ConvertTo(context, culture, value, destinationType);
-        }
-
-        public override object CreateInstance(ITypeDescriptorContext context,
-        IDictionary propertyValues)
-        {
-            int LeftTop = (int)propertyValues["LeftTop"];
-            int LeftBottom = (int)propertyValues["LeftBottom"];
-            int RightTop = (int)propertyValues["RightTop"];
-            int RightBottom = (int)propertyValues["RightBottom"];
-            return new ArcRadius(LeftTop, RightTop, LeftBottom, RightBottom);//创建实例 
-        }
-        public override bool GetCreateInstanceSupported(ITypeDescriptorContext context)
-        {
-            return true;
-        }
-
-        public override PropertyDescriptorCollection GetProperties(
-                            ITypeDescriptorContext context,
-                            object value, Attribute[] attributes)
-        {
-            if (value is ArcRadius)
-                return TypeDescriptor.GetProperties(value, attributes);
-
-            return base.GetProperties(context, value, attributes);
-        }
-
-        public override bool GetPropertiesSupported(ITypeDescriptorContext context)
-        {
-            return true;
-        }
-    }
-    [Serializable]
-    [Browsable(true)]
-    [ComVisible(true)]
-    [TypeConverter(typeof(ArcRadiusConverter))]
-    public struct ArcRadius
-    {
-        private int _rightBottom;
-        private int _rightTop;
-        private int _leftBottom;
-        private int _leftTop;
-
-        public static readonly ArcRadius Empty = new ArcRadius(0);
-
-        public ArcRadius(int radiusLength)
-        {
-            if (radiusLength < 0)
-            {
-                radiusLength = 0;
-            }
-
-            this._rightBottom = this._rightTop = this._leftBottom = this._leftTop = radiusLength;
-        }
-
+        private int _RightBottom=0;
+        private int _RightTop=0;
+        private int _LeftBottom = 0;
+        private int _LeftTop = 0;
         public ArcRadius(int leftTop, int rightTop, int leftBottom, int rightBottom)
         {
-            this._rightBottom = rightBottom < 0 ? 0 : rightBottom;
-            this._rightTop = rightTop < 0 ? 0 : rightTop;
-            this._leftBottom = leftBottom < 0 ? 0 : leftBottom;
-            this._leftTop = leftTop < 0 ? 0 : leftTop;
+            this._RightBottom = rightBottom;
+            this._RightTop = rightTop;
+            this._LeftBottom = leftBottom;
+            this._LeftTop = leftTop;
         }
 
-        private bool IsAllEqual()
-        {
-            return ((this.RightBottom == this.RightTop)
-                 && (this.RightBottom == this.LeftBottom))
-                 && (this.RightBottom == this.LeftTop);
-        }
-
-        [Browsable(true)]
-        public int All
-        {
-            get
-            {
-                if (!IsAllEqual())
-                {
-                    return -1;
-                }
-
-                return this.RightBottom;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    value = 0;
-                }
-
-                this.RightBottom = this.RightTop = this.LeftBottom = this.LeftTop = value;
-            }
-        }
-        [Browsable(true)]
+         
         public int LeftTop
         {
             get
             {
-                return this._leftTop;
+                return this._LeftTop;
             }
             set
             {
-                if (value < 0)
-                {
-                    value = 0;
-                }
 
-                this._leftTop = value;
+                this._LeftTop = value;
             }
         }
 
-        [Browsable(true)]
         public int RightTop
         {
             get
             {
-                return this._rightTop;
+                return this._RightTop;
             }
             set
             {
-                if (value < 0)
-                {
-                    value = 0;
-                }
 
-                this._rightTop = value;
+
+                this._RightTop = value;
             }
         }
 
-        [Browsable(true)]
         public int LeftBottom
         {
             get
             {
-                return this._leftBottom;
+                return this._LeftBottom;
             }
             set
             {
-                if (value < 0)
-                {
-                    value = 0;
-                }
 
-                this._leftBottom = value;
+                this._LeftBottom = value;
             }
         }
 
-        [Browsable(true)]
         public int RightBottom
         {
             get
             {
-                return this._rightBottom;
+                return this._RightBottom;
             }
             set
             {
-                if (value < 0)
-                {
-                    value = 0;
-                }
 
-                this._rightBottom = value;
+                this._RightBottom = value;
             }
         }
 
-        //public static bool operator ==(ArcRadius p1, ArcRadius p2)
-        //{
-        //    return ((((p1.RightTop == p2.RightTop)
-        //        && (p1.RightBottom == p2.RightBottom))
-        //        && (p1.LeftBottom == p2.LeftBottom))
-        //        && (p1.LeftTop == p2.LeftTop));
-        //}
-
-        //public static bool operator !=(ArcRadius p1, ArcRadius p2)
-        //{
-        //    return !(p1 == p2);
-        //}
-
-        public override string ToString()
-        {
-            return LeftTop + ", " + RightTop + ", " + LeftBottom + ", " + RightBottom;
-        }
+       
     }
     public static class GraphicsPathHelper
     {

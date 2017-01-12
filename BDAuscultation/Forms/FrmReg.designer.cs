@@ -55,8 +55,12 @@ namespace BDAuscultation.Forms
             this.btnRegistered.FlatAppearance.BorderSize = 0;
             this.btnRegistered.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistered.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRegistered.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnRegistered.Location = new System.Drawing.Point(326, 40);
             this.btnRegistered.Name = "btnRegistered";
+            this.btnRegistered.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnRegistered.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnRegistered.Radius = 16;
             this.btnRegistered.Size = new System.Drawing.Size(75, 23);
             this.btnRegistered.TabIndex = 27;
             this.btnRegistered.Text = "激活";

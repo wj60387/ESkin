@@ -19,15 +19,40 @@ namespace BDUpdate
          private bool isMouseDown = false;
         private Point FormLocation;     //form的location
         private Point mouseOffset;      //鼠标的按下位置
-        public FrmMain()
+        public FrmMain(string SN,string MAC)
         {
+            this.MAC = MAC;
+            this.SN = SN;
             InitializeComponent();
             this.Load += FrmMain_Load;
         }
 
         void FrmMain_Load(object sender, EventArgs e)
         {
-            Down();
+            using (OperationContextScope scope = new OperationContextScope(remoteService.InnerChannel))
+            {
+                MessageHeader header = MessageHeader.CreateHeader("SN", "http://tempuri.org", SN);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                header = MessageHeader.CreateHeader("MAC", "http://tempuri.org", MAC);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                string sql = @"SELECT  * FROM VersionMajor WHERE Enable=1";
+                var ds = remoteService.ExecuteDataset(sql, null);
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    var banben = ds.Tables[0].Rows[0]["Version"] + "";
+                    var content = ds.Tables[0].Rows[0]["PubContent"] + "";
+                    sql = @"SELECT Value FROM SysConst WHERE KeyName='VersionFileDir'";
+                    var Dir = remoteService.ExecuteScalar(sql, null);
+                    var majorDir = Dir + "\\" + banben;
+                    sql = "select * from View_CurrentVersion ";
+                    var dsFile = remoteService.ExecuteDataset(sql, new string[] { });
+                    int i = 0;
+                    lblVersion.Text = "版本:V" + banben;
+                    lblConetnt.Text = "更新内容:" + content;
+                    Down(majorDir);
+                }
+            }
+           
         }
         protected override void OnMouseDown(MouseEventArgs e)
         {
@@ -41,11 +66,11 @@ namespace BDUpdate
                 mouseOffset = Control.MousePosition;
             }
         }
-        string SN = "90E52F4D-BCA5-422F-897A-A8D3CEF35DBF";//System.Configuration.ConfigurationManager.AppSettings["SN"];
-        string MAC = "20:47:47:C8:CB:42";//System.Configuration.ConfigurationManager.AppSettings["MAC"];
+        string SN = string.Empty;//"90E52F4D-BCA5-422F-897A-A8D3CEF35DBF";//System.Configuration.ConfigurationManager.AppSettings["SN"];
+        string MAC = string.Empty;//"20:47:47:C8:CB:42";//System.Configuration.ConfigurationManager.AppSettings["MAC"];
         string MainExeName = System.Configuration.ConfigurationManager.AppSettings["MainExeName"];
         public   AuscultationService.AuscultationServiceClient remoteService = new AuscultationService.AuscultationServiceClient("WSHttpBinding_IAuscultationService");
-        void Down()
+        void Down(string majorDir)
         {
             ExecuteProcess += FrmMain_ExecuteProcess;
             ToltlProcess += FrmMain_ToltlProcess;
@@ -57,52 +82,41 @@ namespace BDUpdate
                     OperationContext.Current.OutgoingMessageHeaders.Add(header);
                     header = MessageHeader.CreateHeader("MAC", "http://tempuri.org", MAC);
                     OperationContext.Current.OutgoingMessageHeaders.Add(header);
-                    string sql = @"SELECT  Version FROM VersionMajor WHERE Enable=1";
-                    var ds = remoteService.ExecuteDataset(sql, null);
-                    if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                    string sql = "select * from View_CurrentVersion ";
+                    var dsFile = remoteService.ExecuteDataset(sql, new string[] { });
+                    int i = 0;
+                    foreach (DataRow row in dsFile.Tables[0].Rows)
                     {
-                        var banben = ds.Tables[0].Rows[0][0] + "";
-                        sql = @"SELECT Value FROM SysConst WHERE KeyName='VersionFileDir'";
-                        var Dir = remoteService.ExecuteScalar(sql, null);
-                        var majorDir = Dir + "\\" + banben;
-
-                        sql = "select * from VersionFile where Version={0}";
-                        var dsFile = remoteService.ExecuteDataset(sql, new string[] { banben });
-                        int i = 0;
-                        foreach (DataRow row in dsFile.Tables[0].Rows)
+                        i++;
+                        var hash = row["FileHash"] + "";
+                        var fileName = row["FileName"] + "";
+                        var fileRelativePath = row["FileRelativePath"] + "";
+                        if (ToltlProcess != null)
                         {
-                            i++;
-                            var hash = row["FileHash"] + "";
-                            var fileName = row["FileName"] + "";
-                            var fileRelativePath = row["FileRelativePath"] + "";
-                            if (ToltlProcess != null)
+                            ToltlProcess(fileName);
+                        }
+                        var localFilePath = Path.Combine(Application.StartupPath, fileRelativePath);
+                        var remoteFilePath = Path.Combine(majorDir, fileRelativePath);
+                        var fileSize = remoteService.GetFileLength(remoteFilePath);
+                        //下载文件
+                        if (!Directory.Exists(Path.GetDirectoryName(localFilePath)))
+                        {
+                            Directory.CreateDirectory(Path.GetDirectoryName(localFilePath));
+                        }
+                        using (var stream = new FileStream(localFilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite))
+                        {
+                            long position = 0;
+                            while (position < fileSize)
                             {
-                                ToltlProcess(fileName);
-                            }
-                            var localFilePath = Path.Combine(Application.StartupPath, fileRelativePath);
-                            var remoteFilePath = Path.Combine(majorDir, fileRelativePath);
-                            var fileSize = remoteService.GetFileLength(remoteFilePath);
-                            //下载文件
-                            if (!Directory.Exists(Path.GetDirectoryName(localFilePath)))
-                            {
-                                Directory.CreateDirectory(Path.GetDirectoryName(localFilePath));
-                            }
-                            using (var stream = new FileStream(localFilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite))
-                            {
-                                long position = 0;
-                                while (position < fileSize)
-                                {
-                                    var bytes = remoteService.DownLoadFile(remoteFilePath, position, 24 * 1024);
-                                    position += bytes.Length;
-                                    stream.Write(bytes, 0, bytes.Length);
+                                var bytes = remoteService.DownLoadFile(remoteFilePath, position, 24 * 1024);
+                                position += bytes.Length;
+                                stream.Write(bytes, 0, bytes.Length);
 
-                                    if (ExecuteProcess != null)
-                                        ExecuteProcess((int)(position * 100 / fileSize), 100, i, dsFile.Tables[0].Rows.Count);
-                                }
-                                stream.Close();
-
+                                if (ExecuteProcess != null)
+                                    ExecuteProcess((int)(position * 100 / fileSize), 100, i, dsFile.Tables[0].Rows.Count);
                             }
-                            
+                            stream.Close();
+
                         }
                     }
                 }
@@ -146,13 +160,6 @@ namespace BDUpdate
         public event Action<string> ToltlProcess;
         private void btnDown_Click(object sender, EventArgs e)
         {
-           
-           //Process[] ps = Process.GetProcessesByName(MainExeName);
-           //foreach (Process p in ps)
-           //{
-           //    p.WaitForExit();
-           //}
-           Down();
         }
 
         void FrmMain_ExecuteProcess(int value,int maxvalue,  int tvalue, int total)
@@ -165,10 +172,9 @@ namespace BDUpdate
 
                 if (value == maxvalue&&tvalue == total)
                 {
-                    var exe = Path.Combine(Application.StartupPath, "BDAuscultation.exe");
-                    System.Diagnostics.Process.Start(exe);
-                    this.Close();
-                    Application.Exit();
+                   
+                    btnOK.Visible = true;
+                   
                 }
             }));
         }
@@ -184,6 +190,14 @@ namespace BDUpdate
         private void btnMin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            var exe = Path.Combine(Application.StartupPath, "BDAuscultation.exe");
+            System.Diagnostics.Process.Start(exe);
+            this.Close();
+            Application.Exit();
         }
 
         

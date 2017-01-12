@@ -31,7 +31,7 @@ namespace BDAuscultation.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShare));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnShare = new  ButtonEx();
+            this.btnShare = new System.Windows.Forms.ButtonEx();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -53,9 +53,13 @@ namespace BDAuscultation.Forms
             this.btnShare.FlatAppearance.BorderSize = 0;
             this.btnShare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShare.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnShare.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnShare.Location = new System.Drawing.Point(98, 8);
             this.btnShare.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnShare.Name = "btnShare";
+            this.btnShare.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnShare.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnShare.Radius = 16;
             this.btnShare.Size = new System.Drawing.Size(93, 23);
             this.btnShare.TabIndex = 0;
             this.btnShare.Text = "分享";
@@ -78,7 +82,7 @@ namespace BDAuscultation.Forms
             this.treeView1.TabIndex = 1;
             this.treeView1.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterCheck);
             // 
-            // FormShare
+            // FrmShare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +95,7 @@ namespace BDAuscultation.Forms
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormShare";
+            this.Name = "FrmShare";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "听诊录音分享";
             this.panel1.ResumeLayout(false);

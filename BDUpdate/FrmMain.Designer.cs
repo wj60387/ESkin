@@ -35,6 +35,9 @@
             this.lblMsg = new System.Windows.Forms.Label();
             this.lblProcess = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnOK = new System.Windows.Forms.Button();
+            this.lblConetnt = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.processBarEx1 = new System.Windows.Forms.ProcessBarEx();
             this.SuspendLayout();
             // 
@@ -92,6 +95,43 @@
             this.lblProcess.TabIndex = 8;
             this.lblProcess.Text = "准备更新文件...";
             // 
+            // btnOK
+            // 
+            this.btnOK.BackColor = System.Drawing.Color.Blue;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(164, 137);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 30);
+            this.btnOK.TabIndex = 9;
+            this.btnOK.Text = "更新完成";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Visible = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // lblConetnt
+            // 
+            this.lblConetnt.AutoSize = true;
+            this.lblConetnt.BackColor = System.Drawing.Color.Transparent;
+            this.lblConetnt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblConetnt.ForeColor = System.Drawing.Color.White;
+            this.lblConetnt.Location = new System.Drawing.Point(12, 35);
+            this.lblConetnt.Name = "lblConetnt";
+            this.lblConetnt.Size = new System.Drawing.Size(0, 17);
+            this.lblConetnt.TabIndex = 10;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
+            this.lblVersion.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblVersion.Location = new System.Drawing.Point(155, 4);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(0, 17);
+            this.lblVersion.TabIndex = 11;
+            // 
             // processBarEx1
             // 
             this.processBarEx1.Location = new System.Drawing.Point(0, 219);
@@ -108,6 +148,9 @@
             this.BackgroundImage = global::BDUpdate.Properties.Resources.BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(392, 254);
+            this.Controls.Add(this.lblVersion);
+            this.Controls.Add(this.lblConetnt);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblProcess);
             this.Controls.Add(this.lblMsg);
             this.Controls.Add(this.label1);
@@ -131,6 +174,9 @@
         private System.Windows.Forms.Label lblMsg;
         private System.Windows.Forms.Label lblProcess;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label lblConetnt;
+        private System.Windows.Forms.Label lblVersion;
 
     }
 }
