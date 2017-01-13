@@ -20,6 +20,7 @@ namespace BDAuscultation
     partial class FrmMain:   
         IHandleMessage<RequestRemoteAuscultateCode>
         , IHandleMessage<ResGetDeviceInfoCode>
+      // , IHandleMessage<ResRemoteAuscultateCode>
     {
         void InitdgvYCTZ()
         {
@@ -28,7 +29,9 @@ namespace BDAuscultation
             LoadYCTZStet();
 
 
-            var ycjxBtnCheckColumn = new DataGridViewCheckBoxExColumn() { HeaderText = "选择", Text = "选择", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
+            var ycjxBtnCheckColumn = new DataGridViewCheckBoxExColumn() {
+                Name = "dgvYCTZAccept",
+                HeaderText = "选择", Text = "选择", AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
             dgvYCTZ.Columns.Add(ycjxBtnCheckColumn);
 
             dgvYCTZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器名字);
@@ -198,7 +201,6 @@ namespace BDAuscultation
             Mediator.SuperSocket.Send(bytes);
             dgvYCTZ.Rows.Clear();
             Mediator.ShowMsg("刷新在线的听诊器...");
-            btnStart.Visible = false;
             Mediator.WriteLog(this.Name, string.Format("远程听诊,{0}刷新在线的听诊器...", cbBoxYCTZ.Text));
 
         }
@@ -554,6 +556,36 @@ namespace BDAuscultation
 
             }));
         }
+
+        //public void HandleMessage(RefleshStatusCode message)
+        //{
+        //    foreach (DataGridViewRow row in dgvYCTZ.Rows)
+        //    {
+        //        if (row.Cells["dgvYCTZAccept"].Value.ToString() == "否") continue;
+        //        if (row.Cells["dgvYCTZStetName"].Value.ToString() == message.SrcStetName)
+        //        {
+        //            row.Cells["dgvYCTZStetConn"].Value = message.isConnect ? "已连接" : "未连接";
+        //            // row.DefaultCellStyle.BackColor = message.isConnect ? Color.Green : Color.White;
+        //            Mediator.ShowMsg(message.SrcMac + ",的" + message.SrcStetName + "听诊器" + (message.isConnect ? "连接上了..." : "断开连接..."));
+        //        }
+        //    }
+        //}
+        //public void HandleMessage(ResRemoteAuscultateCode message)
+        //{
+        //    Invoke(new MethodInvoker(delegate()
+        //    {
+        //        //Mediator.WriteLog(this.Name, string.Format("处理来自{0}远程邀请请求的回应...", message.SrcPCName));
+        //        Mediator.WriteLog(this.Name, message.Comment);
+        //        foreach (DataGridViewRow row in dgvYCTZ.Rows)
+        //        {
+        //            if (row.Cells["dgvYCTZStetMAC"].Value.ToString() == message.SrcMac && (bool)row.Cells[0].Value)
+        //            {
+        //                row.Cells["dgvYCTZAccept"].Value = message.isAccept ? "是" : "否";
+        //                Mediator.ShowMsg(string.Format("{0}的{1}{2}了远程听诊请求", message.SrcPCName, row.Cells["StetName"].Value, message.isAccept ? "接受" : "拒绝"));
+        //            }
+        //        }
+        //    }));
+        //}
     }
 
 }
