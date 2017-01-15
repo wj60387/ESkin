@@ -85,6 +85,7 @@ namespace BDUpdate
                     string sql = "select * from View_CurrentVersion ";
                     var dsFile = remoteService.ExecuteDataset(sql, new string[] { });
                     int i = 0;
+                    wacth.Start();
                     foreach (DataRow row in dsFile.Tables[0].Rows)
                     {
                         i++;
@@ -111,6 +112,7 @@ namespace BDUpdate
                                 var bytes = remoteService.DownLoadFile(remoteFilePath, position, 24 * 1024);
                                 position += bytes.Length;
                                 stream.Write(bytes, 0, bytes.Length);
+                                DownBytes += bytes.Length;
 
                                 if (ExecuteProcess != null)
                                     ExecuteProcess((int)(position * 100 / fileSize), 100, i, dsFile.Tables[0].Rows.Count);
@@ -161,7 +163,8 @@ namespace BDUpdate
         private void btnDown_Click(object sender, EventArgs e)
         {
         }
-
+        System.Diagnostics.Stopwatch wacth = new Stopwatch();
+        long DownBytes = 0;
         void FrmMain_ExecuteProcess(int value,int maxvalue,  int tvalue, int total)
         {
             this.Invoke(new MethodInvoker(() =>
@@ -169,12 +172,12 @@ namespace BDUpdate
                 this.processBarEx1.Value = maxvalue;
                 this.processBarEx1.Value = value;
                 this.lblProcess.Text = string.Format("当前进度:{0}/{1},总进度:{2}/{3}", value, maxvalue, tvalue,total);
-
+                this.lblNet.Text = (int)(DownBytes / (double)wacth.ElapsedMilliseconds)+ "KB/S";
                 if (value == maxvalue&&tvalue == total)
                 {
-                   
+                    lblgxz.Visible = false;
                     btnOK.Visible = true;
-                   
+                    wacth.Stop();
                 }
             }));
         }
@@ -199,6 +202,8 @@ namespace BDUpdate
             this.Close();
             Application.Exit();
         }
+
+         
 
         
 

@@ -521,6 +521,10 @@
   <ItemGroup>
     <None Include="Resources\圆黑.png" />
     <None Include="Resources\圆亮.png" />
+    <None Include="Resources\更新背景图.png" />
+    <None Include="Resources\更新中.png" />
+    <None Include="Resources\连接.png" />
+    <None Include="Resources\连接-绿色.png" />
     <Content Include="布迪亨1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -623,6 +623,26 @@ namespace BDAuscultation.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 更新中 {
+            get {
+                object obj = ResourceManager.GetObject("更新中", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 更新背景图 {
+            get {
+                object obj = ResourceManager.GetObject("更新背景图", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 检查报告点击 {
             get {
                 object obj = ResourceManager.GetObject("检查报告点击", resourceCulture);
@@ -816,6 +836,26 @@ namespace BDAuscultation.Properties {
         internal static System.Drawing.Bitmap 远程教学 {
             get {
                 object obj = ResourceManager.GetObject("远程教学", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 连接 {
+            get {
+                object obj = ResourceManager.GetObject("连接", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 连接_绿色 {
+            get {
+                object obj = ResourceManager.GetObject("连接_绿色", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

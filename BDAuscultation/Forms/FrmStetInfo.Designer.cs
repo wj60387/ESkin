@@ -84,8 +84,7 @@ namespace BDAuscultation.Forms
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.txtStetName);
@@ -103,9 +102,9 @@ namespace BDAuscultation.Forms
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.radioButtonEx2);
             this.panel1.Controls.Add(this.radioButtonEx1);
-            this.panel1.Location = new System.Drawing.Point(7, 52);
+            this.panel1.Location = new System.Drawing.Point(7, 65);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(432, 450);
+            this.panel1.Size = new System.Drawing.Size(432, 237);
             this.panel1.TabIndex = 11;
             // 
             // txtStetName
@@ -134,15 +133,15 @@ namespace BDAuscultation.Forms
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCancel.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnCancel.LeftBottom = 0;
-            this.btnCancel.LeftTop = 0;
-            this.btnCancel.Location = new System.Drawing.Point(234, 373);
+            this.btnCancel.LeftBottom = 30;
+            this.btnCancel.LeftTop = 30;
+            this.btnCancel.Location = new System.Drawing.Point(281, 191);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancel.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCancel.Radius = 16;
-            this.btnCancel.RightBottom = 0;
-            this.btnCancel.RightTop = 0;
+            this.btnCancel.RightBottom = 30;
+            this.btnCancel.RightTop = 30;
             this.btnCancel.Size = new System.Drawing.Size(104, 33);
             this.btnCancel.TabIndex = 30;
             this.btnCancel.Text = "取消";
@@ -161,7 +160,7 @@ namespace BDAuscultation.Forms
             this.btnSure.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.btnSure.LeftBottom = 30;
             this.btnSure.LeftTop = 30;
-            this.btnSure.Location = new System.Drawing.Point(88, 373);
+            this.btnSure.Location = new System.Drawing.Point(137, 191);
             this.btnSure.Name = "btnSure";
             this.btnSure.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.btnSure.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -181,13 +180,13 @@ namespace BDAuscultation.Forms
             this.txtStetRemark.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetRemark.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetRemark.ForeColor = System.Drawing.Color.Black;
-            this.txtStetRemark.Location = new System.Drawing.Point(141, 220);
+            this.txtStetRemark.Location = new System.Drawing.Point(245, 238);
             this.txtStetRemark.Multiline = true;
             this.txtStetRemark.Name = "txtStetRemark";
             this.txtStetRemark.PasswordChar = '\0';
             this.txtStetRemark.Radius = 24;
             this.txtStetRemark.ReadOnly = false;
-            this.txtStetRemark.Size = new System.Drawing.Size(244, 117);
+            this.txtStetRemark.Size = new System.Drawing.Size(88, 25);
             this.txtStetRemark.TabIndex = 28;
             this.txtStetRemark.WaterText = "听诊器备注";
             // 
@@ -195,9 +194,9 @@ namespace BDAuscultation.Forms
             // 
             this.label11.Image = global::BDAuscultation.Properties.Resources.听诊器备注;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(25, 220);
+            this.label11.Location = new System.Drawing.Point(116, 238);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 25);
+            this.label11.Size = new System.Drawing.Size(107, 25);
             this.label11.TabIndex = 27;
             this.label11.Text = "听诊器备注：";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,13 +208,13 @@ namespace BDAuscultation.Forms
             this.txtStetFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetFunc.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetFunc.ForeColor = System.Drawing.Color.Black;
-            this.txtStetFunc.Location = new System.Drawing.Point(139, 173);
+            this.txtStetFunc.Location = new System.Drawing.Point(339, 238);
             this.txtStetFunc.Multiline = false;
             this.txtStetFunc.Name = "txtStetFunc";
             this.txtStetFunc.PasswordChar = '\0';
             this.txtStetFunc.Radius = 24;
             this.txtStetFunc.ReadOnly = false;
-            this.txtStetFunc.Size = new System.Drawing.Size(246, 24);
+            this.txtStetFunc.Size = new System.Drawing.Size(86, 24);
             this.txtStetFunc.TabIndex = 26;
             this.txtStetFunc.WaterText = "听诊器描述";
             // 
@@ -223,7 +222,7 @@ namespace BDAuscultation.Forms
             // 
             this.label10.Image = global::BDAuscultation.Properties.Resources.听诊器描述;
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(25, 173);
+            this.label10.Location = new System.Drawing.Point(8, 237);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(102, 25);
             this.label10.TabIndex = 25;
@@ -237,7 +236,7 @@ namespace BDAuscultation.Forms
             this.txtStetOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetOwner.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetOwner.ForeColor = System.Drawing.Color.Black;
-            this.txtStetOwner.Location = new System.Drawing.Point(139, 129);
+            this.txtStetOwner.Location = new System.Drawing.Point(139, 144);
             this.txtStetOwner.Multiline = false;
             this.txtStetOwner.Name = "txtStetOwner";
             this.txtStetOwner.PasswordChar = '\0';
@@ -251,7 +250,7 @@ namespace BDAuscultation.Forms
             // 
             this.label9.Image = global::BDAuscultation.Properties.Resources.听诊器所属人;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(26, 129);
+            this.label9.Location = new System.Drawing.Point(26, 144);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 25);
             this.label9.TabIndex = 23;
@@ -262,7 +261,7 @@ namespace BDAuscultation.Forms
             // 
             this.label8.Image = global::BDAuscultation.Properties.Resources.听诊器名字;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(24, 91);
+            this.label8.Location = new System.Drawing.Point(24, 106);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(102, 25);
             this.label8.TabIndex = 22;
@@ -276,7 +275,7 @@ namespace BDAuscultation.Forms
             this.txtStetChineseName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtStetChineseName.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStetChineseName.ForeColor = System.Drawing.Color.Black;
-            this.txtStetChineseName.Location = new System.Drawing.Point(139, 91);
+            this.txtStetChineseName.Location = new System.Drawing.Point(139, 106);
             this.txtStetChineseName.Multiline = false;
             this.txtStetChineseName.Name = "txtStetChineseName";
             this.txtStetChineseName.PasswordChar = '\0';
@@ -301,7 +300,7 @@ namespace BDAuscultation.Forms
             // 
             this.label6.Image = global::BDAuscultation.Properties.Resources.听诊器用途;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(25, 56);
+            this.label6.Location = new System.Drawing.Point(25, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 25);
             this.label6.TabIndex = 19;
@@ -311,7 +310,7 @@ namespace BDAuscultation.Forms
             // radioButtonEx2
             // 
             this.radioButtonEx2.AutoSize = true;
-            this.radioButtonEx2.Location = new System.Drawing.Point(209, 58);
+            this.radioButtonEx2.Location = new System.Drawing.Point(209, 67);
             this.radioButtonEx2.Name = "radioButtonEx2";
             this.radioButtonEx2.Size = new System.Drawing.Size(50, 21);
             this.radioButtonEx2.TabIndex = 16;
@@ -322,7 +321,7 @@ namespace BDAuscultation.Forms
             // 
             this.radioButtonEx1.AutoSize = true;
             this.radioButtonEx1.Checked = true;
-            this.radioButtonEx1.Location = new System.Drawing.Point(142, 58);
+            this.radioButtonEx1.Location = new System.Drawing.Point(142, 67);
             this.radioButtonEx1.Name = "radioButtonEx1";
             this.radioButtonEx1.Size = new System.Drawing.Size(50, 21);
             this.radioButtonEx1.TabIndex = 15;
@@ -404,7 +403,7 @@ namespace BDAuscultation.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 508);
+            this.ClientSize = new System.Drawing.Size(446, 314);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.buttonEx1);
             this.Controls.Add(this.panel1);

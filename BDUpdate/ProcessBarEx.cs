@@ -33,10 +33,14 @@ namespace  System.Windows.Forms
         }
         protected override void OnPaint(PaintEventArgs e)
         {
+            var boderRect = new Rectangle(e.ClipRectangle.X + 1, e.ClipRectangle.Y+1, e.ClipRectangle.Width - 1, e.ClipRectangle.Height - 2);
+            e.Graphics.DrawRectangle(new Pen(Color.FromArgb(200, 227, 255),2f), boderRect);
             base.OnPaint(e);
-            var brush = new LinearGradientBrush(
-               new Point(0, 0), new Point(this.Width, this.Height),
-               Color.Gold, Color.GreenYellow);
+            //var brush = new LinearGradientBrush(
+            //   new Point(0, 0), new Point(this.Width, this.Height),
+            //   Color.Gold, Color.GreenYellow);
+
+            var brush = new SolidBrush(Color.FromArgb(200, 227, 255));
             var rect = new Rectangle(0, 0, this.Width * value / maxValue, this.Height);
             e.Graphics.FillRectangle(brush, rect);
             string text = string.Format("{0}/{1}",value,maxValue);

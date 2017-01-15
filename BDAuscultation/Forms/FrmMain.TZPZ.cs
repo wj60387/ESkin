@@ -23,30 +23,32 @@ namespace BDAuscultation
             dgvTZQPZStetNO.FillWeight = 200;
 
             var btnConnColumn = new DataGridViewButtonExColumn("",
-               BDAuscultation.Properties.Resources.分享点击状态, BDAuscultation.Properties.Resources.分享未点击) 
+               BDAuscultation.Properties.Resources.连接_绿色, BDAuscultation.Properties.Resources.连接) 
                {  Name = "dgvTZQPZConn", HeaderText = "连接", 
-                   AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
+                   AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 70 };
             this.dgvTZQPZ.Columns.Add(btnConnColumn);
 
             var btnEditColumn = new DataGridViewButtonExColumn("",
                BDAuscultation.Properties.Resources.编辑点击, BDAuscultation.Properties.Resources.编辑未点击) { Name = "dgvTZQPZEdit", HeaderText = "编辑", 
-                AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 60 };
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width = 70 };
             this.dgvTZQPZ.Columns.Add(btnEditColumn);
             var btnDelColumn = new DataGridViewButtonExColumn("",
                 BDAuscultation.Properties.Resources.删除点击状态, 
                 BDAuscultation.Properties.Resources.删除未点击) 
                 { Name = "dgvTZQPZDelete", HeaderText = "删除", 
-                    AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width =60 };
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.None, Width =70 };
             this.dgvTZQPZ.Columns.Add(btnDelColumn);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器编号);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.计算机名);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊类型);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器名字);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器所属人);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器描述);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器备注);
+            dgvTZQPZ.ListColumnImage.Add(null);
+            dgvTZQPZ.ListColumnImage.Add(null);
+             //dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器描述);
+            //dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.听诊器备注);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.连接状态);
-            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.分享未点击);
+            dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.连接);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.编辑);
             dgvTZQPZ.ListColumnImage.Add(BDAuscultation.Properties.Resources.删除);
             LoadStetInfoTZPZ();

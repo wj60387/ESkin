@@ -58,7 +58,7 @@ namespace BDAuscultation
                 MessageBox.Show(string.Format("听诊器{0}尚未连接", this.cbBoxYCTZ.Text));
                 return;
             }
-            if (!DgvTable.Select().Where(r => r[0].ToString() == "True").Any())
+            if (!DgvTable.Select().Where(r => r["dgvYCTZAccept"].ToString() == "True").Any())
             {
                 MessageBox.Show("请选择听诊器！");
                 return;
@@ -78,11 +78,12 @@ namespace BDAuscultation
                 }
                 if (!isHas) break;
             }
-            var macs = DgvTable.Select().Where(r => r[0].ToString() == "True").GroupBy(row => row["MAC"]).Select(g => g.Key.ToString()).ToArray();
+            var macs = DgvTable.Select().Where(r => r["dgvYCTZAccept"].ToString() == "True")
+                .GroupBy(row => row["dgvYCTZMAC"]).Select(g => g.Key.ToString()).ToArray();
             var guid = Guid.NewGuid().ToString();
             foreach (var mac in macs)
             {
-                var rows = DgvTable.Select("MAC='" + mac + "' and Checked='True'");
+                var rows = DgvTable.Select("dgvYCTZMAC='" + mac + "' and dgvYCTZAccept='True'");
                 if (rows.Length > 0)
                 {
                     var code = new RequestRemoteAuscultateCode()
@@ -93,7 +94,7 @@ namespace BDAuscultation
                         SrcStetName = this.cbBoxYCTZ.Text,
                         SrcStetOwner = Setting.GetStetInfoByStetName(this.cbBoxYCTZ.Text).Owner,
                         DestMac = mac,
-                        DestStetNames = rows.Select(r => r["StetName"].ToString()).ToArray(),
+                        DestStetNames = rows.Select(r => r["dgvYCTZStetNO"].ToString()).ToArray(),
                         InvestList = DgvTable
 
                     };
@@ -119,7 +120,7 @@ namespace BDAuscultation
                 foreach (DataRow dr in DgvTable.Rows)
                 {
 
-                    int count = Mediator.remoteService.ExecuteNonQuery(sqlInsert, new string[] { guid, dr["StetName"] + "", dr["MAC"] + "" });
+                    int count = Mediator.remoteService.ExecuteNonQuery(sqlInsert, new string[] { guid, dr["dgvYCTZStetNO"] + "", dr["dgvYCTZMAC"] + "" });
                     if (count <= 0)
                     {
                         MessageBox.Show("远程听诊创建失败...");
@@ -250,8 +251,8 @@ namespace BDAuscultation
         {
             for (int i = 0; i < dgvYCTZ.Rows.Count; i++)
             {
-                var mac = dgvYCTZ.Rows[i].Cells[4].Value.ToString();
-                var stetName = dgvYCTZ.Rows[i].Cells[2].Value.ToString();
+                var mac = dgvYCTZ.Rows[i].Cells["dgvYCTZMAC"].Value.ToString();
+                var stetName = dgvYCTZ.Rows[i].Cells["dgvYCTZStetNO"].Value.ToString();
                 if (stetName.Equals(StetName) && Mac.Equals(mac))
                     return true;
             }

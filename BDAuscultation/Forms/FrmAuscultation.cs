@@ -34,26 +34,10 @@ namespace BDAuscultation.Forms
 
         void FormAuscultation_Load(object sender, EventArgs e)
         {
-            this.dgvRemote.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.Black, Alignment = DataGridViewContentAlignment.MiddleCenter };
-            this.dgvRemote.Font = new Font(Setting.dgvFontFamliy, Setting.dgvFontSize);
+            //this.dgvRemote.RowsDefaultCellStyle = new DataGridViewCellStyle() { SelectionForeColor = Color.Black, Alignment = DataGridViewContentAlignment.MiddleCenter };
+            //this.dgvRemote.Font = new Font(Setting.dgvFontFamliy, Setting.dgvFontSize);
         }
-        public void LoadMettingList(DataTable table)
-        {
-            for (int j = 0; j < table.Rows.Count; j++)
-            {
-                if (table.Rows[j]["MAC"].Equals(Setting.authorizationInfo.MachineCode))
-                {
-                    table.Rows[j]["isAccept"] = "是";
-                }
-                List<object> list = new List<object>();
-                for (int i = 0; i < table.Columns.Count; i++)
-                {
-                    list.Add(table.Rows[j][i]);
-                }
-
-                dgvRemote.Rows.Add(list.ToArray());
-            }
-        }
+        
         void dgvRemote_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -181,9 +165,8 @@ namespace BDAuscultation.Forms
             {
                 if (message.isAccept)
                 {
-                    foreach (DataRow dr in InvestList.Select("MAC='" + message.SrcMac + "'"))
+                    foreach (DataRow dr in InvestList.Select("dgvYCTZMAC='" + message.SrcMac + "'"))
                     {
-                        dr["isAccept"] = "是";
                         List<object> list = new List<object>();
                         for (int i = 0; i < InvestList.Columns.Count; i++)
                         {
@@ -518,7 +501,7 @@ namespace BDAuscultation.Forms
                     dgvRemote.Rows.Clear();
                     foreach (DataRow row in ds.Tables[0].Rows)
                     {
-                        dgvRemote.Rows.Add(true, row["StetChineseName"], row["StetName"], row["PCName"], row["MAC"], row["Owner"], "已连接", "是");
+                        dgvRemote.Rows.Add( row["StetChineseName"], row["StetName"], row["PCName"], row["MAC"], row["Owner"], true);
                     }
                      
                 }
@@ -562,8 +545,7 @@ namespace BDAuscultation.Forms
                         dgvRemote.Rows.Clear();
                         foreach (DataRow row in ds.Tables[0].Rows)
                         {
-                            dgvRemote.Rows.Add(true, row["StetChineseName"], row["StetName"], row["PCName"], row["MAC"], row["Owner"], "已连接", "是");
-                           // dgvRemote.Rows.Add(true, row[0], row[1], row[2], row[3], row[4], "已连接", "是");
+                            dgvRemote.Rows.Add(row["StetChineseName"], row["StetName"], row["PCName"], row["MAC"], row["Owner"], true);
                         }
                     }
                 }

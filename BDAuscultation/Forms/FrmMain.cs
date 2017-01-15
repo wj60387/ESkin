@@ -16,7 +16,7 @@ namespace BDAuscultation
     {
         public FrmMain()
         {
-            this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);  
+            //this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height);  
             InitializeComponent();
            
             this.SizeChanged += FrmMain_SizeChanged;
@@ -100,7 +100,9 @@ namespace BDAuscultation
             this.Visible = false;
             Init();
             this.Visible = true;
-             
+            this.Location = new Point(0, 0);
+            this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+            this.Height = Screen.PrimaryScreen.WorkingArea.Height;
         }
         void nav1_OnXTClick()
         {

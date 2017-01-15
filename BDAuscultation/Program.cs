@@ -159,7 +159,7 @@ namespace BDAuscultation
             }
             Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
             var formMain = new FrmMain();
-            formMain.WindowState = FormWindowState.Maximized;
+            //formMain.WindowState = FormWindowState.Maximized;
             //Application.Run(new FrmStetInfo());
             Application.Run(formMain);
             mutex.Close();

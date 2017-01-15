@@ -358,4 +358,16 @@
   <data name="圆黑" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\圆黑.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="更新中" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\更新中.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="更新背景图" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\更新背景图.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="连接" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\连接.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="连接_绿色" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\连接-绿色.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

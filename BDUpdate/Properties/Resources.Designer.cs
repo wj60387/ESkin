@@ -83,9 +83,29 @@ namespace BDUpdate.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 中心图标 {
+            get {
+                object obj = ResourceManager.GetObject("中心图标", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 关闭按钮 {
             get {
                 object obj = ResourceManager.GetObject("关闭按钮", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 更新背景图 {
+            get {
+                object obj = ResourceManager.GetObject("更新背景图", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

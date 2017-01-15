@@ -55,14 +55,6 @@
             this.tabTZPZ = new System.Windows.Forms.TabPage();
             this.btnTZPZ = new System.Windows.Forms.ButtonEx();
             this.dgvTZQPZ = new System.Windows.Forms.DataGridViewEx();
-            this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTZQPZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonEx1 = new System.Windows.Forms.ButtonEx();
             this.cbBoxTZPZ = new System.Windows.Forms.ComboBoxEx();
             this.btnBgTZPZ = new System.Windows.Forms.ButtonEx();
@@ -151,6 +143,14 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.操作日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvTZQPZStetNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZPCNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZBZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTZQPZStetConn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlYDTZ.SuspendLayout();
             this.tabTZPZ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTZQPZ)).BeginInit();
@@ -300,62 +300,6 @@
             this.dgvTZQPZ.Size = new System.Drawing.Size(675, 496);
             this.dgvTZQPZ.TabIndex = 38;
             // 
-            // dgvTZQPZStetNO
-            // 
-            this.dgvTZQPZStetNO.HeaderText = "听诊器编号";
-            this.dgvTZQPZStetNO.Name = "dgvTZQPZStetNO";
-            this.dgvTZQPZStetNO.ReadOnly = true;
-            this.dgvTZQPZStetNO.Width = 220;
-            // 
-            // dgvTZQPZPCNAME
-            // 
-            this.dgvTZQPZPCNAME.HeaderText = "计算机名";
-            this.dgvTZQPZPCNAME.Name = "dgvTZQPZPCNAME";
-            this.dgvTZQPZPCNAME.ReadOnly = true;
-            this.dgvTZQPZPCNAME.Width = 110;
-            // 
-            // dgvTZQPZStetType
-            // 
-            this.dgvTZQPZStetType.HeaderText = "听诊器类型";
-            this.dgvTZQPZStetType.Name = "dgvTZQPZStetType";
-            this.dgvTZQPZStetType.ReadOnly = true;
-            this.dgvTZQPZStetType.Width = 110;
-            // 
-            // dgvTZQPZStetName
-            // 
-            this.dgvTZQPZStetName.HeaderText = "听诊器名字";
-            this.dgvTZQPZStetName.Name = "dgvTZQPZStetName";
-            this.dgvTZQPZStetName.ReadOnly = true;
-            this.dgvTZQPZStetName.Width = 115;
-            // 
-            // dgvTZQPZStetOwner
-            // 
-            this.dgvTZQPZStetOwner.HeaderText = "听诊器所属人";
-            this.dgvTZQPZStetOwner.Name = "dgvTZQPZStetOwner";
-            this.dgvTZQPZStetOwner.ReadOnly = true;
-            this.dgvTZQPZStetOwner.Width = 120;
-            // 
-            // dgvTZQPZMS
-            // 
-            this.dgvTZQPZMS.HeaderText = "听诊器描述";
-            this.dgvTZQPZMS.Name = "dgvTZQPZMS";
-            this.dgvTZQPZMS.ReadOnly = true;
-            this.dgvTZQPZMS.Width = 110;
-            // 
-            // dgvTZQPZBZ
-            // 
-            this.dgvTZQPZBZ.HeaderText = "听诊器备注";
-            this.dgvTZQPZBZ.Name = "dgvTZQPZBZ";
-            this.dgvTZQPZBZ.ReadOnly = true;
-            this.dgvTZQPZBZ.Width = 110;
-            // 
-            // dgvTZQPZStetConn
-            // 
-            this.dgvTZQPZStetConn.HeaderText = "连接状态";
-            this.dgvTZQPZStetConn.Name = "dgvTZQPZStetConn";
-            this.dgvTZQPZStetConn.ReadOnly = true;
-            this.dgvTZQPZStetConn.Width = 110;
-            // 
             // buttonEx1
             // 
             this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
@@ -383,7 +327,7 @@
             // 
             this.cbBoxTZPZ.BackColor = System.Drawing.Color.Transparent;
             this.cbBoxTZPZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxTZPZ.DropDownHeight = 2;
+            this.cbBoxTZPZ.DropDownHeight = 22;
             this.cbBoxTZPZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxTZPZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZPZ.DwonImage")));
             this.cbBoxTZPZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -554,7 +498,7 @@
             // 
             this.cbBoxTZJX.BackColor = System.Drawing.Color.Transparent;
             this.cbBoxTZJX.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxTZJX.DropDownHeight = 2;
+            this.cbBoxTZJX.DropDownHeight = 24;
             this.cbBoxTZJX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxTZJX.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxTZJX.DwonImage")));
             this.cbBoxTZJX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1339,7 +1283,7 @@
             // 
             this.cbBoxYDTZ.BackColor = System.Drawing.Color.Transparent;
             this.cbBoxYDTZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxYDTZ.DropDownHeight = 2;
+            this.cbBoxYDTZ.DropDownHeight = 24;
             this.cbBoxYDTZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxYDTZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxYDTZ.DwonImage")));
             this.cbBoxYDTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1548,7 +1492,7 @@
             // 
             this.cbBoxYCTZ.BackColor = System.Drawing.Color.Transparent;
             this.cbBoxYCTZ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbBoxYCTZ.DropDownHeight = 24;
+            this.cbBoxYCTZ.DropDownHeight = 22;
             this.cbBoxYCTZ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxYCTZ.DwonImage = ((System.Drawing.Image)(resources.GetObject("cbBoxYCTZ.DwonImage")));
             this.cbBoxYCTZ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1801,6 +1745,64 @@
             this.退出系统ToolStripMenuItem.Text = "退出系统";
             this.退出系统ToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.退出系统ToolStripMenuItem.Click += new System.EventHandler(this.退出系统ToolStripMenuItem_Click);
+            // 
+            // dgvTZQPZStetNO
+            // 
+            this.dgvTZQPZStetNO.HeaderText = "听诊器编号";
+            this.dgvTZQPZStetNO.Name = "dgvTZQPZStetNO";
+            this.dgvTZQPZStetNO.ReadOnly = true;
+            this.dgvTZQPZStetNO.Width = 220;
+            // 
+            // dgvTZQPZPCNAME
+            // 
+            this.dgvTZQPZPCNAME.HeaderText = "计算机名";
+            this.dgvTZQPZPCNAME.Name = "dgvTZQPZPCNAME";
+            this.dgvTZQPZPCNAME.ReadOnly = true;
+            this.dgvTZQPZPCNAME.Width = 110;
+            // 
+            // dgvTZQPZStetType
+            // 
+            this.dgvTZQPZStetType.HeaderText = "听诊器类型";
+            this.dgvTZQPZStetType.Name = "dgvTZQPZStetType";
+            this.dgvTZQPZStetType.ReadOnly = true;
+            this.dgvTZQPZStetType.Width = 110;
+            // 
+            // dgvTZQPZStetName
+            // 
+            this.dgvTZQPZStetName.HeaderText = "听诊器名字";
+            this.dgvTZQPZStetName.Name = "dgvTZQPZStetName";
+            this.dgvTZQPZStetName.ReadOnly = true;
+            this.dgvTZQPZStetName.Width = 115;
+            // 
+            // dgvTZQPZStetOwner
+            // 
+            this.dgvTZQPZStetOwner.HeaderText = "听诊器所属人";
+            this.dgvTZQPZStetOwner.Name = "dgvTZQPZStetOwner";
+            this.dgvTZQPZStetOwner.ReadOnly = true;
+            this.dgvTZQPZStetOwner.Width = 120;
+            // 
+            // dgvTZQPZMS
+            // 
+            this.dgvTZQPZMS.HeaderText = "听诊器描述";
+            this.dgvTZQPZMS.Name = "dgvTZQPZMS";
+            this.dgvTZQPZMS.ReadOnly = true;
+            this.dgvTZQPZMS.Visible = false;
+            this.dgvTZQPZMS.Width = 110;
+            // 
+            // dgvTZQPZBZ
+            // 
+            this.dgvTZQPZBZ.HeaderText = "听诊器备注";
+            this.dgvTZQPZBZ.Name = "dgvTZQPZBZ";
+            this.dgvTZQPZBZ.ReadOnly = true;
+            this.dgvTZQPZBZ.Visible = false;
+            this.dgvTZQPZBZ.Width = 110;
+            // 
+            // dgvTZQPZStetConn
+            // 
+            this.dgvTZQPZStetConn.HeaderText = "连接状态";
+            this.dgvTZQPZStetConn.Name = "dgvTZQPZStetConn";
+            this.dgvTZQPZStetConn.ReadOnly = true;
+            this.dgvTZQPZStetConn.Width = 110;
             // 
             // FrmMain
             // 

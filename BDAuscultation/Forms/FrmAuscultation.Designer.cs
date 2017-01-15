@@ -30,39 +30,46 @@ namespace BDAuscultation.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnExit = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnExit = new System.Windows.Forms.ButtonEx();
             this.ucTextBoxEx1 = new System.Windows.Forms.UCTextBoxEx();
             this.btnAuscultate = new System.Windows.Forms.ButtonEx();
             this.dgvRemote = new System.Windows.Forms.DataGridViewEx();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Checked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.StetChineseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StetName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PCName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StetOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StetStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isAccept = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAccept = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.ButtonEx();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRemote)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.Location = new System.Drawing.Point(276, 41);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
+            this.btnExit.LeftBottom = 30;
+            this.btnExit.LeftTop = 30;
+            this.btnExit.Location = new System.Drawing.Point(328, 38);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(78, 25);
+            this.btnExit.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnExit.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnExit.Radius = 16;
+            this.btnExit.RightBottom = 30;
+            this.btnExit.RightTop = 30;
+            this.btnExit.Size = new System.Drawing.Size(86, 30);
             this.btnExit.TabIndex = 14;
             this.btnExit.Tag = "start";
             this.btnExit.Text = "退出会诊";
@@ -75,7 +82,7 @@ namespace BDAuscultation.Forms
             this.ucTextBoxEx1.BackColor = System.Drawing.SystemColors.Control;
             this.ucTextBoxEx1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucTextBoxEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucTextBoxEx1.Location = new System.Drawing.Point(26, 41);
+            this.ucTextBoxEx1.Location = new System.Drawing.Point(112, 38);
             this.ucTextBoxEx1.Multiline = false;
             this.ucTextBoxEx1.Name = "ucTextBoxEx1";
             this.ucTextBoxEx1.PasswordChar = '\0';
@@ -91,12 +98,17 @@ namespace BDAuscultation.Forms
             this.btnAuscultate.FlatAppearance.BorderSize = 0;
             this.btnAuscultate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAuscultate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAuscultate.ForeColor = System.Drawing.Color.White;
             this.btnAuscultate.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnAuscultate.Location = new System.Drawing.Point(276, 38);
+            this.btnAuscultate.LeftBottom = 30;
+            this.btnAuscultate.LeftTop = 30;
+            this.btnAuscultate.Location = new System.Drawing.Point(328, 38);
             this.btnAuscultate.Name = "btnAuscultate";
             this.btnAuscultate.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnAuscultate.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
             this.btnAuscultate.Radius = 16;
+            this.btnAuscultate.RightBottom = 30;
+            this.btnAuscultate.RightTop = 30;
             this.btnAuscultate.Size = new System.Drawing.Size(86, 30);
             this.btnAuscultate.TabIndex = 16;
             this.btnAuscultate.Text = "进入会诊";
@@ -107,26 +119,26 @@ namespace BDAuscultation.Forms
             // 
             this.dgvRemote.AllowUserToAddRows = false;
             this.dgvRemote.AllowUserToDeleteRows = false;
+            this.dgvRemote.AllowUserToResizeRows = false;
             this.dgvRemote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvRemote.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvRemote.BackgroundColor = System.Drawing.Color.White;
             this.dgvRemote.BoderPad = 4;
             this.dgvRemote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvRemote.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvRemote.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 9F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRemote.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRemote.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRemote.ColumnHeadersHeight = 40;
             this.dgvRemote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRemote.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Checked,
             this.StetChineseName,
             this.StetName,
             this.PCName,
@@ -134,56 +146,36 @@ namespace BDAuscultation.Forms
             this.StetOwner,
             this.StetStatus,
             this.isAccept});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 9F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRemote.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRemote.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRemote.EnableHeadersVisualStyles = false;
-            this.dgvRemote.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.dgvRemote.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvRemote.IndexSize = 23;
-            this.dgvRemote.Location = new System.Drawing.Point(12, 91);
+            this.dgvRemote.IndexSize = 24;
+            this.dgvRemote.Location = new System.Drawing.Point(9, 74);
+            this.dgvRemote.MultiSelect = false;
             this.dgvRemote.Name = "dgvRemote";
             this.dgvRemote.ReadOnly = true;
             this.dgvRemote.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRemote.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(41);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRemote.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRemote.RowHeadersWidth = 70;
             this.dgvRemote.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dgvRemote.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvRemote.RowTemplate.Height = 32;
             this.dgvRemote.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRemote.Size = new System.Drawing.Size(743, 367);
+            this.dgvRemote.Size = new System.Drawing.Size(923, 383);
             this.dgvRemote.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "远程教学室";
-            // 
-            // Checked
-            // 
-            this.Checked.HeaderText = "选择";
-            this.Checked.Name = "Checked";
-            this.Checked.ReadOnly = true;
-            this.Checked.Visible = false;
-            this.Checked.Width = 5;
             // 
             // StetChineseName
             // 
@@ -229,10 +221,20 @@ namespace BDAuscultation.Forms
             // 
             // isAccept
             // 
-            this.isAccept.HeaderText = "是否接受";
+            this.isAccept.HeaderText = "checked";
             this.isAccept.Name = "isAccept";
             this.isAccept.ReadOnly = true;
-            this.isAccept.Width = 125;
+            this.isAccept.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(11, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "远程教学室";
             // 
             // btnClose
             // 
@@ -244,22 +246,36 @@ namespace BDAuscultation.Forms
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnClose.Location = new System.Drawing.Point(746, 7);
+            this.btnClose.LeftBottom = 0;
+            this.btnClose.LeftTop = 0;
+            this.btnClose.Location = new System.Drawing.Point(926, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
             this.btnClose.Radius = 16;
+            this.btnClose.RightBottom = 0;
+            this.btnClose.RightTop = 0;
             this.btnClose.Size = new System.Drawing.Size(12, 12);
             this.btnClose.TabIndex = 41;
             this.toolTip1.SetToolTip(this.btnClose, "关闭");
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "源听诊器：";
+            // 
             // FrmAuscultation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 468);
+            this.ClientSize = new System.Drawing.Size(947, 484);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ucTextBoxEx1);
@@ -283,20 +299,20 @@ namespace BDAuscultation.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ButtonEx btnExit;
         private ButtonEx btnAuscultate;
         private DataGridViewEx dgvRemote;
         private System.Windows.Forms.UCTextBoxEx ucTextBoxEx1;
-        private DataGridViewCheckBoxColumn Checked;
+        private Label label1;
+        private ButtonEx btnClose;
+        private ToolTip toolTip1;
         private DataGridViewTextBoxColumn StetChineseName;
         private DataGridViewTextBoxColumn StetName;
         private DataGridViewTextBoxColumn PCName;
         private DataGridViewTextBoxColumn MAC;
         private DataGridViewTextBoxColumn StetOwner;
         private DataGridViewTextBoxColumn StetStatus;
-        private DataGridViewTextBoxColumn isAccept;
-        private Label label1;
-        private ButtonEx btnClose;
-        private ToolTip toolTip1;
+        private DataGridViewCheckBoxColumn isAccept;
+        private Label label2;
     }
 }
