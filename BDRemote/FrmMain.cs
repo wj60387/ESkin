@@ -353,7 +353,7 @@ namespace BDRemote
                         var rcsypCode = new RCSYPCode();
                         rcsypCode.bytes = packet.Take(bytesRead).ToArray();
                         var rcsypBytes = ProtocalData.Utilities.SerializaHelper.Serialize(rcsypCode);
-                        SuperSocket.Send(bytes);
+                        SuperSocket.Send(rcsypBytes);
                         Thread.Sleep(1);
                     }
                     ShowMsg(string.Format("听诊器 {0} 远程听诊完毕，时长 {1} 秒", stethoscope.Name, formProcessBar.Times));
@@ -432,6 +432,20 @@ namespace BDRemote
                         BtnText = "停止远程",
                         CancelBtnVisible = true
                     };
+
+                    var stetName = ucTextBoxEx1.Text;
+                         ShowMsg(string.Format("远程听诊开始接收数据 ..."));
+                        var stethoscopes = StethoscopeManager.StethoscopeList.Where(s => s.Name == stetName);
+                        if (!stethoscopes.Any())
+                            throw new Exception("目前没有检测到听诊器,请检测设备设置！");
+                        var _stethoscope = stethoscopes.First();
+                        if (!_stethoscope.IsConnected)
+                        {
+                            ShowMsg(string.Format("听诊器 {0} 尚未连接", _stethoscope.Name));
+                            return;
+                        }
+                        else
+                            _stethoscope.StartAudioOutput();
                     formProcessBar.OnActiveClose += () =>
                     {
                         this.Invoke(new MethodInvoker(() =>
@@ -460,6 +474,7 @@ namespace BDRemote
                             formProcessBar.Title = string.Format("远程教学中... {0} 秒", formProcessBar.Times);
                         }));
                     };
+
                     formProcessBar.ShowDialog();
                 }));
             });
