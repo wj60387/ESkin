@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDUpdate", "BDUpdate\BDUpda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDVersionPub", "BDVersionPub\BDVersionPub.csproj", "{C8440946-8AC4-468A-BF65-390CFAECBAFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDRemote", "BDRemote\BDRemote.csproj", "{F36ED094-425D-460D-962A-59A8F78AD3DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBArgTest", "DBArgTest\DBArgTest.csproj", "{11706F78-A831-4746-BDDB-3525836905FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{C8440946-8AC4-468A-BF65-390CFAECBAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8440946-8AC4-468A-BF65-390CFAECBAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8440946-8AC4-468A-BF65-390CFAECBAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36ED094-425D-460D-962A-59A8F78AD3DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36ED094-425D-460D-962A-59A8F78AD3DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36ED094-425D-460D-962A-59A8F78AD3DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36ED094-425D-460D-962A-59A8F78AD3DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11706F78-A831-4746-BDDB-3525836905FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11706F78-A831-4746-BDDB-3525836905FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11706F78-A831-4746-BDDB-3525836905FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11706F78-A831-4746-BDDB-3525836905FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

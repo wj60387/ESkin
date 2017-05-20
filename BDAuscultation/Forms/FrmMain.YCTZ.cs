@@ -236,9 +236,9 @@ namespace BDAuscultation
                                     , message.StetOwners[i],
                                     message.isConnected[i] ? "已连接" : "未连接"
                                     ,false);
-                                // dgvRemote.Rows[dgvRemote.Rows.Count - 1].DefaultCellStyle.BackColor = message.isConnected[i] ? Color.Green : Color.White;
                             }
                         }
+
                     }
                 }));
 

@@ -174,7 +174,7 @@ namespace BDAuscultation.Forms
             this.dgvRemote.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvRemote.RowTemplate.Height = 32;
             this.dgvRemote.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRemote.Size = new System.Drawing.Size(923, 383);
+            this.dgvRemote.Size = new System.Drawing.Size(884, 383);
             this.dgvRemote.TabIndex = 8;
             // 
             // StetChineseName
@@ -248,7 +248,7 @@ namespace BDAuscultation.Forms
             this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnClose.LeftBottom = 0;
             this.btnClose.LeftTop = 0;
-            this.btnClose.Location = new System.Drawing.Point(926, 7);
+            this.btnClose.Location = new System.Drawing.Point(887, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -274,7 +274,7 @@ namespace BDAuscultation.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 484);
+            this.ClientSize = new System.Drawing.Size(908, 484);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);

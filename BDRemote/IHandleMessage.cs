@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using ProtocalData.Protocol;
 
-namespace BDAuscultation
+namespace BDRemote
 {
     /// <summary>
     /// 

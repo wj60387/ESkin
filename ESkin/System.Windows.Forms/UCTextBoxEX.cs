@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -43,6 +44,7 @@ namespace System.Windows.Forms
         void UCTextBoxEx_BackColorChanged(object sender, EventArgs e)
         {
             waterTextBox1.BackColor = this.BackColor;
+            waterTextBox1.Invalidate();
         }
 
         Color activeColor = Color.FromArgb(100, 200, 250);
@@ -173,8 +175,7 @@ namespace System.Windows.Forms
             gp.CloseAllFigures();
             return gp;
         }
-
-
+        [Browsable(true)]
         public string Text
         {
             get
