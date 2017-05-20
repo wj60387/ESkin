@@ -87,6 +87,11 @@ namespace BDAuscultation.Commucation
             webSocket.DataReceived += new EventHandler<DataReceivedEventArgs>(webSocket_DataReceived);
       
         }
+        public void Send(CodeBase code)
+        {
+            var bytes = ProtocalData.Utilities.SerializaHelper.Serialize(code);
+            webSocket.Send(bytes, 0, bytes.Length);
+        }
         public void Send(string message)
         {
                 webSocket.Send(message);

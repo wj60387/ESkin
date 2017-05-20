@@ -31,44 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnClose = new System.Windows.Forms.ButtonEx();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.ButtonEx();
+            this.ucTextBoxEx1 = new System.Windows.Forms.ComboBox();
+            this.btnStop = new System.Windows.Forms.ButtonEx();
+            this.processBarEx1 = new System.Windows.Forms.ProcessBarEx();
+            this.radioButtonEx2 = new System.Windows.Forms.RadioButtonEx();
+            this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
             this.ucTextBoxEx3 = new System.Windows.Forms.UCTextBoxEx();
             this.ucTextBoxEx2 = new System.Windows.Forms.UCTextBoxEx();
             this.btnConn = new System.Windows.Forms.ButtonEx();
-            this.lblMsg = new System.Windows.Forms.Label();
-            this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
-            this.radioButtonEx2 = new System.Windows.Forms.RadioButtonEx();
-            this.ucTextBoxEx1 = new System.Windows.Forms.ComboBox();
-            this.processBarEx1 = new System.Windows.Forms.ProcessBarEx();
-            this.btnStop = new System.Windows.Forms.ButtonEx();
+            this.btnClose = new System.Windows.Forms.ButtonEx();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnClose.LeftBottom = 0;
-            this.btnClose.LeftTop = 0;
-            this.btnClose.Location = new System.Drawing.Point(524, 7);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnClose.Radius = 16;
-            this.btnClose.RightBottom = 0;
-            this.btnClose.RightTop = 0;
-            this.btnClose.Size = new System.Drawing.Size(12, 12);
-            this.btnClose.TabIndex = 48;
-            this.toolTip1.SetToolTip(this.btnClose, "关闭");
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label2
             // 
@@ -81,28 +55,73 @@
             this.label2.TabIndex = 49;
             this.label2.Text = "当前听诊器：";
             // 
-            // btnStart
+            // ucTextBoxEx1
             // 
-            this.btnStart.BackColor = System.Drawing.Color.Transparent;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnStart.LeftBottom = 15;
-            this.btnStart.LeftTop = 15;
-            this.btnStart.Location = new System.Drawing.Point(408, 114);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnStart.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnStart.Radius = 8;
-            this.btnStart.RightBottom = 15;
-            this.btnStart.RightTop = 15;
-            this.btnStart.Size = new System.Drawing.Size(73, 24);
-            this.btnStart.TabIndex = 54;
-            this.btnStart.Text = "发起听诊";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.ucTextBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ucTextBoxEx1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ucTextBoxEx1.FormattingEnabled = true;
+            this.ucTextBoxEx1.Location = new System.Drawing.Point(98, 51);
+            this.ucTextBoxEx1.Name = "ucTextBoxEx1";
+            this.ucTextBoxEx1.Size = new System.Drawing.Size(228, 25);
+            this.ucTextBoxEx1.TabIndex = 58;
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.Transparent;
+            this.btnStop.FlatAppearance.BorderSize = 0;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStop.ForeColor = System.Drawing.Color.White;
+            this.btnStop.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
+            this.btnStop.LeftBottom = 15;
+            this.btnStop.LeftTop = 15;
+            this.btnStop.Location = new System.Drawing.Point(329, 154);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnStop.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnStop.Radius = 8;
+            this.btnStop.RightBottom = 15;
+            this.btnStop.RightTop = 15;
+            this.btnStop.Size = new System.Drawing.Size(73, 24);
+            this.btnStop.TabIndex = 60;
+            this.btnStop.Text = "停止";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // processBarEx1
+            // 
+            this.processBarEx1.Location = new System.Drawing.Point(29, 162);
+            this.processBarEx1.MaxValue = 100;
+            this.processBarEx1.Name = "processBarEx1";
+            this.processBarEx1.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Blocks;
+            this.processBarEx1.Size = new System.Drawing.Size(294, 12);
+            this.processBarEx1.TabIndex = 59;
+            this.processBarEx1.Text = "processBarEx1";
+            this.processBarEx1.Value = 0;
+            // 
+            // radioButtonEx2
+            // 
+            this.radioButtonEx2.AutoSize = true;
+            this.radioButtonEx2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioButtonEx2.Location = new System.Drawing.Point(220, 116);
+            this.radioButtonEx2.Name = "radioButtonEx2";
+            this.radioButtonEx2.Size = new System.Drawing.Size(69, 24);
+            this.radioButtonEx2.TabIndex = 57;
+            this.radioButtonEx2.Text = "被叫方";
+            this.radioButtonEx2.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonEx1
+            // 
+            this.radioButtonEx1.AutoSize = true;
+            this.radioButtonEx1.Checked = true;
+            this.radioButtonEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioButtonEx1.Location = new System.Drawing.Point(25, 117);
+            this.radioButtonEx1.Name = "radioButtonEx1";
+            this.radioButtonEx1.Size = new System.Drawing.Size(69, 24);
+            this.radioButtonEx1.TabIndex = 56;
+            this.radioButtonEx1.TabStop = true;
+            this.radioButtonEx1.Text = "发起方";
+            this.radioButtonEx1.UseVisualStyleBackColor = true;
             // 
             // ucTextBoxEx3
             // 
@@ -146,7 +165,7 @@
             this.btnConn.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnConn.LeftBottom = 15;
             this.btnConn.LeftTop = 15;
-            this.btnConn.Location = new System.Drawing.Point(408, 52);
+            this.btnConn.Location = new System.Drawing.Point(332, 53);
             this.btnConn.Name = "btnConn";
             this.btnConn.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnConn.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -159,93 +178,55 @@
             this.btnConn.UseVisualStyleBackColor = false;
             this.btnConn.Click += new System.EventHandler(this.btnConn_Click);
             // 
-            // lblMsg
+            // btnClose
             // 
-            this.lblMsg.AutoSize = true;
-            this.lblMsg.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblMsg.Location = new System.Drawing.Point(45, 187);
-            this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(0, 20);
-            this.lblMsg.TabIndex = 55;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
+            this.btnClose.LeftBottom = 0;
+            this.btnClose.LeftTop = 0;
+            this.btnClose.Location = new System.Drawing.Point(408, 7);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.btnClose.Radius = 16;
+            this.btnClose.RightBottom = 0;
+            this.btnClose.RightTop = 0;
+            this.btnClose.Size = new System.Drawing.Size(12, 12);
+            this.btnClose.TabIndex = 48;
+            this.toolTip1.SetToolTip(this.btnClose, "关闭");
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // radioButtonEx1
+            // richTextBox1
             // 
-            this.radioButtonEx1.AutoSize = true;
-            this.radioButtonEx1.Checked = true;
-            this.radioButtonEx1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButtonEx1.Location = new System.Drawing.Point(25, 117);
-            this.radioButtonEx1.Name = "radioButtonEx1";
-            this.radioButtonEx1.Size = new System.Drawing.Size(69, 24);
-            this.radioButtonEx1.TabIndex = 56;
-            this.radioButtonEx1.TabStop = true;
-            this.radioButtonEx1.Text = "发起方";
-            this.radioButtonEx1.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonEx2
-            // 
-            this.radioButtonEx2.AutoSize = true;
-            this.radioButtonEx2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButtonEx2.Location = new System.Drawing.Point(220, 116);
-            this.radioButtonEx2.Name = "radioButtonEx2";
-            this.radioButtonEx2.Size = new System.Drawing.Size(69, 24);
-            this.radioButtonEx2.TabIndex = 57;
-            this.radioButtonEx2.Text = "被叫方";
-            this.radioButtonEx2.UseVisualStyleBackColor = true;
-            // 
-            // ucTextBoxEx1
-            // 
-            this.ucTextBoxEx1.FormattingEnabled = true;
-            this.ucTextBoxEx1.Location = new System.Drawing.Point(98, 55);
-            this.ucTextBoxEx1.Name = "ucTextBoxEx1";
-            this.ucTextBoxEx1.Size = new System.Drawing.Size(294, 20);
-            this.ucTextBoxEx1.TabIndex = 58;
-            // 
-            // processBarEx1
-            // 
-            this.processBarEx1.Location = new System.Drawing.Point(29, 162);
-            this.processBarEx1.MaxValue = 100;
-            this.processBarEx1.Name = "processBarEx1";
-            this.processBarEx1.Size = new System.Drawing.Size(373, 12);
-            this.processBarEx1.TabIndex = 59;
-            this.processBarEx1.Text = "processBarEx1";
-            this.processBarEx1.Value = 0;
-            // 
-            // btnStop
-            // 
-            this.btnStop.BackColor = System.Drawing.Color.Transparent;
-            this.btnStop.FlatAppearance.BorderSize = 0;
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStop.ForeColor = System.Drawing.Color.White;
-            this.btnStop.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnStop.LeftBottom = 15;
-            this.btnStop.LeftTop = 15;
-            this.btnStop.Location = new System.Drawing.Point(408, 156);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnStop.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnStop.Radius = 8;
-            this.btnStop.RightBottom = 15;
-            this.btnStop.RightTop = 15;
-            this.btnStop.Size = new System.Drawing.Size(73, 24);
-            this.btnStop.TabIndex = 60;
-            this.btnStop.Text = "停止";
-            this.btnStop.UseVisualStyleBackColor = false;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox1.Location = new System.Drawing.Point(25, 190);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(377, 129);
+            this.richTextBox1.TabIndex = 61;
+            this.richTextBox1.Text = "";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(544, 261);
+            this.ClientSize = new System.Drawing.Size(428, 375);
             this.ControlBox = false;
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.processBarEx1);
             this.Controls.Add(this.ucTextBoxEx1);
             this.Controls.Add(this.radioButtonEx2);
             this.Controls.Add(this.radioButtonEx1);
-            this.Controls.Add(this.lblMsg);
-            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.ucTextBoxEx3);
             this.Controls.Add(this.ucTextBoxEx2);
             this.Controls.Add(this.btnConn);
@@ -270,13 +251,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.UCTextBoxEx ucTextBoxEx2;
         private System.Windows.Forms.UCTextBoxEx ucTextBoxEx3;
-        private System.Windows.Forms.ButtonEx btnStart;
-        private System.Windows.Forms.Label lblMsg;
         private System.Windows.Forms.RadioButtonEx radioButtonEx1;
         private System.Windows.Forms.RadioButtonEx radioButtonEx2;
         private System.Windows.Forms.ComboBox ucTextBoxEx1;
         private System.Windows.Forms.ProcessBarEx processBarEx1;
         private System.Windows.Forms.ButtonEx btnStop;
+        private System.Windows.Forms.RichTextBox richTextBox1;
 
     }
 }

@@ -21,6 +21,15 @@ namespace  System.Windows.Forms
             get { return maxValue; }
             set { this.maxValue = value; this.Invalidate(); }
         }
+
+        ProgressBarStyle progressBarStyle = ProgressBarStyle.Continuous;
+        public ProgressBarStyle ProgressBarStyle
+        {
+            get { return this.progressBarStyle; }
+            set { this.progressBarStyle = value;
+            this.Invalidate();
+            }
+        }
         public ProcessBarEx()
         {
             this.Size = new  Size(100,3);
@@ -30,17 +39,42 @@ namespace  System.Windows.Forms
               ControlStyles.OptimizedDoubleBuffer |//在缓冲区上绘制，不直接绘制到屏幕上，减少闪烁。
               ControlStyles.ResizeRedraw | //控件大小发生变化时，重绘。                  
               ControlStyles.SupportsTransparentBackColor, true);//支持透明背景颜色
+                System.Timers.Timer timer = new Timers.Timer(40);
+                timer.Elapsed += timer_Elapsed;
+                timer.Start();
+                this.Disposed += ((s, e) => { timer.Stop(); });
         }
+
+        void timer_Elapsed(object sender, Timers.ElapsedEventArgs e)
+        {
+            
+            position += 10;
+            if (position >= this.Width)
+                position = 0;
+            this.Invalidate();
+        }
+        int position = 0;
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            var brush = new LinearGradientBrush(
-               new Point(0, 0), new Point(this.Width, this.Height),
-               Color.Gold, Color.GreenYellow);
-            var rect = new Rectangle(0, 0, this.Width * value / maxValue, this.Height);
-            e.Graphics.FillRectangle(brush, rect);
-            string text = string.Format("{0}/{1}",value,maxValue);
-            var textRect = TextRenderer.MeasureText(text,this.Font);
+            if (progressBarStyle == Forms.ProgressBarStyle.Blocks)
+            {
+                var brush = new LinearGradientBrush(
+                   new Point(0, 0), new Point(this.Width, this.Height),
+                   Color.Gold, Color.GreenYellow);
+                var rect = new Rectangle(position, 0, this.Width / 5, this.Height);
+                e.Graphics.FillRectangle(brush, rect);
+            }
+            else
+            {
+                var brush = new LinearGradientBrush(
+                  new Point(0, 0), new Point(this.Width, this.Height),
+                  Color.Gold, Color.GreenYellow);
+                var rect = new Rectangle(0, 0, this.Width * value / maxValue, this.Height);
+                e.Graphics.FillRectangle(brush, rect);
+            }
+            //string text = string.Format("{0}/{1}",value,maxValue);
+            //var textRect = TextRenderer.MeasureText(text,this.Font);
            
            // e.Graphics.DrawString(text, this.Font, brush, this.Width / 2 - textRect.Width / 2, -3);
         }
