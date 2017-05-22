@@ -123,10 +123,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAABySURBVChTjZJBCoAgEEW7mFDdo0UL72ZHq0Vdof/BLyPa2OKB47wHEk3bHhMIgGePGSQeVnAC
-        L6J8gaALLyoyZ7voRZVMtBA2amRiZcHoyVQyqYbMAijfYBhQ1pO6H+JL1l0TeXJ3N5JFcTj8/TUQxeMF
-        hwzCezD49kwAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABGdBTUEAALGPC/xhBQAAAHJJREFUKFON
+        kkEKgCAQRbuYUN2jRQvvZkerRV2h/8EvI9rY4oHjvAcSTdseEwiAZ48ZJB5WcAIvonyBoAsvKjJnu+hF
+        lUy0EDZqZGJlwejJVDKphswCKN9gGFDWk7of4kvWXRN5cnc3kkVxOPz9NRDF4wWHDMJ7MPj2TAAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
 </root>

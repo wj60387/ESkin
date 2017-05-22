@@ -1,5 +1,6 @@
 ﻿using BDAuscultation.Commucation;
 using BDRemote.Forms;
+using MMM.HealthCare.Scopes.Device;
 using ProtocalData.Protocol;
 using ProtocalData.Protocol.Derive;
 using ProtocalData.Utilities;
@@ -8,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -34,75 +36,122 @@ namespace BDRemote
         {
             ShowMsg(message.Msg);
         }
+        private void btnStart_Click(object sender, EventArgs e)
+        {
 
+        }
+        System.Timers.Timer timer = new System.Timers.Timer(500);
         public void HandleMessage(RReadyCode message)
         {
             if (isOrder)
             {
-                SuperSocket.Send(new RStartAudioCode());
-                ShowMsg("马上开始发送数据...");
-                Thread.Sleep(100);
+                //ShowMsg("请点击开始按钮开始...");
+                ShowMsg("开始发送数据...");
                 Thread thread = new Thread(() =>
                 {
-                    var stethoscope = StethoscopeManager.StethoscopeList.Where(s => s.IsConnected).First();
+                    //Thread.Sleep(200);
+                    SuperSocket.Send(new RStartAudioCode());
+                    Current.StartAudioInput();
+                    timer.Start();
+                    Invoke(new MethodInvoker(() => {
+                        processBarEx1.Visible = true;
+                    }));
+                    //Thread.Sleep(200);
                     while (!isStop)
                     {
-
                         byte[] packet = new byte[128];
-                        int bytesRead = stethoscope.AudioInputStream.Read(packet, 0, packet.Length);
+                        int bytesRead = Current.AudioInputStream.Read(packet, 0, packet.Length);
                         if (bytesRead <= 0)
                         {
-                            Thread.Sleep(1);
+                            Thread.Sleep(100);
                             continue;
                         }
-                        var rcsypCode = new RCSYPCode();
-                        rcsypCode.bytes = packet.Take(bytesRead).ToArray();
-                        var rcsypBytes = ProtocalData.Utilities.SerializaHelper.Serialize(rcsypCode);
-                        SuperSocket.Send(rcsypBytes);
+                        var code = new RTransAudioCode();
+                        code.Bytes = packet.Take(bytesRead).ToArray();
+                        SuperSocket.Send(code);
                         Thread.Sleep(1);
                     }
+                    Current.StopAudioInput();
                 });
                 thread.Start();
             }
             else
             {
-                ShowMsg("马上开始接收数据...");
+                if (isConnect())
+                {
+                    ShowMsg("马上开始接收数据...");
+                    SuperSocket.Send(new RReadyCode());
+                }
             }
         }
+        static Stethoscope Current { get; set; }
         public void HandleMessage(RStartAudioCode message)
         {
             ShowMsg(string.Format("远程听诊开始接收数据..."));
-
-            this.Invoke(new MethodInvoker(() =>
-                {
-                    var stethoscope = StethoscopeManager.StethoscopeList.Where(s => s.IsConnected).First();
-                    stethoscope.StartAudioOutput();
-                }));
+            Current.StartAudioOutput();
+            timer.Start();
+            this.Invoke(new MethodInvoker(() => {
+                processBarEx1.Visible = true;
+            }));
+           
         }
         public void HandleMessage(RTransAudioCode message)
         {
-            this.Invoke(new MethodInvoker(() =>
-            {
-                var stethoscope = StethoscopeManager.StethoscopeList.Where(s => s.IsConnected).First();
-                stethoscope.AudioOutputStream.Write(message.Bytes, 0, message.Bytes.Length);
-            }));
+            //ThreadPool.QueueUserWorkItem((obj) =>
+            //{
+            Current.AudioOutputStream.Write(message.Bytes, 0, message.Bytes.Length);
+            //});
+
+
         }
         public void HandleMessage(RStopAudioCode message)
         {
         }
         public void HandleMessage(RExitCode message)
         {
-            ShowMsg(string.Format("远程听诊停止接收数据..."));
-            this.Invoke(new MethodInvoker(() =>
-               {
-                   var stethoscope = StethoscopeManager.StethoscopeList.Where(s => s.IsConnected).First();
-                   stethoscope.StopAudioOutput();
-               }));
+            isStop = true;
+            ShowMsg("对方停止了远程");
+            if (isOrder)
+            {
+                //Current.StopAudioInput();
+            }
+            else
+            {
+                Current.StopAudioOutput();
+            }
+            timer.Stop();
         }
         private void btnStop_Click(object sender, EventArgs e)
         {
-            SuperSocket.Send(new  RExitCode());
+            ShowMsg("主动停止远程...");
+            isStop = true;
+            SuperSocket.Send(new RExitCode());
+            if (isOrder)
+            {
+                //Current.StopAudioInput();
+            }
+            else
+            {
+                Current.StopAudioOutput();
+            }
 
+        }
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+             isStop = true;
+             if (isConnect())
+             {
+                 if (isOrder)
+                 {
+                     //Current.StopAudioInput();
+                 }
+                 else
+                 {
+                     Current.StopAudioOutput();
+                 }
+             }
+             Application.Exit();
+            
         }
         private bool isMouseDown = false;
         private Point FormLocation;     //form的location
@@ -134,7 +183,10 @@ namespace BDRemote
             foreach (var item in StethoscopeManager.StethoscopeList)
             {
                 ucTextBoxEx1.Items.Add(item.Name);
+                
             }
+            if(ucTextBoxEx1.Items.Count>0)
+            ucTextBoxEx1.SelectedIndex = 0;
         }
 
         void SuperSocket_Opened(object sender, EventArgs e)
@@ -187,7 +239,23 @@ namespace BDRemote
         }
         void FrmMain_Load(object sender, EventArgs e)
         {
+            timer.Elapsed += timer_Elapsed;
+            timer.Enabled = false;
             OnSetehoscopeConnect += FrmMain_OnSetehoscopeConnect;
+
+        }
+        int count = 0;
+        void timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            if (isStop)
+            {
+                timer.Stop();
+                return;
+            } 
+            count+=500;
+            Invoke(new MethodInvoker(() => {
+                label1.Text = count / 1000f + "";
+            }));
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -235,19 +303,12 @@ namespace BDRemote
 
         private void btnConn_Click(object sender, EventArgs e)
         {
-            if (isConnect())
-            {
+            if (string.IsNullOrEmpty(ucTextBoxEx1.Text))
                 return;
-            }
-            var stetNo = ucTextBoxEx1.Text.Trim();
-            if (!string.IsNullOrEmpty(stetNo))
-            {
-                var b = StethoscopeManager.StethoscopeList.Where(s => s.Name == stetNo && s.IsConnected).Any();
-                if (!b)
-                    OpenStethoscope(stetNo);
+            if (isConnect())
+                CloseStethoscope(ucTextBoxEx1.Text);
                 else
-                    CloseStethoscope(stetNo);
-            }
+                OpenStethoscope(ucTextBoxEx1.Text);
         }
         /// <summary>
         ///设备连接成功事件
@@ -279,6 +340,7 @@ namespace BDRemote
                         {
                             OnSetehoscopeConnect();
                         }
+                        Current = stethoscope;
                         //Mediator.ShowMsg(string.Format("听诊器{0}连接成功", stethoscope.Name));
                     }
 
@@ -333,7 +395,7 @@ namespace BDRemote
                         ShowMsg(string.Format("听诊器 {0} 断开连接...", stethoscopeName), false);
                         Invoke(new MethodInvoker(delegate()
                         {
-                            btnConn.ForeColor = Color.FromArgb(60, 135, 251);
+                            btnConn.ForeColor = Color.White;
                             btnConn.Text = "连接";
                         }));
                     }
@@ -354,13 +416,14 @@ namespace BDRemote
             formProcessBar.ShowDialog();
             return stethoscope.IsConnected;
         }
-       
+
         bool isStop = false;
         /// <summary>
         /// 设备连接事件
         /// </summary>
         void FrmMain_OnSetehoscopeConnect()
         {
+           
             //告诉对方
             var code = new RReadyCode();
             SuperSocket.Send(code);
@@ -391,13 +454,13 @@ namespace BDRemote
             if (isOrder)
             {
                 ShowMsg("我们是发起方,正在向他发起远程听诊了...", false);
-                ShowMsg("请先连接你的听诊设备...", false);
+                //ShowMsg("请先连接你的听诊设备...", false);
 
             }
             else
             {
                 ShowMsg("我们是被叫方,正在等待小伙伴发起远程听诊...", false);
-                ShowMsg("在等待的过程中,请先连接你的听诊设备 ...", false);
+                //ShowMsg("在等待的过程中,请先连接你的听诊设备 ...", false);
 
 
             }
@@ -411,14 +474,19 @@ namespace BDRemote
         public void HandleMessage(RYHXXCode message)
         {
             ShowMsg("你的小伙伴退出了,你可以关闭程序了...");
+            isStop = true;
+            if (isConnect())
+            {
+                if (isOrder)
+                {
+                    //Current.StopAudioInput();
+                }
+                else
+                {
+                    Current.StopAudioOutput();
+                }
+            }
+            Application.Exit();
         }
-
-       
-
-
-        
-
-
-
     }
 }

@@ -44,10 +44,10 @@ namespace  System.Windows.Forms
                 timer.Start();
                 this.Disposed += ((s, e) => { timer.Stop(); });
         }
-
+        int takeTime = 0;
         void timer_Elapsed(object sender, Timers.ElapsedEventArgs e)
         {
-            
+            //takeTime += 40;
             position += 10;
             if (position >= this.Width)
                 position = 0;
@@ -64,6 +64,12 @@ namespace  System.Windows.Forms
                    Color.Gold, Color.GreenYellow);
                 var rect = new Rectangle(position, 0, this.Width / 5, this.Height);
                 e.Graphics.FillRectangle(brush, rect);
+                //if (takeTime % 1000 == 0)
+                //{
+                //    string text = string.Format("{0}", takeTime / 1000);
+                //    var textRect = TextRenderer.MeasureText(text, this.Font);
+                //    e.Graphics.DrawString(text, this.Font, Brushes.Red, this.Width / 2 - textRect.Width / 2, -3);
+                //}
             }
             else
             {
@@ -73,6 +79,7 @@ namespace  System.Windows.Forms
                 var rect = new Rectangle(0, 0, this.Width * value / maxValue, this.Height);
                 e.Graphics.FillRectangle(brush, rect);
             }
+           
             //string text = string.Format("{0}/{1}",value,maxValue);
             //var textRect = TextRenderer.MeasureText(text,this.Font);
            

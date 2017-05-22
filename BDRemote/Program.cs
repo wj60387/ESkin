@@ -15,15 +15,16 @@ namespace BDRemote
         static void Main(string [] args)
         {
 
-            if (args != null && args.Length>1)
+            if (args != null && args.Length == 1 && args[0].Contains('#'))
             {
-
+                Application.ThreadException += Application_ThreadException;
+                AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
                 string location = System.Configuration.ConfigurationManager.AppSettings["startPoint"];
                 var ps = location.Split(',');
-                ;
+                var _args = args[0].Split('#');
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                var mainForm=new   FrmMain(args[0], !string.IsNullOrEmpty(args[1]));
+                var mainForm = new FrmMain(_args[0], !string.IsNullOrEmpty(_args[1]));
                 mainForm.StartPosition = FormStartPosition.Manual;
                 mainForm.Location = new Point(int.Parse(ps[0]), int.Parse(ps[1]));
                 Application.Run(mainForm);
@@ -40,6 +41,14 @@ namespace BDRemote
                 catch { }
             }
            
+        }
+
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+        }
+
+        static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
+        {
         }
     }
 }
