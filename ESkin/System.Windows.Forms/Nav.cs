@@ -162,11 +162,14 @@ namespace System.Windows.Forms
 
             //}
             var logoRect = new Rectangle(0, 0, this.Width, LogoHeight);
-            e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f), Brushes.Black, logoRect, new StringFormat()
-            {
-                Alignment = StringAlignment.Center,
-                LineAlignment = StringAlignment.Center
-            });
+
+            //var image = ESkin.Properties.Resources.布迪亨LOGO;
+            e.Graphics.DrawImage(ESkin.Properties.Resources.布迪亨LOGO, logoRect);
+            //e.Graphics.DrawString("LOGO", new Font("微软雅黑", 16f), Brushes.Black, logoRect, new StringFormat()
+            //{
+            //    Alignment = StringAlignment.Center,
+            //    LineAlignment = StringAlignment.Center
+            //});
             int height = LogoHeight;
             for (int i = 0; i < NavItemList.Count; i++)
             {

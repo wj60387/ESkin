@@ -403,6 +403,16 @@ namespace ESkin.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 布迪亨LOGO {
+            get {
+                object obj = ResourceManager.GetObject("布迪亨LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 序号 {
             get {
                 object obj = ResourceManager.GetObject("序号", resourceCulture);
