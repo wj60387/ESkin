@@ -95,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -111,6 +112,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="read.txt" />
+    <None Include="Resources\timg.gif" />
+    <None Include="Resources\新建位图图像.bmp" />
+    <None Include="Resources\已连接状态.jpg" />
+    <None Include="Resources\未连接状态.jpg" />
     <Content Include="系统按钮关闭.png" />
   </ItemGroup>
   <ItemGroup>

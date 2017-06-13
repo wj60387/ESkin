@@ -36,14 +36,12 @@
             this.ucTextBoxEx1 = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.processBarEx1 = new System.Windows.Forms.ProcessBarEx();
-            this.btnStart = new System.Windows.Forms.ButtonEx();
-            this.btnStop = new System.Windows.Forms.ButtonEx();
             this.radioButtonEx2 = new System.Windows.Forms.RadioButtonEx();
             this.radioButtonEx1 = new System.Windows.Forms.RadioButtonEx();
             this.ucTextBoxEx3 = new System.Windows.Forms.UCTextBoxEx();
             this.ucTextBoxEx2 = new System.Windows.Forms.UCTextBoxEx();
-            this.btnConn = new System.Windows.Forms.ButtonEx();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonEx1 = new System.Windows.Forms.ButtonEx();
             this.SuspendLayout();
             // 
             // btnClose
@@ -58,7 +56,7 @@
             this.btnClose.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnClose.LeftBottom = 0;
             this.btnClose.LeftTop = 0;
-            this.btnClose.Location = new System.Drawing.Point(408, 7);
+            this.btnClose.Location = new System.Drawing.Point(418, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
             this.btnClose.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
@@ -114,54 +112,6 @@
             this.processBarEx1.Text = "processBarEx1";
             this.processBarEx1.Value = 30;
             this.processBarEx1.Visible = false;
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.Transparent;
-            this.btnStart.FlatAppearance.BorderSize = 0;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnStart.LeftBottom = 15;
-            this.btnStart.LeftTop = 15;
-            this.btnStart.Location = new System.Drawing.Point(98, 12);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnStart.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnStart.Radius = 8;
-            this.btnStart.RightBottom = 15;
-            this.btnStart.RightTop = 15;
-            this.btnStart.Size = new System.Drawing.Size(73, 24);
-            this.btnStart.TabIndex = 62;
-            this.btnStart.Text = "开始";
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Visible = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // btnStop
-            // 
-            this.btnStop.BackColor = System.Drawing.Color.Transparent;
-            this.btnStop.FlatAppearance.BorderSize = 0;
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStop.ForeColor = System.Drawing.Color.White;
-            this.btnStop.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnStop.LeftBottom = 15;
-            this.btnStop.LeftTop = 15;
-            this.btnStop.Location = new System.Drawing.Point(174, 12);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnStop.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnStop.Radius = 8;
-            this.btnStop.RightBottom = 15;
-            this.btnStop.RightTop = 15;
-            this.btnStop.Size = new System.Drawing.Size(73, 24);
-            this.btnStop.TabIndex = 60;
-            this.btnStop.Text = "停止";
-            this.btnStop.UseVisualStyleBackColor = false;
-            this.btnStop.Visible = false;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // radioButtonEx2
             // 
@@ -219,29 +169,6 @@
             this.ucTextBoxEx2.TabIndex = 50;
             this.ucTextBoxEx2.WaterText = "医生姓名";
             // 
-            // btnConn
-            // 
-            this.btnConn.BackColor = System.Drawing.Color.Transparent;
-            this.btnConn.FlatAppearance.BorderSize = 0;
-            this.btnConn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConn.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnConn.ForeColor = System.Drawing.Color.White;
-            this.btnConn.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnConn.LeftBottom = 15;
-            this.btnConn.LeftTop = 15;
-            this.btnConn.Location = new System.Drawing.Point(332, 53);
-            this.btnConn.Name = "btnConn";
-            this.btnConn.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
-            this.btnConn.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
-            this.btnConn.Radius = 8;
-            this.btnConn.RightBottom = 15;
-            this.btnConn.RightTop = 15;
-            this.btnConn.Size = new System.Drawing.Size(73, 24);
-            this.btnConn.TabIndex = 45;
-            this.btnConn.Text = "连接";
-            this.btnConn.UseVisualStyleBackColor = false;
-            this.btnConn.Click += new System.EventHandler(this.btnConn_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -251,24 +178,45 @@
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 64;
             // 
+            // buttonEx1
+            // 
+            this.buttonEx1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.BackgroundImage = global::BDRemote.Properties.Resources.已连接状态;
+            this.buttonEx1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonEx1.FlatAppearance.BorderSize = 0;
+            this.buttonEx1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEx1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEx1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
+            this.buttonEx1.LeftBottom = 0;
+            this.buttonEx1.LeftTop = 0;
+            this.buttonEx1.Location = new System.Drawing.Point(332, 53);
+            this.buttonEx1.Name = "buttonEx1";
+            this.buttonEx1.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(135)))), ((int)(((byte)(251)))));
+            this.buttonEx1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(105)))), ((int)(((byte)(251)))));
+            this.buttonEx1.Radius = 16;
+            this.buttonEx1.RightBottom = 0;
+            this.buttonEx1.RightTop = 0;
+            this.buttonEx1.Size = new System.Drawing.Size(50, 25);
+            this.buttonEx1.TabIndex = 67;
+            this.buttonEx1.UseVisualStyleBackColor = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(428, 295);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(438, 295);
             this.ControlBox = false;
+            this.Controls.Add(this.buttonEx1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.processBarEx1);
-            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.btnStop);
             this.Controls.Add(this.ucTextBoxEx1);
             this.Controls.Add(this.radioButtonEx2);
             this.Controls.Add(this.radioButtonEx1);
             this.Controls.Add(this.ucTextBoxEx3);
             this.Controls.Add(this.ucTextBoxEx2);
-            this.Controls.Add(this.btnConn);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -285,7 +233,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ButtonEx btnConn;
         private System.Windows.Forms.ButtonEx btnClose;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label2;
@@ -294,11 +241,10 @@
         private System.Windows.Forms.RadioButtonEx radioButtonEx1;
         private System.Windows.Forms.RadioButtonEx radioButtonEx2;
         private System.Windows.Forms.ComboBox ucTextBoxEx1;
-        private System.Windows.Forms.ButtonEx btnStop;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ButtonEx btnStart;
         private System.Windows.Forms.ProcessBarEx processBarEx1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ButtonEx buttonEx1;
 
     }
 }
