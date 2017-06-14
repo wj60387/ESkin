@@ -43,44 +43,61 @@ namespace BDRemote
         System.Timers.Timer timer = new System.Timers.Timer(500);
         public void HandleMessage(RReadyCode message)
         {
-            if (isOrder)
+            if (isOrder)//发起方
             {
-                //ShowMsg("请点击开始按钮开始...");
-                ShowMsg("开始发送数据...");
-                Thread thread = new Thread(() =>
+                if(!message.isReady)
                 {
-                    //Thread.Sleep(200);
-                    SuperSocket.Send(new RStartAudioCode());
-                    Current.StartAudioInput();
-                    timer.Start();
+                    ShowMsg("发起远程听诊失败(请确认对方已连接听诊器)");
+                     btnPresss.Enabled = true;
+                }
+                else
+                {
+                    ShowMsg("远程听诊进行中");
                     Invoke(new MethodInvoker(() => {
-                        processBarEx1.Visible = true;
+                        btnPresss.Text = "停止";
                     }));
-                    //Thread.Sleep(200);
-                    while (!isStop)
-                    {
-                        byte[] packet = new byte[128];
-                        int bytesRead = Current.AudioInputStream.Read(packet, 0, packet.Length);
-                        if (bytesRead <= 0)
-                        {
-                            Thread.Sleep(100);
-                            continue;
-                        }
-                        var code = new RTransAudioCode();
-                        code.Bytes = packet.Take(bytesRead).ToArray();
-                        SuperSocket.Send(code);
-                        Thread.Sleep(1);
-                    }
-                    Current.StopAudioInput();
-                });
-                thread.Start();
+                }
+
+                 
+                
             }
             else
             {
                 if (isConnect())
                 {
-                    ShowMsg("马上开始接收数据...");
-                    SuperSocket.Send(new RReadyCode());
+                    Thread thread = new Thread(() =>
+                    {
+                        //Thread.Sleep(200);
+                        SuperSocket.Send(new RStartAudioCode());
+                        Current.StartAudioInput();
+                        timer.Start();
+                        Invoke(new MethodInvoker(() =>
+                        {
+                            gifBox1.StartAnimate();
+                            //processBarEx1.Visible = true;
+                        }));
+                        //Thread.Sleep(200);
+                        while (!isStop)
+                        {
+                            byte[] packet = new byte[128];
+                            int bytesRead = Current.AudioInputStream.Read(packet, 0, packet.Length);
+                            if (bytesRead <= 0)
+                            {
+                                Thread.Sleep(100);
+                                continue;
+                            }
+                            var code = new RTransAudioCode();
+                            code.Bytes = packet.Take(bytesRead).ToArray();
+                            SuperSocket.Send(code);
+                            Thread.Sleep(1);
+                        }
+                        Current.StopAudioInput();
+                    });
+                    thread.Start();
+                }
+                else
+                {
+                    SuperSocket.Send(new RReadyCode() { isReady=false});
                 }
             }
         }
@@ -91,7 +108,8 @@ namespace BDRemote
             Current.StartAudioOutput();
             timer.Start();
             this.Invoke(new MethodInvoker(() => {
-                processBarEx1.Visible = true;
+                gifBox1.StartAnimate();
+              //  processBarEx1.Visible = true;
             }));
            
         }
@@ -106,50 +124,19 @@ namespace BDRemote
         }
         public void HandleMessage(RStopAudioCode message)
         {
+            isStop = true;
+            this.Invoke(new MethodInvoker(() => {
+                gifBox1.StopAnimate();
+            }));
         }
         public void HandleMessage(RExitCode message)
         {
-            isStop = true;
-            ShowMsg("对方停止了远程");
-            if (isOrder)
-            {
-                //Current.StopAudioInput();
-            }
-            else
-            {
-                Current.StopAudioOutput();
-            }
-            timer.Stop();
+            
         }
-        private void btnStop_Click(object sender, EventArgs e)
-        {
-            ShowMsg("主动停止远程...");
-            isStop = true;
-            SuperSocket.Send(new RExitCode());
-            if (isOrder)
-            {
-                //Current.StopAudioInput();
-            }
-            else
-            {
-                Current.StopAudioOutput();
-            }
-
-        }
+        
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-             isStop = true;
-             if (isConnect())
-             {
-                 if (isOrder)
-                 {
-                     //Current.StopAudioInput();
-                 }
-                 else
-                 {
-                     Current.StopAudioOutput();
-                 }
-             }
+            
              Application.Exit();
             
         }
@@ -158,6 +145,7 @@ namespace BDRemote
         private Point mouseOffset;      //鼠标的按下位置
         public static string serverUrl = System.Configuration.ConfigurationManager.AppSettings["serverUrl"];
         public SupSocket SuperSocket = new SupSocket(serverUrl);
+        bool isRequest = false;
         public FrmMain(string remoteID, bool isRequest)
         {
             base.SetStyle(
@@ -177,16 +165,18 @@ namespace BDRemote
             SuperSocket.Opened += SuperSocket_Opened;
 
             SuperSocket.OpenSocket(remoteID);
-            //ucTextBoxEx1.Text = StethoscopeManager.StethoscopeList.First().Name;
-            radioButtonEx1.Checked = isRequest;
-            radioButtonEx2.Checked = !isRequest;
+            this.isRequest = isRequest;
             foreach (var item in StethoscopeManager.StethoscopeList)
             {
-                ucTextBoxEx1.Items.Add(item.Name);
-                
+                stetList.Items.Add(item.Name);
             }
-            if(ucTextBoxEx1.Items.Count>0)
-            ucTextBoxEx1.SelectedIndex = 0;
+            if(stetList.Items.Count>0)
+            stetList.SelectedIndex = 0;
+            if(isRequest)
+               btnPresss.Enabled = false;
+            else
+               btnPresss.Visible = false;
+            gifBox1.StopAnimate();
         }
 
         void SuperSocket_Opened(object sender, EventArgs e)
@@ -226,14 +216,12 @@ namespace BDRemote
 
         void SuperSocket_MessageReceived(object sender, WebSocket4Net.MessageReceivedEventArgs e)
         {
-            ShowMsg(e.Message, false);
+            //ShowMsg(e.Message, false);
         }
 
         void FrmMain_LocationChanged(object sender, EventArgs e)
         {
-            ucTextBoxEx1.Invalidate();
-            ucTextBoxEx2.Invalidate();
-            ucTextBoxEx3.Invalidate();
+            stetList.Invalidate();
             btnConn.Invalidate();
 
         }
@@ -303,12 +291,12 @@ namespace BDRemote
 
         private void btnConn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(ucTextBoxEx1.Text))
+            if (string.IsNullOrEmpty(stetList.Text))
                 return;
             if (isConnect())
-                CloseStethoscope(ucTextBoxEx1.Text);
+                CloseStethoscope(stetList.Text);
                 else
-                OpenStethoscope(ucTextBoxEx1.Text);
+                OpenStethoscope(stetList.Text);
         }
         /// <summary>
         ///设备连接成功事件
@@ -395,8 +383,9 @@ namespace BDRemote
                         ShowMsg(string.Format("听诊器 {0} 断开连接...", stethoscopeName), false);
                         Invoke(new MethodInvoker(delegate()
                         {
-                            btnConn.ForeColor = Color.White;
-                            btnConn.Text = "连接";
+                            btnConn.BackgroundImage = global::BDRemote.Properties.Resources.已连接状态;
+                            btnConn.Enabled = false;
+                            stetList.Enabled = false;
                         }));
                     }
                 }
@@ -423,10 +412,15 @@ namespace BDRemote
         /// </summary>
         void FrmMain_OnSetehoscopeConnect()
         {
-           
+            if (isConnect() && !isOrder)
+            {
+                ShowMsg("等待远程听诊");
+            }
+
+            btnPresss.Enabled = true;
             //告诉对方
-            var code = new RReadyCode();
-            SuperSocket.Send(code);
+            //var code = new RReadyCode();
+            //SuperSocket.Send(code);
         }
         /// <summary>
         /// 发起方
@@ -435,14 +429,11 @@ namespace BDRemote
         {
             get
             {
-                bool order = false;
-                Invoke(new MethodInvoker(() =>
-                {
-                    order = radioButtonEx1.Checked;
-                }));
-                return order;
+                return isRequest;
             }
         }
+
+        bool isOnline = false;
 
         /// <summary>
         /// 用户上线,触发发起远程
@@ -450,20 +441,20 @@ namespace BDRemote
         /// <param name="message"></param>
         public void HandleMessage(RYHDLCode message)
         {
-            ShowMsg("你的小伙伴上线了", false);
-            if (isOrder)
-            {
-                ShowMsg("我们是发起方,正在向他发起远程听诊了...", false);
-                //ShowMsg("请先连接你的听诊设备...", false);
 
-            }
-            else
-            {
-                ShowMsg("我们是被叫方,正在等待小伙伴发起远程听诊...", false);
-                //ShowMsg("在等待的过程中,请先连接你的听诊设备 ...", false);
+            isOnline = true;
+            //ShowMsg("你的小伙伴上线了", false);
+            //if (isOrder)
+            //{
+            //    ShowMsg("我们是发起方,正在向他发起远程听诊了...", false);
+            //    //ShowMsg("请先连接你的听诊设备...", false);
 
-
-            }
+            //}
+            //else
+            //{
+            //    ShowMsg("我们是被叫方,正在等待小伙伴发起远程听诊...", false);
+            //    //ShowMsg("在等待的过程中,请先连接你的听诊设备 ...", false);
+            //}
             //发起
         }
         bool isConnect()
@@ -473,7 +464,7 @@ namespace BDRemote
 
         public void HandleMessage(RYHXXCode message)
         {
-            ShowMsg("你的小伙伴退出了,你可以关闭程序了...");
+            //ShowMsg("你的小伙伴退出了,你可以关闭程序了...");
             isStop = true;
             if (isConnect())
             {
@@ -487,6 +478,53 @@ namespace BDRemote
                 }
             }
             Application.Exit();
+        }
+
+        private void btnPresss_Click(object sender, EventArgs e)
+        {
+            if ("开始" == btnPresss.Text)
+            {
+
+
+                if (isOnline)
+                {
+                    if (isRequest && isConnect())
+                    {
+                        var code = new RReadyCode();
+                        SuperSocket.Send(code);
+                        ShowMsg("本端已发起远程听诊");
+                        btnPresss.Enabled = false;
+                    }
+                }
+                else
+                {
+                    ShowMsg("发起远程听诊失败（对方未启动客户端）");
+                }
+            }
+            else
+            {
+              
+                if (isConnect())
+                {
+                    gifBox1.StopAnimate();
+                    if (isOrder)
+                    {
+                        Current.StopAudioOutput();
+                    }
+                    SuperSocket.Send(new RStopAudioCode());
+                }
+            }
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            //gifBox1.StartAnimate();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            //gifBox1.StopAnimate();
         }
 
         

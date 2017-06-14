@@ -7,6 +7,7 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using BDAuscultation.SQLite;
 using BDAuscultation.Commucation;
+using System.IO;
 
 namespace BDAuscultation
 {
@@ -45,6 +46,43 @@ namespace BDAuscultation
                    
             }
             return false;
+        }
+        public static void Update()
+        {
+            using (OperationContextScope scope = new OperationContextScope(remoteService.InnerChannel))
+            {
+                MessageHeader header = MessageHeader.CreateHeader("SN", "http://tempuri.org", Setting.authorizationInfo.AuthorizationNum);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                header = MessageHeader.CreateHeader("MAC", "http://tempuri.org", Setting.authorizationInfo.MachineCode);
+                OperationContext.Current.OutgoingMessageHeaders.Add(header);
+                var sql = @"SELECT Value,CreateTime FROM SysConst WHERE KeyName='UpdatePath'";
+                var dt = remoteService.ExecuteDataset(sql, null);
+                var ct = DateTime.Parse(dt.Tables[0].Rows[0]["CreateTime"] + "");
+                var path = dt.Tables[0].Rows[0]["Value"] + "" ;
+                var info = new FileInfo(Path.Combine(Application.StartupPath, "BDUpdate.exe"));
+                if (info.LastWriteTime < ct)
+                {
+                    var localFilePath = Path.Combine(Application.StartupPath, "BDUpdate.exe");
+                    var remoteFilePath = Path.Combine(path, "BDUpdate.exe");
+                    var fileSize = remoteService.GetFileLength(remoteFilePath);
+                    //下载文件
+                    if (!Directory.Exists(Path.GetDirectoryName(localFilePath)))
+                    {
+                        Directory.CreateDirectory(Path.GetDirectoryName(localFilePath));
+                    }
+                    using (var stream = new FileStream(localFilePath, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite))
+                    {
+                        long position = 0;
+                        while (position < fileSize)
+                        {
+                            var bytes = remoteService.DownLoadFile(remoteFilePath, position, 24 * 1024);
+                            position += bytes.Length;
+                            stream.Write(bytes, 0, bytes.Length);
+                        }
+                        stream.Close();
+                    }
+                }
+            }
         }
         public static bool isBusy = false;
       

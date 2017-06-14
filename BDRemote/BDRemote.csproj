@@ -76,6 +76,9 @@
     <Compile Include="FrmProcessBar.designer.cs">
       <DependentUpon>FrmProcessBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="GifBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="IHandleMessage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProcessBar.resx">
       <DependentUpon>FrmProcessBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GifBox.resx">
+      <DependentUpon>GifBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

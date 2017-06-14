@@ -43,10 +43,11 @@ namespace BDUpdate
                     var content = ds.Tables[0].Rows[0]["PubContent"] + "";
                     sql = @"SELECT Value FROM SysConst WHERE KeyName='VersionFileDir'";
                     var Dir = remoteService.ExecuteScalar(sql, null);
-                    var majorDir = Dir + "\\" + banben;
-                    sql = "select * from View_CurrentVersion ";
-                    var dsFile = remoteService.ExecuteDataset(sql, new string[] { });
-                    int i = 0;
+                    //var majorDir = Dir + "\\" + banben;
+                    var majorDir = Dir;
+                    //sql = "select * from View_CurrentVersion ";
+                    //var dsFile = remoteService.ExecuteDataset(sql, new string[] { });
+                    //int i = 0;
                     lblVersion.Text = "版本:V" + banben;
                     lblConetnt.Text = "更新内容:" + content;
                     Down(majorDir);
@@ -89,6 +90,7 @@ namespace BDUpdate
                     foreach (DataRow row in dsFile.Tables[0].Rows)
                     {
                         i++;
+                        var version = row["Version"] + "";
                         var hash = row["FileHash"] + "";
                         var fileName = row["FileName"] + "";
                         var fileRelativePath = row["FileRelativePath"] + "";
@@ -97,7 +99,7 @@ namespace BDUpdate
                             ToltlProcess(fileName);
                         }
                         var localFilePath = Path.Combine(Application.StartupPath, fileRelativePath);
-                        var remoteFilePath = Path.Combine(majorDir, fileRelativePath);
+                        var remoteFilePath = Path.Combine(majorDir, version+"\\"+fileRelativePath);
                         var fileSize = remoteService.GetFileLength(remoteFilePath);
                         //下载文件
                         if (!Directory.Exists(Path.GetDirectoryName(localFilePath)))
