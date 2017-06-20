@@ -1,5 +1,6 @@
 ﻿using BDAuscultation.Commucation;
 using BDRemote.Forms;
+using BDRemote.Properties;
 using MMM.HealthCare.Scopes.Device;
 using ProtocalData.Protocol;
 using ProtocalData.Protocol.Derive;
@@ -177,6 +178,7 @@ namespace BDRemote
             else
                btnPresss.Visible = false;
             gifBox1.StopAnimate();
+            label1.Text = "";
         }
 
         void SuperSocket_Opened(object sender, EventArgs e)
@@ -228,6 +230,7 @@ namespace BDRemote
         void FrmMain_Load(object sender, EventArgs e)
         {
             timer.Elapsed += timer_Elapsed;
+            timer.Interval = 1000;
             timer.Enabled = false;
             OnSetehoscopeConnect += FrmMain_OnSetehoscopeConnect;
 
@@ -240,9 +243,9 @@ namespace BDRemote
                 timer.Stop();
                 return;
             } 
-            count+=500;
+            count+=1000;
             Invoke(new MethodInvoker(() => {
-                label1.Text = count / 1000f + "";
+                label1.Text = count / 1000f + "秒";
             }));
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -321,8 +324,9 @@ namespace BDRemote
                         ShowMsg(string.Format("听诊器 {0} 连接成功...", stethoscopeName), false);
                         Invoke(new MethodInvoker(() =>
                         {
-                            btnConn.ForeColor = Color.Red;
-                            btnConn.Text = "断开";
+                            btnConn.BackgroundImage = Resources.已连接状态;
+                            //btnConn.ForeColor = Color.Red;
+                            //btnConn.Text = "断开";
                         }));
                         if (OnSetehoscopeConnect != null)
                         {
