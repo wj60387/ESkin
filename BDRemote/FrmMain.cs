@@ -486,7 +486,7 @@ namespace BDRemote
 
         private void btnPresss_Click(object sender, EventArgs e)
         {
-            if ("开始" == btnPresss.Text)
+            if ("请求听对方声音" == btnPresss.Text)
             {
 
 

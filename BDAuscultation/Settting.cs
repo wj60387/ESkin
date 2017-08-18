@@ -15,8 +15,32 @@ using BDAuscultation.Utilities;
 
 namespace BDAuscultation
 {
+   
     public static class Setting
     {
+        public static List<string> PicOrder = LoadPic();
+        public static List<string> LoadPic()
+        {
+            List<string> lst = new List<string>(15);
+            //心脏
+            lst.Add(@"Image\Part\" + "主动脉一区（2R）.jpg");
+            lst.Add(@"Image\Part\" + "主动脉二区(3-4L).jpg");
+            lst.Add(@"Image\Part\" + "肺动脉瓣区（2L）.jpg");
+            lst.Add(@"Image\Part\" + "二尖瓣区（Apex）.jpg");
+            lst.Add(@"Image\Part\" + "三尖瓣区（4L）.jpg");
+            //肺部 
+            lst.Add(@"Image\Part\" + "尖前动脉（L）.jpg");
+            lst.Add(@"Image\Part\" + "尖前动脉（R）.jpg");
+            lst.Add(@"Image\Part\" + "尖后动脉（L）.jpg");
+            lst.Add(@"Image\Part\" + "尖后动脉（R）.jpg");
+            lst.Add(@"Image\Part\" + "中前动脉（L）.jpg");
+            lst.Add(@"Image\Part\" + "中前动脉（R）.jpg");
+            lst.Add(@"Image\Part\" + "中后动脉（L）.jpg");
+            lst.Add(@"Image\Part\" + "中后动脉（R）.jpg");
+            lst.Add(@"Image\Part\" + "后基底动脉（L）.jpg");
+            lst.Add(@"Image\Part\" + "后基底动脉（R）.jpg");
+            return lst;
+        }
         //public static string[] FilePaths
         //{
         //    get

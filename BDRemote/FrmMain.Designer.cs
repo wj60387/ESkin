@@ -177,7 +177,7 @@
             this.btnPresss.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
             this.btnPresss.LeftBottom = 0;
             this.btnPresss.LeftTop = 0;
-            this.btnPresss.Location = new System.Drawing.Point(-12, 25);
+            this.btnPresss.Location = new System.Drawing.Point(3, 29);
             this.btnPresss.Name = "btnPresss";
             this.btnPresss.NormalColor = System.Drawing.Color.Transparent;
             this.btnPresss.PressColor = System.Drawing.Color.Transparent;

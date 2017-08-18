@@ -45,9 +45,9 @@ namespace BDAuscultation.Forms
         {
            // var filePaths = Directory.GetFiles(@"Image\Part");
             dataGridViewEx1.Columns.Add(new DataGridViewImageColumn(false) { HeaderText = "缩略图" });
-            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Part", HeaderText = "部位", Width = 80 });
-            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "isRecord", HeaderText = "是否已录音", Width = 40, FillWeight = 150.0f });
-            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "RecordTime", HeaderText = "录制时间", Width = 150, FillWeight = 250.0f });
+            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "Part", HeaderText = "部位", Width = 120 });
+            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "isRecord", HeaderText = "是否已录音", Width = 120, FillWeight = 200.0f });
+            dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "RecordTime", HeaderText = "录制时间", Width = 140, FillWeight = 250.0f });
             dataGridViewEx1.Columns.Add(new DataGridViewTextBoxColumn() { Name = "TakeTime", HeaderText = "时长(秒)", Width = 40, FillWeight = 120.0f });
             
             
@@ -113,9 +113,9 @@ namespace BDAuscultation.Forms
             }
         }
         void LoadAudio()
-        {
+         {
             dataGridViewEx1.Rows.Clear();
-            var filePaths = Directory.GetFiles(@"Image\Part");
+            var filePaths = Setting.PicOrder;// Directory.GetFiles(@"Image\Part");
             foreach (var file in filePaths)
             {
                 dataGridViewEx1.Rows.Add(Image.FromFile(file).GetThumbnailImage(60, 66, () => { return true; }, IntPtr.Zero), Path.GetFileNameWithoutExtension(file), "否");

@@ -142,7 +142,7 @@ namespace BDAuscultation
 
             Setting.authorizationInfo = authorizationInfo;
             //升级升级程序
-            Mediator.Update();
+           // Mediator.Update();
             if (Mediator.isUpdate())
             {
                 var updateExe = Path.Combine(Application.StartupPath, "BDUpdate.exe");
@@ -150,43 +150,28 @@ namespace BDAuscultation
                 System.Diagnostics.Process.Start(updateExe, authorizationInfo.AuthorizationNum + " " + authorizationInfo.MachineCode);
                 return;
             }
+            //var files=Directory.GetFiles(@"Image\Part");
+            //if (!files.Contains("后基底动脉"))
+            //{
 
-
-            #region   部位重新命名 
-            if (File.Exists(@"Image\Part\心脏1.jpg"))
-            {
-                File.Delete(@"Image\Part\心脏1.jpg");
-            }
-            if (File.Exists(@"Image\Part\心脏2.jpg"))
-            {
-                File.Delete(@"Image\Part\心脏2.jpg");
-            }
-            if (File.Exists(@"Image\Part\心脏3.jpg"))
-            {
-                File.Delete(@"Image\Part\心脏3.jpg");
-            }
-            if (File.Exists(@"Image\Part\心脏4.jpg"))
-            {
-                File.Delete(@"Image\Part\心脏4.jpg");
-            }
-            if (File.Exists(@"Image\Part\心脏5.jpg"))
-            {
-                File.Delete(@"Image\Part\心脏5.jpg");
-            }
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfo set Part='主动脉一区' where Part='心脏1'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfo set Part='肺动脉瓣区' where Part='心脏2'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfo set Part='主动脉二区' where Part='心脏3'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfo set Part='三尖瓣区' where Part='心脏4'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfo set Part='二尖瓣区' where Part='心脏5'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfoDown set Part='主动脉一区' where Part='心脏1'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfoDown set Part='肺动脉瓣区' where Part='心脏2'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfoDown set Part='主动脉二区' where Part='心脏3'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfoDown set Part='三尖瓣区' where Part='心脏4'");
-            Mediator.sqliteHelper.ExecuteNonQuery("update AudioInfoDown set Part='二尖瓣区' where Part='心脏5'");
-
-           
-            #endregion
-
+            //    try
+            //    {
+            //        Mediator.sqliteHelper.ExecuteNonQuery("delete from AudioInfo");
+            //        Mediator.sqliteHelper.ExecuteNonQuery("delete from AudioInfoDown");
+            //        for (int i = 0; i < files.Length; i++)
+            //        {
+            //            File.Delete(files[i]);
+            //        }
+            //    }
+            //   catch(Exception ex)
+            //    {
+            //        MessageBox.Show("error：" + ex);
+            //    }
+            //    //var updateExe = Path.Combine(Application.StartupPath, "BDUpdate.exe");
+            //    //ProcessStartInfo process = new ProcessStartInfo(updateExe);
+            //    //System.Diagnostics.Process.Start(updateExe, authorizationInfo.AuthorizationNum + " " + authorizationInfo.MachineCode);
+            //    return;
+            //}
             #endregion
             var formLogin = new FrmLogin();
             formLogin.StartPosition = FormStartPosition.CenterScreen;
