@@ -53,10 +53,11 @@ namespace BDRemote
                 }
                 else
                 {
-                    ShowMsg("远程听诊进行中");
-                    Invoke(new MethodInvoker(() => {
-                        btnPresss.Text = "停止";
-                    }));
+                    btnPresss.Enabled = true;
+                    //ShowMsg("远程听诊进行中");
+                    //Invoke(new MethodInvoker(() => {
+                    //    btnPresss.Text = "停止";
+                    //}));
                 }
 
                  
@@ -419,12 +420,13 @@ namespace BDRemote
             if (isConnect() && !isOrder)
             {
                 ShowMsg("等待远程听诊");
+                //告诉对方
+                var code = new RReadyCode();
+                SuperSocket.Send(code);
             }
 
-            btnPresss.Enabled = true;
-            //告诉对方
-            //var code = new RReadyCode();
-            //SuperSocket.Send(code);
+            //btnPresss.Enabled = true;
+           
         }
         /// <summary>
         /// 发起方
@@ -486,18 +488,18 @@ namespace BDRemote
 
         private void btnPresss_Click(object sender, EventArgs e)
         {
-            if ("请求听对方声音" == btnPresss.Text)
+            if ("请求声音" == btnPresss.Text)
             {
-
-
                 if (isOnline)
                 {
                     if (isRequest && isConnect())
                     {
+                        btnPresss.Enabled = false;
                         var code = new RReadyCode();
                         SuperSocket.Send(code);
                         ShowMsg("本端已发起远程听诊");
                         btnPresss.Enabled = false;
+                        btnPresss.Text = "停止";
                     }
                 }
                 else
@@ -510,9 +512,11 @@ namespace BDRemote
               
                 if (isConnect())
                 {
+                    
                     gifBox1.StopAnimate();
                     if (isOrder)
                     {
+                        btnPresss.Enabled = true;
                         Current.StopAudioOutput();
                     }
                     SuperSocket.Send(new RStopAudioCode());
@@ -530,6 +534,8 @@ namespace BDRemote
         {
             //gifBox1.StopAnimate();
         }
+
+        
 
         
     }

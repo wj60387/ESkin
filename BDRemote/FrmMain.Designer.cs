@@ -39,9 +39,9 @@
             this.btnConn = new System.Windows.Forms.ButtonEx();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPresss = new System.Windows.Forms.ButtonEx();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnPresss = new System.Windows.Forms.Button();
             this.gifBox1 = new System.Windows.Forms.GifBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -168,37 +168,19 @@
             // 
             this.btnPresss.BackColor = System.Drawing.Color.Transparent;
             this.btnPresss.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPresss.Enabled = false;
             this.btnPresss.FlatAppearance.BorderSize = 0;
             this.btnPresss.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPresss.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnPresss.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPresss.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPresss.ForeColor = System.Drawing.Color.White;
-            this.btnPresss.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(85)))), ((int)(((byte)(230)))));
-            this.btnPresss.LeftBottom = 0;
-            this.btnPresss.LeftTop = 0;
-            this.btnPresss.Location = new System.Drawing.Point(3, 29);
+            this.btnPresss.ForeColor = System.Drawing.Color.Black;
+            this.btnPresss.Location = new System.Drawing.Point(26, 21);
             this.btnPresss.Name = "btnPresss";
-            this.btnPresss.NormalColor = System.Drawing.Color.Transparent;
-            this.btnPresss.PressColor = System.Drawing.Color.Transparent;
-            this.btnPresss.Radius = 16;
-            this.btnPresss.RightBottom = 0;
-            this.btnPresss.RightTop = 0;
-            this.btnPresss.Size = new System.Drawing.Size(121, 29);
+            this.btnPresss.Size = new System.Drawing.Size(74, 27);
             this.btnPresss.TabIndex = 71;
-            this.btnPresss.Text = "请求听对方声音";
+            this.btnPresss.Text = "请求声音";
             this.btnPresss.UseVisualStyleBackColor = false;
             this.btnPresss.Click += new System.EventHandler(this.btnPresss_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
-            this.label4.TabIndex = 73;
-            this.label4.Text = "奔达微客户端";
             // 
             // gifBox1
             // 
@@ -211,6 +193,16 @@
             this.gifBox1.Size = new System.Drawing.Size(290, 67);
             this.gifBox1.TabIndex = 70;
             this.gifBox1.Text = "gifBox1";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.TabIndex = 73;
+            this.label4.Text = "奔达微客户端";
             // 
             // FrmMain
             // 
@@ -253,7 +245,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ButtonEx btnPresss;
+        private System.Windows.Forms.Button btnPresss;
 
     }
 }
